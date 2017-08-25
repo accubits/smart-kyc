@@ -6,7 +6,8 @@ class dbconfig
     /** @var string - Redis */
     public $HOST     = 'localhost';
     public $USER     = 'root';
-    public $PASSWORD = 'Accubits@123';
+    public $PASSWORD = 'accubits';
+//    public $PASSWORD = 'Accubits@123';
     public $DB_NAME  = 'crypbrokers';
 
 
@@ -58,8 +59,8 @@ class dbconfig
 
 
     public $COL_usersImage_unique_id           = 'usersImage_unique_id';
-    public $COL_usersImage_users_unique_id     = 'users_unique_id';
-    public $COL_usersImage_image     = 'users_image';
+    public $COL_usersImage_users_unique_id     = 'usersImage_users_unique_id';
+    public $COL_usersImage_image               = 'usersImage_image';
 
 //    public $TOKEN                        = 'token';
 //    public $pageNo                       = 'pageNo';
