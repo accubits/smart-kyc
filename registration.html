@@ -170,7 +170,7 @@
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">State/Province/Region</div>
-                            <input type='text' ng-model="user.city">
+                            <input type='text' ng-model="user.state">
                         </div>
 
                         <div style="clear: both"></div>
@@ -201,7 +201,7 @@
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Date Of Birth (mm/dd/yyyy)</div>
-                            <input type='text' ng-model="user.dateOfBirth" class="datepicker-here" data-language='en'/>
+                            <input type='text' ng-model="user.dateOfBirth" id="dob" class="datepicker-here" data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -211,6 +211,7 @@
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">ID Type</div>
                             <select ng-model="user.idType">
+                                <option value="">--Select--</option>
                                 <option value="1">Passport</option>
                                 <option value="2">Drivers Licence</option>
                                 <option value="3">Other Gov Issued Photo ID</option>
@@ -227,11 +228,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">ID Issue date(mm/dd/yyyy)</div>
-                            <input type='text' ng-model="user.idIssueDate" class="datepicker-here" data-language='en'/>
+                            <input type='text' id="issueDate" ng-model="user.idIssueDate" class="datepicker-here" data-language='en'/>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">ID valid to (if any)</div>
-                            <input type='text' ng-model="user.idValidTo" class="datepicker-here" data-language='en'/>
+                            <input type='text' id="validTo" ng-model="user.idValidTo" class="datepicker-here" data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -239,7 +240,7 @@
 
 
                     <div class="bottom_button_wrap">
-                        <div class="next_button go_btn personal" data-id="personal_2">
+                        <div class="next_button go_btn personal" ng-click="addUserInformation()" data-id="personal_2">
                             Next
                         </div>
                     </div>
@@ -377,17 +378,20 @@
 
                     </div>
 
+                    <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
-                        <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+                        <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" ng-model="data.images" class="dropzone" id="my-awesome-dropzone">
+                            <!--<input name="usersImage_users_unique_id" ng-model="uniqurId" >-->
+
+                        </form>
                     <p>No of Documents submitted : 7</p>
 
                     <div class="bottom_button_wrap">
 
-
                         <div class="prev_button pr_doc go_btn" data-id="personal_2">
                             Previous
                         </div>
-                        <div class="next_button company go_btn">
+                        <div class="next_button company go_btn" ng-click="imageUpload()">
                             Verify
                         </div>
                     </div>
@@ -433,6 +437,7 @@
 <script rel="script" src="js/libs/datepicker.en.js"></script>
 <script rel="script" src="js/libs/dropzone.js"></script>
 <script rel="script" src="js/toast/toast.js"></script>
+<script rel="script" src="js/config.js"></script>
 <script rel="script" src="js/registration.js"></script>
 <script rel="script" src="js/maincontroller.js"></script>
 
@@ -440,7 +445,7 @@
 <script>
     $('.datepicker-here').datepicker
     ({
-        language: 'en',
+        language: 'en',dateFormat: 'yyyy-mm-dd'
     });
 
 </script>
