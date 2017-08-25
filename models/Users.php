@@ -360,12 +360,14 @@ class Users
 
     }
 
-    public function insertImage(){
+    public function insertImage($image){
 
         $dataArr = array(
-            $this->config->COL_users_image => $this->getImage()
+            $this->config->COL_usersImage_unique_id => TagdToUtils::getUniqueId(),
+            $this->config->COL_usersImage_image => $image,
+            $this->config->COL_usersImage_users_unique_id => $this->getUniqueId()
         );
-        $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
+        $sql1 = $this->db->createInsertQuery($this->config->Table_usersImage, $dataArr);
         $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
