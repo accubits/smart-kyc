@@ -12,12 +12,13 @@ class Users
     public $first_name;
     public $last_name;
     public $gender;
-    public $address;
+    public $address1;
+    public $address2;
+    public $address3;
     public $city;
     public $state;
     public $country_residence;
     public $zip;
-    public $mobile_code;
     public $mobile_number;
     public $date_of_birth;
     public $id_issue_date;
@@ -152,17 +153,49 @@ class Users
     /**
      * @return mixed
      */
-    public function getAddress()
+    public function getAddress1()
     {
-        return $this->address;
+        return $this->address1;
     }
 
     /**
-     * @param mixed $address
+     * @param mixed $address1
      */
-    public function setAddress($address)
+    public function setAddress1($address1)
     {
-        $this->address = $address;
+        $this->address1 = $address1;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress2()
+    {
+        return $this->address2;
+    }
+
+    /**
+     * @param mixed $address2
+     */
+    public function setAddress2($address2)
+    {
+        $this->address2 = $address2;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAddress3()
+    {
+        return $this->address3;
+    }
+
+    /**
+     * @param mixed $address3
+     */
+    public function setAddress3($address3)
+    {
+        $this->address3 = $address3;
     }
 
     /**
@@ -298,6 +331,7 @@ class Users
         $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . " 
             where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
         $result = $this->db->executeQuery($sql);
+//        echo $sql;
         if ($result['CODE'] != 1) {
 
             $this->error->internalServer();
@@ -309,7 +343,9 @@ class Users
                 $this->config->COL_users_first_name => $this->getFirstName(),
                 $this->config->COL_users_last_name => $this->getLastName(),
                 $this->config->COL_users_gender => $this->getGender(),
-                $this->config->COL_users_address => $this->getAddress(),
+                $this->config->COL_users_address1 => $this->getAddress1(),
+                $this->config->COL_users_address2 => $this->getAddress2(),
+                $this->config->COL_users_address3 => $this->getAddress3(),
                 $this->config->COL_users_city => $this->getCity(),
                 $this->config->COL_users_state => $this->getState(),
                 $this->config->COL_users_country_residence => $this->getCountryResidence(),
