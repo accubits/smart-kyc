@@ -6,8 +6,8 @@ class dbconfig
     /** @var string - Redis */
     public $HOST     = 'localhost';
     public $USER     = 'root';
-    public $PASSWORD = 'accubits';
-//    public $PASSWORD = 'Accubits@123';
+//    public $PASSWORD = 'accubits';
+    public $PASSWORD = 'Accubits@123';
     public $DB_NAME  = 'crypbrokers';
 
 
@@ -29,10 +29,10 @@ class dbconfig
     public $COL_users_state                 = 'users_state';
     public $COL_users_country_residence     = 'users_country_residence';
     public $COL_users_zip                   = 'users_zip';
-    public $COL_users_mobile_code           = 'users_mobile_code';
     public $COL_users_mobile_number         = 'users_mobile_number';
     public $COL_users_date_of_birth         = 'users_date_of_birth';
-    public $COL_users_passport_id           = 'users_passport_id';
+    public $COL_users_id_type               = 'users_id_type';
+    public $COL_users_id_number             = 'users_id_number';
     public $COL_users_id_issue_date         = 'users_id_issue_date';
     public $COL_users_id_valid_date         = 'users_id_valid_date';
     public $COL_users_image                 = 'users_image';
@@ -46,7 +46,6 @@ class dbconfig
     public $COL_company_state               = 'company_state';
     public $COL_company_country_residence   = 'company_country_residence';
     public $COL_company_zip                 = 'company_zip';
-    public $COL_company_country_code        = 'company_country_code';
     public $COL_company_phone_number        = 'company_phone_number';
     public $COL_company_url                 = 'company_url';
     public $COL_company_bussiness_nature    = 'company_bussiness_nature';
