@@ -59,8 +59,8 @@ class dbconfig
 
 
     public $COL_usersImage_unique_id           = 'usersImage_unique_id';
-    public $COL_usersImage_users_unique_id     = 'users_unique_id';
-    public $COL_usersImage_image     = 'users_image';
+    public $COL_usersImage_users_unique_id     = 'usersImage_users_unique_id';
+    public $COL_usersImage_image               = 'usersImage_image';
 
 //    public $TOKEN                        = 'token';
 //    public $pageNo                       = 'pageNo';

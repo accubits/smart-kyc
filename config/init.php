@@ -54,12 +54,13 @@ $Table_usersImage = "CREATE TABLE IF NOT EXISTS {$config->Table_usersImage} (
 	$config->COL_usersImage_image VARCHAR (255) NOT NULL, 
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    CONSTRAINT $config->COL_userImage_users_unique_id FOREIGN KEY ($config->COL_userImage_users_unique_id) 
+    CONSTRAINT $config->COL_usersImage_users_unique_id FOREIGN KEY ($config->COL_usersImage_users_unique_id) 
     REFERENCES $config->Table_users ($config->COL_users_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
 var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_usersImage));
+
 
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4cef0aa-e5a7-4918-9f9d-3728d43e7931" name="Default" comment="" />
+    <list default="true" id="a4cef0aa-e5a7-4918-9f9d-3728d43e7931" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/init.php" afterPath="$PROJECT_DIR$/config/init.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,13 +126,13 @@
       <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <marker date="1503584487112" expanded="true" signature="45:1029" ph="CREATE TABLE... IF" />
-                <marker date="1503584487112" expanded="true" signature="1052:2218" ph="CREATE TABLE... IF" />
-                <marker date="1503584487112" expanded="true" signature="2221:2953" ph="CREATE TABLE... IF" />
-                <marker date="1503584487112" expanded="true" signature="2245:2906" ph="CREATE TABLE... IF" />
+                <marker date="1503644089087" expanded="true" signature="45:1029" ph="CREATE TABLE... IF" />
+                <marker date="1503644089087" expanded="true" signature="1052:2218" ph="CREATE TABLE... IF" />
+                <marker date="1503644089087" expanded="true" signature="2221:2955" ph="CREATE TABLE... IF" />
+                <marker date="1503644089087" expanded="true" signature="2245:2908" ph="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
@@ -148,8 +151,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="180">
+              <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -339,12 +342,12 @@
       <option name="presentableId" value="Default" />
       <updated>1503554734835</updated>
       <workItem from="1503554736505" duration="25981000" />
-      <workItem from="1503640964757" duration="1347000" />
+      <workItem from="1503640964757" duration="3158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27328000" />
+    <option name="totallyTimeSpent" value="29139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -484,10 +487,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1503584487112" expanded="true" signature="45:1029" ph="CREATE TABLE... IF" />
-            <marker date="1503584487112" expanded="true" signature="1052:2218" ph="CREATE TABLE... IF" />
-            <marker date="1503584487112" expanded="true" signature="2221:2953" ph="CREATE TABLE... IF" />
-            <marker date="1503584487112" expanded="true" signature="2245:2906" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="45:1029" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="1052:2218" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="2221:2955" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="2245:2908" ph="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
@@ -638,19 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <marker date="1503584487112" expanded="true" signature="45:1029" ph="CREATE TABLE... IF" />
-            <marker date="1503584487112" expanded="true" signature="1052:2218" ph="CREATE TABLE... IF" />
-            <marker date="1503584487112" expanded="true" signature="2221:2953" ph="CREATE TABLE... IF" />
-            <marker date="1503584487112" expanded="true" signature="2245:2906" ph="CREATE TABLE... IF" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/DataBaseHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -663,10 +653,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <marker date="1503644089087" expanded="true" signature="45:1029" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="1052:2218" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="2221:2955" ph="CREATE TABLE... IF" />
+            <marker date="1503644089087" expanded="true" signature="2245:2908" ph="CREATE TABLE... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="180">
+          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
