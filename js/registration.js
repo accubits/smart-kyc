@@ -58,6 +58,10 @@ function navig()
     $('.content_wrap').css({'display':'block'});
     $('.content_navigation').css({'display':'none'});
 }
+function individual()
+{
+    alert("c");
+}
 function init() {
     //$('.go_btn ').click(go);
 
@@ -68,5 +72,6 @@ function init() {
     $('.radio').click(rad_act);
     $('.to_top').click(top_mov);
     $('.to_nav_tab').click(navig);
+    $('.indiv').click(individual);
 }
 $(document).ready(init);
