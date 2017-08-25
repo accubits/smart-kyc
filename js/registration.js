@@ -14,11 +14,20 @@
 
 function person_next()
 {
-    $('.documents_wrap').css({'display':'none'});
-    $('.company_wrap').css({'display':'block'});
-    $('.personal_wrap').css({'display':'none'});
-    $('.person_blk').addClass("green_bg");
-    $('.comp_blk').addClass("green");
+
+    if ($('.indiv').hasClass('indv_active')) {
+        $('.documents_wrap').css({'display':'block'});
+        $('.company_wrap').css({'display':'none'});
+        $('.personal_wrap').css({'display':'none'});
+    }
+    else
+    {
+        $('.documents_wrap').css({'display':'none'});
+        $('.company_wrap').css({'display':'block'});
+        $('.personal_wrap').css({'display':'none'});
+        $('.person_blk').addClass("green_bg");
+        $('.comp_blk').addClass("green");
+    }
 }
 function person_prev()
 {
@@ -38,11 +47,19 @@ function company_next()
 }
 function doc_prev()
 {
-    $('.documents_wrap').css({'display':'none'});
-    $('.company_wrap').css({'display':'block'});
-    $('.personal_wrap').css({'display':'none'});
-    $('.comp_blk').removeClass("green_bg");
-    $('.req_blk').removeClass("green");
+    if ($('.indiv').hasClass('indv_active')) {
+        $('.documents_wrap').css({'display':'none'});
+        $('.company_wrap').css({'display':'none'});
+        $('.personal_wrap').css({'display':'block'});
+    }
+    else
+    {
+        $('.documents_wrap').css({'display':'none'});
+        $('.company_wrap').css({'display':'block'});
+        $('.personal_wrap').css({'display':'none'});
+        $('.comp_blk').removeClass("green_bg");
+        $('.req_blk').removeClass("green");
+    }
 }
 function rad_act()
 {
@@ -58,6 +75,11 @@ function navig()
     $('.content_wrap').css({'display':'block'});
     $('.content_navigation').css({'display':'none'});
 }
+function individual()
+{
+    $(this).addClass('indv_active');
+    $('.comp_blk_dis').css({'display':'none'});
+}
 function init() {
     //$('.go_btn ').click(go);
 
@@ -68,5 +90,6 @@ function init() {
     $('.radio').click(rad_act);
     $('.to_top').click(top_mov);
     $('.to_nav_tab').click(navig);
+    $('.indiv').click(individual);
 }
 $(document).ready(init);
