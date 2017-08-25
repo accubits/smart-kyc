@@ -20,7 +20,6 @@ function onSuccessHandler() {
     $company->setState($_POST[$config->COL_company_state]);
     $company->setCountryResidence($_POST[$config->COL_company_country_residence]);
     $company->setZip($_POST[$config->COL_company_zip]);
-    $company->setCountryCode($_POST[$config->COL_company_country_code]);
     $company->setPhoneNumber($_POST[$config->COL_company_phone_number]);
     $company->setUrl($_POST[$config->COL_company_url]);
     $company->setBussinessNature($_POST[$config->COL_company_bussiness_nature]);
@@ -45,7 +44,6 @@ $required = array(
     $config->COL_company_state,
     $config->COL_company_country_residence,
     $config->COL_company_zip,
-    $config->COL_company_country_code,
     $config->COL_company_phone_number,
     $config->COL_company_url,
     $config->COL_company_bussiness_nature,
