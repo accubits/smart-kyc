@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+
+<div class="outer">
+    <div class="header">
+        <div class="logo">
+            <img src="images/cryp_log.png" alt="logo">
+        </div>
+
+        <div class="nav_bar">
+            <div class="nav_com">
+                HOME
+            </div>
+            <div class="nav_com">
+                PLACE AN ORDER
+            </div>
+            <div class="nav_com">
+                CONTACT US
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="sub_head">
+        <div class="sub_capt">
+            Registration
+        </div>
+        <div class="sub_path">
+            HOME / REGISTRATION
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <div class="content_wrap">
+        <div class="content_nav">
+            <div class="blocks">
+                <div class="blocks_no green person_blk">
+                    1
+                </div>
+                <div class="blocks_capt">
+                    Personal Information
+                </div>
+            </div>
+            <div class="blocks">
+                <div class="blocks_no comp_blk">
+                    2
+                </div>
+                <div class="blocks_capt">
+                    Company Information
+                </div>
+            </div>
+            <div class="blocks">
+                <div class="blocks_no req_blk">
+                    3
+                </div>
+                <div class="blocks_capt">
+                    Required Documents,<br>
+                    Terms and Conditions
+                </div>
+            </div>
+        </div>
+
+<div class="main_container">
+        <div class="personal_wrap wraps_common" id="personal">
+            <h2>
+                Personal Information
+            </h2>
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Name</div>
+                    <input type="text">
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Place</div>
+                    <input type="text">
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Gender</div>
+                    <div class="radio_outer">
+                        <div class="male_out">
+                            <div class="radio">
+                                <div class="checked"></div>
+                            </div>
+                            Male
+                        </div>
+                        <div class="male_out">
+                            <div class="radio">
+                                <div class="checked"></div>
+                            </div>
+                            Female
+                        </div>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Address Line 1</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Address Line 2</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Address Line 3</div>
+                    <input type="text">
+                </div>
+            </div>
+
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">City</div>
+                    <input type='text'/>
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">State/Province/Region</div>
+                    <input type='text'/>
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Country of Residence</div>
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Zip / Postal code(without spaces)</div>
+                    <input type='text'/>
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Mobile country code</div>
+                    <input type='text'/>
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Mobile phone number</div>
+                    <input type='text'/>
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Date of birth</div>
+                    <input type='text' class="datepicker-here" />
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Passport / ID number</div>
+                    <input type="text">
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">ID Issue date</div>
+                    <input type='text' class="datepicker-here" />
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">ID valid to (if any)</div>
+                    <input type='text' class="datepicker-here" />
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+
+            <div class="bottom_button_wrap">
+                <div class="next_button go_btn personal" data-id="personal_2">
+                    Next
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="company_wrap wraps_common" id="personal_2">
+            <h2>
+                Company Information
+            </h2>
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Name</div>
+                    <input type="text">
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Mobile</div>
+                    <input type="text">
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Company Url</div>
+                    <input type="text">
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Nature of company buisness</div>
+                    <input type="text">
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Who are your customers? Where are they located</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Do you perform due to diligence on your customers? what information do you collect from them?</div>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Do you perform due to diligence on your customers? what information do you collect from them?</div>
+                    <input type="text">
+                </div>
+            </div>
+
+
+            <div class="text_box_wrap">
+                <div class="text_box_left txt_bx">
+                    <div class="text_desc">Expected monthly volume</div>
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+                <div class="text_box_right txt_bx">
+                    <div class="text_desc">Nature of activity</div>
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+
+                <div style="clear: both"></div>
+            </div>
+
+            <div class="text_box_wrap">
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">If other is chosen, Please specify</div>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="bottom_button_wrap">
+                <div class="prev_button pr_company go_btn" data-id="personal_1">
+                    Previous
+                </div>
+                <div class="next_button company go_btn" data-id="personal_3">
+                    Next
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="documents_wrap wraps_common" id="personal_3">
+            <h2>
+                Required Documents
+            </h2>
+
+            <div class="docs_list">
+                Applicant's ID<br>
+                Proof of identity<br>
+                Company Business Registration<br>
+                Written attestation from the board of directors authorising the opening of company account on octagon statergy<br>
+                Proof of company address in the form of a telephone ,utility or bank statement
+
+                <p>Important</p>
+
+                <span>*</span> Documents must be in the following format : jpg,png,gif,pdf<br>
+                <span>*</span> Documents must be scanned in color with minimum of 300dpi resolution<br>
+                <span>*</span> Documents must be entirely visible<br>
+                <span>*</span> Maximum number of file upload : 15<br>
+                <span>*</span> Proof of residency document must be a scanned image of a paper document, not an electronic substitute.
+                Electronic versions of proof of documents will not be accepted<br>
+            </div>
+
+
+                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+            <p>No of Documents submitted : 7</p>
+
+            <div class="bottom_button_wrap">
+
+
+                <div class="prev_button pr_doc go_btn" data-id="personal_2">
+                    Previous
+                </div>
+                <div class="next_button company go_btn">
+                    Verify
+                </div>
+            </div>
+
+        </div>
+
+</div>
+    </div>
+
+    <footer>
+        <div class="to_top">
+        </div>
+        <div class="copy_right">
+            Copyright © Octragon Strategy Limited 2017
+        </div>
+        <div class="copy_links">
+            <div class="copy_blocks">
+                About Us
+            </div>
+            <div class="copy_blocks">
+                Fees
+            </div>
+            <div class="copy_blocks">
+                Terms of use
+            </div>
+            <div class="copy_blocks">
+                Privacy Policy
+            </div>
+            <div class="copy_blocks">
+                Contact Us
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </footer>
+
+</div>
+
+<script rel="script" src="js/jquery.min.js"></script>
+<script rel="script" src="js/registration.js"></script>
+<script rel="script" src="js/datepicker.min.js"></script>
+<script rel="script" src="js/dropzone.js"></script>
+<script rel="script" src="js/registration.js"></script>
+
+<script>
+    $('.datepicker-here').datepicker
+    ({
+
+    });
+
+</script>
+</body>
+</html>
