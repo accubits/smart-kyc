@@ -16,7 +16,9 @@ function onSuccessHandler() {
     $users->setFirstName($_POST[$config->COL_users_first_name]);
     $users->setLastName($_POST[$config->COL_users_last_name]);
     $users->setGender($_POST[$config->COL_users_gender]);
-    $users->setAddress($_POST[$config->COL_users_address]);
+    $users->setAddress1($_POST[$config->COL_users_address1]);
+    $users->setAddress2($_POST[$config->COL_users_address2]);
+    $users->setAddress3($_POST[$config->COL_users_address3]);
     $users->setCity($_POST[$config->COL_users_city]);
     $users->setState($_POST[$config->COL_users_state]);
     $users->setCountryResidence($_POST[$config->COL_users_country_residence]);
@@ -38,7 +40,9 @@ $required = array(
     $config->COL_users_first_name,
     $config->COL_users_last_name,
     $config->COL_users_gender,
-    $config->COL_users_address,
+    $config->COL_users_address1,
+    $config->COL_users_address2,
+    $config->COL_users_address3,
     $config->COL_users_city,
     $config->COL_users_state,
     $config->COL_users_country_residence,
