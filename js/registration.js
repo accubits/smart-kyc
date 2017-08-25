@@ -52,7 +52,11 @@ function rad_act()
 function top_mov()
 {
     $('html, body').animate({scrollTop: '0px'}, 300);
-    //alert("aa");
+}
+function navig()
+{
+    $('.content_wrap').css({'display':'block'});
+    $('.content_navigation').css({'display':'none'});
 }
 function init() {
     //$('.go_btn ').click(go);
@@ -63,5 +67,6 @@ function init() {
     $('.pr_doc').click(doc_prev);
     $('.radio').click(rad_act);
     $('.to_top').click(top_mov);
+    $('.to_nav_tab').click(navig);
 }
 $(document).ready(init);

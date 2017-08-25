@@ -40,6 +40,10 @@ input,textarea,select
     font-family: Montserrat-Light;
     font-size: 15px;
 }
+.nav_bar a
+{
+   color: #1b274a;
+}
 .nav_com
 {
     padding: 3px 15px;
@@ -164,7 +168,41 @@ input,textarea,select
 .content_wrap
 {
     padding: 2% 7%;
+    display: none;
 }
+.content_navigation
+{
+    width: 100%;
+    padding: 10% 0%;
+    background-color: white;
+    text-align: center;
+}
+.content_navigation p
+{
+    font-family: Montserrat-Light;
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+.to_nav_tab
+{
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 50px;
+    cursor: pointer;
+    position: relative;
+}
+/*.to_nav_tab:nth-child(1):after*/
+/*{*/
+    /*height: 100px;*/
+    /*width: 1px;*/
+    /*background-color: black;*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*right: 0;*/
+/*}*/
+
 .text_box_left
 {
     display: inline-block;
@@ -195,7 +233,7 @@ input,textarea,select
 }
 .txt_bx select
 {
-    height: 52px;
+    height: 42px;
     width: 100%;
 }
 .text_box_full input,select
@@ -346,12 +384,33 @@ footer
     height: 40px;
     border-radius: 50%;
     background-color: #f1a12f;
-    position: absolute;
+    position: fixed;
     right: 62px;
-    top: -20px;
+    bottom: 41px;
     cursor: pointer;
-    background-image: url("../images/up-arrow.png");
+    background-image: url(../images/up-arrow.png);
     background-size: 15px;
     background-repeat: no-repeat;
     background-position: 12px 12px;
+    z-index: 22;
+}
+a
+{
+    text-decoration: none;
+}
+
+@media only screen and (max-width:888px)
+{
+    .copy_right
+    {
+        font-size: 11px;
+    }
+    .copy_blocks
+    {
+        font-size: 11px;
+    }
+    /*.nav_bar*/
+    /*{*/
+        /*display: none;*/
+    /*}*/
 }
