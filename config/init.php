@@ -24,6 +24,7 @@ $Table_users = "CREATE TABLE IF NOT EXISTS {$config->Table_users} (
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
+
 $Table_company = "CREATE TABLE IF NOT EXISTS {$config->Table_company} (
 	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
 	$config->COL_company_unique_id varchar(255) NOT NULL PRIMARY  KEY,
