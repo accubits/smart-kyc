@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="crypbrokersApp">
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/dropzone.css">
     <link rel="stylesheet" href="css/registration.css">
 </head>
-<body>
+<body ng-controller="crypbrokersCntl">
 
 <div class="outer">
     <div class="header">
@@ -113,11 +113,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">First Name</div>
-                            <input type="text">
+                            <input type="text" ng-model="user.firstName">
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Last Name</div>
-                            <input type="text">
+                            <input type="text" ng-model="user.lastName">
                         </div>
 
                         <div style="clear: both"></div>
@@ -128,13 +128,13 @@
                             <div class="radio_outer">
                                 <div class="male_out">
                                     <div class="radio">
-                                        <div class="checked"></div>
+                                        <div class="checked" ng-model="user.gender"></div>
                                     </div>
                                     Male
                                 </div>
                                 <div class="male_out">
                                     <div class="radio">
-                                        <div class="checked"></div>
+                                        <div class="checked" ng-model="user.gender"></div>
                                     </div>
                                     Female
                                 </div>
@@ -146,19 +146,19 @@
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">Address Line 1</div>
-                            <input type="text">
+                            <input type="text" ng-model="user.address1">
                         </div>
                     </div>
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">Address Line 2</div>
-                            <input type="text">
+                            <input type="text" ng-model="user.address2">
                         </div>
                     </div>
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">Address Line 3</div>
-                            <input type="text">
+                            <input type="text" ng-model="user.address3">
                         </div>
                     </div>
 
@@ -166,11 +166,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">City</div>
-                            <input type='text'/>
+                            <input type='text' ng-model="user.city">
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">State/Province/Region</div>
-                            <input type='text'/>
+                            <input type='text' ng-model="user.city">
                         </div>
 
                         <div style="clear: both"></div>
@@ -179,15 +179,16 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Country of Residence</div>
-                            <select>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                            <select ng-model="user.countryOfResidence">
+                                <option value="">--Select--</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option </option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Zip / Postal code(without spaces)</div>
-                            <input type='text'/>
+                            <input type='text' ng-model="user.zip">
                         </div>
 
                         <div style="clear: both"></div>
@@ -196,11 +197,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Mobile (With Country Code)</div>
-                            <input type='text'/>
+                            <input type='text' ng-model="user.mobile">
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Date Of Birth (mm/dd/yyyy)</div>
-                            <input type='text' class="datepicker-here" data-language='en'/>
+                            <input type='text' ng-model="user.dateOfBirth" class="datepicker-here" data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -209,15 +210,15 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">ID Type</div>
-                            <select>
-                                <option>Passport</option>
-                                <option>Drivers Licence</option>
-                                <option>Other Gov Issued Photo ID</option>
+                            <select ng-model="user.idType">
+                                <option value="1">Passport</option>
+                                <option value="2">Drivers Licence</option>
+                                <option value="3">Other Gov Issued Photo ID</option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">ID number</div>
-                            <input type="text">
+                            <input type="text" ng-model="user.idNumber">
                         </div>
 
                         <div style="clear: both"></div>
@@ -226,11 +227,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">ID Issue date(mm/dd/yyyy)</div>
-                            <input type='text' class="datepicker-here" data-language='en'/>
+                            <input type='text' ng-model="user.idIssueDate" class="datepicker-here" data-language='en'/>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">ID valid to (if any)</div>
-                            <input type='text' class="datepicker-here" data-language='en'/>
+                            <input type='text' ng-model="user.idValidTo" class="datepicker-here" data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -425,13 +426,16 @@
 
 </div>
 
-<script rel="script" src="js/jquery.min.js"></script>
+<script rel="script" src="js/libs/jquery.min.js"></script>
+<script rel="script" src="js/libs/angular.min.js"></script>
+<script rel="script" src="js/libs/angular-route.min.js"></script>
+<script rel="script" src="js/libs/datepicker.min.js"></script>
+<script rel="script" src="js/libs/datepicker.en.js"></script>
+<script rel="script" src="js/libs/dropzone.js"></script>
+<script rel="script" src="js/toast/toast.js"></script>
 <script rel="script" src="js/registration.js"></script>
+<script rel="script" src="js/maincontroller.js"></script>
 
-<script rel="script" src="js/datepicker.min.js"></script>
-<script rel="script" src="js/datepicker.en.js"></script>
-<script rel="script" src="js/dropzone.js"></script>
-<script rel="script" src="js/registration.js"></script>
 
 <script>
     $('.datepicker-here').datepicker
