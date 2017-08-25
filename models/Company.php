@@ -327,17 +327,6 @@ class Company
 
     public function addCompanyInfo()
     {
-
-//        $sql = "select " . $this->config->COL_users_passport_id . " from " . $this->config->Table_users . "
-//            where " . $this->config->COL_users_passport_id . " = '" . $this->getPassportId() . "'";
-//        $result = $this->db->executeQuery($sql);
-//
-//        if ($result['CODE'] != 1) {
-//
-//            $this->error->internalServer();
-//        }
-//
-//        if (empty($result['RESULT'])) {
             $dataArr = array(
                 $this->config->COL_company_unique_id => TagdToUtils::getUniqueId(),
                 $this->config->COL_company_name => $this->getName(),
@@ -347,7 +336,6 @@ class Company
                 $this->config->COL_company_state => $this->getState(),
                 $this->config->COL_company_country_residence => $this->getCountryResidence(),
                 $this->config->COL_company_zip => $this->getZip(),
-                $this->config->COL_company_country_code => $this->getCountryCode(),
                 $this->config->COL_company_phone_number => $this->getPhoneNumber(),
                 $this->config->COL_company_url => $this->getUrl(),
                 $this->config->COL_company_bussiness_nature => $this->getBussinessNature(),
@@ -368,11 +356,6 @@ class Company
                 $response['result'] = $dataArr;
                 return $response;
             }
-//        } else {
-//            $out['success'] = true;
-//            $out['result']['msg'] = "id in list";
-//            return $out;
-//        }
 
 
     }

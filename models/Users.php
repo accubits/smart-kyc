@@ -20,10 +20,42 @@ class Users
     public $mobile_code;
     public $mobile_number;
     public $date_of_birth;
-    public $passport_id;
     public $id_issue_date;
     public $id_valid_date;
     public $image;
+    public $id_type;
+    public $id_number;
+    /**
+     * @return mixed
+     */
+    public function getIdType()
+    {
+        return $this->id_type;
+    }
+
+    /**
+     * @param mixed $id_type
+     */
+    public function setIdType($id_type)
+    {
+        $this->id_type = $id_type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdNumber()
+    {
+        return $this->id_number;
+    }
+
+    /**
+     * @param mixed $id_number
+     */
+    public function setIdNumber($id_number)
+    {
+        $this->id_number = $id_number;
+    }
 
     /**
      * @return mixed
@@ -200,22 +232,6 @@ class Users
     /**
      * @return mixed
      */
-    public function getMobileCode()
-    {
-        return $this->mobile_code;
-    }
-
-    /**
-     * @param mixed $mobile_code
-     */
-    public function setMobileCode($mobile_code)
-    {
-        $this->mobile_code = $mobile_code;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getMobileNumber()
     {
         return $this->mobile_number;
@@ -244,23 +260,6 @@ class Users
     {
         $this->date_of_birth = $date_of_birth;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getPassportId()
-    {
-        return $this->passport_id;
-    }
-
-    /**
-     * @param mixed $passport_id
-     */
-    public function setPassportId($passport_id)
-    {
-        $this->passport_id = $passport_id;
-    }
-
     /**
      * @return mixed
      */
@@ -296,10 +295,9 @@ class Users
     public function addInfo()
     {
 
-        $sql = "select " . $this->config->COL_users_passport_id . " from " . $this->config->Table_users . " 
-            where " . $this->config->COL_users_passport_id . " = '" . $this->getPassportId() . "'";
+        $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . " 
+            where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
         $result = $this->db->executeQuery($sql);
-
         if ($result['CODE'] != 1) {
 
             $this->error->internalServer();
@@ -316,17 +314,16 @@ class Users
                 $this->config->COL_users_state => $this->getState(),
                 $this->config->COL_users_country_residence => $this->getCountryResidence(),
                 $this->config->COL_users_zip => $this->getZip(),
-                $this->config->COL_users_mobile_code => $this->getMobileCode(),
                 $this->config->COL_users_mobile_number => $this->getMobileNumber(),
                 $this->config->COL_users_date_of_birth => $this->getDateOfBirth(),
-                $this->config->COL_users_passport_id => $this->getPassportId(),
+                $this->config->COL_users_id_type =>$this->getIdType(),
+                $this->config->COL_users_id_number => $this->getIdNumber(),
                 $this->config->COL_users_id_issue_date => $this->getIdIssueDate(),
                 $this->config->COL_users_id_valid_date => $this->getIdValidDate()
             );
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
-
             if ($result['CODE'] != 1) {
                 $this->error->internalServer();
             } else {
@@ -335,8 +332,8 @@ class Users
                 return $response;
             }
         } else {
-            $out['success'] = true;
-            $out['result']['msg'] = "id in list";
+            $out['success'] = false;
+            $out['result']['msg'] = "Already inserted passportid";
             return $out;
         }
 
