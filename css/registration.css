@@ -178,7 +178,7 @@ input,textarea,select
 .content_navigation
 {
     width: 100%;
-    height: 30%;
+    min-height: 30%;
     padding: 10% 0%;
     background-color: white;
     text-align: center;
@@ -404,19 +404,40 @@ a
 {
     text-decoration: none;
 }
-
-@media only screen and (max-width:888px)
+.mob_nav_bar
 {
-    .copy_right
-    {
-        font-size: 11px;
-    }
-    .copy_blocks
-    {
-        font-size: 11px;
-    }
+    display: none;
+}
+/*@media only screen and (max-width:880px)*/
+/*{*/
+    /*.copy_right*/
+    /*{*/
+        /*font-size: 11px;*/
+    /*}*/
+    /*.copy_blocks*/
+    /*{*/
+        /*font-size: 11px;*/
+    /*}*/
+/*}*/
+
+
+/*@media only screen and (max-width:769px)*/
+/*{*/
+    /*.mob_nav_bar*/
+    /*{*/
+        /*display: block;*/
+        /*text-align: center;*/
+    /*}*/
     /*.nav_bar*/
     /*{*/
         /*display: none;*/
     /*}*/
-}
+    /*.mob_nav_bar .nav_com*/
+    /*{*/
+        /*width: 80%;*/
+        /*padding: 0%;*/
+        /*display: inline-block;*/
+        /*vertical-align: top;*/
+        /*text-align: left;*/
+    /*}*/
+/*}*/

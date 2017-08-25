@@ -35,6 +35,24 @@
         <div style="clear:both;"></div>
     </div>
 
+    <div class="mob_nav_bar">
+        <a href="http://www.crypbrokers.com/">
+            <div class="nav_com">
+                HOME
+            </div>
+        </a>
+        <a href="http://www.crypbrokers.com/place-an-order/">
+            <div class="nav_com">
+                PLACE AN ORDER
+            </div>
+        </a>
+        <a href="http://www.crypbrokers.com/contact-us/">
+            <div class="nav_com">
+                CONTACT US
+            </div>
+        </a>
+    </div>
+
 
     <div class="sub_head">
         <div class="sub_capt">
@@ -182,7 +200,7 @@
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Date Of Birth (mm/dd/yyyy)</div>
-                            <input type='text' class="datepicker-here" />
+                            <input type='text' class="datepicker-here" data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -208,11 +226,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">ID Issue date(mm/dd/yyyy)</div>
-                            <input type='text' class="datepicker-here" />
+                            <input type='text' class="datepicker-here" data-language='en'/>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">ID valid to (if any)</div>
-                            <input type='text' class="datepicker-here" />
+                            <input type='text' class="datepicker-here" data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -409,14 +427,16 @@
 
 <script rel="script" src="js/jquery.min.js"></script>
 <script rel="script" src="js/registration.js"></script>
+
 <script rel="script" src="js/datepicker.min.js"></script>
+<script rel="script" src="js/datepicker.en.js"></script>
 <script rel="script" src="js/dropzone.js"></script>
 <script rel="script" src="js/registration.js"></script>
 
 <script>
     $('.datepicker-here').datepicker
     ({
-
+        language: 'en',
     });
 
 </script>
