@@ -3,6 +3,8 @@ var crypbrokersApp = angular.module('crypbrokersApp', []);
 crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+    $scope.nextButton1=false;
+    $scope.nextButton2=false;
     $scope.user={
         firstName:'',
         lastName:'',
@@ -24,20 +26,14 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     $scope.company={
         name:'',
         phone:'',
-        websiteUrl:'',
-        address1:'',
-        address2:'',
-        address3:'',
-        city:'',
-        state:'',
-        countryOfResidence:'',
-        zip:'',
-        mobile:'',
-        dateOfBirth:'',
-        idType:'',
-        idNumber:'',
-        idIssueDate:'',
-        idValidTo:'',
+        url:'',
+        bussibessNature:'',
+        custmerType:'',
+        customerInfoQ:'',
+        userUrlQ:'',
+        exptAvgOrder:'',
+        activityNatureQ:'',
+        bankDetailsQ:'',
     }
 
     /* add user details function [Start] */
@@ -47,8 +43,8 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 return;
             }
             console.log($('#dob').val())
-           $scope.user.dateOfBirth= $('#dob').val();
-            $scope.user.idIssueDate=$('#issueDate').val();
+        $scope.user.dateOfBirth= $('#dob').val();
+        $scope.user.idIssueDate=$('#issueDate').val();
         $scope.user.idValidTo=$('#validTo').val();
 
         console.log('users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
@@ -80,7 +76,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             // Making API Call [start]
             $http(requestObj).success(function (data) {
                 console.log(data);
-            showError('successfully added user information','success',true)
+                $scope.uniqurId= data.result.users_uniqueId;
+                $scope.nextButton1=true;
+                showError('successfully added user information','success',true)
 
             }).error(function (data, err) {
               console.log(data);
@@ -95,27 +93,25 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     /* add company details function [Start] */
     $scope.addCompanyInformation = function (){
 
-        var data = 'users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
-            $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
-            '&&users_address='+ $scope.user.address1 + '&&users_city=' +$scope.user.city+
-            '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
-            '&&users_zip='+ $scope.user.zip + '&&users_mobile_number='+$scope.user.mobile +
-            '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_passport_id='+$scope.user.idType+
-            '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
-            '&&users_id_valid_date='+ $scope.user.idValidTo;
+        var data = 'company_name='+ $scope.company.name + '&&company_phone_number=' +
+            $scope.company.phone + '&&company_url=' + $scope.company.url+
+            '&&company_bussiness_nature='+ $scope.company.bussibessNature + '&&company_customer_type_q=' +$scope.company.custmerType+
+            '&&company_customer_info_q='+ $scope.company.customerInfoQ + '&&company_user_url_q='+$scope.company.userUrlQ +
+            '&&company_expt_avgorder_q='+ $scope.company.exptAvgOrder + '&&company_activity_nature_q='+$scope.company.activityNatureQ +
+            '&&company_bankdetails_q='+ $scope.company.bankDetailsQ;
 
         var postData = data;
         var requestObj = {
             method: 'POST',
-            url: ServerApi+'addInfo.php',
+            url: ServerApi+'addCompanyInfo.php',
             data: postData
         };
 
         // Making API Call [start]
         $http(requestObj).success(function (data) {
             console.log(data);
-            showError('successfully added user information','success',true)
-        $scope.uniqurId= data.result.users_uniqueId;
+            $scope.nextButton2=true;
+            showError('successfully added Company information','success',true)
         }).error(function (data, err) {
             console.log(data);
             console.log(err);

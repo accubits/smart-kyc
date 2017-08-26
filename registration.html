@@ -240,7 +240,10 @@
 
 
                     <div class="bottom_button_wrap">
-                        <div class="next_button go_btn personal" ng-click="addUserInformation()" data-id="personal_2">
+                        <div class="next_button go_btn personal" ng-show="!nextButton1" ng-click="addUserInformation()" data-id="personal_2">
+                            Next
+                        </div>
+                        <div class="next_button go_btn personal" ng-show="nextButton1"  data-id="personal_2">
                             Next
                         </div>
                     </div>
@@ -255,11 +258,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Company Name</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.name">
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Phone</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.phone">
                         </div>
 
                         <div style="clear: both"></div>
@@ -268,11 +271,11 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Website Url</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.url">
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Nature of business</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.bussibessNature">
                         </div>
 
                         <div style="clear: both"></div>
@@ -282,19 +285,19 @@
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">Who are your customers? Where are they located</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.custmerType">
                         </div>
                     </div>
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">Do you have a KYC policy in place for your customers? If so,please provide a URL to your policy page.</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.userUrlQ">
                         </div>
                     </div>
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">Do you perform due to dilligence on your customers? what information do you collect from them?</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.customerInfoQ">
                         </div>
                     </div>
 
@@ -302,20 +305,22 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Expected Average Order Size (USD)</div>
-                            <select>
-                                <option>$10,000-$99,000</option>
-                                <option>$100,000-$499,000</option>
-                                <option>$150,000-$999,000</option>
-                                <option>$1 million-$9.9 million</option>
-                                <option>$10 million +</option>
+                            <select ng-model="company.exptAvgOrder">
+                                <option value="">--Select--</option>
+                                <option value="1">$10,000-$99,000</option>
+                                <option value="2">$100,000-$499,000</option>
+                                <option value="3">$150,000-$999,000</option>
+                                <option value="4">$1 million-$9.9 million</option>
+                                <option value="5">$10 million +</option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Nature of activity</div>
-                            <select>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
+                            <select ng-model="company.activityNatureQ">
+                                <option value="" >--Select--</option>
+                                <option value="1" >Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
                             </select>
                         </div>
 
@@ -325,7 +330,7 @@
                     <div class="text_box_wrap">
                         <div class="text_box_full txt_bx">
                             <div class="text_desc">What bank will you be using for deposits and withdrawals,and where is it located?</div>
-                            <input type="text">
+                            <input type="text" ng-model="company.bankDetailsQ">
                         </div>
                     </div>
 
@@ -333,7 +338,10 @@
                         <div class="prev_button pr_company go_btn" data-id="personal_1">
                             Previous
                         </div>
-                        <div class="next_button company go_btn" data-id="personal_3">
+                        <div class="next_button company go_btn" ng-show="!nextButton2" ng-click="addCompanyInformation()" data-id="personal_3">
+                            Next
+                        </div>
+                        <div class="next_button company go_btn" ng-show="nextButton2"  data-id="personal_3">
                             Next
                         </div>
                     </div>
@@ -380,8 +388,8 @@
 
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
-                        <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" ng-model="data.images" class="dropzone" id="my-awesome-dropzone">
-                            <!--<input name="usersImage_users_unique_id" ng-model="uniqurId" >-->
+                        <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="post" class="dropzone" id="my-awesome-dropzone">
+                            <input type="hidden" name="usersImage_users_unique_id" value="uniqurId" >
 
                         </form>
                     <p>No of Documents submitted : 7</p>
