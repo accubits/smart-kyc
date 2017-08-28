@@ -6,8 +6,8 @@ class dbconfig
     /** @var string - Redis */
     public $HOST     = 'localhost';
     public $USER     = 'root';
-//    public $PASSWORD = 'accubits';
-    public $PASSWORD = 'Accubits@123';
+    public $PASSWORD = 'accubits';
+//    public $PASSWORD = 'Accubits@123';
     public $DB_NAME  = 'crypbrokers';
 
 
@@ -18,7 +18,10 @@ class dbconfig
     /** @var string - Tables */
     public $Table_users                     = 'users';
     public $Table_company                   = 'company';
-    public $Table_usersImage                =  'usersImage';
+    public $Table_usersImage                = 'usersImage';
+    public $Table_userRegistration          = 'userRegistration';
+
+    /*Table_users*/
 
     public $COL_users_unique_id             = 'users_uniqueId';
     public $COL_users_first_name            = 'users_first_name';
@@ -39,6 +42,8 @@ class dbconfig
     public $COL_users_id_valid_date         = 'users_id_valid_date';
 
 
+    /*Table_company*/
+
     public $COL_company_unique_id           = 'company_unique_id';
     public $COL_company_name                = 'company_name';
     public $COL_company_phone_number        = 'company_phone_number';
@@ -52,19 +57,22 @@ class dbconfig
     public $COL_company_bankdetails_q       = 'company_bankdetails_q';
 
 
+    /*Table_usersImage*/
+
     public $COL_usersImage_unique_id           = 'usersImage_unique_id';
     public $COL_usersImage_users_unique_id     = 'usersImage_users_unique_id';
     public $COL_usersImage_image               = 'usersImage_image';
 
-//    public $TOKEN                        = 'token';
-//    public $pageNo                       = 'pageNo';
-//    public $limit                        = 'limit';
-//    public $text                         = 'text';
 
-//    public $baseUrl                      = "http://icosys.local/";
-//    public $serverMailUrl                = "http://52.220.41.10/icosys/server/mail/index.php";
-//    public $server                       = "http://52.220.41.10";
-//    public $forgotPasswordServerLink     = "http://52.220.41.10/icosys/frontend/view/forgot.html";
+    /*Table_userRegistration*/
+
+    public $COL_userRegistration_unique_id     = 'userRegistration_uniqueId';
+    public $COL_userRegistration_username      = 'userRegistration_username';
+    public $COL_userRegistration_email         = 'userRegistration_email';
+    public $COL_userRegistration_password      = 'userRegistration_password';
+
+
+    public $TOKEN                        = 'token';
 
 
 }

@@ -170,6 +170,10 @@ input,textarea,select
     position: absolute;
     width: 70px;
 }
+.content_wrap_ver
+{
+    padding: 2% 7%;
+}
 .content_wrap
 {
     padding: 2% 7%;
@@ -436,6 +440,27 @@ a
 .mob_nav_bar
 {
     display: none;
+}
+.content_wrap_ver .personal_wrap .text_desc
+{
+    color: #a7a7a7;
+}
+.ver_but
+{
+    display: inline-block;
+    background-color: #FFC107;
+    color: white;
+    padding: 10px 40px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Montserrat-Light;
+    cursor: pointer;
+}
+.verif_button_wrap
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 /*@media only screen and (max-width:880px)*/
 /*{*/
