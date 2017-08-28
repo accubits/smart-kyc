@@ -6,8 +6,8 @@ class dbconfig
     /** @var string - Redis */
     public $HOST     = 'localhost';
     public $USER     = 'root';
-    public $PASSWORD = 'accubits';
-//    public $PASSWORD = 'Accubits@123';
+//    public $PASSWORD = 'accubits';
+    public $PASSWORD = 'Accubits@123';
     public $DB_NAME  = 'crypbrokers';
 
 
