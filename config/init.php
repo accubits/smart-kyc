@@ -54,9 +54,21 @@ $Table_usersImage = "CREATE TABLE IF NOT EXISTS {$config->Table_usersImage} (
     REFERENCES $config->Table_users ($config->COL_users_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
+$Table_userRegistration = "CREATE TABLE IF NOT EXISTS {$config->Table_userRegistration} (
+	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
+	$config->COL_userRegistration_unique_id varchar(255) NOT NULL PRIMARY  KEY,
+	$config->COL_userRegistration_username varchar(255) NOT NULL,
+	$config->COL_userRegistration_email varchar(255) NOT NULL,
+	$config->COL_userRegistration_password varchar(255) NOT NULL,
+	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
+    modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+
 var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_usersImage));
+var_dump($db->executeQuery($Table_userRegistration));
 
 
 

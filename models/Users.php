@@ -26,6 +26,58 @@ class Users
     public $image;
     public $id_type;
     public $id_number;
+    public $userName;
+    public $password;
+    public $email;
+
+    /**
+     * @return mixed
+     */
+    public function getUserName()
+    {
+        return $this->userName;
+    }
+
+    /**
+     * @param mixed $userName
+     */
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
     /**
      * @return mixed
      */
@@ -325,6 +377,8 @@ class Users
         $this->id_valid_date = $id_valid_date;
     }
 
+    /*Personal Data Insertion*/
+
     public function addInfo()
     {
 
@@ -376,6 +430,8 @@ class Users
 
     }
 
+    /*Upload Documents*/
+
     public function uploadImage($files) {
 
         $uploader     = new FileUploader();
@@ -393,6 +449,8 @@ class Users
 //        }
 
     }
+
+    /*Uploaded Documents save to DB*/
 
     public function insertImage($image){
 
@@ -413,6 +471,8 @@ class Users
         }
     }
 
+    /*Insertion of each doc*/
+
 public function addAllImage($images){
 
     foreach ($images as $image)
@@ -422,4 +482,45 @@ public function addAllImage($images){
     $response['success'] = true;
     return $response;
 }
+
+/*User Registration*/
+
+public function userRegistration(){
+
+    $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email." 
+    from " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' 
+    and ".$this->config->COL_userRegistration_password." = '".$this->getPassword()."'";
+    $result = $this->db->executeQuery($sql);
+//        echo $sql;
+    if ($result['CODE'] != 1) {
+
+        $this->error->internalServer();
+    }
+
+    if (empty($result['RESULT'])) {
+        $dataArr = array(
+            $this->config->COL_userRegistration_unique_id    => TagdToUtils::getUniqueId(),
+            $this->config->COL_userRegistration_username     => $this->getUserName(),
+            $this->config->COL_userRegistration_email        => $this->getEmail(),
+            $this->config->COL_userRegistration_password     => $this->getPassword()
+        );
+
+        $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+        $result = $this->db->executeQuery($sql1);
+        if ($result['CODE'] != 1) {
+            $this->error->internalServer();
+        } else {
+            $response['success'] = true;
+            $response['result'] = $dataArr;
+            return $response;
+        }
+    } else {
+        $out['success'] = false;
+        $out['result']['msg'] = "Already Existing user";
+        return $out;
+    }
+
+}
+
 }
