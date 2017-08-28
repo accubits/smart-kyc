@@ -59,7 +59,7 @@ class Users
      */
     public function setPassword($password)
     {
-        $this->password = $password;
+        $this->password = TagdToUtils::createPasswordHash($password);
     }
 
     /**
@@ -489,8 +489,7 @@ public function userRegistration(){
 
     $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email." 
     from " . $this->config->Table_userRegistration . " where 
-    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' 
-    and ".$this->config->COL_userRegistration_password." = '".$this->getPassword()."'";
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' limit 1";
     $result = $this->db->executeQuery($sql);
 //        echo $sql;
     if ($result['CODE'] != 1) {
@@ -517,10 +516,34 @@ public function userRegistration(){
         }
     } else {
         $out['success'] = false;
-        $out['result']['msg'] = "Already Existing user";
+        $out['result']['msg'] = "Already Existing Emailid";
         return $out;
     }
 
+}
+
+/*User Login*/
+
+public function signIn(){
+
+    $sql = "Select " . $this->config->COL_userRegistration_unique_id . " 
+    from " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' 
+        and " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
+    $result = $this->db->executeQuery($sql);
+    if ($result['CODE'] != 1) {
+        $this->error->internalServer();
+    } elseif (count($result['RESULT']) == 0) {
+        $this->error->string = "Invalid Credentials";
+        $this->error->responseCode = 400;
+        $this->error->errorHandler();
+    } else {
+        $token = TagdToUtils::getUniqueId();
+        $this->redis->key = $token;
+        $data = array('uid' => $result['RESULT'][0][$this->config->COL_userRegistration_unique_id]);
+        $this->redis->setSessionValue($data);
+        return array('success' => true, 'result' => $token);
+    }
 }
 
 }

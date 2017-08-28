@@ -63,15 +63,10 @@ class dbconfig
     public $COL_userRegistration_password      = 'userRegistration_password';
 
 
-//    public $TOKEN                        = 'token';
+    public $TOKEN                        = 'token';
 //    public $pageNo                       = 'pageNo';
 //    public $limit                        = 'limit';
 //    public $text                         = 'text';
-
-//    public $baseUrl                      = "http://icosys.local/";
-//    public $serverMailUrl                = "http://52.220.41.10/icosys/server/mail/index.php";
-//    public $server                       = "http://52.220.41.10";
-//    public $forgotPasswordServerLink     = "http://52.220.41.10/icosys/frontend/view/forgot.html";
 
 
 }
