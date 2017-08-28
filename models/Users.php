@@ -387,7 +387,7 @@ class Users
         $result = $this->db->executeQuery($sql);
 
         if ($result['CODE'] != 1) {
-//echo "dssd";
+
             $this->error->internalServer();
         }
 
@@ -414,9 +414,9 @@ class Users
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
-//echo $sql1;
+
             if ($result['CODE'] != 1) {
-//echo "111";
+
                 $this->error->internalServer();
 
             } else {
