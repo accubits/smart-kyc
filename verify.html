@@ -7,7 +7,7 @@
 </head>
 <body ng-controller="crypbrokersCntl">
 
-<div class="outer">
+<div class="outer" ng-controller="verifyCntl">
     <div class="header">
         <div class="logo">
             <img src="images/cryp_log.png" alt="logo">
@@ -73,11 +73,11 @@
             <div class="text_box_wrap">
                 <div class="text_box_left txt_bx">
                     <div class="text_desc">Name</div>
-                    <div class="name_disp">John</div>
+                    <div class="name_disp">{{details.users_first_name}}</div>
                 </div>
                 <div class="text_box_right txt_bx">
                     <div class="text_desc">Gender</div>
-                    <div class="name_disp">Male</div>
+                    <div class="name_disp">{{details.users_gender}}</div>
                 </div>
 
                 <div style="clear: both"></div>
@@ -87,9 +87,9 @@
             <div class="text_box_wrap">
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Address</div>
-                    Line 1<br>
-                    Line 2<br>
-                    Line 3<br>
+                    {{details.users_address1}}<br>
+                    {{details.users_address2}}<br>
+                    {{details.users_address3}}<br>
                 </div>
             </div>
 
@@ -97,11 +97,11 @@
             <div class="text_box_wrap">
                 <div class="text_box_left txt_bx">
                     <div class="text_desc">City</div>
-                    city Name
+                    {{details.users_city}}
                 </div>
                 <div class="text_box_right txt_bx">
                     <div class="text_desc">State/Province/Region</div>
-                    State or province or region name
+                    {{details.users_state}}
                 </div>
 
                 <div style="clear: both"></div>
@@ -112,11 +112,11 @@
             <div class="text_box_wrap">
                 <div class="text_box_left txt_bx">
                     <div class="text_desc">Mobile (With Country Code)</div>
-                    990098900
+                    {{details.users_mobile_number}}
                 </div>
                 <div class="text_box_right txt_bx">
                     <div class="text_desc">Date Of Birth (mm/dd/yyyy)</div>
-                    22/22/3091
+                    {{details.users_date_of_birth}}
                 </div>
 
                 <div style="clear: both"></div>
@@ -175,6 +175,7 @@
 <script rel="script" src="js/config.js"></script>
 <script rel="script" src="js/registration.js"></script>
 <script rel="script" src="js/maincontroller.js"></script>
+<script rel="script" src="js/verifycontroller.js"></script>
 
 
 <script>

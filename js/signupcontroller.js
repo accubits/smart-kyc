@@ -1,4 +1,4 @@
-crypbrokersApp.controller('signupCntl', function ($scope,$http) {
+crypbrokersApp.controller('signupCntl', function ($scope,$http,$window) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $scope.details={
@@ -45,7 +45,7 @@ crypbrokersApp.controller('signupCntl', function ($scope,$http) {
         };
         $http(requestObj).success(function (data) {
             console.log(data);
-            $window.location.href = '/home.html';
+            $window.location.href = 'login.html';
             showError('User signIn success','success',true)
 
         }).error(function (data, err) {

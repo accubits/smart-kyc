@@ -1,4 +1,4 @@
-crypbrokersApp.controller('loginCntl', function ($scope,$http) {
+crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $scope.details={
@@ -33,7 +33,8 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http) {
         };
         $http(requestObj).success(function (data) {
             console.log(data);
-            // $window.location.href = '/home.html';
+            localStorage.setItem("userDetails",JSON.stringify(data.result));
+            $window.location.href = 'verify.html';
             showError('Successfully loggedIn','success',true)
 
         }).error(function (data, err) {
