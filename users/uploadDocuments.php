@@ -15,11 +15,8 @@ function onSuccessHandler()
     $users = new Users($db,$config,$error,$redis);
     $users->setUniqueId($_POST[$config->COL_usersImage_users_unique_id]);
     $users->setImage($users->uploadImage($_FILES));
-//    print_r($users->getImage());
-    foreach ($users->getImage() as $image)
-    {
-        $response = $users->insertImage($image);
-    }
+    $images = $users->getImage();
+    echo json_encode($users->addAllImage($images));
 }
 $required = array(
     $config->COL_usersImage_users_unique_id
