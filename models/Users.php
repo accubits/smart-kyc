@@ -558,4 +558,20 @@ public function signIn(){
     }
 }
 
+
+public function readInfo(){
+
+    $sql = "Select * from ".$this->config->Table_users." where 
+    ".$this->config->COL_users_unique_id." = '".$this->getUniqueId()."'";
+    $result = $this->db->executeQuery($sql);
+    if($result['CODE']!=1){
+        $this->error->internalServer();
+    }else {
+
+        $response['success'] = true;
+        $response['result'] = $result['RESULT'];
+        return $response;
+    }
+
+}
 }
