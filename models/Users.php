@@ -30,6 +30,16 @@ class Users
     public $password;
     public $email;
 
+    function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
+    {
+
+        $this->db = $dataBaseHandler;
+        $this->config = $config;
+        $this->error = $error;
+        $this->redis = $redis;
+
+    }
+
     /**
      * @return mixed
      */
@@ -125,18 +135,6 @@ class Users
     {
         $this->image = $image;
     }
-
-
-    function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
-    {
-
-        $this->db = $dataBaseHandler;
-        $this->config = $config;
-        $this->error = $error;
-        $this->redis = $redis;
-
-    }
-
 
     /**
      * @return mixed
@@ -377,6 +375,8 @@ class Users
         $this->id_valid_date = $id_valid_date;
     }
 
+
+
     /*Personal Data Insertion*/
 
     public function addInfo()
@@ -385,45 +385,51 @@ class Users
         $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . " 
             where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
         $result = $this->db->executeQuery($sql);
-//        echo $sql;
-        if ($result['CODE'] != 1) {
 
+        if ($result['CODE'] != 1) {
+//echo "dssd";
             $this->error->internalServer();
         }
 
         if (empty($result['RESULT'])) {
             $dataArr = array(
-                $this->config->COL_users_unique_id => TagdToUtils::getUniqueId(),
-                $this->config->COL_users_first_name => $this->getFirstName(),
-                $this->config->COL_users_last_name => $this->getLastName(),
-                $this->config->COL_users_gender => $this->getGender(),
-                $this->config->COL_users_address1 => $this->getAddress1(),
-                $this->config->COL_users_address2 => $this->getAddress2(),
-                $this->config->COL_users_address3 => $this->getAddress3(),
-                $this->config->COL_users_city => $this->getCity(),
-                $this->config->COL_users_state => $this->getState(),
+                $this->config->COL_users_unique_id         => TagdToUtils::getUniqueId(),
+                $this->config->COL_users_first_name        => $this->getFirstName(),
+                $this->config->COL_users_last_name         => $this->getLastName(),
+                $this->config->COL_users_gender            => $this->getGender(),
+                $this->config->COL_users_address1          => $this->getAddress1(),
+                $this->config->COL_users_address2          => $this->getAddress2(),
+                $this->config->COL_users_address3          => $this->getAddress3(),
+                $this->config->COL_users_city              => $this->getCity(),
+                $this->config->COL_users_state             => $this->getState(),
                 $this->config->COL_users_country_residence => $this->getCountryResidence(),
-                $this->config->COL_users_zip => $this->getZip(),
-                $this->config->COL_users_mobile_number => $this->getMobileNumber(),
-                $this->config->COL_users_date_of_birth => $this->getDateOfBirth(),
-                $this->config->COL_users_id_type =>$this->getIdType(),
-                $this->config->COL_users_id_number => $this->getIdNumber(),
-                $this->config->COL_users_id_issue_date => $this->getIdIssueDate(),
-                $this->config->COL_users_id_valid_date => $this->getIdValidDate()
+                $this->config->COL_users_zip               => $this->getZip(),
+                $this->config->COL_users_mobile_number     => $this->getMobileNumber(),
+                $this->config->COL_users_date_of_birth     => $this->getDateOfBirth(),
+                $this->config->COL_users_id_type           =>$this->getIdType(),
+                $this->config->COL_users_id_number         => $this->getIdNumber(),
+                $this->config->COL_users_id_issue_date     => $this->getIdIssueDate(),
+                $this->config->COL_users_id_valid_date     => $this->getIdValidDate()
             );
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
+//echo $sql1;
             if ($result['CODE'] != 1) {
+//echo "111";
                 $this->error->internalServer();
+
             } else {
+
                 $response['success'] = true;
                 $response['result'] = $dataArr;
                 return $response;
+
             }
         } else {
+
             $out['success'] = false;
-            $out['result']['msg'] = "Already inserted passportid";
+            $out['result']['msg'] = "Already inserted Id Number";
             return $out;
         }
 
@@ -439,15 +445,6 @@ class Users
         $uploadStatus = $uploader->upload($files);
 
         return $uploadStatus;
-
-//        if ($uploadStatus) {
-//            return  $uploader->getFilename();
-//        }
-//        else
-//        {
-//            return null;
-//        }
-
     }
 
     /*Uploaded Documents save to DB*/
@@ -463,8 +460,11 @@ class Users
         $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
+
             $this->error->internalServer();
+
         } else {
+
             $response['success'] = true;
             $response['result'] = $dataArr;
             return $response;
@@ -479,6 +479,7 @@ public function addAllImage($images){
     {
          $this->insertImage($image);
     }
+
     $response['success'] = true;
     return $response;
 }
@@ -491,7 +492,7 @@ public function userRegistration(){
     from " . $this->config->Table_userRegistration . " where 
     " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' limit 1";
     $result = $this->db->executeQuery($sql);
-//        echo $sql;
+
     if ($result['CODE'] != 1) {
 
         $this->error->internalServer();
@@ -507,14 +508,19 @@ public function userRegistration(){
 
         $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
         $result = $this->db->executeQuery($sql1);
+
         if ($result['CODE'] != 1) {
+
             $this->error->internalServer();
+
         } else {
+
             $response['success'] = true;
             $response['result'] = $dataArr;
             return $response;
         }
     } else {
+
         $out['success'] = false;
         $out['result']['msg'] = "Already Existing Emailid";
         return $out;
@@ -526,18 +532,24 @@ public function userRegistration(){
 
 public function signIn(){
 
-    $sql = "Select " . $this->config->COL_userRegistration_unique_id . " 
-    from " . $this->config->Table_userRegistration . " where 
-    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' 
-        and " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
+    $sql = "Select " . $this->config->COL_userRegistration_unique_id . " from 
+    " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' and 
+    " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
     $result = $this->db->executeQuery($sql);
+
     if ($result['CODE'] != 1) {
+
         $this->error->internalServer();
+
     } elseif (count($result['RESULT']) == 0) {
+
         $this->error->string = "Invalid Credentials";
         $this->error->responseCode = 400;
         $this->error->errorHandler();
+
     } else {
+
         $token = TagdToUtils::getUniqueId();
         $this->redis->key = $token;
         $data = array('uid' => $result['RESULT'][0][$this->config->COL_userRegistration_unique_id]);

@@ -26,7 +26,6 @@ $required = array(
 
     $config->COL_userRegistration_email,
     $config->COL_userRegistration_password
-
 );
 
 NvooyUtils::onSetAndEmptyCheckHandler($_POST, $required, $required, "onSuccessHandler", "onEmptyHandler", "onNotSetHandler", true);

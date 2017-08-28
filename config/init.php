@@ -69,6 +69,6 @@ var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_userRegistration));
-
+echo $db->executeQuery($Table_userRegistration);
 
 
