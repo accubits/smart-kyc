@@ -383,6 +383,7 @@ class Users
         $uploadStatus = $uploader->upload($files);
 
         return $uploadStatus;
+
 //        if ($uploadStatus) {
 //            return  $uploader->getFilename();
 //        }
@@ -411,4 +412,14 @@ class Users
             return $response;
         }
     }
+
+public function addAllImage($images){
+
+    foreach ($images as $image)
+    {
+         $this->insertImage($image);
+    }
+    $response['success'] = true;
+    return $response;
+}
 }
