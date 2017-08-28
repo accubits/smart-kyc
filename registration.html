@@ -188,7 +188,7 @@
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Zip / Postal code(without spaces)</div>
-                            <input type='text' ng-model="user.zip">
+                            <input type='text' ng-model="user.zip" onkeypress='return (event.charCode >= 48 && event.charCode <= 57 )||event.charCode == 43 '>
                         </div>
 
                         <div style="clear: both"></div>
@@ -197,7 +197,7 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Mobile (With Country Code)</div>
-                            <input type='text' ng-model="user.mobile">
+                            <input type='text' ng-model="user.mobile" onkeypress='return (event.charCode >= 48 && event.charCode <= 57 )||event.charCode == 43 '>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Date Of Birth (mm/dd/yyyy)</div>
@@ -262,7 +262,7 @@
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Phone</div>
-                            <input type="text" ng-model="company.phone">
+                            <input type="text" ng-model="company.phone" onkeypress='return (event.charCode >= 48 && event.charCode <= 57 )||event.charCode == 43 '>
                         </div>
 
                         <div style="clear: both"></div>
@@ -389,7 +389,7 @@
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
                         <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="post" class="dropzone" id="my-awesome-dropzone">
-                            <input type="hidden" name="usersImage_users_unique_id" value="uniqurId" >
+                            <!--<input type="hidden" name="usersImage_users_unique_id" value="uniqurId" >-->
 
                         </form>
                     <p>No of Documents submitted : 7</p>
@@ -399,7 +399,7 @@
                         <div class="prev_button pr_doc go_btn" data-id="personal_2">
                             Previous
                         </div>
-                        <div class="next_button company go_btn" ng-click="imageUpload()">
+                        <div class="next_button company go_btn">
                             Verify
                         </div>
                     </div>
