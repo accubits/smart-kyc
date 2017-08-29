@@ -67,12 +67,12 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="756" column="32" selection-start-line="756" selection-start-column="32" selection-end-line="756" selection-end-column="32" />
+            <state relative-caret-position="79">
+              <caret line="742" column="28" selection-start-line="742" selection-start-column="28" selection-end-line="742" selection-end-column="28" />
               <folding>
-                <marker date="1504039824000" expanded="true" signature="14619:14955" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504039824000" expanded="true" signature="17324:17338" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504039824000" expanded="true" signature="17753:18366" placeholder="Select *,c. " />
+                <marker date="1504039945000" expanded="true" signature="14619:14955" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504039945000" expanded="true" signature="17324:17338" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504039945000" expanded="true" signature="17753:18366" placeholder="Select *,c. " />
               </folding>
             </state>
           </provider>
@@ -81,8 +81,8 @@
       <file leaf-file-name="class.phpmailer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mail/vendor/phpmailer/phpmailer/class.phpmailer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="663" column="7" selection-start-line="663" selection-start-column="7" selection-end-line="663" selection-end-column="7" />
+            <state relative-caret-position="116">
+              <caret line="716" column="74" selection-start-line="716" selection-start-column="70" selection-end-line="716" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -383,12 +383,12 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="6236000" />
+      <workItem from="1504027340314" duration="6352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26292000" />
+    <option name="totallyTimeSpent" value="26408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -715,14 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mail/vendor/phpmailer/phpmailer/class.phpmailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="663" column="7" selection-start-line="663" selection-start-column="7" selection-end-line="663" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mail/vendor/phpmailer/phpmailer/examples/gmail.phps">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-110">
@@ -749,14 +741,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mail/vendor/phpmailer/phpmailer/class.phpmailer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="716" column="74" selection-start-line="716" selection-start-column="70" selection-end-line="716" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="756" column="32" selection-start-line="756" selection-start-column="32" selection-end-line="756" selection-end-column="32" />
+        <state relative-caret-position="79">
+          <caret line="742" column="28" selection-start-line="742" selection-start-column="28" selection-end-line="742" selection-end-column="28" />
           <folding>
-            <marker date="1504039824000" expanded="true" signature="14619:14955" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504039824000" expanded="true" signature="17324:17338" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504039824000" expanded="true" signature="17753:18366" placeholder="Select *,c. " />
+            <marker date="1504039945000" expanded="true" signature="14619:14955" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504039945000" expanded="true" signature="17324:17338" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504039945000" expanded="true" signature="17753:18366" placeholder="Select *,c. " />
           </folding>
         </state>
       </provider>
