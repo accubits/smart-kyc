@@ -554,14 +554,20 @@ public function userRegistration(){
     }
 
     if (empty($result['RESULT'])) {
+        $uniqueId = TagdToUtils::getUniqueId();
         $dataArr = array(
-            $this->config->COL_userRegistration_unique_id    => TagdToUtils::getUniqueId(),
+            $this->config->COL_userRegistration_unique_id    => $uniqueId,
             $this->config->COL_userRegistration_username     => $this->getUserName(),
             $this->config->COL_userRegistration_email        => $this->getEmail(),
             $this->config->COL_userRegistration_password     => $this->getPassword()
         );
 
         $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+        $result = $this->db->executeQuery($sql1);
+
+        $sql1 = $this->db->createInsertQuery($this->config->Table_users, [
+            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
+        ]);
         $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
