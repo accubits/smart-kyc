@@ -599,8 +599,14 @@ public function signIn(){
 
 public function readInfo(){
 
-    $sql = "Select u.*,r.* from ".$this->config->Table_users." u 
-    inner join ".$this->config->Table_userRegistration." r 
+//    $sql = "Select u.*,r.*,i.* from ".$this->config->Table_users." u
+//    inner join ".$this->config->Table_userRegistration." r
+//    on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id."
+//    where u.".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
+//    $result = $this->db->executeQuery($sql);
+
+    $sql = "Select u.*,r.* from ".$this->config->Table_userRegistration." r 
+    inner join ".$this->config->Table_users." u 
     on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
     where u.".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
     $result = $this->db->executeQuery($sql);
