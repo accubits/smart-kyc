@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 /**
  * Created by PhpStorm.
@@ -19,6 +19,23 @@ class Company
     public $expt_avgorder;
     public $activity_nature_q;
     public $bankdetails_q;
+    public $user_id;
+
+    /**
+     * @return mixed
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * @param mixed $user_id
+     */
+    public function setUserId($user_id)
+    {
+        $this->user_id = $user_id;
+    }
 
     /**
      * @return mixed

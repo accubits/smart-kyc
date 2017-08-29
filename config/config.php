@@ -42,7 +42,6 @@ class dbconfig
     public $COL_users_id_valid_date         = 'users_id_valid_date';
     public $COL_users_userRegistration_unique_id = 'userRegistration_uniqueId';
 
-
     /*Table_company*/
 
     public $COL_company_unique_id           = 'company_unique_id';
@@ -56,7 +55,6 @@ class dbconfig
     public $COL_company_expt_avgorder_q     = 'company_expt_avgorder_q';
     public $COL_company_activity_nature_q   = 'company_activity_nature_q';
     public $COL_company_bankdetails_q       = 'company_bankdetails_q';
-
 
     /*Table_usersImage*/
 
