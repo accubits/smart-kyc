@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="crypbrokersApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Login</title>
     <link rel="stylesheet" href="css/admin.css">
 </head>
-<body>
+<body ng-controller="adminloginCntl">
 
 <div class="outer">
     <div class="header">
@@ -33,32 +33,31 @@
             <div class="text_box_wrap">
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Username</div>
-                    <input type="text">
+                    <input type="text" ng-model="details.email">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Password</div>
-                    <input type="password">
+                    <input type="password" ng-model="details.password">
                 </div>
                 <div class="user_list">
-                    <a href="registration.html">
-                        <div class="login_btn">
+                        <div class="login_btn" ng-click="adminlogIn()">
                             Login
                         </div>
-                    </a>
                     <p>Forgot password ?</p>
                 </div>
             </div>
         </div>
-
-
     </div>
-
-
-
 </div>
 
-<script rel="script" src="js/jquery.min.js"></script>
-<script rel="script" src="js/registration.js"></script>
+<script rel="script" src="../js/libs/jquery.min.js"></script>
+<script rel="script" src="../js/libs/angular.min.js"></script>
+<script rel="script" src="../js/libs/angular-route.min.js"></script>
+<script rel="script" src="../js/config.js"></script>
+<script rel="script" src="../js/toast/toast.js"></script>
+<script rel="script" src="../js/registration.js"></script>
+<script rel="script" src="../js/maincontroller.js"></script>
+<script rel="script" src="../js/adminlogincontroller.js"></script>
 
 </body>
 </html>
