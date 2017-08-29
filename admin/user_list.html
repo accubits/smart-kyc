@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="crypbrokersApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Login</title>
     <link rel="stylesheet" href="css/admin.css">
 </head>
-<body>
+<body ng-controller="userlistCntl">
 
 <div class="outer">
     <div class="header">
@@ -36,34 +36,40 @@
                 </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>01</td>
-                <td>John doe</td>
+            <tr ng-repeat="info in details">
+                <td>{{$index + 1}} </td>
+                <td>{{info.users_first_name}}</td>
                 <td>johndoe@gmail.com</td>
-                <td>22/22/2019</td>
+                <td>{{info.created_date}}</td>
             </tr>
 
-            <tr>
-                <td>01</td>
-                <td>John doe</td>
-                <td>johndoe@gmail.com</td>
-                <td>22/22/2019</td>
-            </tr>
+            <!--<tr>-->
+                <!--<td>01</td>-->
+                <!--<td>John doe</td>-->
+                <!--<td>johndoe@gmail.com</td>-->
+                <!--<td>22/22/2019</td>-->
+            <!--</tr>-->
 
-            <tr>
-                <td>01</td>
-                <td>John doe</td>
-                <td>johndoe@gmail.com</td>
-                <td>22/22/2019</td>
-            </tr>
+            <!--<tr>-->
+                <!--<td>01</td>-->
+                <!--<td>John doe</td>-->
+                <!--<td>johndoe@gmail.com</td>-->
+                <!--<td>22/22/2019</td>-->
+            <!--</tr>-->
             </tbody>
         </table>
     </div>
 
 </div>
 
-<script rel="script" src="js/jquery.min.js"></script>
-<script rel="script" src="js/registration.js"></script>
+<script rel="script" src="../js/libs/jquery.min.js"></script>
+<script rel="script" src="../js/libs/angular.min.js"></script>
+<script rel="script" src="../js/libs/angular-route.min.js"></script>
+<script rel="script" src="../js/config.js"></script>
+<script rel="script" src="../js/toast/toast.js"></script>
+<script rel="script" src="../js/registration.js"></script>
+<script rel="script" src="../js/maincontroller.js"></script>
+<script rel="script" src="../js/userlistcontroller.js"></script>
 
 </body>
 </html>
