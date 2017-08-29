@@ -752,8 +752,9 @@ public function readInfo(){
         $mail->Subject = $sub;
         $mail->Body = $content;
         $mail->AddAddress($to);
+        
         if(!$mail->Send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
+//            echo "Mailer Error: " . $mail->ErrorInfo;
         }
     }
     
