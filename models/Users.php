@@ -444,7 +444,7 @@ class Users
                 $this->config->COL_users_id_valid_date              => $this->getIdValidDate(),
                 $this->config->COL_users_userRegistration_unique_id => $this->getRegistrationId()
             );
-            foreach($dataArr as $k => $v) { $data[] = "$k='$v''"; }
+            foreach($dataArr as $k => $v) { $data[] = "$k='$v'"; }
             $sql1 = "Update ".$this->config->Table_users." set ".implode(",",$data)." where ".
                 $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
 //            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
