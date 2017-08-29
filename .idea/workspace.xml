@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68f0150a-dd9f-4a3d-93f2-4ed35fc4c9a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Users.php" afterPath="$PROJECT_DIR$/models/Users.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,12 +35,19 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="748" column="8" selection-start-line="748" selection-start-column="8" selection-end-line="748" selection-end-column="8" />
+            <state relative-caret-position="304">
+              <caret line="753" column="57" selection-start-line="753" selection-start-column="57" selection-end-line="753" selection-end-column="57" />
               <folding>
-                <marker date="1504042941000" expanded="true" signature="15088:15424" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504042941000" expanded="true" signature="17793:17807" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504042941000" expanded="true" signature="18222:19020" placeholder="Select *,c. " />
+                <marker date="1504043115000" expanded="true" signature="15088:15424" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504043115000" expanded="true" signature="17793:17807" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504043115000" expanded="true" signature="18222:19020" placeholder="Select *,c. " />
+                <marker date="1504043115000" expanded="true" signature="19282:19313" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504043115000" expanded="true" signature="19282:19354" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504043115000" expanded="true" signature="19282:19355" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504043115000" expanded="true" signature="19282:19356" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504043115000" expanded="true" signature="19282:19419" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504043115000" expanded="true" signature="19282:19446" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504043115000" expanded="true" signature="19282:19573" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
               </folding>
             </state>
           </provider>
@@ -320,16 +326,16 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="8519000" />
+      <workItem from="1504027340314" duration="8748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28575000" />
+    <option name="totallyTimeSpent" value="28804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828755" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -338,7 +344,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -720,12 +726,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="748" column="8" selection-start-line="748" selection-start-column="8" selection-end-line="748" selection-end-column="8" />
+        <state relative-caret-position="304">
+          <caret line="753" column="57" selection-start-line="753" selection-start-column="57" selection-end-line="753" selection-end-column="57" />
           <folding>
-            <marker date="1504042941000" expanded="true" signature="15088:15424" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504042941000" expanded="true" signature="17793:17807" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504042941000" expanded="true" signature="18222:19020" placeholder="Select *,c. " />
+            <marker date="1504043115000" expanded="true" signature="15088:15424" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504043115000" expanded="true" signature="17793:17807" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504043115000" expanded="true" signature="18222:19020" placeholder="Select *,c. " />
+            <marker date="1504043115000" expanded="true" signature="19282:19313" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504043115000" expanded="true" signature="19282:19354" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504043115000" expanded="true" signature="19282:19355" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504043115000" expanded="true" signature="19282:19356" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504043115000" expanded="true" signature="19282:19419" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504043115000" expanded="true" signature="19282:19446" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504043115000" expanded="true" signature="19282:19573" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
           </folding>
         </state>
       </provider>

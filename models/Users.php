@@ -744,16 +744,25 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
-        $response['success'] = true;
-        $response['result']['data'] = $result['RESULT'][0];
-        
-        $sql = "Select `usersImage_image` from ".$this->config->Table_usersImage." where ".
-            $this->config->COL_usersImage_users_unique_id." = '".$this->getUniqueId()."'";
-        $result = $this->db->executeQuery($sql);
+        if (count($result['RESULT']) > 0) {
+            $response['success'] = true;
+            $response['result']['data'] = $result['RESULT'][0];
 
-        $response['result']['image'] = $result['RESULT'];
+            $sql = "Select `usersImage_image` from " . $this->config->Table_usersImage . " where " .
+                $this->config->COL_usersImage_users_unique_id . " = '" . $this->getUniqueId() . "'";
+            $result = $this->db->executeQuery($sql);
 
-        return $response;
+            $response['result']['image'] = $result['RESULT'];
+
+            return $response;
+        }
+        else {
+            $response['success'] = true;
+            $response['result']['data'] = [];
+            $response['result']['image'] = [];
+
+            return $response;
+        }
 
     }
 
