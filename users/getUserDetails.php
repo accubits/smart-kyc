@@ -15,7 +15,7 @@ function onSuccessHandler()
     global $config,$db,$error,$redis;
     $users = new Users($db,$config,$error,$redis);
     $users->setUniqueId($_POST[$config->COL_userRegistration_unique_id]);
-    echo json_encode($users->readAllInfo());
+    echo json_encode($users->readDetails());
 
 }
 
