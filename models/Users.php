@@ -740,7 +740,7 @@ public function readInfo(){
     public function sendMail($to,$sub,$content) {
         $mail = new  PHPMailer(); // create a new object
         $mail->IsSMTP(); // enable SMTP
-        $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; // authentication enabled
         $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
         $mail->Host = "smtp.gmail.com";
