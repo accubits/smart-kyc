@@ -40,6 +40,7 @@ class dbconfig
     public $COL_users_id_number             = 'users_id_number';
     public $COL_users_id_issue_date         = 'users_id_issue_date';
     public $COL_users_id_valid_date         = 'users_id_valid_date';
+    public $COL_users_userRegistration_unique_id = 'userRegistration_uniqueId';
 
 
     /*Table_company*/

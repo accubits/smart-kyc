@@ -23,6 +23,7 @@ function onSuccessHandler() {
     $users->setIdType($_POST[$config->COL_users_id_type]);
     $users->setIdNumber($_POST[$config->COL_users_id_number]);
     $users->setIdIssueDate($_POST[$config->COL_users_id_issue_date]);
+    $users->setRegistrationId($_POST[$config->COL_users_userRegistration_unique_id]);
 
     if(isset($_POST[$config->COL_users_gender])) {
 
@@ -63,7 +64,8 @@ $required = array(
     $config->COL_users_date_of_birth,
     $config->COL_users_id_type,
     $config->COL_users_id_number,
-    $config->COL_users_id_issue_date
+    $config->COL_users_id_issue_date,
+    $config->COL_users_userRegistration_unique_id
 );
 
 NvooyUtils::onSetAndEmptyCheckHandler($_POST, $required, $required, "onSuccessHandler", "onEmptyHandler", "onNotSetHandler", true);
