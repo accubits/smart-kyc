@@ -41,6 +41,7 @@ $Table_company = "CREATE TABLE IF NOT EXISTS {$config->Table_company} (
 	$config->COL_company_expt_avgorder_q varchar(255) NOT NULL,
 	$config->COL_company_activity_nature_q varchar(255) NOT NULL,
 	$config->COL_company_bankdetails_q TEXT NULL,
+	$config->COL_users_userRegistration_unique_id varchar(255) NOT NULL,
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";

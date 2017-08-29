@@ -53,8 +53,8 @@ function onSuccessHandler() {
     echo json_encode($response);
 }
 
-
 $required = array(
+
     $config->COL_users_first_name,
     $config->COL_users_last_name,
     $config->COL_users_address1,
@@ -66,6 +66,7 @@ $required = array(
     $config->COL_users_id_number,
     $config->COL_users_id_issue_date,
     $config->COL_users_userRegistration_unique_id
+
 );
 
 NvooyUtils::onSetAndEmptyCheckHandler($_POST, $required, $required, "onSuccessHandler", "onEmptyHandler", "onNotSetHandler", true);

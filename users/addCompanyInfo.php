@@ -23,9 +23,9 @@ function onSuccessHandler() {
     $company->setExptAvgorder($_POST[$config->COL_company_expt_avgorder_q]);
     $company->setActivityNatureQ($_POST[$config->COL_company_activity_nature_q]);
     $company->setBankdetailsQ($_POST[$config->COL_company_bankdetails_q]);
+    $company->setUserId($_POST[$config->COL_users_userRegistration_unique_id]);
     $response=$company->addCompanyInfo();
     echo json_encode($response);
-
 
 }
 
@@ -40,7 +40,8 @@ $required = array(
     $config->COL_company_user_url_q,
     $config->COL_company_expt_avgorder_q,
     $config->COL_company_activity_nature_q,
-    $config->COL_company_bankdetails_q
+    $config->COL_company_bankdetails_q,
+    $config->COL_users_userRegistration_unique_id
 );
 
 NvooyUtils::onSetAndEmptyCheckHandler($_POST, $required, $required, "onSuccessHandler", "onEmptyHandler", "onNotSetHandler", true);
