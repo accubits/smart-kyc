@@ -8,7 +8,7 @@
 
 include '../libraries/header.php';
 include '../class/Authenticate.php';
-include '../config/src/PHPMailer.php';
+require '../config/src/PHPMailer.php';
 
 function onSuccessHandler()
 {
