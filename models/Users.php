@@ -471,9 +471,9 @@ class Users
     }
     
     public function updateVerificationStatus($status) {
-        $sql1 = "Update ".$this->config->Table_users." set ".$this->config->COL_users_verify_status." = ".$status." where ".
+        $sql1 = "Update ".$this->config->Table_users." set ".$this->config->COL_users_verify_status." = ".(int)$status." where ".
             $this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
-//            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
+        echo $sql1;
         $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
