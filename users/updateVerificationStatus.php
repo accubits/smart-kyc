@@ -14,6 +14,7 @@ function onSuccessHandler()
 
     global $config,$db,$error,$redis;
     $users = new Users($db,$config,$error,$redis);
+    $users->sendMail();
     $users->setRegistrationId($_POST[$config->COL_users_userRegistration_unique_id]);
     if ($_POST['status'] !=1 && $_POST['status']!= 0){
         $error->responseCode = 400;
