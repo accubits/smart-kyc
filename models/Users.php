@@ -706,6 +706,7 @@ public function readInfo(){
             $this->config->COL_usersImage_users_unique_id."
         ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
         $result = $this->db->executeQuery($sql);
+        print_r($result);
 
         if($result['CODE']!=1){
 
