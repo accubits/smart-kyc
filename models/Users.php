@@ -698,7 +698,7 @@ public function readInfo(){
 
     public function readDetails(){
 
-        $sql = "Select * from 
+        $sql = "Select *,c.".$this->config->COL_users_userRegistration_unique_id." as `user_company_unique_id` from 
         ".$this->config->Table_userRegistration." u join ".$this->config->Table_company." c 
         on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
             $this->config->COL_users_userRegistration_unique_id." join ".$this->config->Table_usersImage."
