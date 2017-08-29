@@ -179,12 +179,7 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Country of Residence</div>
-                            <select ng-model="user.countryOfResidence">
-                                <option value="">--Select--</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option </option>
-                            </select>
+                            <select data-ng-model="user.countryOfResidence" data-ng-options="v as v.name for v in countries"></select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Zip / Postal code(without spaces)</div>
@@ -318,9 +313,10 @@
                             <div class="text_desc">Nature of activity</div>
                             <select ng-model="company.activityNatureQ">
                                 <option value="" >--Select--</option>
-                                <option value="1" >Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                                <option value="1" >Buying Digital Assets for lawful use</option>
+                                <option value="1" >Selling Digital Assets for lawful use</option>
+                                <option value="1" >Buying and Selling Digital Assets for lawful use</option>
+                                <option value="2">Other</option>
                             </select>
                         </div>
 
@@ -388,11 +384,11 @@
 
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
-                        <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="post" class="dropzone" id="my-awesome-dropzone">
-                            <!--<input type="hidden" name="usersImage_users_unique_id" value="uniqurId" >-->
-
+                        <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="POST"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
+                            <input type="text" name="usersImage_users_unique_id" value="uniqueId" >
+                            <input type="file" name="images" />
                         </form>
-                    <p>No of Documents submitted : 7</p>
+                    <!--<p>No of Documents submitted : 7</p>-->
 
                     <div class="bottom_button_wrap">
 
