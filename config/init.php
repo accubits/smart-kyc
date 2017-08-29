@@ -60,6 +60,7 @@ $Table_userRegistration = "CREATE TABLE IF NOT EXISTS {$config->Table_userRegist
 	$config->COL_userRegistration_username varchar(255) NOT NULL,
 	$config->COL_userRegistration_email varchar(255) NOT NULL,
 	$config->COL_userRegistration_password varchar(255) NOT NULL,
+	$config->COL_userRegistration_status int(1) default 0,
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
@@ -69,6 +70,3 @@ var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_userRegistration));
-echo $db->executeQuery($Table_userRegistration);
-
-

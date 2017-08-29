@@ -29,6 +29,7 @@ class Users
     public $userName;
     public $password;
     public $email;
+    public $status;
 
     function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
     {
@@ -38,6 +39,22 @@ class Users
         $this->error = $error;
         $this->redis = $redis;
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
     /**
@@ -577,4 +594,47 @@ public function readInfo(){
     }
 
 }
+
+    public function addAdmin(){
+
+        $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email.",
+         ".$this->config->COL_userRegistration_status." from " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' limit 1";
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+        }
+
+        if (empty($result['RESULT'])) {
+            $dataArr = array(
+                $this->config->COL_userRegistration_unique_id    => TagdToUtils::getUniqueId(),
+                $this->config->COL_userRegistration_username     => $this->getUserName(),
+                $this->config->COL_userRegistration_email        => $this->getEmail(),
+                $this->config->COL_userRegistration_password     => $this->getPassword(),
+                $this->config->COL_userRegistration_status       => $this->getStatus()
+            );
+
+            $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+            $result = $this->db->executeQuery($sql1);
+
+            if ($result['CODE'] != 1) {
+
+                $this->error->internalServer();
+
+            } else {
+
+                $response['success'] = true;
+                $response['result'] = $dataArr;
+                return $response;
+            }
+        } else {
+
+            $out['success'] = false;
+            $out['result']['msg'] = "Already Existing Emailid";
+            return $out;
+        }
+
+    }
 }
