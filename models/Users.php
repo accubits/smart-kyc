@@ -512,7 +512,6 @@ class Users
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_usersImage, $dataArr);
         $result = $this->db->executeQuery($sql1);
-        print_r($result);
 
         if ($result['CODE'] != 1) {
 
