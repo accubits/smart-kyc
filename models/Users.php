@@ -695,4 +695,24 @@ public function readInfo(){
         }
 
     }
+
+    public function readDetails(){
+
+        $sql = "Select * from 
+        ".$this->config->Table_userRegistration." u join ".$this->config->Table_company." c 
+        on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
+            $this->config->COL_users_userRegistration_unique_id." where 
+        ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        $response['success'] = true;
+        $response['result'] = $result['RESULT'];
+        return $response;
+
+    }
+
 }
