@@ -702,8 +702,8 @@ public function readInfo(){
         ".$this->config->Table_userRegistration." u join ".$this->config->Table_company." c 
         on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
             $this->config->COL_users_userRegistration_unique_id." join ".$this->config->Table_usersImage."
-             i on where u.".$this->config->COL_users_userRegistration_unique_id." = i.".
-            $this->config->COL_usersImage_users_unique_id."
+             i on u.".$this->config->COL_users_userRegistration_unique_id." = i.".
+            $this->config->COL_usersImage_users_unique_id." where
         ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
         $result = $this->db->executeQuery($sql);
         print_r($result);
