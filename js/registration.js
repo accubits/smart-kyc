@@ -12,6 +12,15 @@
 //}
 
 
+function switchTab(){
+
+    var id = $(this).attr('data-id');
+    $('.blocks').removeClass('active');
+    $(this).addClass('active');
+
+    $('.wraps_common').css({'display': 'none'});
+    $(id).css({'display': 'block'});
+}
 function person_next()
 {
 
@@ -83,7 +92,7 @@ function individual()
 function init() {
     //$('.go_btn ').click(go);
 
-    $('.personal').click(person_next);
+    //$('.personal').click(person_next);
     $('.pr_company').click(person_prev);
     $('.company').click(company_next);
     $('.pr_doc').click(doc_prev);
@@ -91,5 +100,8 @@ function init() {
     $('.to_top').click(top_mov);
     $('.to_nav_tab').click(navig);
     $('.indiv').click(individual);
+
+    $('.blocks').click(switchTab);
+
 }
 $(document).ready(init);

@@ -26,6 +26,21 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
             else if($scope.details.users_gender == '0'){
                 $scope.details.gender = 'Female'
             }
+            var users = data.result;
+            for(var item in users){
+                users[item]["created_date"] = new Date(users[item]["created_date"]);
+
+                switch (users[item]["users_verify_status"]){
+                    case 0:
+                            users[item]["users_kyc_status"] = "Rejected";
+                        break;
+                    case 1:
+                        users[item]["users_kyc_status"] = "Approved";
+                        break;
+                }
+            }
+
+            $scope.details = users;
 
         }).error(function (data, err) {
             console.log(data);
@@ -34,4 +49,11 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
         });
     };
     $scope.getlist();
+
+    $scope.goToUserPage = function(id){
+
+
+        localStorage.setItem("userID",id);
+        window.location.href = 'detailed_view.html';
+    }
 });

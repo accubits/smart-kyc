@@ -31,6 +31,11 @@
                 CONTACT US
             </div>
             </a>
+            <a href="index.html">
+                <div class="nav_com">
+                    LOGOUT
+                </div>
+            </a>
         </div>
         <div style="clear:both"></div>
     </div>
@@ -59,7 +64,7 @@
             Registration
         </div>
         <div class="sub_path">
-            HOME / REGISTRATION
+            <a href="verify.html"> HOME</a> / REGISTRATION
         </div>
         <div style="clear: both"></div>
     </div>
@@ -127,14 +132,14 @@
                             <div class="text_desc">Gender</div>
                             <div class="radio_outer">
                                 <div class="male_out">
-                                    <div class="radio active" id="1">
-                                        <div class="checked" ng-model="user.gender"></div>
+                                    <div class="radio" id="1" ng-class="{active: user.gender == 1}">
+                                        <div class="checked"></div>
                                     </div>
                                     Male
                                 </div>
                                 <div class="male_out">
-                                    <div class="radio" id="0">
-                                        <div class="checked" ng-model="user.gender"></div>
+                                    <div class="radio" id="0" ng-class="{active: user.gender == 0}">
+                                        <div class="checked"></div>
                                     </div>
                                     Female
                                 </div>
@@ -179,7 +184,7 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">Country of Residence</div>
-                            <select data-ng-model="user.countryOfResidence" data-ng-options="v as v.name for v in countries"></select>
+                            <select data-ng-model="user.countryOfResidence" data-ng-options="v.name as v.name for v in countries"></select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Zip / Postal code(without spaces)</div>
@@ -207,9 +212,9 @@
                             <div class="text_desc">ID Type</div>
                             <select ng-model="user.idType">
                                 <option value="">--Select--</option>
-                                <option value="1">Passport</option>
-                                <option value="2">Drivers Licence</option>
-                                <option value="3">Other Gov Issued Photo ID</option>
+                                <option>Passport</option>
+                                <option>Drivers Licence</option>
+                                <option>Other Gov Issued Photo ID</option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
@@ -235,10 +240,7 @@
 
 
                     <div class="bottom_button_wrap">
-                        <div class="next_button go_btn personal" ng-show="!nextButton1" ng-click="addUserInformation()" data-id="personal_2">
-                            Next
-                        </div>
-                        <div class="next_button go_btn personal" ng-show="nextButton1"  data-id="personal_2">
+                        <div class="next_button go_btn personal" ng-click="addUserInformation()" data-id="personal_2">
                             Next
                         </div>
                     </div>
@@ -302,21 +304,21 @@
                             <div class="text_desc">Expected Average Order Size (USD)</div>
                             <select ng-model="company.exptAvgOrder">
                                 <option value="">--Select--</option>
-                                <option value="1">$10,000-$99,000</option>
-                                <option value="2">$100,000-$499,000</option>
-                                <option value="3">$150,000-$999,000</option>
-                                <option value="4">$1 million-$9.9 million</option>
-                                <option value="5">$10 million +</option>
+                                <option>$10,000-$99,000</option>
+                                <option>$100,000-$499,000</option>
+                                <option>$150,000-$999,000</option>
+                                <option>$1 million-$9.9 million</option>
+                                <option>$10 million +</option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Nature of activity</div>
                             <select ng-model="company.activityNatureQ">
                                 <option value="" >--Select--</option>
-                                <option value="1" >Buying Digital Assets for lawful use</option>
-                                <option value="1" >Selling Digital Assets for lawful use</option>
-                                <option value="1" >Buying and Selling Digital Assets for lawful use</option>
-                                <option value="2">Other</option>
+                                <option>Buying Digital Assets for lawful use</option>
+                                <option>Selling Digital Assets for lawful use</option>
+                                <option>Buying and Selling Digital Assets for lawful use</option>
+                                <option>Other</option>
                             </select>
                         </div>
 
@@ -334,10 +336,7 @@
                         <div class="prev_button pr_company go_btn" data-id="personal_1">
                             Previous
                         </div>
-                        <div class="next_button company go_btn" ng-show="!nextButton2" ng-click="addCompanyInformation()" data-id="personal_3">
-                            Next
-                        </div>
-                        <div class="next_button company go_btn" ng-show="nextButton2"  data-id="personal_3">
+                        <div class="next_button company go_btn" ng-click="addCompanyInformation()" data-id="personal_3">
                             Next
                         </div>
                     </div>
@@ -381,21 +380,32 @@
                         <span>*</span> Image should be in high resolution(min 300 dpi)<br>
 
                     </div>
-
+                    <div class="image_upload">
+                        <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()" />
+                    </div>
+                    <p>No of Documents submitted : {{userImage.length}}</p>
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
-                        <form action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="POST"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
-                            <input type="text" name="usersImage_users_unique_id" value="uniqueId" >
-                            <input type="file" name="images" />
+                        <form style="display: none" action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="POST"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
+                            <input type="text" name="usersImage_users_unique_id" value="uniqueId">
+                            <div class="fallback">
+                                <input name="file" type="file" multiple id="" />
+                            </div>
+
+                            <input type="submit" value="Hellow" />
                         </form>
-                    <!--<p>No of Documents submitted : 7</p>-->
+                    <div class="declaration">
+                        <input type="checkbox" id="declaration" />
+                        <label for="declaration">I do hereby solemnly declare that the information provided is up-to-date and correct. The documents provided as proof of identity and proof of address has been self-attested. I authorize Octagon Strategy to verify the information provided to confirm its accuracy.
+                        </label>
+                    </div>
 
                     <div class="bottom_button_wrap">
 
                         <div class="prev_button pr_doc go_btn" data-id="personal_2">
                             Previous
                         </div>
-                        <div class="next_button company go_btn">
+                        <div class="next_button company go_btn" ng-click="verifyDoc()">
                             Verify
                         </div>
                     </div>

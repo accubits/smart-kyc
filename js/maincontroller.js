@@ -4,8 +4,8 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $scope.userDetails=JSON.parse(localStorage.getItem("userDetails"));
-    $scope.nextButton1=false;
-    $scope.nextButton2=false;
+    $scope.nextButton1=true;
+    $scope.nextButton2=true;
     $scope.user={
         firstName:'',
         lastName:'',
@@ -297,9 +297,44 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         // Making API Call [start]
         $http(requestObj).success(function (data) {
             console.log(data);
-            $scope.uniqurId= data.result.users_uniqueId;
-            $scope.nextButton1=true;
-            showError('successfully added user information','success',true)
+            //$scope.uniqurId= data.result.users_uniqueId;
+            //$scope.nextButton1=true;
+            //showError('successfully added user information','success',true);
+
+            var user = data["result"]["data"];
+            $scope.userImage = data["result"]["image"]
+
+            $scope.user={
+                firstName: user["users_first_name"],
+                lastName: user["users_last_name"],
+                gender: user["users_gender"],
+                address1:user["users_address1"],
+                address2:user["users_address2"],
+                address3:user["users_address3"],
+                city:user["users_city"],
+                state:user["users_state"],
+                countryOfResidence:user["users_country_residence"],
+                zip:user["users_zip"],
+                mobile:user["users_mobile_number"],
+                dateOfBirth:user["users_date_of_birth"],
+                idType:user["users_id_type"],
+                idNumber:user["users_id_number"],
+                idIssueDate:user["users_id_issue_date"],
+                idValidTo:user["users_id_valid_date"],
+            };
+
+            $scope.company={
+                name:user["company_name"],
+                phone:user["company_phone_number"],
+                url:user["company_url"],
+                bussibessNature:user["company_bussiness_nature"],
+                custmerType:user["company_customer_type_q"],
+                customerInfoQ:user["company_customer_info_q"],
+                userUrlQ:user["company_user_url_q"],
+                exptAvgOrder:user["company_expt_avgorder_q"],
+                activityNatureQ:user["company_activity_nature_q"],
+                bankDetailsQ:user["company_bankdetails_q"],
+            };
 
         }).error(function (data, err) {
             console.log(data);
@@ -321,8 +356,19 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     getUserDetails();
     /* add user details function [Start] */
     $scope.addUserInformation = function (){
-            if(!$scope.user.firstName){
-                // showError('Please enter name','error',false);
+        console.log('users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
+            $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
+            '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
+            '&&users_address3=' +$scope.user.address3+'&&users_city=' +$scope.user.city+
+            '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
+            '&&users_zip='+ $scope.user.zip + '&&users_mobile_number='+$scope.user.mobile +
+            '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_id_type='+$scope.user.idType+
+            '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
+            '&&users_id_valid_date='+ $scope.user.idValidTo);
+        console.log($('#dob').val())
+            if(!$scope.user.firstName || !$scope.user.lastName || !$scope.user.address1 || !$scope.user.city || !$scope.user.state
+                || !$scope.user.countryOfResidence || !$scope.user.zip ||  !$scope.user.idType || !$scope.user.idNumber || !$scope.user.mobile){
+                showError('Please enter all the details','error',true);
                 return;
             }
         //    to find gender
@@ -348,7 +394,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
                 '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
                 '&&users_address3=' +$scope.user.address3+'&&users_city=' +$scope.user.city+
-                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
+                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence.name +
                 '&&users_zip='+ $scope.user.zip + '&&users_mobile_number='+$scope.user.mobile +
                 '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_id_type='+$scope.user.idType+
                 '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
@@ -357,7 +403,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
                 '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
                 '&&users_address3=' +$scope.user.address3+'&&users_city=' +$scope.user.city+
-                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
+                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence.name +
                 '&&users_zip='+ $scope.user.zip + '&&users_mobile_number='+$scope.user.mobile +
                 '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_id_type='+$scope.user.idType+
                 '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
@@ -376,7 +422,8 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 console.log(data);
                 $scope.uniqurId= data.result.users_uniqueId;
                 $scope.nextButton1=true;
-                showError('successfully added user information','success',true)
+                showError('successfully added user information','success',true);
+                person_next();
 
             }).error(function (data, err) {
               console.log(data);
@@ -400,6 +447,13 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     /* add company details function [Start] */
     $scope.addCompanyInformation = function (){
 
+
+        if(!$scope.company.name || !$scope.company.phone || !$scope.company.url || !$scope.company.bussibessNature
+        || !$scope.company.custmerType || !$scope.company.customerInfoQ || !$scope.company.userUrlQ || !$scope.company.exptAvgOrder
+        || !$scope.company.activityNatureQ || !$scope.company.bankDetailsQ){
+            showError('Please enter all the details','error',true);
+            return;
+        }
         var data = 'company_name='+ $scope.company.name +
             '&&company_phone_number=' + $scope.company.phone +
             '&&company_url=' + $scope.company.url+
@@ -435,10 +489,84 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
 //init functions
     $scope.imageUpload = function () {
         console.log($('#my-awesome-dropzone').val());
-        console.log($scope.data.images)
+        //console.log($scope.data.images);
+
+        if($('#declaration').prop('checked')){
+            showError('Please enter the details', "error", true);
+            return;
+        }
+        uploadFile();
     }
 
+    $scope.verifyDoc = function(){
+        if(!$('#declaration').prop('checked')){
+            showError('Please accept the declaration.', "error", true);
+            return;
+        }
+        uploadFile();
+    }
 
+    function uploadFile(){
+
+        if(!$('#files').prop('files')[0] || $('#files').prop('files')[0] == undefined){
+            window.location.href = 'verify.html';
+            return;
+        }
+        var files = $scope.files;
+        var fd = new FormData();
+        var url = ServerApi + 'uploadDocuments.php';
+        showError('Uploading...', "loading", false);
+        fd.append('image', $('#files').prop('files')[0]);
+        var data = {};
+
+        fd.append("usersImage_users_unique_id", $scope.userDetails.unique_id);
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: fd,
+            cache: false,
+            dataType: 'multipart/form-data',
+            processData: false, // Don't process the files
+            contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+            success: function (data, textStatus, jqXHR) {
+                hideError();
+                showError('Uploaded the documents', "success", true);
+                window.location.href = 'verify.html';
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+
+                var result = JSON.parse(jqXHR["responseText"]);
+                if (result["success"]) {
+                    ////console.log(result);
+                    hideError();
+                    showError('Uploaded the documents', "success", true);
+                    window.location.href = 'verify.html';
+                }
+                else {
+                    console.log(jqXHR);
+                    var error = JSON.parse(jqXHR.responseText);
+                    hideError();
+                    if (jqXHR.status == 403) {
+                        //showError('Please Login...', 'error', false);
+                        setTimeout(function () {
+                            $scope.logout();
+                        }, 500);
+                    }
+                    else if (JSON.parse(jqXHR.responseText)['error']) {
+                        var error_s = JSON.parse(jqXHR.responseText)['error'];
+                        hideError();
+                        showError(error_s, "error", true);
+
+                    }
+                    else if (jqXHR.status == 500) {
+                        showError('Internal error', 'error', true);
+                    }
+                }
+            }
+        });
+    }
 });
 
 
