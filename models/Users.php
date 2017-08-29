@@ -6,6 +6,8 @@
  * Date: 24/8/17
  * Time: 2:36 PM
  */
+require '../config/src/PHPMailer.php';
+
 class Users
 {
     public $uniqueId;
