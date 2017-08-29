@@ -599,9 +599,12 @@ public function signIn(){
 
 public function readInfo(){
 
-    $sql = "Select * from ".$this->config->Table_users." where 
-    ".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
+    $sql = "Select u.*,r.* from ".$this->config->Table_users." u 
+    inner join ".$this->config->Table_userRegistration." r 
+    on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
+    where u.".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
     $result = $this->db->executeQuery($sql);
+
     if($result['CODE']!=1){
         $this->error->internalServer();
     }else {
