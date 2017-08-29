@@ -6,7 +6,7 @@
  * Date: 24/8/17
  * Time: 2:36 PM
  */
-require '../config/src/PHPMailer.php';
+require '../mail/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 class Users
 {
@@ -738,7 +738,7 @@ public function readInfo(){
     }
 
     public function sendMail() {
-        $mail = new PHPMailer(); // create a new object
+        $mail = new  PHPMailer(); // create a new object
         $mail->IsSMTP(); // enable SMTP
         $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; // authentication enabled
