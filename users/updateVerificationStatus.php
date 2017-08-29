@@ -14,14 +14,16 @@ function onSuccessHandler()
 
     global $config,$db,$error,$redis;
     $users = new Users($db,$config,$error,$redis);
-    $users->sendMail();
     $users->setRegistrationId($_POST[$config->COL_users_userRegistration_unique_id]);
     if ($_POST['status'] !=1 && $_POST['status']!= 0){
         $error->responseCode = 400;
         $error->string = "Invalid status";
         $error->errorHandler();
     }
-    echo json_encode($users->updateVerificationStatus($_POST['status']));
+    $out = $users->updateVerificationStatus($_POST['status']);
+    $email = $users->getEmailFromId($_POST[$config->COL_users_userRegistration_unique_id]);
+    $users->sendMail($email,"KYC verification completed","Hi, your KYC verification is completed");
+    echo json_encode($out);
 
 }
 

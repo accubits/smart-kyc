@@ -737,7 +737,7 @@ public function readInfo(){
 
     }
 
-    public function sendMail() {
+    public function sendMail($to,$sub,$content) {
         $mail = new  PHPMailer(); // create a new object
         $mail->IsSMTP(); // enable SMTP
         $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -749,15 +749,26 @@ public function readInfo(){
         $mail->Username = "charush@accubits.com";
         $mail->Password = "charush*523";
         $mail->SetFrom("example@gmail.com");
-        $mail->Subject = "Test";
-        $mail->Body = "hello";
-        $mail->AddAddress("charush1994@gmail.com");
-
+        $mail->Subject = $sub;
+        $mail->Body = $content;
+        $mail->AddAddress($to);
         if(!$mail->Send()) {
             echo "Mailer Error: " . $mail->ErrorInfo;
-        } else {
-            echo "Message has been sent";
         }
+    }
+    
+    
+    public function getEmailFromId($id){
+        
+        $sql = "Select ".$this->config->COL_userRegistration_email." from ".$this->config->Table_users." where ".
+            $this->config->COL_userRegistration_unique_id." = '".$id."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        return $result['RESULT'][0][$this->config->COL_userRegistration_email];
     }
 
 }
