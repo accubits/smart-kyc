@@ -25,6 +25,7 @@ class dbconfig
 
     public $COL_users_unique_id             = 'users_uniqueId';
     public $COL_users_first_name            = 'users_first_name';
+    public $COL_users_verify_status         = 'users_verify_status';
     public $COL_users_last_name             = 'users_last_name';
     public $COL_users_gender                = 'users_gender';
     public $COL_users_address1              = 'users_address1';

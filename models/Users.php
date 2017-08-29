@@ -469,6 +469,25 @@ class Users
         }
 
     }
+    
+    public function updateVerificationStatus($status) {
+        $sql1 = "Update ".$this->config->Table_users." set ".$this->config->COL_users_verify_status." = ".$status." where ".
+            $this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
+//            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
+        $result = $this->db->executeQuery($sql1);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+
+        } else {
+
+            $response['success'] = true;
+            $response['result'] = "Verification Status updated";
+            return $response;
+
+        }
+    }
 
     /*Upload Documents*/
 
