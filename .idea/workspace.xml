@@ -65,12 +65,12 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="712" column="9" selection-start-line="712" selection-start-column="9" selection-end-line="712" selection-end-column="9" />
+            <state relative-caret-position="320">
+              <caret line="711" column="43" selection-start-line="711" selection-start-column="43" selection-end-line="711" selection-end-column="43" />
               <folding>
-                <marker date="1504027823000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504027823000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504027823000" expanded="true" signature="17029:17643" placeholder="Select *,c. " />
+                <marker date="1504028185000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504028185000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504028185000" expanded="true" signature="17029:17644" placeholder="Select *,c. " />
               </folding>
             </state>
           </provider>
@@ -268,12 +268,12 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="741000" />
+      <workItem from="1504027340314" duration="978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20797000" />
+    <option name="totallyTimeSpent" value="21034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -579,12 +579,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="712" column="9" selection-start-line="712" selection-start-column="9" selection-end-line="712" selection-end-column="9" />
+        <state relative-caret-position="320">
+          <caret line="711" column="43" selection-start-line="711" selection-start-column="43" selection-end-line="711" selection-end-column="43" />
           <folding>
-            <marker date="1504027823000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504027823000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504027823000" expanded="true" signature="17029:17643" placeholder="Select *,c. " />
+            <marker date="1504028185000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504028185000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504028185000" expanded="true" signature="17029:17644" placeholder="Select *,c. " />
           </folding>
         </state>
       </provider>
