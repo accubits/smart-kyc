@@ -238,7 +238,8 @@ class Company
                 $this->config->COL_company_user_url_q => $this->getUserUrl(),
                 $this->config->COL_company_expt_avgorder_q => $this->getExptAvgorder(),
                 $this->config->COL_company_activity_nature_q => $this->getActivityNatureQ(),
-                $this->config->COL_company_bankdetails_q => $this->getBankdetailsQ()
+                $this->config->COL_company_bankdetails_q => $this->getBankdetailsQ(),
+                $this->config->COL_users_userRegistration_unique_id => $this->getUserId()
             );
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_company, $dataArr);

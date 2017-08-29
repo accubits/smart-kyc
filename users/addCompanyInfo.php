@@ -26,7 +26,7 @@ function onSuccessHandler() {
     $company->setUserId($_POST[$config->COL_users_userRegistration_unique_id]);
     $response=$company->addCompanyInfo();
     echo json_encode($response);
-    
+
 }
 
 
