@@ -476,7 +476,6 @@ class Users
         $sql1 = "Update ".$this->config->Table_users." set ".$this->config->COL_users_verify_status." = ".(int)$status." where ".
             $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
         $result = $this->db->executeQuery($sql1);
-        print_r($result);
 
         if ($result['CODE'] != 1) {
 
@@ -761,10 +760,9 @@ public function readInfo(){
     
     public function getEmailFromId($id){
         
-        $sql = "Select ".$this->config->COL_userRegistration_email." from ".$this->config->Table_users." where ".
+        $sql = "Select ".$this->config->COL_userRegistration_email." from ".$this->config->Table_userRegistration." where ".
             $this->config->COL_userRegistration_unique_id." = '".$id."'";
         $result = $this->db->executeQuery($sql);
-        print_r($result);
 
         if($result['CODE']!=1){
 
