@@ -96,6 +96,10 @@ input,textarea,select
     position: relative;
     z-index: 2;
 }
+.blocks:hover
+{
+    border-bottom: 2px solid #ffc107;
+}
 .blocks_no
 {
     display: inline-block;
@@ -121,7 +125,6 @@ input,textarea,select
 .blocks_capt
 {
     font-family: Montserrat-Light;
-    margin-top: 20px;
     font-size: 15px;
 }
 .person_blk:after
@@ -519,4 +522,24 @@ a
 .us_name
 {
     font-size: 15px;
+}
+.sub_accpt
+{
+    float: right;
+}
+.acpt_dcl
+{
+    display: inline-block;
+    background-color: #FFC107;
+    color: white;
+    padding: 5px 24px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Montserrat-Light;
+    cursor: pointer;
+    font-size: 12px;
+}
+.dcl
+{
+    background-color: #b1b0aa;
 }
