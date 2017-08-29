@@ -251,8 +251,6 @@ class Company
                 $response['result'] = $dataArr;
                 return $response;
             }
-
-
     }
 
 }
