@@ -50,12 +50,10 @@ class Users
 
     function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
     {
-
         $this->db = $dataBaseHandler;
         $this->config = $config;
         $this->error = $error;
         $this->redis = $redis;
-
     }
 
     /**
@@ -440,14 +438,16 @@ class Users
                 $this->config->COL_users_zip                        => $this->getZip(),
                 $this->config->COL_users_mobile_number              => $this->getMobileNumber(),
                 $this->config->COL_users_date_of_birth              => $this->getDateOfBirth(),
-                $this->config->COL_users_id_type                    =>$this->getIdType(),
+                $this->config->COL_users_id_type                    => $this->getIdType(),
                 $this->config->COL_users_id_number                  => $this->getIdNumber(),
                 $this->config->COL_users_id_issue_date              => $this->getIdIssueDate(),
                 $this->config->COL_users_id_valid_date              => $this->getIdValidDate(),
                 $this->config->COL_users_userRegistration_unique_id => $this->getRegistrationId()
             );
 
-            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
+            $sql1 = "Update ".$this->config->Table_users." set ".implode(",",$dataArr)." where ".
+                $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
+//            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
 
             if ($result['CODE'] != 1) {
@@ -467,7 +467,6 @@ class Users
             $out['result']['msg'] = "Already inserted Id Number";
             return $out;
         }
-
 
     }
 
@@ -599,8 +598,14 @@ public function signIn(){
 
 public function readInfo(){
 
-    $sql = "Select u.*,r.* from ".$this->config->Table_users." u 
-    inner join ".$this->config->Table_userRegistration." r 
+//    $sql = "Select u.*,r.*,i.* from ".$this->config->Table_users." u
+//    inner join ".$this->config->Table_userRegistration." r
+//    on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id."
+//    where u.".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
+//    $result = $this->db->executeQuery($sql);
+
+    $sql = "Select u.*,r.* from ".$this->config->Table_userRegistration." r 
+    inner join ".$this->config->Table_users." u 
     on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
     where u.".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
     $result = $this->db->executeQuery($sql);
