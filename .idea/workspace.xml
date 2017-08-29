@@ -36,8 +36,8 @@
       <file leaf-file-name="getUserDetails.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/getUserDetails.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            <state relative-caret-position="195">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,8 +66,8 @@
       <file leaf-file-name="updateVerificationStatus.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="210">
+              <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -78,8 +78,8 @@
       <file leaf-file-name="addInfo.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/addInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="196">
+              <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -103,12 +103,12 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="479" column="0" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="0" />
+            <state relative-caret-position="236">
+              <caret line="481" column="43" selection-start-line="481" selection-start-column="43" selection-end-line="481" selection-end-column="43" />
               <folding>
-                <marker date="1504029554000" expanded="true" signature="14501:14837" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504029554000" expanded="true" signature="17206:17220" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504029554000" expanded="true" signature="17635:18248" placeholder="Select *,c. " />
+                <marker date="1504029680000" expanded="true" signature="14537:14873" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504029680000" expanded="true" signature="17242:17256" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504029680000" expanded="true" signature="17671:18284" placeholder="Select *,c. " />
               </folding>
             </state>
           </provider>
@@ -320,12 +320,12 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="1862000" />
+      <workItem from="1504027340314" duration="1990000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21918000" />
+    <option name="totallyTimeSpent" value="22046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -581,14 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/uploadDocuments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/getAllUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -601,14 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/getUserDetails.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -634,14 +618,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/addInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/getInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -650,10 +626,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/users/addInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/uploadDocuments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/getUserDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+        <state relative-caret-position="210">
+          <caret line="22" column="46" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
@@ -662,12 +662,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="479" column="0" selection-start-line="479" selection-start-column="0" selection-end-line="479" selection-end-column="0" />
+        <state relative-caret-position="236">
+          <caret line="481" column="43" selection-start-line="481" selection-start-column="43" selection-end-line="481" selection-end-column="43" />
           <folding>
-            <marker date="1504029554000" expanded="true" signature="14501:14837" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504029554000" expanded="true" signature="17206:17220" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504029554000" expanded="true" signature="17635:18248" placeholder="Select *,c. " />
+            <marker date="1504029680000" expanded="true" signature="14537:14873" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504029680000" expanded="true" signature="17242:17256" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504029680000" expanded="true" signature="17671:18284" placeholder="Select *,c. " />
           </folding>
         </state>
       </provider>
