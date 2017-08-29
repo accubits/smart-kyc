@@ -30,6 +30,23 @@ class Users
     public $password;
     public $email;
     public $status;
+    public $registrationId;
+
+    /**
+     * @return mixed
+     */
+    public function getRegistrationId()
+    {
+        return $this->registrationId;
+    }
+
+    /**
+     * @param mixed $registrationId
+     */
+    public function setRegistrationId($registrationId)
+    {
+        $this->registrationId = $registrationId;
+    }
 
     function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
     {
@@ -410,23 +427,24 @@ class Users
 
         if (empty($result['RESULT'])) {
             $dataArr = array(
-                $this->config->COL_users_unique_id         => TagdToUtils::getUniqueId(),
-                $this->config->COL_users_first_name        => $this->getFirstName(),
-                $this->config->COL_users_last_name         => $this->getLastName(),
-                $this->config->COL_users_gender            => $this->getGender(),
-                $this->config->COL_users_address1          => $this->getAddress1(),
-                $this->config->COL_users_address2          => $this->getAddress2(),
-                $this->config->COL_users_address3          => $this->getAddress3(),
-                $this->config->COL_users_city              => $this->getCity(),
-                $this->config->COL_users_state             => $this->getState(),
-                $this->config->COL_users_country_residence => $this->getCountryResidence(),
-                $this->config->COL_users_zip               => $this->getZip(),
-                $this->config->COL_users_mobile_number     => $this->getMobileNumber(),
-                $this->config->COL_users_date_of_birth     => $this->getDateOfBirth(),
-                $this->config->COL_users_id_type           =>$this->getIdType(),
-                $this->config->COL_users_id_number         => $this->getIdNumber(),
-                $this->config->COL_users_id_issue_date     => $this->getIdIssueDate(),
-                $this->config->COL_users_id_valid_date     => $this->getIdValidDate()
+                $this->config->COL_users_unique_id                  => TagdToUtils::getUniqueId(),
+                $this->config->COL_users_first_name                 => $this->getFirstName(),
+                $this->config->COL_users_last_name                  => $this->getLastName(),
+                $this->config->COL_users_gender                     => $this->getGender(),
+                $this->config->COL_users_address1                   => $this->getAddress1(),
+                $this->config->COL_users_address2                   => $this->getAddress2(),
+                $this->config->COL_users_address3                   => $this->getAddress3(),
+                $this->config->COL_users_city                       => $this->getCity(),
+                $this->config->COL_users_state                      => $this->getState(),
+                $this->config->COL_users_country_residence          => $this->getCountryResidence(),
+                $this->config->COL_users_zip                        => $this->getZip(),
+                $this->config->COL_users_mobile_number              => $this->getMobileNumber(),
+                $this->config->COL_users_date_of_birth              => $this->getDateOfBirth(),
+                $this->config->COL_users_id_type                    =>$this->getIdType(),
+                $this->config->COL_users_id_number                  => $this->getIdNumber(),
+                $this->config->COL_users_id_issue_date              => $this->getIdIssueDate(),
+                $this->config->COL_users_id_valid_date              => $this->getIdValidDate(),
+                $this->config->COL_users_userRegistration_unique_id => $this->getRegistrationId()
             );
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
@@ -582,7 +600,7 @@ public function signIn(){
 public function readInfo(){
 
     $sql = "Select * from ".$this->config->Table_users." where 
-    ".$this->config->COL_users_unique_id." = '".$this->getUniqueId()."'";
+    ".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
     $result = $this->db->executeQuery($sql);
     if($result['CODE']!=1){
         $this->error->internalServer();
