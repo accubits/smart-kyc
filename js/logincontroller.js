@@ -33,7 +33,8 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
         };
         $http(requestObj).success(function (data) {
             console.log(data);
-            localStorage.setItem("userDetails",JSON.stringify(data.result));
+            localStorage.setItem("userDetails",JSON.stringify(data));
+
             $window.location.href = 'verify.html';
             showError('Successfully loggedIn','success',true)
 

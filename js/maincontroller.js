@@ -34,18 +34,31 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         exptAvgOrder:'',
         activityNatureQ:'',
         bankDetailsQ:'',
-    }
-
+    };
     /* add user details function [Start] */
     $scope.addUserInformation = function (){
             if(!$scope.user.firstName){
                 // showError('Please enter name','error',false);
                 return;
             }
+        //    to find gender
+        var find = $('.active').attr('id');
+            console.log(find);
+        if (find == 1){
+            $scope.user.gender = 1;
+            console.log("genderis"+$scope.user.gender)
+        }
+        else if (find == 0){
+            $scope.user.gender = 0;
+            console.log("genderis"+$scope.user.gender)
+        }
+
             console.log($('#dob').val())
+
         $scope.user.dateOfBirth= $('#dob').val();
         $scope.user.idIssueDate=$('#issueDate').val();
         $scope.user.idValidTo=$('#validTo').val();
+
 
         console.log('users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
                 $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
@@ -57,7 +70,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
                 '&&users_id_valid_date='+ $scope.user.idValidTo);
             var data = 'users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
-                $scope.user.lastName + '&&users_gender=' + 1+
+                $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
                 '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
                 '&&users_address3=' +$scope.user.address3+'&&users_city=' +$scope.user.city+
                 '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
