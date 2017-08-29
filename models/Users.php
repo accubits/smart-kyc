@@ -449,7 +449,6 @@ class Users
                 $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
 //            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
-            print_r($result);
 
             if ($result['CODE'] != 1) {
 

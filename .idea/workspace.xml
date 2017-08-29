@@ -105,9 +105,9 @@
             <state relative-caret-position="161">
               <caret line="446" column="62" selection-start-line="446" selection-start-column="62" selection-end-line="446" selection-end-column="62" />
               <folding>
-                <marker date="1504030193000" expanded="true" signature="14601:14937" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504030193000" expanded="true" signature="17306:17320" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504030193000" expanded="true" signature="17735:18348" placeholder="Select *,c. " />
+                <marker date="1504030251000" expanded="true" signature="14600:14936" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504030251000" expanded="true" signature="17305:17319" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504030251000" expanded="true" signature="17734:18347" placeholder="Select *,c. " />
               </folding>
             </state>
           </provider>
@@ -319,12 +319,12 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="2344000" />
+      <workItem from="1504027340314" duration="2453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22400000" />
+    <option name="totallyTimeSpent" value="22509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -664,9 +664,9 @@
         <state relative-caret-position="161">
           <caret line="446" column="62" selection-start-line="446" selection-start-column="62" selection-end-line="446" selection-end-column="62" />
           <folding>
-            <marker date="1504030193000" expanded="true" signature="14601:14937" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504030193000" expanded="true" signature="17306:17320" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504030193000" expanded="true" signature="17735:18348" placeholder="Select *,c. " />
+            <marker date="1504030251000" expanded="true" signature="14600:14936" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504030251000" expanded="true" signature="17305:17319" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504030251000" expanded="true" signature="17734:18347" placeholder="Select *,c. " />
           </folding>
         </state>
       </provider>
