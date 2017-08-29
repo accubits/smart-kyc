@@ -70,6 +70,7 @@ class dbconfig
     public $COL_userRegistration_username      = 'userRegistration_username';
     public $COL_userRegistration_email         = 'userRegistration_email';
     public $COL_userRegistration_password      = 'userRegistration_password';
+    public $COL_userRegistration_status        = 'userRegistration_status';
 
 
     public $TOKEN                        = 'token';

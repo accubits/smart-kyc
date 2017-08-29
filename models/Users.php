@@ -29,6 +29,7 @@ class Users
     public $userName;
     public $password;
     public $email;
+    public $status;
 
     function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
     {
@@ -38,6 +39,22 @@ class Users
         $this->error = $error;
         $this->redis = $redis;
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
     /**
@@ -387,7 +404,7 @@ class Users
         $result = $this->db->executeQuery($sql);
 
         if ($result['CODE'] != 1) {
-//echo "dssd";
+
             $this->error->internalServer();
         }
 
@@ -414,9 +431,9 @@ class Users
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
-//echo $sql1;
+
             if ($result['CODE'] != 1) {
-//echo "111";
+
                 $this->error->internalServer();
 
             } else {
@@ -552,10 +569,104 @@ public function signIn(){
 
         $token = TagdToUtils::getUniqueId();
         $this->redis->key = $token;
-        $data = array('uid' => $result['RESULT'][0][$this->config->COL_userRegistration_unique_id]);
+        $unique_id = $result['RESULT'][0][$this->config->COL_userRegistration_unique_id];
+        $data = array('uid' => $unique_id);
         $this->redis->setSessionValue($data);
-        return array('success' => true, 'result' => $token);
+        return array('success' => true,
+            'token' => $token,
+             'unique_id' => $unique_id);
     }
 }
 
+
+public function readInfo(){
+
+    $sql = "Select * from ".$this->config->Table_users." where 
+    ".$this->config->COL_users_unique_id." = '".$this->getUniqueId()."'";
+    $result = $this->db->executeQuery($sql);
+    if($result['CODE']!=1){
+        $this->error->internalServer();
+    }else {
+
+        $response['success'] = true;
+        $response['result'] = $result['RESULT'];
+        return $response;
+    }
+
+}
+
+    public function addAdmin(){
+
+        $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email.",
+         ".$this->config->COL_userRegistration_status." from " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' limit 1";
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+        }
+
+        if (empty($result['RESULT'])) {
+            $dataArr = array(
+                $this->config->COL_userRegistration_unique_id    => TagdToUtils::getUniqueId(),
+                $this->config->COL_userRegistration_username     => $this->getUserName(),
+                $this->config->COL_userRegistration_email        => $this->getEmail(),
+                $this->config->COL_userRegistration_password     => $this->getPassword(),
+                $this->config->COL_userRegistration_status       => $this->getStatus()
+            );
+
+            $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+            $result = $this->db->executeQuery($sql1);
+
+            if ($result['CODE'] != 1) {
+
+                $this->error->internalServer();
+
+            } else {
+
+                $response['success'] = true;
+                $response['result'] = $dataArr;
+                return $response;
+            }
+        } else {
+
+            $out['success'] = false;
+            $out['result']['msg'] = "Already Existing Emailid";
+            return $out;
+        }
+
+    }
+
+
+
+    public function readAllInfo(){
+
+        $sql = "Select ".$this->config->COL_userRegistration_status." from 
+        ".$this->config->Table_userRegistration." where 
+        ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        if (($result['RESULT'][0][$this->config->COL_userRegistration_status]) == "1"){
+
+            $sql = "Select * from ".$this->config->Table_users." ";
+            $result = $this->db->executeQuery($sql);
+
+            if($result['CODE']!=1){
+
+                $this->error->internalServer();
+
+            }else {
+
+                $response['success'] = true;
+                $response['result'] = $result['RESULT'];
+                return $response;
+            }
+        }
+
+    }
 }

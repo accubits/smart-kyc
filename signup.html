@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="crypbrokersApp">
 <head>
     <meta charset="UTF-8">
     <title>Signup</title>
     <link rel="stylesheet" href="css/registration.css">
 </head>
-<body>
+<body ng-controller="signupCntl">
 
 <div class="outer">
     <div class="header">
         <div class="logo">
             <img src="images/cryp_log.png" alt="logo">
         </div>
-
         <div class="nav_bar">
             <a href="login.html">
                 <div class="nav_com">
@@ -22,8 +21,6 @@
         </div>
         <div style="clear:both;"></div>
     </div>
-
-
     <div class="sub_head">
         <div class="sub_capt">
             Sign up here
@@ -31,39 +28,41 @@
         <div style="clear: both"></div>
     </div>
     <div class="content_wrap_log">
-
         <div class="login_block">
             <div class="text_box_wrap">
                 <div class="text_box_full txt_bx">
+                    <div class="text_desc">Name</div>
+                    <input type="text" ng-model="details.name">
+                </div>
+                <div class="text_box_full txt_bx">
                     <div class="text_desc">Email</div>
-                    <input type="text">
+                    <input type="text" ng-model="details.email">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Password</div>
-                    <input type="password">
+                    <input type="password" ng-model="details.password">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Re-Type Password</div>
-                    <input type="password">
+                    <input type="password" ng-model="details.reenterpassword">
                 </div>
                 <div class="log_wrap">
-                    <div class="login_btn">
+                    <div class="login_btn" ng-click="signUp()">
                         Signup
                     </div>
-
                 </div>
             </div>
         </div>
-
-
     </div>
-
-
-
 </div>
 
-<script rel="script" src="js/jquery.min.js"></script>
+<script rel="script" src="js/libs/jquery.min.js"></script>
+<script rel="script" src="js/libs/angular.min.js"></script>
+<script rel="script" src="js/libs/angular-route.min.js"></script>
+<script rel="script" src="js/config.js"></script>
+<script rel="script" src="js/toast/toast.js"></script>
 <script rel="script" src="js/registration.js"></script>
-
+<script rel="script" src="js/maincontroller.js"></script>
+<script rel="script" src="js/signupcontroller.js"></script>
 </body>
 </html>

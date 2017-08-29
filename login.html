@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="crypbrokersApp">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="css/registration.css">
 </head>
-<body>
+<body ng-controller="loginCntl">
 
 <div class="outer">
     <div class="header">
@@ -35,19 +35,17 @@
             <div class="login_block">
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
-                        <div class="text_desc">Username</div>
-                        <input type="text">
+                        <div class="text_desc">Email</div>
+                        <input type="text" ng-model="details.email">
                     </div>
                     <div class="text_box_full txt_bx">
                         <div class="text_desc">Password</div>
-                        <input type="password">
+                        <input type="password" ng-model="details.password">
                     </div>
                     <div class="log_wrap">
-                        <a href="registration.html">
-                            <div class="login_btn">
-                                Login
-                            </div>
-                        </a>
+                        <div class="login_btn" ng-click="logIn()">
+                            Login
+                        </div >
                         <p>Forgot password ?</p>
                     </div>
                 </div>
@@ -60,8 +58,14 @@
 
 </div>
 
-<script rel="script" src="js/jquery.min.js"></script>
+<script rel="script" src="js/libs/jquery.min.js"></script>
+<script rel="script" src="js/libs/angular.min.js"></script>
+<script rel="script" src="js/libs/angular-route.min.js"></script>
+<script rel="script" src="js/config.js"></script>
+<script rel="script" src="js/toast/toast.js"></script>
 <script rel="script" src="js/registration.js"></script>
+<script rel="script" src="js/maincontroller.js"></script>
+<script rel="script" src="js/logincontroller.js"></script>
 
 </body>
 </html>
