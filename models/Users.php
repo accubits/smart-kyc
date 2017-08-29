@@ -678,6 +678,7 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
+        print_r($result['RESULT'][0][$this->config->COL_userRegistration_status]);
         if (($result['RESULT'][0][$this->config->COL_userRegistration_status]) == "1"){
 
             $sql = "Select * from ".$this->config->Table_users." ";
