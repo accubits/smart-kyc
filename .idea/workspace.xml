@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68f0150a-dd9f-4a3d-93f2-4ed35fc4c9a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Users.php" afterPath="$PROJECT_DIR$/models/Users.php" />
     </list>
@@ -57,12 +56,12 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="708" column="25" selection-start-line="708" selection-start-column="25" selection-end-line="708" selection-end-column="25" />
+            <state relative-caret-position="155">
+              <caret line="700" column="110" selection-start-line="700" selection-start-column="110" selection-end-line="700" selection-end-column="110" />
               <folding>
-                <marker date="1504027571000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504027571000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504027571000" expanded="true" signature="17029:17555" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504027716000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504027716000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504027716000" expanded="true" signature="17029:17641" placeholder="Select *,c. " />
               </folding>
             </state>
           </provider>
@@ -250,12 +249,12 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="208000" />
+      <workItem from="1504027340314" duration="359000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20264000" />
+    <option name="totallyTimeSpent" value="20415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -537,12 +536,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="708" column="25" selection-start-line="708" selection-start-column="25" selection-end-line="708" selection-end-column="25" />
+        <state relative-caret-position="155">
+          <caret line="700" column="110" selection-start-line="700" selection-start-column="110" selection-end-line="700" selection-end-column="110" />
           <folding>
-            <marker date="1504027571000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504027571000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504027571000" expanded="true" signature="17029:17555" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504027716000" expanded="true" signature="13895:14231" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504027716000" expanded="true" signature="16600:16614" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504027716000" expanded="true" signature="17029:17641" placeholder="Select *,c. " />
           </folding>
         </state>
       </provider>
