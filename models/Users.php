@@ -673,7 +673,7 @@ public function readInfo(){
         ".$this->config->Table_userRegistration." where 
         ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
         $result = $this->db->executeQuery($sql);
-echo $sql;
+
         if($result['CODE']!=1){
 
             $this->error->internalServer();
