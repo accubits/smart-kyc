@@ -16,11 +16,11 @@ input,textarea,select
 }
 @font-face {
     font-family: Montserrat-Regular;
-    src: url(../fonts/Montserrat-Regular.otf);
+    src: url(../../fonts/Montserrat-Regular.otf);
 }
 @font-face {
     font-family: Montserrat-Light;
-    src: url(../fonts/Montserrat-Light.otf);
+    src: url(../../fonts/Montserrat-Light.otf);
 }
 .outer
 {

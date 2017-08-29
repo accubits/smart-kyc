@@ -16,11 +16,11 @@ input,textarea,select
 }
 @font-face {
     font-family: Montserrat-Regular;
-    src: url(../fonts/Montserrat-Regular.otf);
+    src: url(../../fonts/Montserrat-Regular.otf);
 }
 @font-face {
     font-family: Montserrat-Light;
-    src: url(../fonts/Montserrat-Light.otf);
+    src: url(../../fonts/Montserrat-Light.otf);
 }
 .outer
 {
@@ -68,7 +68,7 @@ input,textarea,select
 .content_nav
 {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0px !important;
 }
 .sub_capt
 {
@@ -96,6 +96,10 @@ input,textarea,select
     position: relative;
     z-index: 2;
 }
+.blocks:hover
+{
+    border-bottom: 2px solid #ffc107;
+}
 .blocks_no
 {
     display: inline-block;
@@ -121,7 +125,6 @@ input,textarea,select
 .blocks_capt
 {
     font-family: Montserrat-Light;
-    margin-top: 20px;
     font-size: 15px;
 }
 .person_blk:after
@@ -182,7 +185,45 @@ input,textarea,select
 .content_wrap_log
 {
     width: 35%;
-    margin: 6% auto;
+    margin: 7% auto;
+}
+.content_wrap_ad
+{
+    width: 65%;
+    margin: 7% auto;
+}
+.content_wrap_ad table
+{
+    width: 100%;
+}
+.ad_tab thead
+{
+    text-align: left;
+    background-color: #f2f2f3;
+}
+
+.ad_tab thead tr th
+{
+    padding: 10px 5px;
+    color: #747474;
+}
+td, th {
+    border: 1px solid #cccccc;
+    text-align: left;
+    padding: 8px;
+    font-weight: 500;
+}
+td{
+    color: #939393;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.content_wrap_ad table {
+    border-collapse: collapse;
+    width: 100%;
+
 }
 .login_btn
 {
@@ -344,14 +385,14 @@ input,textarea,select
 /*{*/
     /*display: none;*/
 /*}*/
-.company_wrap
-{
-    display: none;
-}
-.documents_wrap
-{
-    display: none;
-}
+/*.company_wrap*/
+/*{*/
+    /*display: none;*/
+/*}*/
+/*.documents_wrap*/
+/*{*/
+    /*display: none;*/
+/*}*/
 .docs_list
 {
     font-family: Montserrat-Light;
@@ -474,36 +515,31 @@ a
     margin-bottom: 30px;
     text-align: center;
 }
-/*@media only screen and (max-width:880px)*/
-/*{*/
-    /*.copy_right*/
-    /*{*/
-        /*font-size: 11px;*/
-    /*}*/
-    /*.copy_blocks*/
-    /*{*/
-        /*font-size: 11px;*/
-    /*}*/
-/*}*/
-
-
-/*@media only screen and (max-width:769px)*/
-/*{*/
-    /*.mob_nav_bar*/
-    /*{*/
-        /*display: block;*/
-        /*text-align: center;*/
-    /*}*/
-    /*.nav_bar*/
-    /*{*/
-        /*display: none;*/
-    /*}*/
-    /*.mob_nav_bar .nav_com*/
-    /*{*/
-        /*width: 80%;*/
-        /*padding: 0%;*/
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-        /*text-align: left;*/
-    /*}*/
-/*}*/
+.user_list
+{
+    text-align: center;
+}
+.us_name
+{
+    font-size: 15px;
+}
+.sub_accpt
+{
+    float: right;
+}
+.acpt_dcl
+{
+    display: inline-block;
+    background-color: #FFC107;
+    color: white;
+    padding: 5px 24px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Montserrat-Light;
+    cursor: pointer;
+    font-size: 12px;
+}
+.dcl
+{
+    background-color: #b1b0aa;
+}

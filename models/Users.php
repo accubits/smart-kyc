@@ -29,6 +29,24 @@ class Users
     public $userName;
     public $password;
     public $email;
+    public $status;
+    public $registrationId;
+
+    /**
+     * @return mixed
+     */
+    public function getRegistrationId()
+    {
+        return $this->registrationId;
+    }
+
+    /**
+     * @param mixed $registrationId
+     */
+    public function setRegistrationId($registrationId)
+    {
+        $this->registrationId = $registrationId;
+    }
 
     function __construct(DataBaseHandler $dataBaseHandler, dbconfig $config, Error $error, RedisSession $redis)
     {
@@ -38,6 +56,22 @@ class Users
         $this->error = $error;
         $this->redis = $redis;
 
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 
     /**
@@ -393,23 +427,24 @@ class Users
 
         if (empty($result['RESULT'])) {
             $dataArr = array(
-                $this->config->COL_users_unique_id         => TagdToUtils::getUniqueId(),
-                $this->config->COL_users_first_name        => $this->getFirstName(),
-                $this->config->COL_users_last_name         => $this->getLastName(),
-                $this->config->COL_users_gender            => $this->getGender(),
-                $this->config->COL_users_address1          => $this->getAddress1(),
-                $this->config->COL_users_address2          => $this->getAddress2(),
-                $this->config->COL_users_address3          => $this->getAddress3(),
-                $this->config->COL_users_city              => $this->getCity(),
-                $this->config->COL_users_state             => $this->getState(),
-                $this->config->COL_users_country_residence => $this->getCountryResidence(),
-                $this->config->COL_users_zip               => $this->getZip(),
-                $this->config->COL_users_mobile_number     => $this->getMobileNumber(),
-                $this->config->COL_users_date_of_birth     => $this->getDateOfBirth(),
-                $this->config->COL_users_id_type           =>$this->getIdType(),
-                $this->config->COL_users_id_number         => $this->getIdNumber(),
-                $this->config->COL_users_id_issue_date     => $this->getIdIssueDate(),
-                $this->config->COL_users_id_valid_date     => $this->getIdValidDate()
+                $this->config->COL_users_unique_id                  => TagdToUtils::getUniqueId(),
+                $this->config->COL_users_first_name                 => $this->getFirstName(),
+                $this->config->COL_users_last_name                  => $this->getLastName(),
+                $this->config->COL_users_gender                     => $this->getGender(),
+                $this->config->COL_users_address1                   => $this->getAddress1(),
+                $this->config->COL_users_address2                   => $this->getAddress2(),
+                $this->config->COL_users_address3                   => $this->getAddress3(),
+                $this->config->COL_users_city                       => $this->getCity(),
+                $this->config->COL_users_state                      => $this->getState(),
+                $this->config->COL_users_country_residence          => $this->getCountryResidence(),
+                $this->config->COL_users_zip                        => $this->getZip(),
+                $this->config->COL_users_mobile_number              => $this->getMobileNumber(),
+                $this->config->COL_users_date_of_birth              => $this->getDateOfBirth(),
+                $this->config->COL_users_id_type                    =>$this->getIdType(),
+                $this->config->COL_users_id_number                  => $this->getIdNumber(),
+                $this->config->COL_users_id_issue_date              => $this->getIdIssueDate(),
+                $this->config->COL_users_id_valid_date              => $this->getIdValidDate(),
+                $this->config->COL_users_userRegistration_unique_id => $this->getRegistrationId()
             );
 
             $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
@@ -552,18 +587,24 @@ public function signIn(){
 
         $token = TagdToUtils::getUniqueId();
         $this->redis->key = $token;
-        $data = array('uid' => $result['RESULT'][0][$this->config->COL_userRegistration_unique_id]);
+        $unique_id = $result['RESULT'][0][$this->config->COL_userRegistration_unique_id];
+        $data = array('uid' => $unique_id);
         $this->redis->setSessionValue($data);
-        return array('success' => true, 'result' => $token);
+        return array('success' => true,
+            'token' => $token,
+             'unique_id' => $unique_id);
     }
 }
 
 
 public function readInfo(){
 
-    $sql = "Select * from ".$this->config->Table_users." where 
-    ".$this->config->COL_users_unique_id." = '".$this->getUniqueId()."'";
+    $sql = "Select u.*,r.* from ".$this->config->Table_users." u 
+    inner join ".$this->config->Table_userRegistration." r 
+    on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
+    where u.".$this->config->COL_users_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
     $result = $this->db->executeQuery($sql);
+
     if($result['CODE']!=1){
         $this->error->internalServer();
     }else {
@@ -574,4 +615,79 @@ public function readInfo(){
     }
 
 }
+
+    public function addAdmin(){
+
+        $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email.",
+         ".$this->config->COL_userRegistration_status." from " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' limit 1";
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+        }
+
+        if (empty($result['RESULT'])) {
+            $dataArr = array(
+                $this->config->COL_userRegistration_unique_id    => TagdToUtils::getUniqueId(),
+                $this->config->COL_userRegistration_username     => $this->getUserName(),
+                $this->config->COL_userRegistration_email        => $this->getEmail(),
+                $this->config->COL_userRegistration_password     => $this->getPassword(),
+                $this->config->COL_userRegistration_status       => $this->getStatus()
+            );
+
+            $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+            $result = $this->db->executeQuery($sql1);
+
+            if ($result['CODE'] != 1) {
+
+                $this->error->internalServer();
+
+            } else {
+
+                $response['success'] = true;
+                $response['result'] = $dataArr;
+                return $response;
+            }
+        } else {
+
+            $out['success'] = false;
+            $out['result']['msg'] = "Already Existing Emailid";
+            return $out;
+        }
+
+    }
+
+
+
+    public function readAllInfo(){
+
+        $sql = "Select ".$this->config->COL_userRegistration_status." from 
+        ".$this->config->Table_userRegistration." where 
+        ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        if (($result['RESULT'][0][$this->config->COL_userRegistration_status]) == "1"){
+
+            $sql = "Select * from ".$this->config->Table_users." ";
+            $result = $this->db->executeQuery($sql);
+
+            if($result['CODE']!=1){
+
+                $this->error->internalServer();
+
+            }else {
+
+                $response['success'] = true;
+                $response['result'] = $result['RESULT'];
+                return $response;
+            }
+        }
+
+    }
 }
