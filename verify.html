@@ -135,12 +135,20 @@
 
     </div>
 
-
-        <div class="verif_button_wrap">
+        <div class="verification_wrap" ng-if="user.users_verify_status == 1">
+            <div class="verify_icon"><img src="images/verified-protection.png" alt="" /></div>
+            <div class="">VERIFIED</div>
+        </div>
+        <div class="verif_button_wrap" ng-if="user.users_verify_status == 0">
             <a href="registration.html">
                 <div class="ver_but">Get Verified</div>
             </a>
         </div>
+    <div class="verif_button_wrap" ng-if="user.users_verify_status == 1">
+        <a href="registration.html">
+            <div class="ver_but">Edit information</div>
+        </a>
+    </div>
 
     <footer>
         <div class="to_top">

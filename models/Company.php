@@ -241,8 +241,10 @@ class Company
                 $this->config->COL_company_bankdetails_q => $this->getBankdetailsQ(),
                 $this->config->COL_users_userRegistration_unique_id => $this->getUserId()
             );
-
-            $sql1 = $this->db->createInsertQuery($this->config->Table_company, $dataArr);
+        
+            foreach($dataArr as $k => $v) { $data[] = "$k='$v'"; }
+            $sql1 = "Update ".$this->config->Table_company." set ".implode(",",$data)." where ".
+            $this->config->COL_users_userRegistration_unique_id." = '".$this->getUserId()."'";
             $result = $this->db->executeQuery($sql1);
             if ($result['CODE'] != 1) {
                 $this->error->internalServer();

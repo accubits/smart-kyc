@@ -7,6 +7,7 @@ $Table_users = "CREATE TABLE IF NOT EXISTS {$config->Table_users} (
 	$config->COL_users_first_name varchar(255) NOT NULL,
 	$config->COL_users_last_name varchar(255) NOT NULL,
 	$config->COL_users_gender boolean NOT NULL,
+	$config->COL_users_verify_status boolean NOT NULL DEFAULT 0,
 	$config->COL_users_address1 TEXT NULL,
 	$config->COL_users_address2 TEXT NULL,
 	$config->COL_users_address3 TEXT NULL,
@@ -55,7 +56,7 @@ $Table_usersImage = "CREATE TABLE IF NOT EXISTS {$config->Table_usersImage} (
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT $config->COL_usersImage_users_unique_id FOREIGN KEY ($config->COL_usersImage_users_unique_id) 
-    REFERENCES $config->Table_users ($config->COL_users_unique_id) ON DELETE CASCADE
+    REFERENCES $config->Table_users ($config->COL_users_userRegistration_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
 $Table_userRegistration = "CREATE TABLE IF NOT EXISTS {$config->Table_userRegistration} (

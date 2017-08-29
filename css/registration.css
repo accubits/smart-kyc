@@ -481,6 +481,17 @@ a
     font-family: Montserrat-Light;
     font-size: 13px;
 }
+.verification_wrap{
+    text-align: center;
+    margin: auto;
+    width: 100px;
+    margin-top: 50px;
+}
+.verify_icon{
+    width: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
 /*@media only screen and (max-width:880px)*/
 /*{*/
     /*.copy_right*/

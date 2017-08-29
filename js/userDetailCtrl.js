@@ -85,6 +85,8 @@ crypbrokersApp.controller('userDetailCtrl', function ($scope,$http) {
             $scope.details = data.result;
             console.log($scope.details);
 
+            $scope.user.users_verify_status = 1;
+
             showError('Successfully updated the status','success',true);
 
         }).error(function (data, err) {

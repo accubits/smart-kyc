@@ -6,6 +6,8 @@
  * Date: 24/8/17
  * Time: 2:36 PM
  */
+require '../mail/vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
+
 class Users
 {
     public $uniqueId;
@@ -444,8 +446,8 @@ class Users
                 $this->config->COL_users_id_valid_date              => $this->getIdValidDate(),
                 $this->config->COL_users_userRegistration_unique_id => $this->getRegistrationId()
             );
-
-            $sql1 = "Update ".$this->config->Table_users." set ".implode(",",$dataArr)." where ".
+            foreach($dataArr as $k => $v) { $data[] = "$k='$v'"; }
+            $sql1 = "Update ".$this->config->Table_users." set ".implode(",",$data)." where ".
                 $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
 //            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
             $result = $this->db->executeQuery($sql1);
@@ -468,6 +470,24 @@ class Users
             return $out;
         }
 
+    }
+    
+    public function updateVerificationStatus($status) {
+        $sql1 = "Update ".$this->config->Table_users." set ".$this->config->COL_users_verify_status." = ".(int)$status." where ".
+            $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
+        $result = $this->db->executeQuery($sql1);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+
+        } else {
+
+            $response['success'] = true;
+            $response['result'] = "Verification Status updated";
+            return $response;
+
+        }
     }
 
     /*Upload Documents*/
@@ -533,14 +553,25 @@ public function userRegistration(){
     }
 
     if (empty($result['RESULT'])) {
+        $uniqueId = TagdToUtils::getUniqueId();
         $dataArr = array(
-            $this->config->COL_userRegistration_unique_id    => TagdToUtils::getUniqueId(),
+            $this->config->COL_userRegistration_unique_id    => $uniqueId,
             $this->config->COL_userRegistration_username     => $this->getUserName(),
             $this->config->COL_userRegistration_email        => $this->getEmail(),
             $this->config->COL_userRegistration_password     => $this->getPassword()
         );
 
         $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+        $result = $this->db->executeQuery($sql1);
+
+        $sql1 = $this->db->createInsertQuery($this->config->Table_users, [
+            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
+        ]);
+        $result = $this->db->executeQuery($sql1);
+
+        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
+            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
+        ]);
         $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
@@ -698,23 +729,76 @@ public function readInfo(){
 
     public function readDetails(){
 
-        $sql = "Select * from 
-        ".$this->config->Table_userRegistration." u join ".$this->config->Table_company." c 
+        $sql = "Select *,c.".$this->config->COL_users_userRegistration_unique_id." as `user_company_unique_id` from 
+        ".$this->config->Table_userRegistration." r  join ".$this->config->Table_users." u 
+        on r.".$this->config->COL_users_userRegistration_unique_id." = u.".
+            $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_company." c 
         on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
-            $this->config->COL_users_userRegistration_unique_id." join ".$this->config->Table_usersImage."
-             i on where u.".$this->config->COL_users_userRegistration_unique_id." = i.".
-            $this->config->COL_usersImage_users_unique_id."
-        ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
+            $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_usersImage."
+             i on u.".$this->config->COL_users_userRegistration_unique_id." = i.".
+            $this->config->COL_usersImage_users_unique_id." where
+        u.".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
         $result = $this->db->executeQuery($sql);
 
         if($result['CODE']!=1){
 
             $this->error->internalServer();
         }
-        $response['success'] = true;
-        $response['result'] = $result['RESULT'];
-        return $response;
+        if (count($result['RESULT']) > 0) {
+            $response['success'] = true;
+            $response['result']['data'] = $result['RESULT'][0];
 
+            $sql = "Select `usersImage_image` from " . $this->config->Table_usersImage . " where " .
+                $this->config->COL_usersImage_users_unique_id . " = '" . $this->getUniqueId() . "'";
+            $result = $this->db->executeQuery($sql);
+
+            $response['result']['image'] = $result['RESULT'];
+
+            return $response;
+        }
+        else {
+            $response['success'] = true;
+            $response['result']['data'] = [];
+            $response['result']['image'] = [];
+
+            return $response;
+        }
+
+    }
+
+    public function sendMail($to,$sub,$content) {
+        $mail = new  PHPMailer(); // create a new object
+        $mail->IsSMTP(); // enable SMTP
+        $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
+        $mail->SMTPAuth = true; // authentication enabled
+        $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
+        $mail->Host = "smtp.gmail.com";
+        $mail->Port = 587; // or 587
+        $mail->IsHTML(true);
+        $mail->Username = "charush@accubits.com";
+        $mail->Password = "charush*523";
+        $mail->SetFrom("example@gmail.com");
+        $mail->Subject = $sub;
+        $mail->Body = $content;
+        $mail->AddAddress($to);
+        
+        if(!$mail->Send()) {
+//            echo "Mailer Error: " . $mail->ErrorInfo;
+        }
+    }
+    
+    
+    public function getEmailFromId($id){
+        
+        $sql = "Select ".$this->config->COL_userRegistration_email." from ".$this->config->Table_userRegistration." where ".
+            $this->config->COL_userRegistration_unique_id." = '".$id."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        return $result['RESULT'][0][$this->config->COL_userRegistration_email];
     }
 
 }

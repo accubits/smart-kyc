@@ -365,7 +365,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_id_type='+$scope.user.idType+
             '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
             '&&users_id_valid_date='+ $scope.user.idValidTo);
-        console.log($('#dob').val())
+        console.log($scope.user.countryOfResidence)
             if(!$scope.user.firstName || !$scope.user.lastName || !$scope.user.address1 || !$scope.user.city || !$scope.user.state
                 || !$scope.user.countryOfResidence || !$scope.user.zip ||  !$scope.user.idType || !$scope.user.idNumber || !$scope.user.mobile){
                 showError('Please enter all the details','error',true);
@@ -492,10 +492,10 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         //console.log($scope.data.images);
 
         if($('#declaration').prop('checked')){
-            showError('Please enter the details', "error", true);
+            //showError('Please enter the details', "error", true);
             return;
         }
-        uploadFile();
+        //uploadFile();
     }
 
     $scope.verifyDoc = function(){
