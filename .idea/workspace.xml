@@ -103,11 +103,11 @@
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="447" column="72" selection-start-line="447" selection-start-column="65" selection-end-line="447" selection-end-column="72" />
+              <caret line="447" column="82" selection-start-line="447" selection-start-column="82" selection-end-line="447" selection-end-column="82" />
               <folding>
-                <marker date="1504029680000" expanded="true" signature="14537:14873" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504029680000" expanded="true" signature="17242:17256" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504029680000" expanded="true" signature="17671:18284" placeholder="Select *,c. " />
+                <marker date="1504030079000" expanded="true" signature="14598:14934" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504030079000" expanded="true" signature="17303:17317" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504030079000" expanded="true" signature="17732:18345" placeholder="Select *,c. " />
               </folding>
             </state>
           </provider>
@@ -319,16 +319,16 @@
       <updated>1503990897274</updated>
       <workItem from="1503990898798" duration="15368000" />
       <workItem from="1504015499202" duration="4688000" />
-      <workItem from="1504027340314" duration="2140000" />
+      <workItem from="1504027340314" duration="2267000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22196000" />
+    <option name="totallyTimeSpent" value="22323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14620355" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -336,7 +336,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -662,11 +662,11 @@
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="447" column="72" selection-start-line="447" selection-start-column="65" selection-end-line="447" selection-end-column="72" />
+          <caret line="447" column="82" selection-start-line="447" selection-start-column="82" selection-end-line="447" selection-end-column="82" />
           <folding>
-            <marker date="1504029680000" expanded="true" signature="14537:14873" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504029680000" expanded="true" signature="17242:17256" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504029680000" expanded="true" signature="17671:18284" placeholder="Select *,c. " />
+            <marker date="1504030079000" expanded="true" signature="14598:14934" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504030079000" expanded="true" signature="17303:17317" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504030079000" expanded="true" signature="17732:18345" placeholder="Select *,c. " />
           </folding>
         </state>
       </provider>
