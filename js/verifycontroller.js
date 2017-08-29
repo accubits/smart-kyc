@@ -3,12 +3,12 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     $scope.userDetails=JSON.parse(localStorage.getItem("userDetails"));
-    console.log($scope.userDetails);
+    console.log($scope.userDetails.unique_id);
 
     $scope.verify= function (){
 
-
-        var data = 'users_uniqueId=0c9fe679bd8a8ce92082a252f7db6c0b';
+        var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;
+        console.log(data);
 
         var postData = data;
         var requestObj = {
@@ -20,13 +20,17 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             console.log(data);
             $scope.details = data.result[0];
             console.log($scope.details);
+            if($scope.details.users_gender == '1'){
+                $scope.details.gender = 'Male'
+            }
+            else if($scope.details.users_gender == '0'){
+                $scope.details.gender = 'Female'
+            }
 
         }).error(function (data, err) {
             console.log(data);
             console.log(err);
             showError('errooooor','error',true)
-
-
         });
     };
     $scope.verify();
