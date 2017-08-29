@@ -552,9 +552,12 @@ public function signIn(){
 
         $token = TagdToUtils::getUniqueId();
         $this->redis->key = $token;
-        $data = array('uid' => $result['RESULT'][0][$this->config->COL_userRegistration_unique_id]);
+        $unique_id = $result['RESULT'][0][$this->config->COL_userRegistration_unique_id];
+        $data = array('uid' => $unique_id);
         $this->redis->setSessionValue($data);
-        return array('success' => true, 'result' => $token);
+        return array('success' => true,
+            'token' => $token,
+             'unique_id' => $unique_id);
     }
 }
 
