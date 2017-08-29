@@ -19,7 +19,7 @@ function onSuccessHandler()
     echo json_encode($users->addAllImage($images));
 }
 $required = array(
-    $config->COL_usersImage_users_unique_id
+//    $config->COL_usersImage_users_unique_id
 );
 
 NvooyUtils::onSetAndEmptyCheckHandler($_POST, $required, $required, "onSuccessHandler", "onEmptyHandler", "onNotSetHandler", true);
