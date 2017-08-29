@@ -637,4 +637,36 @@ public function readInfo(){
         }
 
     }
+
+
+
+    public function readAllInfo(){
+
+        $sql = "Select ".$this->config->COL_userRegistration_status." from 
+        ".$this->config->Table_userRegistration." where 
+        ".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        if (($result['RESULT'][0][$this->config->COL_userRegistration_status]) == "1"){
+
+            $sql = "Select * from ".$this->config->Table_users." ";
+            $result = $this->db->executeQuery($sql);
+
+            if($result['CODE']!=1){
+
+                $this->error->internalServer();
+
+            }else {
+
+                $response['success'] = true;
+                $response['result'] = $result['RESULT'];
+                return $response;
+            }
+        }
+
+    }
 }

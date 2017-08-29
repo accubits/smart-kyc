@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b70767b-e132-4b23-8191-861b559013e7" name="Default" comment="" />
+    <list default="true" id="6b70767b-e132-4b23-8191-861b559013e7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Users.php" afterPath="$PROJECT_DIR$/models/Users.php" />
+    </list>
     <ignored path="crypbrokers.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -24,10 +26,13 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="597" column="24" lean-forward="true" selection-start-line="597" selection-start-column="24" selection-end-line="597" selection-end-column="24" />
+            <state relative-caret-position="18">
+              <caret line="642" column="12" lean-forward="false" selection-start-line="642" selection-start-column="12" selection-end-line="642" selection-end-column="12" />
               <folding>
-                <marker date="1503989116195" expanded="true" signature="12711:12834" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1503992577529" expanded="true" signature="12711:12834" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1503992577529" expanded="true" signature="14750:14953" ph="Select from ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1503992577529" expanded="true" signature="15202:15216" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1503992577529" expanded="true" signature="15202:15246" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
               </folding>
             </state>
           </provider>
@@ -60,21 +65,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userRegistration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/userRegistration.php">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="180">
+              <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/config.php">
+      <file leaf-file-name="getAllUsers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/getAllUsers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            <state relative-caret-position="306">
+              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/getInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -108,8 +125,9 @@
         <option value="$PROJECT_DIR$/css/registration.css" />
         <option value="$PROJECT_DIR$/verify.html" />
         <option value="$PROJECT_DIR$/config/init.php" />
-        <option value="$PROJECT_DIR$/models/Users.php" />
         <option value="$PROJECT_DIR$/users/addAdmin.php" />
+        <option value="$PROJECT_DIR$/users/getAllUsers.php" />
+        <option value="$PROJECT_DIR$/models/Users.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
       </list>
     </option>
@@ -275,12 +293,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1503563747942</updated>
-      <workItem from="1503985529882" duration="3877000" />
+      <workItem from="1503985529882" duration="6794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3877000" />
+    <option name="totallyTimeSpent" value="6794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -553,14 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/getInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -590,16 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="597" column="24" lean-forward="true" selection-start-line="597" selection-start-column="24" selection-end-line="597" selection-end-column="24" />
-          <folding>
-            <marker date="1503989116195" expanded="true" signature="12711:12834" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/addAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -610,10 +610,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/users/getInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/getAllUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="642" column="12" lean-forward="false" selection-start-line="642" selection-start-column="12" selection-end-line="642" selection-end-column="12" />
+          <folding>
+            <marker date="1503992577529" expanded="true" signature="12711:12834" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1503992577529" expanded="true" signature="14750:14953" ph="Select from ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1503992577529" expanded="true" signature="15202:15216" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1503992577529" expanded="true" signature="15202:15246" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding />
         </state>
       </provider>
