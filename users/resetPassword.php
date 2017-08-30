@@ -7,7 +7,6 @@
  */
 
 include '../libraries/header.php';
-include '../class/Authenticate.php';
 
 function onSuccessHandler() {
 

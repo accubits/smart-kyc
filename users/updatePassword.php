@@ -7,7 +7,6 @@
  */
 
 include '../libraries/header.php';
-include '../class/Authenticate.php';
 
 function onSuccessHandler() {
 
@@ -16,11 +15,10 @@ function onSuccessHandler() {
     $users->setPassword($_POST[$config->COL_userRegistration_password]);
     $users->setRegistrationId($_POST[$config->COL_users_userRegistration_unique_id]);
 
-    $response=$users->resetPassword($_POST['token']);
+    $response=$users->updatePassword();
     echo json_encode($response);
 
 }
-
 
 $required = array(
     $config->COL_users_userRegistration_unique_id,
