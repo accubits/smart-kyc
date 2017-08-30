@@ -6,6 +6,11 @@ crypbrokersApp.controller('userDetailCtrl', function ($scope,$http) {
     $scope.userID= localStorage.getItem("userID");
     console.log($scope.userDetails.unique_id);
 
+    $scope.logout = function(){
+        localStorage.removeItem('adminDetails');
+        window.location = 'index.html';
+
+    }
     function getUserDetails(){
 
         var data = 'userRegistration_uniqueId='+$scope.userID;

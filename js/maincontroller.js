@@ -4,6 +4,16 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $scope.userDetails=JSON.parse(localStorage.getItem("userDetails"));
+
+    $scope.logout = function(){
+        localStorage.removeItem('userDetails');
+        window.location = 'index.html';
+
+    }
+    if(!localStorage.getItem("userDetails")){
+        window.location = 'index.html';
+    }
+
     $scope.nextButton1=true;
     $scope.nextButton2=true;
     $scope.user={
@@ -284,6 +294,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         {name: 'Zimbabwe', code: 'ZW'}
     ];
     $scope.idType = ["Passport", "Drivers Licence", "Other Gov Issued Photo ID"];
+
+
+
     function getUserDetails(){
 
         var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;

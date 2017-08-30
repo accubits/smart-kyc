@@ -4,6 +4,11 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
 
     $scope.userDetails=JSON.parse(localStorage.getItem("adminDetails"));
     console.log($scope.userDetails.unique_id);
+    $scope.logout = function(){
+        localStorage.removeItem('adminDetails');
+        window.location = 'index.html';
+
+    }
 
     $scope.getlist= function (){
 
