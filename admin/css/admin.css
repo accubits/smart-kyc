@@ -195,36 +195,46 @@ input,textarea,select
 }
 .content_wrap_ad
 {
-    width: 65%;
-    margin: 7% auto;
+    /*width: ;*/
+    margin: 50px 7%;
 }
 .content_wrap_ad table
 {
     width: 100%;
+    box-shadow: 0px 0px 5px 1px #ddd;
 }
 .ad_tab thead
 {
     text-align: left;
-    background-color: #f2f2f3;
+    /*background-color: #f2f2f3;*/
 }
 
 .ad_tab thead tr th
 {
-    padding: 10px 5px;
-    color: #747474;
+    padding: 15px 10px;
+    color: #222;
+}
+.user_item{
+    cursor: pointer;
+}
+.user_item:hover{
+    background: #f2f2f2;
+}
+tr{
+    border-bottom: 1px solid #ddd;
 }
 td, th {
-    border: 1px solid #cccccc;
+    /*border: 1px solid #cccccc;*/
     text-align: left;
-    padding: 8px;
-    font-weight: 500;
+    padding: 15px 10px;
+    font-family: Montserrat-Light;
 }
 td{
-    color: #939393;
+    color: #555;
 }
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #f9f9f9;
 }
 .content_wrap_ad table {
     border-collapse: collapse;
@@ -245,6 +255,15 @@ tr:nth-child(even) {
 .login_btn:hover
 {
     background-color:  #1e2434;
+}
+.login_block{
+    padding: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px 1px #ddd;
+    display: none;
+}
+.login_block.active{
+    display: block;
 }
 .login_block .text_box_wrap .text_box_full
 {
@@ -557,4 +576,11 @@ a
 .dcl
 {
     background-color: #b1b0aa;
+}
+.reset_pass_wrap {
+    width: 400px;
+    margin: 20px auto 80px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px 1px #ddd;
+    padding: 30px;
 }

@@ -15,24 +15,14 @@
         </div>
 
         <div class="nav_bar">
-            <a href="http://www.crypbrokers.com/">
+            <a href="index.html">
                 <div class="nav_com">
                     HOME
                 </div>
             </a>
-            <a href="http://www.crypbrokers.com/place-an-order/">
+            <a href="#" ng-click="logout()">
                 <div class="nav_com">
-                    PLACE AN ORDER
-                </div>
-            </a>
-            <a href="http://www.crypbrokers.com/contact-us/">
-                <div class="nav_com">
-                    CONTACT US
-                </div>
-            </a>
-            <a href="index.html">
-                <div class="nav_com">
-                    LOGOUT
+                    Logout
                 </div>
             </a>
         </div>
@@ -40,19 +30,14 @@
     </div>
 
     <div class="mob_nav_bar">
-        <a href="http://www.crypbrokers.com/">
+        <a href="index.html">
             <div class="nav_com">
                 HOME
             </div>
         </a>
-        <a href="http://www.crypbrokers.com/place-an-order/">
+        <a href="#" ng-click="logout()">
             <div class="nav_com">
-                PLACE AN ORDER
-            </div>
-        </a>
-        <a href="http://www.crypbrokers.com/contact-us/">
-            <div class="nav_com">
-                CONTACT US
+                Logout
             </div>
         </a>
     </div>
@@ -151,18 +136,31 @@
         </div>
     </div>
     <div class="tab_content_wrap">
-        <div class="tab_content" id="general"></div>
+        <div class="tab_content" id="general">
+            <div class="flow_wrap">
+                <div class="flow">
+                    <div class="icon" style="background-image: url('images/started.png')"></div>
+                    <p>Complete KYC Process</p>
+                    <a href="registration.html" class="started_btn">Get started</a>
+                </div>
+                <div class="flow">
+                    <div class="icon" style="background-image: url('images/verified.png')"></div>
+                    <p>Get Verified</p>
+                </div>
+                <div class="flow">
+                    <div class="icon" style="background-image: url('images/place.png')"></div>
+                    <p>Place your order</p>
+                </div>
+            </div>
+        </div>
         <div class="tab_content active" id="verify">
+            <div class="verification_wrap" ng-if="user.users_verify_status == 0">
+                <div class="">You account is not yet verified</div>
+            </div>
             <div class="verification_wrap" ng-if="user.users_verify_status == 1">
-                <div class="verify_icon"><img src="images/verified-protection.png" alt="" /></div>
-                <div class="">VERIFIED</div>
+                <div class="">You account is verified</div>
             </div>
-            <div class="verif_button_wrap" ng-if="user.users_verify_status == 0">
-                <a href="registration.html">
-                    <div class="ver_but">Get Verified</div>
-                </a>
-            </div>
-            <div class="verif_button_wrap" ng-if="user.users_verify_status == 1">
+            <div class="verif_button_wrap">
                 <a href="registration.html">
                     <div class="ver_but">Edit information</div>
                 </a>
@@ -172,24 +170,20 @@
             <div class="reset_pass_wrap">
                 <h2>Reset Password</h2>
                 <div class="text_box_full txt_bx">
-                    <div class="text_desc">Name</div>
-                    <input type="text" ng-model="details.name">
-                </div>
-                <div class="text_box_full txt_bx">
-                    <div class="text_desc">Email</div>
-                    <input type="text" ng-model="details.email">
+                    <div class="text_desc">Old Password</div>
+                    <input type="password" ng-model="passDeatils.oldpass">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Password</div>
-                    <input type="password" ng-model="details.password">
+                    <input type="password" ng-model="passDeatils.password">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Re-Type Password</div>
-                    <input type="password" ng-model="details.reenterpassword">
+                    <input type="password" ng-model="passDeatils.reenterpassword">
                 </div>
                 <div class="log_wrap">
-                    <div class="login_btn" ng-click="signUp()">
-                        Signup
+                    <div class="login_btn" ng-click="resetPassword()">
+                        Reset
                     </div>
                 </div>
             </div>

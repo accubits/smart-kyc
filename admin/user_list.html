@@ -19,7 +19,12 @@
                     Home
                 </div>
             </a>
-            <a href="index.html">
+            <a href="reset_password.html">
+                <div class="nav_com">
+                    Password
+                </div>
+            </a>
+            <a href="#" ng-click="logout()">
                 <div class="nav_com">
                     Logout
                 </div>
@@ -38,16 +43,16 @@
         <table class="ad_tab">
             <thead>
                 <tr class="under_row">
-                    <th>No</th>
                     <th>Name</th>
+                    <th>Email</th>
                     <th>Location</th>
                     <th>KYC Status</th>
                 </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="info in details" ng-click="goToUserPage(info.userRegistration_uniqueId)">
-                <td>{{$index + 1}} </td>
-                <td>{{info.users_first_name}}</td>
+            <tr ng-repeat="info in details" ng-click="goToUserPage(info.userRegistration_uniqueId)" class="user_item">
+                <td>{{info.users_first_name}} {{info.users_last_name}}</td>
+                <td>{{info.userRegistration_email}}</td>
                 <td>{{info.users_city}}, {{info.users_country_residence}}</td>
                 <td>{{info.users_kyc_status}}</td>
             </tr>
