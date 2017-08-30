@@ -859,7 +859,6 @@ public function readInfo(){
          where ".$this->config->COL_forgotPassword_token." = '".$token."' LIMIT 1";
 
         $result = $this->db->executeQuery($sql);
-        print_r($result);
 
         if($result['CODE']!=1){
 
