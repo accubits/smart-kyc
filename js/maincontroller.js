@@ -530,8 +530,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var fd = new FormData();
         var url = ServerApi + 'uploadDocuments.php';
         showError('Uploading...', "loading", false);
+        fd.append('image', $('#files').prop('files')[0]);
         for(var item in $('#files').prop('files')){
-            fd.append('image[]', $('#files').prop('files')[item]);
+            //fd.append('image[]', $('#files').prop('files')[item]);
         }
 
         var data = {};
