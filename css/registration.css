@@ -54,6 +54,7 @@ input,textarea,select
     padding: 3px 15px;
     display: inline-block;
     vertical-align: middle;
+    text-transform: uppercase;
 }
 .nav_com:hover
 {
@@ -604,37 +605,192 @@ a
 .started_btn:hover{
     background: #da860f;
 }
+.ham_icon
+{
+    display: none;
+}
 
-/*@media only screen and (max-width:880px)*/
-/*{*/
-    /*.copy_right*/
-    /*{*/
-        /*font-size: 11px;*/
-    /*}*/
-    /*.copy_blocks*/
-    /*{*/
-        /*font-size: 11px;*/
-    /*}*/
-/*}*/
+@media only screen and (max-width:880px)
+{
+    .copy_links
+    {
+        display: none;
+    }
+    .copy_blocks
+    {
+        font-size: 11px;
+    }
+    footer
+    {
+        text-align: center;
+    }
+}
 
 
-/*@media only screen and (max-width:769px)*/
-/*{*/
-    /*.mob_nav_bar*/
-    /*{*/
-        /*display: block;*/
-        /*text-align: center;*/
-    /*}*/
-    /*.nav_bar*/
-    /*{*/
-        /*display: none;*/
-    /*}*/
-    /*.mob_nav_bar .nav_com*/
-    /*{*/
-        /*width: 80%;*/
-        /*padding: 0%;*/
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-        /*text-align: left;*/
-    /*}*/
-/*}*/
+@media only screen and (max-width:768px)
+{
+    .text_box_left
+    {
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .text_box_right
+    {
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .content_nav
+    {
+        display: none;
+    }
+    .to_nav_tab
+    {
+        width: 80px;
+    }
+    .sub_capt
+    {
+        font-size: 18px;
+    }
+    .nav_bar
+    {
+        width: 100%;
+        background-color: #263253;
+        left: 0;
+        top: 0px;
+        color: white;
+        opacity: 0;
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+    .nav_bar.active
+    {
+        top: 100%;
+        opacity: 1;
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+    }
+    .nav_com
+    {
+        width: 100%;
+    }
+    .nav_com
+    {
+        padding: 2% 3%;
+        width: 94%;
+        border-bottom: 1px solid #848484;
+        color: white;
+    }
+    .ham_icon
+    {
+        display: block;
+        width: 28px;
+        height: 30px;
+        background-image: url(../images/menu-button-of-three-lines.png);
+        position: absolute;
+        right: 50px;
+        top: 26%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .prev_button
+    {
+        padding: 6px 28px;
+    }
+    .next_button
+    {
+        padding: 6px 28px;
+    }
+}
+@media only screen and (max-width:674px)
+{
+    .flow_wrap {
+        display: flex;
+        margin: 40px 0px 91px;
+    }
+}
+@media only screen and (max-width:560px)
+{
+    .tab_wrap ul li
+    {
+        padding: 10px 11px;
+        font-size: 11px;
+    }
+    .tab_wrap ul li img {
+        width: 12px;
+        margin-right: 0px;
+    }
+    .reset_pass_wrap
+    {
+        width: 92%;
+        padding: 4%;
+    }
+    .ham_icon
+    {
+        width: 20px;
+    }
+}
+@media only screen and (max-width:530px)
+{
+    .flow
+    {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .flow_wrap
+    {
+        display: block;
+    }
+
+    .logo
+    {
+        width: 150px;
+    }
+    .nav_bar
+    {
+        top: 20px;
+    }
+    .sub_path
+    {
+        display: none;
+    }
+    .flow .icon {
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+        background-size: 33px;
+    }
+    .flow p
+    {
+        font-size: 12px;
+    }
+    .sub_capt {
+        font-size: 12px;
+    }
+    .to_top
+    {
+        width: 30px;
+        height: 30px;
+        background-size: 10px;
+        background-position: 10px 10px;
+    }
+    .reset_pass_wrap h2
+    {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:450px)
+{
+    .to_nav_tab {
+        margin-bottom: 50px;
+    }
+    .content_wrap_log
+    {
+        width: 80%;
+    }
+}
