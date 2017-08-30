@@ -213,6 +213,12 @@ input,textarea,select
     padding: 10px 5px;
     color: #747474;
 }
+.user_item{
+    cursor: pointer;
+}
+.user_item:hover{
+    background: #f2f2f2;
+}
 td, th {
     border: 1px solid #cccccc;
     text-align: left;

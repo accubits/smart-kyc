@@ -203,12 +203,7 @@
                     <div class="text_box_wrap">
                         <div class="text_box_left txt_bx">
                             <div class="text_desc">ID Type</div>
-                            <select ng-model="user.idType">
-                                <option value="">--Select--</option>
-                                <option>Passport</option>
-                                <option>Drivers Licence</option>
-                                <option>Other Gov Issued Photo ID</option>
-                            </select>
+                            <select data-ng-model="user.idType" data-ng-options="v for v in idType"></select>
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">ID number</div>
@@ -344,21 +339,21 @@
 
                     <div class="docs_list">
                         <p>Individual</p>
-                        - Gov Issued ID(Passport,Drivers License,Other)<br>
-                        - Selfie picture of you holding Gov issued ID<br>
-                        - Proof of home address( utility bill or bank statement) issued within the last 3 months containing your name on the account
+                        - Gov Issued ID (Passport,Drivers License, Other)<br>
+                        - Selfie Picture of You Holding Gov Issued ID<br>
+                        - Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account
 
 
                         <p>Company</p>
-                        - Gov Issued ID(Passport,Drivers License,Other)<br>
-                        - Selfie picture of you holding Gov issued ID<br>
+                        - Gov Issued ID (Passport,Drivers License,Other)<br>
+                        - Selfie Picture of You Holding Gov Issued ID<br>
                         - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>
                         - Company registration document<br>
-                        - Proof of company address(Utility bill or Bank statement)<br>
+                        - Proof of Home Address (Utility bill or Bank statement)<br>
 
                         <p>Important</p>
 
-                        - Documents must be in the following format : jpg,png,gif,pdf<br>
+                        - Documents must be in the following format : jpg, png, gif, pdf<br>
                         - Documents must be scanned in color <br>
                         - Documents must be clearly visible<br>
                         - Selfie with ID requirements<br>
@@ -370,7 +365,7 @@
                         <span>*</span> Your face and card information should be clearly visible<br>
                         <span>*</span> Donot wear a sunglass, a hat or a headband<br>
                         <span>*</span> The photo should be recent<br>
-                        <span>*</span> Image should be in high resolution(min 300 dpi)<br>
+                        <span>*</span> Image should be in high resolution (min 300 dpi)<br>
 
                     </div>
                     <div class="image_upload">

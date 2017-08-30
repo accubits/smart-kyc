@@ -283,7 +283,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         {name: 'Zambia', code: 'ZM'},
         {name: 'Zimbabwe', code: 'ZW'}
     ];
-
+    $scope.idType = ["Passport", "Drivers Licence", "Other Gov Issued Photo ID"];
     function getUserDetails(){
 
         var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;
@@ -395,7 +395,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
                 '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
                 '&&users_address3=' +$scope.user.address3+'&&users_city=' +$scope.user.city+
-                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence.name +
+                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
                 '&&users_zip='+ $scope.user.zip + '&&users_mobile_number='+$scope.user.mobile +
                 '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_id_type='+$scope.user.idType+
                 '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
@@ -404,7 +404,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
                 '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
                 '&&users_address3=' +$scope.user.address3+'&&users_city=' +$scope.user.city+
-                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence.name +
+                '&&users_state='+ $scope.user.state + '&&users_country_residence='+$scope.user.countryOfResidence +
                 '&&users_zip='+ $scope.user.zip + '&&users_mobile_number='+$scope.user.mobile +
                 '&&users_date_of_birth='+ $scope.user.dateOfBirth + '&&users_id_type='+$scope.user.idType+
                 '&&users_id_number='+ $scope.user.idNumber + '&&users_id_issue_date='+$scope.user.idIssueDate+
@@ -517,7 +517,10 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var fd = new FormData();
         var url = ServerApi + 'uploadDocuments.php';
         showError('Uploading...', "loading", false);
-        fd.append('image', $('#files').prop('files'));
+        for(var item in $('#files').prop('files')){
+            fd.append('image[]', $('#files').prop('files')[item]);
+        }
+
         var data = {};
 
         fd.append("usersImage_users_unique_id", $scope.userDetails.unique_id);

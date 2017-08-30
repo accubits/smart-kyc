@@ -45,7 +45,7 @@
                 </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="info in details" ng-click="goToUserPage(info.userRegistration_uniqueId)">
+            <tr ng-repeat="info in details" ng-click="goToUserPage(info.userRegistration_uniqueId)" class="user_item">
                 <td>{{$index + 1}} </td>
                 <td>{{info.users_first_name}}</td>
                 <td>{{info.users_city}}, {{info.users_country_residence}}</td>
