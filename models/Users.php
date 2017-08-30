@@ -597,7 +597,7 @@ public function userRegistration(){
 
 public function signIn(){
 
-    $sql = "Select r." . $this->config->COL_userRegistration_unique_id . ",u.".$this->config->COL_users_id_type." from 
+    $sql = "Select r." . $this->config->COL_userRegistration_unique_id . ",r.".$this->config->COL_userRegistration_status." from 
     " . $this->config->Table_userRegistration . " r inner join ".$this->config->Table_users." u 
     on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." where 
     " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' and 
@@ -624,7 +624,7 @@ public function signIn(){
         return array('success' => true,
             'token' => $token,
              'unique_id' => $unique_id,
-            'type' => $result['RESULT'][0][$this->config->COL_users_id_type]);
+            'type' => $result['RESULT'][0][$this->config->COL_userRegistration_status]);
     }
 }
 
