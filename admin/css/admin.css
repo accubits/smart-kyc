@@ -246,6 +246,15 @@ tr:nth-child(even) {
 {
     background-color:  #1e2434;
 }
+.login_block{
+    padding: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px 1px #ddd;
+    display: none;
+}
+.login_block.active{
+    display: block;
+}
 .login_block .text_box_wrap .text_box_full
 {
     margin-bottom: 20px;

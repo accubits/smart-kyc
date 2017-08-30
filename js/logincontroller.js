@@ -39,7 +39,8 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
             localStorage.setItem("userDetails",JSON.stringify(data));
 
             if(data["type"] == "1"){
-                showError('Invalid Credentials','error',true);
+                $window.location.href = 'admin/user_list.html';
+                showError('Successfully loggedIn','success',true);
             }
             else{
                 $window.location.href = 'verify.html';

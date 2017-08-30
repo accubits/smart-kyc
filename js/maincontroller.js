@@ -517,7 +517,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var fd = new FormData();
         var url = ServerApi + 'uploadDocuments.php';
         showError('Uploading...', "loading", false);
-        fd.append('image', $('#files').prop('files')[0]);
+        fd.append('image', $('#files').prop('files'));
         var data = {};
 
         fd.append("usersImage_users_unique_id", $scope.userDetails.unique_id);
