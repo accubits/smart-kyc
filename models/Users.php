@@ -829,8 +829,9 @@ public function readInfo(){
             $this->error->internalServer();
         }
 
+        $token = TagdToUtils::getUniqueId()
         $dataArr = array(
-            $this->config->COL_forgotPassword_token => TagdToUtils::getUniqueId(),
+            $this->config->COL_forgotPassword_token => $token,
             $this->config->COL_forgotPassword_uniqueId => $unique_id,
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_forgotPassword, $dataArr);
@@ -843,7 +844,7 @@ public function readInfo(){
         }
         
         $this->sendMail($this->getEmail(),"Reset Password - crypbrokers","Hi, <br> Please click the below link t reset password <br>
-                        http://52.220.41.10/crypbrokers/resetPassword.html?token=".$unique_id);
+                        http://52.220.41.10/crypbrokers/resetPassword.html?token=".$token);
 
         $response['success'] = true;
         $response['result'] = "An email has been sent to your registered email-id";
