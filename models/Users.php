@@ -416,16 +416,16 @@ class Users
     public function addInfo()
     {
 
-        $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . " 
-            where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
-        $result = $this->db->executeQuery($sql);
-
-        if ($result['CODE'] != 1) {
-
-            $this->error->internalServer();
-        }
-
-        if (empty($result['RESULT'])) {
+//        $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . "
+//            where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
+//        $result = $this->db->executeQuery($sql);
+//
+//        if ($result['CODE'] != 1) {
+//
+//            $this->error->internalServer();
+//        }
+//
+//        if (empty($result['RESULT'])) {
             $dataArr = array(
                 $this->config->COL_users_unique_id                  => TagdToUtils::getUniqueId(),
                 $this->config->COL_users_first_name                 => $this->getFirstName(),
@@ -463,12 +463,12 @@ class Users
                 return $response;
 
             }
-        } else {
-
-            $out['success'] = false;
-            $out['result']['msg'] = "Already inserted Id Number";
-            return $out;
-        }
+//        } else {
+//
+//            $out['success'] = false;
+//            $out['result']['msg'] = "Already inserted Id Number";
+//            return $out;
+//        }
 
     }
     
@@ -597,7 +597,7 @@ public function userRegistration(){
 
 public function signIn(){
 
-    $sql = "Select " . $this->config->COL_userRegistration_unique_id . " from 
+    $sql = "Select " . $this->config->COL_userRegistration_unique_id . ",".$this->config->COL_users_id_type." from 
     " . $this->config->Table_userRegistration . " where 
     " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' and 
     " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
@@ -622,7 +622,8 @@ public function signIn(){
         $this->redis->setSessionValue($data);
         return array('success' => true,
             'token' => $token,
-             'unique_id' => $unique_id);
+             'unique_id' => $unique_id,
+            'type' => $result['RESULT'][0][$this->config->COL_users_id_type]);
     }
 }
 
