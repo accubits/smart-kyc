@@ -879,7 +879,14 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
+        $sql = "Delete from ".$this->config->Table_forgotPassword." where ".$this->config->COL_forgotPassword_token." = 
+        '".$token."'";
+        $result = $this->db->executeQuery($sql);
 
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
         $response['success'] = true;
         $response['result'] = "Successfully updated password";
         return $response;
@@ -893,7 +900,7 @@ public function readInfo(){
             $this->getRegistrationId()."'";
         $result = $this->db->executeQuery($sql);
 
-        if($result['CODE']!=1){
+        if($result['CODE']!=1) {
 
             $this->error->internalServer();
         }
