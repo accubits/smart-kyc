@@ -19,6 +19,7 @@ class dbconfig
     public $Table_users                     = 'users';
     public $Table_company                   = 'company';
     public $Table_usersImage                = 'usersImage';
+    public $Table_forgotPassword            = 'forgotPassword';
     public $Table_userRegistration          = 'userRegistration';
 
     /*Table_users*/
@@ -62,8 +63,7 @@ class dbconfig
     public $COL_usersImage_unique_id           = 'usersImage_unique_id';
     public $COL_usersImage_users_unique_id     = 'usersImage_users_unique_id';
     public $COL_usersImage_image               = 'usersImage_image';
-
-
+    
     /*Table_userRegistration*/
 
     public $COL_userRegistration_unique_id     = 'userRegistration_uniqueId';
@@ -72,10 +72,11 @@ class dbconfig
     public $COL_userRegistration_password      = 'userRegistration_password';
     public $COL_userRegistration_status        = 'userRegistration_status';
 
+    public $COL_forgotPassword_token             = 'token';
+    public $COL_forgotPassword_uniqueId          = 'uniqueId';
 
     public $TOKEN                        = 'token';
-
-
+    
 }
 
 $config = new dbconfig();

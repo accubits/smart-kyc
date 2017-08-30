@@ -70,9 +70,19 @@ $Table_userRegistration = "CREATE TABLE IF NOT EXISTS {$config->Table_userRegist
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
+$Table_forgotPassword = "CREATE TABLE IF NOT EXISTS {$config->Table_usersImage} (
+	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
+	$config->COL_forgotPassword_token varchar(255) NOT NULL PRIMARY  KEY,
+	$config->COL_forgotPassword_uniqueId VARCHAR (255) NOT NULL,
+	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
+    modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT $config->COL_forgotPassword_uniqueId FOREIGN KEY ($config->COL_forgotPassword_uniqueId) 
+    REFERENCES $config->Table_users ($config->COL_users_userRegistration_unique_id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
 var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_userRegistration));
+var_dump($db->executeQuery($Table_forgotPassword));
 
