@@ -829,7 +829,7 @@ public function readInfo(){
             $this->error->internalServer();
         }
 
-        $token = TagdToUtils::getUniqueId()
+        $token = TagdToUtils::getUniqueId();
         $dataArr = array(
             $this->config->COL_forgotPassword_token => $token,
             $this->config->COL_forgotPassword_uniqueId => $unique_id,
