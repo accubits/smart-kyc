@@ -41,7 +41,13 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
         }).error(function (data, err) {
             console.log(data);
             console.log(err);
-            showError('errooooor','error',true)
+
+            if(data["error"] == "Invalid Credentials"){
+                showError('Invalid Credentials','error',true);
+                return;
+            }
+
+            showError('Something went wrong. Try again','error',true)
 
 
         });

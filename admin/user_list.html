@@ -14,7 +14,16 @@
             <img src="images/cryp_log.png" alt="logo">
         </div>
         <div class="nav_bar">
-            Logout
+            <a href="#">
+                <div class="nav_com active">
+                    Home
+                </div>
+            </a>
+            <a href="index.html">
+                <div class="nav_com">
+                    Logout
+                </div>
+            </a>
         </div>
         <div style="clear:both;"></div>
     </div>
@@ -31,16 +40,16 @@
                 <tr class="under_row">
                     <th>No</th>
                     <th>Name</th>
-                    <th>Username</th>
-                    <th>Registration date</th>
+                    <th>Location</th>
+                    <th>KYC Status</th>
                 </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="info in details">
+            <tr ng-repeat="info in details" ng-click="goToUserPage(info.userRegistration_uniqueId)">
                 <td>{{$index + 1}} </td>
                 <td>{{info.users_first_name}}</td>
-                <td>johndoe@gmail.com</td>
-                <td>{{info.created_date}}</td>
+                <td>{{info.users_city}}, {{info.users_country_residence}}</td>
+                <td>{{info.users_kyc_status}}</td>
             </tr>
 
             <!--<tr>-->

@@ -45,7 +45,7 @@ crypbrokersApp.controller('signupCntl', function ($scope,$http,$window) {
         };
         $http(requestObj).success(function (data) {
             console.log(data);
-            $window.location.href = 'login.html';
+            $window.location.href = 'index.html';
             showError('User signIn success','success',true)
 
         }).error(function (data, err) {

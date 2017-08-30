@@ -55,7 +55,7 @@ input,textarea,select
     display: inline-block;
     vertical-align: middle;
 }
-.nav_com:hover
+.nav_com:hover, .nav_com.active
 {
     color: #FFC107;
     border-bottom:2px solid #FFC107;
@@ -67,8 +67,9 @@ input,textarea,select
 }
 .content_nav
 {
-    text-align: center;
+    /*text-align: center;*/
     margin-top: 0px !important;
+    margin-bottom: 100px;
 }
 .sub_capt
 {
@@ -92,13 +93,18 @@ input,textarea,select
     display: inline-block;
     vertical-align: top;
     text-align: center;
-    padding: 0px 4%;
     position: relative;
     z-index: 2;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 12px;
 }
-.blocks:hover
+.blocks:hover, .blocks.active
 {
     border-bottom: 2px solid #ffc107;
+    font-weight: bold;
+    font-size: 14px;
 }
 .blocks_no
 {
@@ -180,7 +186,7 @@ input,textarea,select
 .content_wrap
 {
     padding: 2% 7%;
-    display: none;
+    display: block;
 }
 .content_wrap_log
 {
@@ -256,6 +262,7 @@ tr:nth-child(even) {
     padding: 10% 0%;
     background-color: white;
     text-align: center;
+    display: none;
 }
 .content_navigation p
 {
@@ -322,8 +329,10 @@ tr:nth-child(even) {
 }
 .text_desc {
     margin-bottom: 12px;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: capitalize;
+    font-family: Montserrat-Light;
+    color: #999;
 }
 
 .text_box_wrap
@@ -522,6 +531,12 @@ a
 .us_name
 {
     font-size: 15px;
+}
+.us_name span{
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
 }
 .sub_accpt
 {

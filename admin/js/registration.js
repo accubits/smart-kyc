@@ -31,11 +31,20 @@ function person_next()
 }
 function person_prev()
 {
-    $('.documents_wrap').css({'display':'none'});
-    $('.company_wrap').css({'display':'none'});
-    $('.personal_wrap').css({'display':'block'});
-    $('.person_blk').removeClass("green_bg");
-    $('.comp_blk').removeClass("green");
+    $('.blocks').removeClass('active');
+    $(this).addClass('active');
+
+    var id = $(this).attr('data-id');
+
+    $('.wraps_common').css({'display': 'none'});
+    $(id).css({'display': 'block'});
+    //$('.documents_wrap').css({'display':'none'});
+    //$('.company_wrap').css({'display':'none'});
+    //$('.personal_wrap').css({'display':'block'});
+    //$('.person_blk').removeClass("green_bg");
+    //$('.comp_blk').removeClass("green");
+
+
 }
 function company_next()
 {
@@ -84,12 +93,12 @@ function init() {
     //$('.go_btn ').click(go);
 
     $('.personal').click(person_next);
-    $('.pr_company').click(person_prev);
+    $('.blocks').click(person_prev);
     $('.company').click(company_next);
     $('.pr_doc').click(doc_prev);
     $('.radio').click(rad_act);
     $('.to_top').click(top_mov);
-    $('.to_nav_tab').click(navig);
+    $('.to_nav_tab').click(navig);navig();
     $('.indiv').click(individual);
 }
 $(document).ready(init);

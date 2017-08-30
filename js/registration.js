@@ -11,7 +11,24 @@
 //
 //}
 
+function changeTab(){
 
+    var id = $(this).attr('data-id');
+    $('.tab_wrap li').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tab_content').removeClass('active');
+    $(id).addClass('active');
+}
+function switchTab(){
+
+    var id = $(this).attr('data-id');
+    $('.blocks').removeClass('active');
+    $(this).addClass('active');
+
+    $('.wraps_common').css({'display': 'none'});
+    $(id).css({'display': 'block'});
+}
 function person_next()
 {
 
@@ -79,11 +96,12 @@ function individual()
 {
     $(this).addClass('indv_active');
     $('.comp_blk_dis').css({'display':'none'});
+    $('.req_blk').html('2')
 }
 function init() {
     //$('.go_btn ').click(go);
 
-    $('.personal').click(person_next);
+    //$('.personal').click(person_next);
     $('.pr_company').click(person_prev);
     $('.company').click(company_next);
     $('.pr_doc').click(doc_prev);
@@ -91,5 +109,9 @@ function init() {
     $('.to_top').click(top_mov);
     $('.to_nav_tab').click(navig);
     $('.indiv').click(individual);
+
+    $('.tab').click(switchTab);
+    $('.tab_wrap li').click(changeTab);
+
 }
 $(document).ready(init);

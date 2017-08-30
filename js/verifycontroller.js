@@ -19,7 +19,8 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         $http(requestObj).success(function (data) {
             console.log(data);
             $scope.details = data.result[0];
-            console.log($scope.details);
+            $scope.user = data["result"][0];
+            console.log($scope.user["users_verify_status"]);
             if($scope.details.users_gender == '1'){
                 $scope.details.gender = 'Male'
             }
