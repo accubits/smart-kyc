@@ -808,7 +808,6 @@ public function readInfo(){
          where ".$this->config->COL_userRegistration_email." = '".$this->getEmail()."' LIMIT 1";
 
         $result = $this->db->executeQuery($sql);
-        print_r($result);
 
         if($result['CODE']!=1){
 
@@ -819,12 +818,11 @@ public function readInfo(){
             $this->error->string = "No account registered with this email-id";
             $this->error->errorHandler();
         }
-        $unique_id = $result['RESULT'][$this->config->COL_userRegistration_unique_id];
+        $unique_id = $result['RESULT'][0][$this->config->COL_userRegistration_unique_id];
 
         $sql = "Delete from ".$this->config->Table_forgotPassword." where ".$this->config->COL_forgotPassword_uniqueId." = 
         '".$unique_id."'";
         $result = $this->db->executeQuery($sql);
-        print_r($result);
 
         if($result['CODE']!=1){
 
@@ -837,7 +835,6 @@ public function readInfo(){
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_forgotPassword, $dataArr);
         $result = $this->db->executeQuery($sql1);
-        print_r($result);
 
         if ($result['CODE'] != 1) {
 
@@ -874,7 +871,7 @@ public function readInfo(){
         
         $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_password." = 
         '".$this->getPassword()."' where ".$this->config->COL_userRegistration_unique_id." = '".
-            $result['RESULT'][$this->config->COL_forgotPassword_uniqueId]."'";
+            $result['RESULT'][0][$this->config->COL_forgotPassword_uniqueId]."'";
         $result = $this->db->executeQuery($sql);
 
         if($result['CODE']!=1){
