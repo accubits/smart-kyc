@@ -858,12 +858,13 @@ public function readInfo(){
          where ".$this->config->COL_forgotPassword_token." = '".$token."' LIMIT 1";
 
         $result = $this->db->executeQuery($sql);
+        print_r($result);
 
         if($result['CODE']!=1){
 
             $this->error->internalServer();
         }
-        elseif (count($result['RESULT']) == ''){
+        elseif ($result['RESULT'] == ''){
             $this->error->responseCode = 400;
             $this->error->string = "Invalid token";
             $this->error->errorHandler();
