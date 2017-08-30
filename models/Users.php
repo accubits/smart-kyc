@@ -711,7 +711,9 @@ public function readInfo(){
         }
         if (($result['RESULT'][0][$this->config->COL_userRegistration_status]) == "1"){
 
-            $sql = "Select * from ".$this->config->Table_users." ";
+            $sql = "Select * from ".$this->config->Table_users." u join ".$this->config->Table_userRegistration." r 
+        on u.".$this->config->COL_users_userRegistration_unique_id." = r.".
+                $this->config->COL_userRegistration_unique_id;
             $result = $this->db->executeQuery($sql);
 
             if($result['CODE']!=1){
@@ -732,7 +734,7 @@ public function readInfo(){
 
         $sql = "Select *,c.".$this->config->COL_users_userRegistration_unique_id." as `user_company_unique_id` from 
         ".$this->config->Table_userRegistration." r  join ".$this->config->Table_users." u 
-        on r.".$this->config->COL_users_userRegistration_unique_id." = u.".
+        on r.".$this->config->COL_userRegistration_unique_id." = u.".
             $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_company." c 
         on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
             $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_usersImage."
