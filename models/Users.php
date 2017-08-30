@@ -813,7 +813,7 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
-        elseif (count($result['RESULT']) == ''){
+        elseif (count($result['RESULT']) == 0){
             $this->error->responseCode = 400;
             $this->error->string = "No account registered with this email-id";
             $this->error->errorHandler();
@@ -864,7 +864,7 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
-        elseif ($result['RESULT'] == ''){
+        elseif (count($result['RESULT']) == 0){
             $this->error->responseCode = 400;
             $this->error->string = "Invalid token";
             $this->error->errorHandler();
@@ -893,7 +893,24 @@ public function readInfo(){
         
     }
     
-    public function updatePassword() {
+    public function updatePassword($oldPassword) {
+
+        $sql = " Select * from ".$this->config->Table_userRegistration." where ".$this->config->COL_userRegistration_unique_id." = '".
+            $this->getRegistrationId()."' and ".$this->config->COL_userRegistration_password." = '".
+            TagdToUtils::createPasswordHash($oldPassword)."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1) {
+
+            $this->error->internalServer();
+        }
+        elseif (count($result['RESULT']) == 0){
+            $this->error->responseCode = 400;
+            $this->error->string = "Invalid current password";
+            $this->error->errorHandler();
+        }
+        
+        
 
         $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_password." = 
         '".$this->getPassword()."' where ".$this->config->COL_userRegistration_unique_id." = '".
@@ -904,6 +921,7 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
+        
 
         $response['success'] = true;
         $response['result'] = "Successfully updated password";
