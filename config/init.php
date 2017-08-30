@@ -17,7 +17,7 @@ $Table_users = "CREATE TABLE IF NOT EXISTS {$config->Table_users} (
 	$config->COL_users_zip INT NOT NULL,
 	$config->COL_users_mobile_number INT NOT NULL,
 	$config->COL_users_date_of_birth DATE,
-	$config->COL_users_id_type INT NOT NULL,
+	$config->COL_users_id_type varchar(255) NOT NULL,
 	$config->COL_users_id_number INT NOT NULL,
 	$config->COL_users_id_issue_date DATE,
 	$config->COL_users_id_valid_date DATE, 
