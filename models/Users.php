@@ -810,7 +810,8 @@ public function readInfo(){
          where ".$this->config->COL_userRegistration_email." = '".$this->getEmail()."' LIMIT 1";
 
         $result = $this->db->executeQuery($sql);
-
+        print_r($result);
+        
         if($result['CODE']!=1){
 
             $this->error->internalServer();
@@ -825,6 +826,7 @@ public function readInfo(){
         $sql = "Delete from ".$this->config->Table_forgotPassword." where ".$this->config->COL_forgotPassword_uniqueId." = 
         '".$unique_id."'";
         $result = $this->db->executeQuery($sql);
+        print_r($result);
 
         if($result['CODE']!=1){
 
@@ -838,6 +840,7 @@ public function readInfo(){
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_forgotPassword, $dataArr);
         $result = $this->db->executeQuery($sql1);
+        print_r($result);
 
         if ($result['CODE'] != 1) {
 
