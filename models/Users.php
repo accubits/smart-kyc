@@ -597,8 +597,9 @@ public function userRegistration(){
 
 public function signIn(){
 
-    $sql = "Select " . $this->config->COL_userRegistration_unique_id . ",".$this->config->COL_users_id_type." from 
-    " . $this->config->Table_userRegistration . " where 
+    $sql = "Select r." . $this->config->COL_userRegistration_unique_id . ",u.".$this->config->COL_users_id_type." from 
+    " . $this->config->Table_userRegistration . " r inner join ".$this->config->Table_users." u 
+    on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." where 
     " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' and 
     " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
     $result = $this->db->executeQuery($sql);
