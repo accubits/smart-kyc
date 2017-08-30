@@ -569,10 +569,10 @@ public function userRegistration(){
         ]);
         $result = $this->db->executeQuery($sql1);
 
-        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
-            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
-        ]);
-        $result = $this->db->executeQuery($sql1);
+//        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
+//            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
+//        ]);
+//        $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
 
@@ -736,8 +736,8 @@ public function readInfo(){
         $sql = "Select *,c.".$this->config->COL_users_userRegistration_unique_id." as `user_company_unique_id` from 
         ".$this->config->Table_userRegistration." r  join ".$this->config->Table_users." u 
         on r.".$this->config->COL_userRegistration_unique_id." = u.".
-            $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_company." c 
-        on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
+            $this->config->COL_users_userRegistration_unique_id." left join ".$this->config->Table_company." c 
+        on c.".$this->config->COL." = u.".
             $this->config->COL_users_userRegistration_unique_id." where
         u.".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
         $result = $this->db->executeQuery($sql);
