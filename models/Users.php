@@ -416,16 +416,16 @@ class Users
     public function addInfo()
     {
 
-        $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . " 
-            where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
-        $result = $this->db->executeQuery($sql);
-
-        if ($result['CODE'] != 1) {
-
-            $this->error->internalServer();
-        }
-
-        if (empty($result['RESULT'])) {
+//        $sql = "select " . $this->config->COL_users_id_number . " from " . $this->config->Table_users . "
+//            where " . $this->config->COL_users_id_number . " = '" . $this->getIdNumber() . "'";
+//        $result = $this->db->executeQuery($sql);
+//
+//        if ($result['CODE'] != 1) {
+//
+//            $this->error->internalServer();
+//        }
+//
+//        if (empty($result['RESULT'])) {
             $dataArr = array(
                 $this->config->COL_users_unique_id                  => TagdToUtils::getUniqueId(),
                 $this->config->COL_users_first_name                 => $this->getFirstName(),
@@ -463,12 +463,12 @@ class Users
                 return $response;
 
             }
-        } else {
-
-            $out['success'] = false;
-            $out['result']['msg'] = "Already inserted Id Number";
-            return $out;
-        }
+//        } else {
+//
+//            $out['success'] = false;
+//            $out['result']['msg'] = "Already inserted Id Number";
+//            return $out;
+//        }
 
     }
     
@@ -569,10 +569,10 @@ public function userRegistration(){
         ]);
         $result = $this->db->executeQuery($sql1);
 
-        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
-            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
-        ]);
-        $result = $this->db->executeQuery($sql1);
+//        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
+//            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
+//        ]);
+//        $result = $this->db->executeQuery($sql1);
 
         if ($result['CODE'] != 1) {
 
@@ -597,7 +597,7 @@ public function userRegistration(){
 
 public function signIn(){
 
-    $sql = "Select " . $this->config->COL_userRegistration_unique_id . " from 
+    $sql = "Select " . $this->config->COL_userRegistration_unique_id . ",".$this->config->COL_userRegistration_status." from 
     " . $this->config->Table_userRegistration . " where 
     " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' and 
     " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
@@ -622,7 +622,8 @@ public function signIn(){
         $this->redis->setSessionValue($data);
         return array('success' => true,
             'token' => $token,
-             'unique_id' => $unique_id);
+             'unique_id' => $unique_id,
+            'type' => $result['RESULT'][0][$this->config->COL_userRegistration_status]);
     }
 }
 
@@ -710,7 +711,9 @@ public function readInfo(){
         }
         if (($result['RESULT'][0][$this->config->COL_userRegistration_status]) == "1"){
 
-            $sql = "Select * from ".$this->config->Table_users." ";
+            $sql = "Select * from ".$this->config->Table_users." u join ".$this->config->Table_userRegistration." r 
+        on u.".$this->config->COL_users_userRegistration_unique_id." = r.".
+                $this->config->COL_userRegistration_unique_id;
             $result = $this->db->executeQuery($sql);
 
             if($result['CODE']!=1){
@@ -731,12 +734,10 @@ public function readInfo(){
 
         $sql = "Select *,c.".$this->config->COL_users_userRegistration_unique_id." as `user_company_unique_id` from 
         ".$this->config->Table_userRegistration." r  join ".$this->config->Table_users." u 
-        on r.".$this->config->COL_users_userRegistration_unique_id." = u.".
-            $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_company." c 
+        on r.".$this->config->COL_userRegistration_unique_id." = u.".
+            $this->config->COL_users_userRegistration_unique_id." left join ".$this->config->Table_company." c 
         on c.".$this->config->COL_users_userRegistration_unique_id." = u.".
-            $this->config->COL_users_userRegistration_unique_id."  join ".$this->config->Table_usersImage."
-             i on u.".$this->config->COL_users_userRegistration_unique_id." = i.".
-            $this->config->COL_usersImage_users_unique_id." where
+            $this->config->COL_users_userRegistration_unique_id." where
         u.".$this->config->COL_userRegistration_unique_id." = '".$this->getUniqueId()."'";
         $result = $this->db->executeQuery($sql);
 
@@ -808,12 +809,12 @@ public function readInfo(){
          where ".$this->config->COL_userRegistration_email." = '".$this->getEmail()."' LIMIT 1";
 
         $result = $this->db->executeQuery($sql);
-
+        
         if($result['CODE']!=1){
 
             $this->error->internalServer();
         }
-        elseif (count($result['RESULT']) == ''){
+        elseif (count($result['RESULT']) == 0){
             $this->error->responseCode = 400;
             $this->error->string = "No account registered with this email-id";
             $this->error->errorHandler();
@@ -864,7 +865,7 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
-        elseif ($result['RESULT'] == ''){
+        elseif (count($result['RESULT']) == 0){
             $this->error->responseCode = 400;
             $this->error->string = "Invalid token";
             $this->error->errorHandler();
@@ -879,24 +880,49 @@ public function readInfo(){
 
             $this->error->internalServer();
         }
-
-        $response['success'] = true;
-        $response['result'] = "Successfully updated password";
-        return $response;
-        
-    }
-    
-    public function updatePassword() {
-
-        $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_password." = 
-        '".$this->getPassword()."' where ".$this->config->COL_userRegistration_unique_id." = '".
-            $this->getRegistrationId()."'";
+        $sql = "Delete from ".$this->config->Table_forgotPassword." where ".$this->config->COL_forgotPassword_token." = 
+        '".$token."'";
         $result = $this->db->executeQuery($sql);
 
         if($result['CODE']!=1){
 
             $this->error->internalServer();
         }
+        $response['success'] = true;
+        $response['result'] = "Successfully updated password";
+        return $response;
+        
+    }
+    
+    public function updatePassword($oldPassword) {
+
+        $sql = " Select * from ".$this->config->Table_userRegistration." where ".$this->config->COL_userRegistration_unique_id." = '".
+            $this->getRegistrationId()."' and ".$this->config->COL_userRegistration_password." = '".
+            TagdToUtils::createPasswordHash($oldPassword)."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1) {
+
+            $this->error->internalServer();
+        }
+        elseif (count($result['RESULT']) == 0){
+            $this->error->responseCode = 400;
+            $this->error->string = "Invalid current password";
+            $this->error->errorHandler();
+        }
+        
+        
+
+        $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_password." = 
+        '".$this->getPassword()."' where ".$this->config->COL_userRegistration_unique_id." = '".
+            $this->getRegistrationId()."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1) {
+
+            $this->error->internalServer();
+        }
+        
 
         $response['success'] = true;
         $response['result'] = "Successfully updated password";

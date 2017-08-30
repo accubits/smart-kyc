@@ -227,24 +227,34 @@ class Company
 
     public function addCompanyInfo()
     {
-            $dataArr = array(
-                $this->config->COL_company_unique_id => TagdToUtils::getUniqueId(),
-                $this->config->COL_company_name => $this->getName(),
-                $this->config->COL_company_phone_number => $this->getPhoneNumber(),
-                $this->config->COL_company_url => $this->getCompanyUrl(),
-                $this->config->COL_company_bussiness_nature => $this->getBussinessNature(),
-                $this->config->COL_company_customer_type_q => $this->getCustomerTypeQ(),
-                $this->config->COL_company_customer_info_q => $this->getInfoQ(),
-                $this->config->COL_company_user_url_q => $this->getUserUrl(),
-                $this->config->COL_company_expt_avgorder_q => $this->getExptAvgorder(),
-                $this->config->COL_company_activity_nature_q => $this->getActivityNatureQ(),
-                $this->config->COL_company_bankdetails_q => $this->getBankdetailsQ(),
-                $this->config->COL_users_userRegistration_unique_id => $this->getUserId()
-            );
-        
-            foreach($dataArr as $k => $v) { $data[] = "$k='$v'"; }
-            $sql1 = "Update ".$this->config->Table_company." set ".implode(",",$data)." where ".
+        $sql = "Select * from ".$this->config->Table_company." where ".
             $this->config->COL_users_userRegistration_unique_id." = '".$this->getUserId()."'";
+        $result = $this->db->executeQuery($sql);
+        if ($result['CODE'] != 1) {
+            $this->error->internalServer();
+        }
+        $dataArr = array(
+            $this->config->COL_company_unique_id => TagdToUtils::getUniqueId(),
+            $this->config->COL_company_name => $this->getName(),
+            $this->config->COL_company_phone_number => $this->getPhoneNumber(),
+            $this->config->COL_company_url => $this->getCompanyUrl(),
+            $this->config->COL_company_bussiness_nature => $this->getBussinessNature(),
+            $this->config->COL_company_customer_type_q => $this->getCustomerTypeQ(),
+            $this->config->COL_company_customer_info_q => $this->getInfoQ(),
+            $this->config->COL_company_user_url_q => $this->getUserUrl(),
+            $this->config->COL_company_expt_avgorder_q => $this->getExptAvgorder(),
+            $this->config->COL_company_activity_nature_q => $this->getActivityNatureQ(),
+            $this->config->COL_company_bankdetails_q => $this->getBankdetailsQ(),
+            $this->config->COL_users_userRegistration_unique_id => $this->getUserId()
+        );
+
+        if (count($result['RESULT']) > 0) {
+
+            foreach ($dataArr as $k => $v) {
+                $data[] = "$k='$v'";
+            }
+            $sql1 = "Update " . $this->config->Table_company . " set " . implode(",", $data) . " where " .
+                $this->config->COL_users_userRegistration_unique_id . " = '" . $this->getUserId() . "'";
             $result = $this->db->executeQuery($sql1);
             if ($result['CODE'] != 1) {
                 $this->error->internalServer();
@@ -253,6 +263,15 @@ class Company
                 $response['result'] = $dataArr;
                 return $response;
             }
+        }
+        else {
+            $sql1 = $this->db->createInsertQuery($this->config->Table_company, $dataArr);
+            $result = $this->db->executeQuery($sql1);
+            if ($result['CODE'] != 1) {
+                $this->error->internalServer();
+            }
+            
+        }
     }
 
 }

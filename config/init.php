@@ -77,7 +77,7 @@ $Table_forgotPassword = "CREATE TABLE IF NOT EXISTS {$config->Table_forgotPasswo
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT $config->COL_forgotPassword_uniqueId FOREIGN KEY ($config->COL_forgotPassword_uniqueId) 
-    REFERENCES $config->Table_users ($config->COL_users_userRegistration_unique_id) ON DELETE CASCADE
+    REFERENCES $config->Table_userRegistration ($config->COL_userRegistration_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
 var_dump($db->executeQuery($Table_users));

@@ -20,7 +20,6 @@ function onSuccessHandler() {
     $response=$users->userRegistration();
     echo json_encode($response);
 
-
 }
 
 
