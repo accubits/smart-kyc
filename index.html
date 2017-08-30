@@ -33,8 +33,9 @@
     </div>
     <div class="content_wrap_log">
 
-            <div class="login_block">
+            <div class="login_block active" id="login_block">
                 <div class="text_box_wrap">
+                    <h2>Login</h2>
                     <div class="text_box_full txt_bx">
                         <div class="text_desc">Email</div>
                         <input type="text" ng-model="details.email">
@@ -47,10 +48,29 @@
                         <div class="login_btn" ng-click="logIn()">
                             Login
                         </div >
-                        <!--<p>Forgot password ?</p>-->
+                        <div class="frgt_link">
+                            <p ng-click="switchPassBox(1)">Forgot password ?</p>
+                        </div>
                     </div>
                 </div>
             </div>
+        <div class="login_block" id="frgt_block">
+            <div class="text_box_wrap">
+                <h2>Forgot Password</h2>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Email</div>
+                    <input type="text" ng-model="forgot.email">
+                </div>
+                <div class="log_wrap">
+                    <div class="login_btn" ng-click="forgotPass()">
+                        Sumbit
+                    </div >
+                    <div class="frgt_link">
+                        <p ng-click="switchPassBox(0)">Login</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </div>

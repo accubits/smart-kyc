@@ -175,7 +175,7 @@
             <div class="verification_wrap" ng-if="user.users_verify_status == 1">
                 <div class="">You account is verified</div>
             </div>
-            <div class="verif_button_wrap" ng-if="user.users_verify_status == 1">
+            <div class="verif_button_wrap">
                 <a href="registration.html">
                     <div class="ver_but">Edit information</div>
                 </a>
@@ -186,19 +186,19 @@
                 <h2>Reset Password</h2>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Old Password</div>
-                    <input type="password" ng-model="details.password">
+                    <input type="password" ng-model="passDeatils.oldpass">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Password</div>
-                    <input type="password" ng-model="details.password">
+                    <input type="password" ng-model="passDeatils.password">
                 </div>
                 <div class="text_box_full txt_bx">
                     <div class="text_desc">Re-Type Password</div>
-                    <input type="password" ng-model="details.reenterpassword">
+                    <input type="password" ng-model="passDeatils.reenterpassword">
                 </div>
                 <div class="log_wrap">
-                    <div class="login_btn" ng-click="signUp()">
-                        Signup
+                    <div class="login_btn" ng-click="resetPassword()">
+                        Reset
                     </div>
                 </div>
             </div>

@@ -5,6 +5,12 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
     $scope.userDetails=JSON.parse(localStorage.getItem("userDetails"));
     console.log($scope.userDetails.unique_id);
 
+    $scope.passDeatils = {
+        "oldpass": "",
+        "password": "",
+        "reenterpassword": ""
+    }
+
     $scope.verify= function (){
 
         var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;
@@ -35,4 +41,43 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         });
     };
     $scope.verify();
+
+    $scope.resetPassword = function (){
+
+        console.log($scope.passDeatils)
+        if($scope.passDeatils.oldpass == "" || $scope.passDeatils.password == ""){
+            showError('Please enter all the details','error',true);
+            return;
+        }
+        if($scope.passDeatils.password != $scope.passDeatils.reenterpassword){
+            showError("Password doesn't match",'error',true);
+            return;
+        }
+        var data = 'oldPassword='+ $scope.passDeatils.oldpass +
+            '&&userRegistration_uniqueId='+$scope.userDetails.unique_id +
+            '&&userRegistration_password='+ $scope.passDeatils.password;
+
+        var postData = data;
+        var requestObj = {
+            method: 'POST',
+            url: ServerApi+'updatePassword.php',
+            data: postData
+        };
+
+        // Making API Call [start]
+        $http(requestObj).success(function (data) {
+            console.log(data);
+            showError('successfully updated password','success',true);
+            $scope.passDeatils = {
+                "oldpass": "",
+                "password": "",
+                "reenterpassword": ""
+            }
+        }).error(function (data, err) {
+            console.log(data);
+            console.log(err);
+
+        });
+
+    };
 });

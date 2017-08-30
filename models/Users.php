@@ -801,4 +801,106 @@ public function readInfo(){
         return $result['RESULT'][0][$this->config->COL_userRegistration_email];
     }
 
+
+    public function forgotPassword() {
+
+        $sql = "Select ".$this->config->COL_userRegistration_unique_id." from ".$this->config->Table_userRegistration."
+         where ".$this->config->COL_userRegistration_email." = '".$this->getEmail()."' LIMIT 1";
+
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        elseif (count($result['RESULT']) == ''){
+            $this->error->responseCode = 400;
+            $this->error->string = "No account registered with this email-id";
+            $this->error->errorHandler();
+        }
+        $unique_id = $result['RESULT'][0][$this->config->COL_userRegistration_unique_id];
+
+        $sql = "Delete from ".$this->config->Table_forgotPassword." where ".$this->config->COL_forgotPassword_uniqueId." = 
+        '".$unique_id."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+
+        $token = TagdToUtils::getUniqueId();
+        $dataArr = array(
+            $this->config->COL_forgotPassword_token => $token,
+            $this->config->COL_forgotPassword_uniqueId => $unique_id,
+        );
+        $sql1 = $this->db->createInsertQuery($this->config->Table_forgotPassword, $dataArr);
+        $result = $this->db->executeQuery($sql1);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+
+        }
+        
+        $this->sendMail($this->getEmail(),"Reset Password - crypbrokers","Hi, <br> Please click the below link t reset password <br>
+                        http://52.220.41.10/crypbrokers/resetPassword.html?token=".$token);
+
+        $response['success'] = true;
+        $response['result'] = "An email has been sent to your registered email-id";
+        return $response;
+
+    }
+    
+    public function resetPassword($token){
+        
+        
+        $sql =  "Select ".$this->config->COL_forgotPassword_uniqueId." from ".$this->config->Table_forgotPassword."
+         where ".$this->config->COL_forgotPassword_token." = '".$token."' LIMIT 1";
+
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        elseif ($result['RESULT'] == ''){
+            $this->error->responseCode = 400;
+            $this->error->string = "Invalid token";
+            $this->error->errorHandler();
+        }
+        
+        $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_password." = 
+        '".$this->getPassword()."' where ".$this->config->COL_userRegistration_unique_id." = '".
+            $result['RESULT'][0][$this->config->COL_forgotPassword_uniqueId]."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+
+        $response['success'] = true;
+        $response['result'] = "Successfully updated password";
+        return $response;
+        
+    }
+    
+    public function updatePassword() {
+
+        $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_password." = 
+        '".$this->getPassword()."' where ".$this->config->COL_userRegistration_unique_id." = '".
+            $this->getRegistrationId()."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+
+        $response['success'] = true;
+        $response['result'] = "Successfully updated password";
+        return $response;
+    }
+
 }

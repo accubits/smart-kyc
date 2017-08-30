@@ -35,13 +35,20 @@ crypbrokersApp.controller('adminloginCntl', function ($scope,$http,$window) {
             console.log(data);
             localStorage.setItem("adminDetails",JSON.stringify(data));
 
-            $window.location.href = 'user_list.html';
-            showError('Successfully loggedIn','success',true)
+            if(data["type"] == "1"){
+                $window.location.href = 'user_list.html';
+                showError('Successfully loggedIn','success',true)
+            }
+            else{
+                showError('Invalid credentials','error',true);
+            }
+
+
 
         }).error(function (data, err) {
             console.log(data);
             console.log(err);
-            showError('errooooor','error',true)
+            showError(data["error"],'error',true);
 
 
         });

@@ -37,6 +37,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         bankDetailsQ:'',
     };
 
+
     $scope.countries = [
         {name: 'Afghanistan', code: 'AF'},
         {name: 'Åland Islands', code: 'AX'},
@@ -567,6 +568,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             }
         });
     }
+
 });
 
 

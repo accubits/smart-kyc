@@ -181,8 +181,8 @@ input,textarea,select
 }
 .content_wrap_log
 {
-    width: 35%;
-    margin: 6% auto;
+    width: 400px;
+    margin: 80px auto;
 }
 .login_btn
 {
@@ -199,6 +199,15 @@ input,textarea,select
 {
     background-color:  #1e2434;
 }
+.login_block{
+    padding: 30px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px 1px #ddd;
+    display: none;
+}
+.login_block.active{
+    display: block;
+}
 .login_block .text_box_wrap .text_box_full
 {
     margin-bottom: 20px;
@@ -207,6 +216,13 @@ input,textarea,select
 {
     text-align: center;
     margin-top: 10px;
+}
+.frgt_link{
+    font-size: 12px;
+}
+.frgt_link p{
+    display: inline-block;
+    cursor: pointer;
 }
 .content_navigation
 {
@@ -220,17 +236,26 @@ input,textarea,select
 {
     font-family: Montserrat-Light;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     margin-top: 0px;
 }
 .to_nav_tab
 {
-    width: 100px;
+    width: 120px;
     display: inline-block;
     vertical-align: top;
-    margin: 0px 50px;
+    margin: 0px 30px;
     cursor: pointer;
     position: relative;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px 1px #ddd;
+    padding: 30px 40px;
+    transition: all 0.5s;
+}
+.to_nav_tab:hover{
+    /*background: #f2f2f2;*/
+    box-shadow: 0px 0px 15px 2px #ddd;
+    transform: scale(1.05);
 }
 /*.to_nav_tab:nth-child(1):after*/
 /*{*/
