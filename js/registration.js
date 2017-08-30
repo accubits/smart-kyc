@@ -11,7 +11,15 @@
 //
 //}
 
+function changeTab(){
 
+    var id = $(this).attr('data-id');
+    $('.tab_wrap li').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tab_content').removeClass('active');
+    $(id).addClass('active');
+}
 function switchTab(){
 
     var id = $(this).attr('data-id');
@@ -88,6 +96,7 @@ function individual()
 {
     $(this).addClass('indv_active');
     $('.comp_blk_dis').css({'display':'none'});
+    $('.req_blk').html('2')
 }
 function init() {
     //$('.go_btn ').click(go);
@@ -101,7 +110,8 @@ function init() {
     $('.to_nav_tab').click(navig);
     $('.indiv').click(individual);
 
-    $('.blocks').click(switchTab);
+    $('.tab').click(switchTab);
+    $('.tab_wrap li').click(changeTab);
 
 }
 $(document).ready(init);
