@@ -60,9 +60,9 @@ class dbconfig
 
     /*Table_usersImage*/
 
-    public $COL_usersImage_unique_id           = 'usersImage_unique_id';
-    public $COL_usersImage_users_unique_id     = 'usersImage_users_unique_id';
-    public $COL_usersImage_image               = 'usersImage_image';
+    public $COL_usersImage_unique_id                       = 'usersImage_unique_id';
+    public $COL_usersImage_userRegistration_unique_id     = 'usersImage_userRegistration_unique_id';
+    public $COL_usersImage_image                           = 'usersImage_image';
     
     /*Table_userRegistration*/
 

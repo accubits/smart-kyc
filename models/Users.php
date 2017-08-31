@@ -511,11 +511,11 @@ class Users
         $dataArr = array(
             $this->config->COL_usersImage_unique_id => TagdToUtils::getUniqueId(),
             $this->config->COL_usersImage_image => $image,
-            $this->config->COL_usersImage_users_unique_id => $this->getUniqueId()
+            $this->config->COL_usersImage_userRegistration_unique_id => $this->getUniqueId()
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_usersImage, $dataArr);
         $result = $this->db->executeQuery($sql1);
-echo $sql1;
+
         if ($result['CODE'] != 1) {
 
             $this->error->internalServer();
