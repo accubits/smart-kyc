@@ -19,13 +19,15 @@ function onSuccessHandler()
     $out = $users->addAllImage($images);
     $email = $users->getEmailFromId($_POST[$config->COL_usersImage_users_unique_id]);
     $users->sendMail($email,"Documents received","Hi, your KYC documents uploaded successfully. We will verify the documents soon.");
-    $users->sendMail('dittops@accubits.com',"KYC uploaded","User ".$_POST[$config->COL_usersImage_users_unique_id]."
+//    $users->sendMail('dittops@accubits.com',"KYC uploaded","User ".$_POST[$config->COL_usersImage_users_unique_id]."
+//     uploaded KYC details");
+    $users->sendMail('maria@accubits.com',"KYC uploaded","User ".$_POST[$config->COL_usersImage_users_unique_id]."
      uploaded KYC details");
     echo json_encode($out);
     
 }
 $required = array(
-//    $config->COL_usersImage_users_unique_id
+    $config->COL_usersImage_users_unique_id
 );
 
 NvooyUtils::onSetAndEmptyCheckHandler($_POST, $required, $required, "onSuccessHandler", "onEmptyHandler", "onNotSetHandler", true);

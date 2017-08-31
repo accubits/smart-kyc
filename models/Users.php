@@ -446,7 +446,10 @@ class Users
                 $this->config->COL_users_id_valid_date              => $this->getIdValidDate(),
                 $this->config->COL_users_userRegistration_unique_id => $this->getRegistrationId()
             );
-            foreach($dataArr as $k => $v) { $data[] = "$k='$v'"; }
+            foreach($dataArr as $k => $v) {
+
+                $data[] = "$k='$v'";
+            }
             $sql1 = "Update ".$this->config->Table_users." set ".implode(",",$data)." where ".
                 $this->config->COL_userRegistration_unique_id." = '".$this->getRegistrationId()."'";
 //            $sql1 = $this->db->createInsertQuery($this->config->Table_users, $dataArr);
@@ -512,7 +515,7 @@ class Users
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_usersImage, $dataArr);
         $result = $this->db->executeQuery($sql1);
-
+echo $sql1;
         if ($result['CODE'] != 1) {
 
             $this->error->internalServer();
@@ -561,13 +564,18 @@ public function userRegistration(){
             $this->config->COL_userRegistration_password     => $this->getPassword()
         );
 
-        $sql1 = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
-        $result = $this->db->executeQuery($sql1);
+        $sql = $this->db->createInsertQuery($this->config->Table_userRegistration, $dataArr);
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+            $this->error->internalServer();
+
+        }
 
         $sql1 = $this->db->createInsertQuery($this->config->Table_users, [
             $this->config->COL_users_userRegistration_unique_id    => $uniqueId
         ]);
-        $result = $this->db->executeQuery($sql1);
+        $result1 = $this->db->executeQuery($sql1);
 
 //        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
 //            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
@@ -776,8 +784,10 @@ public function readInfo(){
         $mail->Host = "smtp.gmail.com";
         $mail->Port = 587; // or 587
         $mail->IsHTML(true);
-        $mail->Username = "charush@accubits.com";
-        $mail->Password = "charush*523";
+//        $mail->Username = "charush@accubits.com";
+//        $mail->Password = "charush*523";
+        $mail->Username = "maria@accubits.com";
+        $mail->Password = "maria";
         $mail->SetFrom("example@gmail.com");
         $mail->Subject = $sub;
         $mail->Body = $content;
