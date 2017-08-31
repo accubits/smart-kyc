@@ -588,6 +588,17 @@ a
     font-size: 13px;
     margin-top: 10px;
 }
+.doc_blocks
+{
+    display: inline-block;
+    width: 44%;
+    vertical-align: text-top;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    border: 1px solid #e6e6e6;
+    padding: 2%;
+    min-height: 200px;
+}
 .t_c{
     text-align: center;
 }
@@ -650,6 +661,10 @@ a
     cursor: pointer;
     float: right;
     vertical-align: top;
+}
+.sv_btn:hover
+{
+    background-color: #1b274a;
 }
 
 

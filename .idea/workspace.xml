@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3006728c-1b16-4c0b-bd34-ccaba09c4f0c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/registration.css" afterPath="$PROJECT_DIR$/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.html" afterPath="$PROJECT_DIR$/verify.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration.html" afterPath="$PROJECT_DIR$/registration.html" />
     </list>
     <ignored path="crypbrokers.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,6 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/registration.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.884615">
+              <caret line="350" column="30" selection-start-line="350" selection-start-column="30" selection-end-line="350" selection-end-column="30" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="user_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/user_list.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,10 +72,10 @@
       <file leaf-file-name="registration.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/registration.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45519713">
-              <caret line="588" column="21" selection-start-line="588" selection-start-column="21" selection-end-line="588" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.75985664">
+              <caret line="666" column="29" selection-start-line="666" selection-start-column="29" selection-end-line="666" selection-end-column="29" />
               <folding>
-                <marker date="1504184969522" expanded="true" signature="87:100" placeholder="..." />
+                <marker date="1504185692964" expanded="true" signature="87:100" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -85,7 +99,6 @@
         <option value="$PROJECT_DIR$/js/verifycontroller.js" />
         <option value="$PROJECT_DIR$/js/maincontroller.js" />
         <option value="$PROJECT_DIR$/js/registration.js" />
-        <option value="$PROJECT_DIR$/registration.html" />
         <option value="$PROJECT_DIR$/admin/detailed_view.html" />
         <option value="$PROJECT_DIR$/admin/user_list.html" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -94,6 +107,7 @@
         <option value="$PROJECT_DIR$/admin/index.html" />
         <option value="$PROJECT_DIR$/admin/css/admin.css" />
         <option value="$PROJECT_DIR$/verify.html" />
+        <option value="$PROJECT_DIR$/registration.html" />
         <option value="$PROJECT_DIR$/css/registration.css" />
       </list>
     </option>
@@ -338,7 +352,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1504184969522" expanded="true" signature="87:100" placeholder="..." />
+            <marker date="1504185692964" expanded="true" signature="87:100" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -524,17 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="388" column="14" selection-start-line="386" selection-start-column="8" selection-end-line="388" selection-end-column="14" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/detailed_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.1923077">
@@ -619,12 +622,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/registration.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.884615">
+          <caret line="350" column="30" selection-start-line="350" selection-start-column="30" selection-end-line="350" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/registration.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45519713">
-          <caret line="588" column="21" selection-start-line="588" selection-start-column="21" selection-end-line="588" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.75985664">
+          <caret line="666" column="29" selection-start-line="666" selection-start-column="29" selection-end-line="666" selection-end-column="29" />
           <folding>
-            <marker date="1504184969522" expanded="true" signature="87:100" placeholder="..." />
+            <marker date="1504185692964" expanded="true" signature="87:100" placeholder="..." />
           </folding>
         </state>
       </provider>
