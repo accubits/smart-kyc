@@ -673,6 +673,7 @@ a
         -webkit-transition: all ease 0.5s;
         -moz-transition: all ease 0.5s;
         -o-transition: all ease 0.5s;
+        z-index: -10;
     }
     .nav_bar.active
     {
@@ -682,6 +683,7 @@ a
         -webkit-transition: all ease 0.5s;
         -moz-transition: all ease 0.5s;
         -o-transition: all ease 0.5s;
+        z-index: 10;
     }
     .nav_com
     {
@@ -701,8 +703,8 @@ a
         height: 30px;
         background-image: url(../images/menu-button-of-three-lines.png);
         position: absolute;
-        right: 50px;
-        top: 26%;
+        right: 10%;
+        top: 31%;
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -724,6 +726,10 @@ a
 }
 @media only screen and (max-width:560px)
 {
+    .content_wrap h2
+    {
+        font-size: 18px;
+    }
     .tab_wrap ul li
     {
         padding: 10px 11px;

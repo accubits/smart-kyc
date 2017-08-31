@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3006728c-1b16-4c0b-bd34-ccaba09c4f0c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/libs/jquery-1.8.2.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/css/admin.css" afterPath="$PROJECT_DIR$/admin/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/css/registration.css" afterPath="$PROJECT_DIR$/admin/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/registration.css" afterPath="$PROJECT_DIR$/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signup.html" afterPath="$PROJECT_DIR$/signup.html" />
     </list>
     <ignored path="crypbrokers.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,18 +60,6 @@
         </entry>
       </file>
       <file leaf-file-name="registration.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/registration.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.23077">
-              <caret line="34" column="1" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
-              <folding>
-                <marker date="1504165170076" expanded="true" signature="87:100" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registration.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/css/registration.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.23077">
@@ -87,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/css/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4856631">
+            <state vertical-scroll-proportion="-10.423077">
               <caret line="270" column="28" selection-start-line="270" selection-start-column="28" selection-end-line="270" selection-end-column="28" />
               <folding />
             </state>
@@ -129,6 +111,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="registration.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/registration.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.546595">
+              <caret line="706" column="17" selection-start-line="706" selection-start-column="17" selection-end-line="706" selection-end-column="17" />
+              <folding>
+                <marker date="1504176442915" expanded="true" signature="87:100" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -153,10 +147,10 @@
         <option value="$PROJECT_DIR$/admin/user_list.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/signup.html" />
-        <option value="$PROJECT_DIR$/css/registration.css" />
         <option value="$PROJECT_DIR$/admin/css/registration.css" />
         <option value="$PROJECT_DIR$/admin/index.html" />
         <option value="$PROJECT_DIR$/admin/css/admin.css" />
+        <option value="$PROJECT_DIR$/css/registration.css" />
       </list>
     </option>
   </component>
@@ -418,7 +412,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1504165170076" expanded="true" signature="87:100" placeholder="..." />
+            <marker date="1504176442915" expanded="true" signature="87:100" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -672,20 +666,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/registration.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.23077">
-          <caret line="34" column="1" selection-start-line="28" selection-start-column="0" selection-end-line="34" selection-end-column="1" />
-          <folding>
-            <marker date="1504165170076" expanded="true" signature="87:100" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.1923075">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.423077">
+          <caret line="270" column="28" selection-start-line="270" selection-start-column="28" selection-end-line="270" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -698,11 +690,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/css/admin.css">
+    <entry file="file://$PROJECT_DIR$/css/registration.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4856631">
-          <caret line="270" column="28" selection-start-line="270" selection-start-column="28" selection-end-line="270" selection-end-column="28" />
-          <folding />
+        <state vertical-scroll-proportion="0.546595">
+          <caret line="706" column="17" selection-start-line="706" selection-start-column="17" selection-end-line="706" selection-end-column="17" />
+          <folding>
+            <marker date="1504176442915" expanded="true" signature="87:100" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
