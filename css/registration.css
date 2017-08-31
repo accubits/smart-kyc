@@ -734,6 +734,10 @@ a
     {
         width: 20px;
     }
+    .nav_com
+    {
+        font-size: 12px;
+    }
 }
 @media only screen and (max-width:530px)
 {

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3006728c-1b16-4c0b-bd34-ccaba09c4f0c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/registration.css" afterPath="$PROJECT_DIR$/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/registration.js" afterPath="$PROJECT_DIR$/js/registration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration.html" afterPath="$PROJECT_DIR$/registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.html" afterPath="$PROJECT_DIR$/verify.html" />
     </list>
     <ignored path="crypbrokers.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,8 +60,8 @@
       <file leaf-file-name="registration.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/registration.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78315413">
-              <caret line="734" column="20" selection-start-line="734" selection-start-column="20" selection-end-line="734" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.9050179">
+              <caret line="738" column="24" selection-start-line="738" selection-start-column="24" selection-end-line="738" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -604,8 +600,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/registration.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78315413">
-          <caret line="734" column="20" selection-start-line="734" selection-start-column="20" selection-end-line="734" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.9050179">
+          <caret line="738" column="24" selection-start-line="738" selection-start-column="24" selection-end-line="738" selection-end-column="24" />
           <folding />
         </state>
       </provider>
