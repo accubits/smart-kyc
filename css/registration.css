@@ -180,7 +180,8 @@ input,textarea,select
 }
 .content_wrap_ver
 {
-    padding: 50px 7%;
+    padding: 0% 0%;
+    background-color: #f2f2f3;
 }
 .content_wrap
 {
@@ -526,21 +527,25 @@ a
     margin-bottom: 20px;
 }
 .tab_wrap ul{
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
+    text-align: center;
+    margin-bottom: 30px;
 }
 .tab_wrap ul li{
     /*width: 150px;*/
 
-    padding: 15px 30px;
+    padding: 9px 30px;
     font-size: 14px;
     font-family: Montserrat-Light;
     cursor: pointer;
+    display: inline-block;
+
 }
 .tab_wrap ul li.active, .tab_wrap ul li:hover{
     background: #f7f7f7;
@@ -551,11 +556,11 @@ a
     margin-bottom: -1px;
 }
 .tab_wrap ul li img{
-    width: 20px;
+    width: 30px;
     display: inline-block;
     margin: auto;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .tab_wrap ul li span{
     vertical-align: middle;
@@ -572,9 +577,19 @@ a
 .reset_pass_wrap{
     width: 400px;
     margin: 20px auto 80px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px 1px #ddd;
+    /*border: 1px solid #ddd;*/
+    /*box-shadow: 0px 0px 10px 1px #ddd;*/
     padding: 30px;
+}
+.vers
+{
+    display: inline-block;
+    width: 140px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.t_c{
+    text-align: center;
 }
 .text_box_full{
     margin: 10px 0;
@@ -617,6 +632,26 @@ a
 {
     display: none;
 }
+.gen_block
+{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.sv_btn
+{
+    display: inline-block;
+    background-color: #FFC107;
+    color: white;
+    padding: 6px 40px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Montserrat-Light;
+    cursor: pointer;
+    float: right;
+    vertical-align: top;
+}
+
 
 @media only screen and (max-width:880px)
 {
