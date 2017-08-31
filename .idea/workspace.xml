@@ -37,14 +37,14 @@
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
-              <caret line="517" column="11" lean-forward="false" selection-start-line="517" selection-start-column="11" selection-end-line="517" selection-end-column="11" />
+              <caret line="517" column="0" lean-forward="true" selection-start-line="517" selection-start-column="0" selection-end-line="517" selection-end-column="0" />
               <folding>
-                <marker date="1504186996382" expanded="true" signature="15404:15740" ph="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504186996382" expanded="true" signature="18109:18279" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504186996382" expanded="true" signature="19647:19826" ph="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-                <marker date="1504186996382" expanded="true" signature="22310:22442" ph="Delete from " />
-                <marker date="1504186996382" expanded="true" signature="24487:24612" ph="Delete from " />
-                <marker date="1504186996382" expanded="true" signature="24967:25246" ph="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504187094720" expanded="true" signature="15393:15729" ph="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504187094720" expanded="true" signature="18098:18268" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504187094720" expanded="true" signature="19636:19815" ph="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504187094720" expanded="true" signature="22299:22431" ph="Delete from " />
+                <marker date="1504187094720" expanded="true" signature="24476:24601" ph="Delete from " />
+                <marker date="1504187094720" expanded="true" signature="24956:25235" ph="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
               </folding>
             </state>
           </provider>
@@ -264,7 +264,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504087561800</updated>
-      <workItem from="1504160793812" duration="15584000" />
+      <workItem from="1504160793812" duration="15682000" />
     </task>
     <task id="LOCAL-00001" summary="changes">
       <created>1504091772483</created>
@@ -298,7 +298,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15584000" />
+    <option name="totallyTimeSpent" value="15682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -751,14 +751,14 @@
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
-          <caret line="517" column="11" lean-forward="false" selection-start-line="517" selection-start-column="11" selection-end-line="517" selection-end-column="11" />
+          <caret line="517" column="0" lean-forward="true" selection-start-line="517" selection-start-column="0" selection-end-line="517" selection-end-column="0" />
           <folding>
-            <marker date="1504186996382" expanded="true" signature="15404:15740" ph="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504186996382" expanded="true" signature="18109:18279" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504186996382" expanded="true" signature="19647:19826" ph="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-            <marker date="1504186996382" expanded="true" signature="22310:22442" ph="Delete from " />
-            <marker date="1504186996382" expanded="true" signature="24487:24612" ph="Delete from " />
-            <marker date="1504186996382" expanded="true" signature="24967:25246" ph="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504187094720" expanded="true" signature="15393:15729" ph="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504187094720" expanded="true" signature="18098:18268" ph="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504187094720" expanded="true" signature="19636:19815" ph="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504187094720" expanded="true" signature="22299:22431" ph="Delete from " />
+            <marker date="1504187094720" expanded="true" signature="24476:24601" ph="Delete from " />
+            <marker date="1504187094720" expanded="true" signature="24956:25235" ph="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
           </folding>
         </state>
       </provider>
