@@ -2,102 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68f0150a-dd9f-4a3d-93f2-4ed35fc4c9a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cryp_btm.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/menu-button-of-three-lines.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/00314c9cf2bd1a75d62cc127f034b926.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/015889c5a6190bd2f37adaf595393fd8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/0306779738e278a82ab9a63a727a6c61.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/0543c562dd69f11088d5cfdc40663acc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/088622ea291b92dbdd0631c8b9343011.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/0f3ca35b299adffdc81ac5018f27da28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/0f77087f463843dd47f4280dc8bb815c.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/192bc0a7577f5e0ebed2ca460b511d0b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/23b22af07ea7ddc7f850d9743907cedc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/2f09ee8b8adc11835a2e31ac88cdadc3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/30fcad9a737914419d96d31d10dc61fb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/3b51ca9916a2bf8f7848672f024f243f.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/4154d36b222f21a4f6bbb4d1faa03f45.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/4394242c9ba04fa269eb9a5dd0860382.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/4683dbd570852f5c2e1f0e4ae3cae24b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/475c95a6fa257acfc33e7fcf61067f2c.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/5c5a04f91f8ec560b04ed0195c94bc15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/5f125e6a39601343d7ad2930520b3db6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/601b71ee5113209588fc1be081465d9c.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/6242a7640ec288a24f447aefbc0e6d53.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/63a5c55f70ec64e830816be8e48a91a9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/63b1d4add4d63d572698fed7cb74091a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/63b2e75c16a3379d7a1966633dba7bc0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/651f123468e3079e8cee4403ba9cc62f.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/66d8b49d2c8e77a18bfbf61799515d1d.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/6b7f7e10eea7acaab4caa4be0ec975b9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/6e03080339edc506166728fae48e3946.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/6e46d301e36d35c3659893d8bbddf5c2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/708f9a09f49fcbf7c24447ecdf8a9f96.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/728c74d7285abc86bf7879db7002e3f7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/72bf4d9c3f3af4217951dda767ee3791.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/739a648989db32fc02578976ca05b564.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/7e34387ab58501564c05d3da663739c9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/7f3000da00efc2de42c58582f3370ce4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/855c447270c7542a9f93e1403d9646eb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/8d7b9640cce4cad7423aee87307e1a72.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/8e82d787629a5a440071f15b80afe182.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/8ec523ba365dfc2e243ea923d358aeaf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/8f4baae3fdd433eaafbb62b48cbb04dc.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/91fe51bd1821f907c88754692fad7c50.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/9267883378ba2c7cc372c616e636e6f4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/955ab800dd8173be972fc67a38c010c6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/9ac3d575bff7f9b9509f8df188efd801.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/9b2a3205ef98fcdef35608d5d518b39b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/a46f0a6d184f9d814efa7a84069e677b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/a50bff3f6095ae7ca5f4ca9a3f760ab9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/a7d263d4ce85437765d42ccab637d037.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/a860f389852a1628d5798b8a3ae4b375.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/aa55c1f6a56cbd0d7951e60435e28a27.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/af96784d388434f4e988afb25884846d.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/aff1681028d4dbce438a161613c72fbe.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/b13c9f4ca41fb8d31fa53b8abc3c055a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/b2093d63bcec70fd83337020844c45c8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/b20b0b549f509208187a7e956dc5e9e7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/b8c028c8dafc80e0e71d8df96d384414.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/bc528ebe0315c52e8da5001adba35ae6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/becf8e357fc2cfd5b824934c49d72969.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/bf224c4a08da5ed948d91e5ab477dc50.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/c4d9fd50f8eb4fead318feffc52fa57a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/c5e15d4f7cb411f5578d3ca9e9431b5e.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/c70c8eaa82e9d3d215183ee555914fea.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/ce8f8e6b7a90ced693f14551a3113384.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/dc7c0191b19a809a8fd3268e15cf893a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/dd6c692abb33fdcd99cc2c75ac3248bb.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/df3664c978dee9830df8252da25e305e.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/e1d45eeffdee4226e109c7254c4579b5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/e414333091940ec0be0c700da68f9cd8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/e542dd25c1cab3b62eccc87782315ae0.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/ea2031623ca2dc2e9aa921540435e9a7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/ef2654e0065b22a6de32c79498f2c55a.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/f49bfae86d9cf965f6b93ba17606cab6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/f68c3a0afb204071f17e2dbc94953ea8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/f8755e6f5482f7a787451908015576b5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/fb18886ffe0134901749c598183edd76.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/fc0b65aaf9b3d9d47167ccd95504415e.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/uploads/images/fd38a6db4d357354026be913769ee3dc.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/libs/jquery-1.8.2.min.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/updateUserDetails.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/css/admin.css" afterPath="$PROJECT_DIR$/admin/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/css/registration.css" afterPath="$PROJECT_DIR$/admin/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/detailed_view.html" afterPath="$PROJECT_DIR$/admin/detailed_view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="$PROJECT_DIR$/admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/reset_password.html" afterPath="$PROJECT_DIR$/admin/reset_password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user_list.html" afterPath="$PROJECT_DIR$/admin/user_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/init.php" afterPath="$PROJECT_DIR$/config/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/registration.css" afterPath="$PROJECT_DIR$/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/registration.js" afterPath="$PROJECT_DIR$/js/registration.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Users.php" afterPath="$PROJECT_DIR$/models/Users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration.html" afterPath="$PROJECT_DIR$/registration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/signup.html" afterPath="$PROJECT_DIR$/signup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/uploadDocuments.php" afterPath="$PROJECT_DIR$/users/uploadDocuments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.html" afterPath="$PROJECT_DIR$/verify.html" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,22 +27,22 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="752" column="0" selection-start-line="752" selection-start-column="0" selection-end-line="752" selection-end-column="0" />
+            <state relative-caret-position="451">
+              <caret line="977" column="8" selection-start-line="977" selection-start-column="8" selection-end-line="977" selection-end-column="8" />
               <folding>
-                <marker date="1504255448000" expanded="true" signature="15393:15729" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504255448000" expanded="true" signature="18098:18268" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504255448000" expanded="true" signature="19636:19815" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-                <marker date="1504255448000" expanded="true" signature="22299:22311" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="22299:22356" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="22299:22357" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="22299:22416" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="22299:22431" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="22299:22432" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="24476:24601" placeholder="Delete from " />
-                <marker date="1504255448000" expanded="true" signature="24956:24970" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504255448000" expanded="true" signature="24956:25012" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504255448000" expanded="true" signature="24956:25235" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504272240000" expanded="true" signature="15393:15729" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504272240000" expanded="true" signature="18098:18268" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504272240000" expanded="true" signature="19636:19826" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504272240000" expanded="true" signature="22310:22322" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="22310:22367" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="22310:22368" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="22310:22427" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="22310:22442" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="22310:22443" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="24487:24612" placeholder="Delete from " />
+                <marker date="1504272240000" expanded="true" signature="24967:24981" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504272240000" expanded="true" signature="24967:25023" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504272240000" expanded="true" signature="24967:25246" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
               </folding>
             </state>
           </provider>
@@ -161,16 +68,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addAdmin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/addAdmin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Company.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Company.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -190,28 +87,50 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="256">
+              <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userRegistration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/userRegistration.php">
+      <file leaf-file-name="updateUserDetails.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/updateUserDetails.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/libraries/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Authenticate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/class/Authenticate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateVerificationStatus.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="34" column="131" selection-start-line="8" selection-start-column="0" selection-end-line="34" selection-end-column="131" />
               <folding />
             </state>
           </provider>
@@ -226,18 +145,6 @@
                 <marker date="1504255447000" expanded="true" signature="45:1475" placeholder="CREATE TABLE... IF" />
                 <marker date="1504255447000" expanded="true" signature="1499:2444" placeholder="CREATE TABLE... IF" />
                 <marker date="1504255447000" expanded="true" signature="2471:2498" placeholder="CREATE TABLE... IF" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forgotPassword.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/forgotPassword.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding>
-                <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -279,10 +186,11 @@
         <option value="$PROJECT_DIR$/users/updatePassword.php" />
         <option value="$PROJECT_DIR$/users/login.php" />
         <option value="$PROJECT_DIR$/users/userRegistration.php" />
-        <option value="$PROJECT_DIR$/models/Users.php" />
         <option value="$PROJECT_DIR$/models/Company.php" />
         <option value="$PROJECT_DIR$/config/init.php" />
         <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/users/updateUserDetails.php" />
+        <option value="$PROJECT_DIR$/models/Users.php" />
       </list>
     </option>
   </component>
@@ -436,12 +344,12 @@
       <workItem from="1504015499202" duration="4688000" />
       <workItem from="1504027340314" duration="9624000" />
       <workItem from="1504072858022" duration="8305000" />
-      <workItem from="1504255302358" duration="261000" />
+      <workItem from="1504255302358" duration="2682000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38246000" />
+    <option name="totallyTimeSpent" value="40667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -453,7 +361,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -506,23 +414,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/users/forgotPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/userlistcontroller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -725,23 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/getAllUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -845,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/getUserDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -861,24 +727,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="35" column="60" selection-start-line="35" selection-start-column="60" selection-end-line="35" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="131" selection-start-line="8" selection-start-column="0" selection-end-line="34" selection-end-column="131" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/updateUserDetails.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="752" column="0" selection-start-line="752" selection-start-column="0" selection-end-line="752" selection-end-column="0" />
+        <state relative-caret-position="451">
+          <caret line="977" column="8" selection-start-line="977" selection-start-column="8" selection-end-line="977" selection-end-column="8" />
           <folding>
-            <marker date="1504255448000" expanded="true" signature="15393:15729" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504255448000" expanded="true" signature="18098:18268" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504255448000" expanded="true" signature="19636:19815" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-            <marker date="1504255448000" expanded="true" signature="22299:22311" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="22299:22356" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="22299:22357" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="22299:22416" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="22299:22431" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="22299:22432" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="24476:24601" placeholder="Delete from " />
-            <marker date="1504255448000" expanded="true" signature="24956:24970" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504255448000" expanded="true" signature="24956:25012" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504255448000" expanded="true" signature="24956:25235" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504272240000" expanded="true" signature="15393:15729" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504272240000" expanded="true" signature="18098:18268" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504272240000" expanded="true" signature="19636:19826" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504272240000" expanded="true" signature="22310:22322" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="22310:22367" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="22310:22368" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="22310:22427" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="22310:22442" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="22310:22443" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="24487:24612" placeholder="Delete from " />
+            <marker date="1504272240000" expanded="true" signature="24967:24981" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504272240000" expanded="true" signature="24967:25023" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504272240000" expanded="true" signature="24967:25246" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
           </folding>
         </state>
       </provider>
