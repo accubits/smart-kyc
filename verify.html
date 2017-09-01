@@ -148,38 +148,19 @@
             <div class="reset_pass_wrap">
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
-                        <div class="text_desc">Contact Information</div>
-                        <select>
-                            <option>Email</option>
-                            <option>Telephone 1</option>
-                            <option>Telephone 2</option>
-                        </select>
+                        <div class="text_desc">Email address</div>
+                        <input type="text" placeholder="">
                     </div>
                 </div>
-
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
-                        <div class="text_desc">Your Timezone</div>
-                        <select>
-                            <option>North America/America/NewYork</option>
-                            <option>North America/America/NewYork</option>
-                            <option>North America/America/NewYork</option>
-                            <option>North America/America/NewYork</option>
-                            <option>North America/America/NewYork</option>
-                        </select>
+                        <div class="text_desc">Phone number</div>
+                        <input type="text" ng-model="user.idNumber">
                     </div>
                 </div>
 
-                <div class="ver_btm_btn">
-                    <div class="vers">
-                        Version
-                    </div>
-                    <span>:</span>
-                    <div class="vers t_c">
-                        49.2
-                    </div>
-
-                    <div class="sv_btn">
+                <div class="log_wrap">
+                    <div class="login_btn">
                         Save
                     </div>
                     <div style="clear: both"></div>
@@ -190,17 +171,20 @@
 
         </div>
         <div class="tab_content active" id="verify">
-            <div class="verification_wrap" ng-if="user.users_verify_status == 0">
-                <div class="">You account is not yet verified</div>
+            <div class="reset_pass_wrap">
+                <div class="verification_wrap" ng-if="user.users_verify_status == 0">
+                    <div class="">You account is not yet verified</div>
+                </div>
+                <div class="verification_wrap" ng-if="user.users_verify_status == 1">
+                    <div class="">You account is verified</div>
+                </div>
+                <div class="verif_button_wrap">
+                    <a href="registration.html">
+                        <div class="ver_but">Edit information</div>
+                    </a>
+                </div>
             </div>
-            <div class="verification_wrap" ng-if="user.users_verify_status == 1">
-                <div class="">You account is verified</div>
-            </div>
-            <div class="verif_button_wrap">
-                <a href="registration.html">
-                    <div class="ver_but">Edit information</div>
-                </a>
-            </div>
+
         </div>
         <div class="tab_content" id="password">
             <div class="reset_pass_wrap">

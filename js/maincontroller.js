@@ -530,14 +530,17 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var fd = new FormData();
         var url = ServerApi + 'uploadDocuments.php';
         showError('Uploading...', "loading", false);
-        fd.append('image', $('#files').prop('files')[0]);
-        for(var item in $('#files').prop('files')){
-            //fd.append('image[]', $('#files').prop('files')[item]);
-        }
+        //fd.append('image', $('#files').prop('files')[0]);
 
+        var index = 1;
+        for(var item in $('#files').prop('files')){
+            fd.append('image'+index, $('#files').prop('files')[item]);
+            index++;
+        }
+        //console.log(fd);return;
         var data = {};
 
-        fd.append("usersImage_users_unique_id", $scope.userDetails.unique_id);
+        fd.append("usersImage_userRegistration_unique_id", $scope.userDetails.unique_id);
 
         $.ajax({
             url: url,

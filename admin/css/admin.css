@@ -29,7 +29,7 @@ input,textarea,select
 .index_out
 {
     background-image: url(../../images/cryp_btm.png);
-    background-size: contain;
+    background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
 }
@@ -198,7 +198,7 @@ input,textarea,select
 .content_wrap_log
 {
     width: 35%;
-    margin: 7% auto;
+    margin: 5% auto;
 }
 .content_wrap_ad
 {
@@ -591,4 +591,16 @@ a
     border: 1px solid #ddd;
     box-shadow: 0px 0px 10px 1px #ddd;
     padding: 30px;
+}
+.log_logo {
+    display: inline-block;
+    width: 170px;
+    padding: 0 15px;
+}
+.sub_head_log {
+    background-color: #f2f2f3;
+    padding: 8px 7%;
+}
+.sub_head_log .sub_capt {
+    font-size: 18px;
 }
