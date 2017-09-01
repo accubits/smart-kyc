@@ -4,7 +4,7 @@ html,body
     margin: 0;
     padding: 0;
     font-family: Montserrat-Regular;
-    height: 100%;
+    /*height: 100%;*/
 }
 img
 {
@@ -25,6 +25,13 @@ input,textarea,select
 .outer
 {
     height: 100%;
+}
+.index_out
+{
+    background-image: url(../../images/cryp_btm.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 .header
 {

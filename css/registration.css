@@ -4,7 +4,7 @@ html,body
     margin: 0;
     padding: 0;
     font-family: Montserrat-Regular;
-    height: 100%;
+    /*height: 100%;*/
 }
 img
 {
@@ -26,6 +26,20 @@ input,textarea,select
 {
     height: 100%;
 }
+.index_out
+{
+    background-image: url(../images/cryp_btm.png);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.index_out:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+}
 .header
 {
     position: relative;
@@ -34,14 +48,14 @@ input,textarea,select
 .logo
 {
     display: inline-block;
-    width: 235px;
+    width: 200px;
     padding: 0 15px;
 }
 .nav_bar
 {
     position: absolute;
     right: 25px;
-    top: 40px;
+    top: 30px;
     font-family: Montserrat-Light;
     font-size: 15px;
 }
@@ -54,6 +68,7 @@ input,textarea,select
     padding: 3px 15px;
     display: inline-block;
     vertical-align: middle;
+    text-transform: uppercase;
 }
 .nav_com:hover
 {
@@ -63,7 +78,22 @@ input,textarea,select
 .sub_head
 {
     background-color: #f2f2f3;
-    padding: 2% 7%;
+    padding: 20px 7%;
+}
+.sub_head_log
+{
+    background-color: #f2f2f3;
+    padding: 8px 7%;
+}
+.log_logo
+{
+    display: inline-block;
+    width: 170px;
+    padding: 0 15px;
+}
+.log_nav
+{
+    top: 20px;
 }
 .content_nav
 {
@@ -72,7 +102,7 @@ input,textarea,select
 }
 .sub_capt
 {
-    font-size: 26px;
+    font-size: 20px;
     font-family: Montserrat-Regular;
     font-weight: bold;
     display: inline-block;
@@ -172,17 +202,18 @@ input,textarea,select
 }
 .content_wrap_ver
 {
-    padding: 50px 7%;
+    padding: 0% 0%;
+    background-color: #f2f2f3;
 }
 .content_wrap
 {
-    padding: 2% 7%;
+    padding: 40px 7%;
     display: none;
 }
 .content_wrap_log
 {
     width: 400px;
-    margin: 80px auto;
+    margin: 40px auto;
 }
 .login_btn
 {
@@ -200,10 +231,11 @@ input,textarea,select
     background-color:  #1e2434;
 }
 .login_block{
-    padding: 30px;
+    padding: 20px 30px;
     border: 1px solid #ddd;
     box-shadow: 0px 0px 10px 1px #ddd;
     display: none;
+    background-color: white;
 }
 .login_block.active{
     display: block;
@@ -517,21 +549,25 @@ a
     margin-bottom: 20px;
 }
 .tab_wrap ul{
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
+    text-align: center;
+    margin-bottom: 30px;
 }
 .tab_wrap ul li{
     /*width: 150px;*/
 
-    padding: 15px 30px;
+    padding: 9px 30px;
     font-size: 14px;
     font-family: Montserrat-Light;
     cursor: pointer;
+    display: inline-block;
+
 }
 .tab_wrap ul li.active, .tab_wrap ul li:hover{
     background: #f7f7f7;
@@ -542,11 +578,11 @@ a
     margin-bottom: -1px;
 }
 .tab_wrap ul li img{
-    width: 20px;
+    width: 30px;
     display: inline-block;
     margin: auto;
     vertical-align: middle;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .tab_wrap ul li span{
     vertical-align: middle;
@@ -561,11 +597,31 @@ a
     display: block;
 }
 .reset_pass_wrap{
-    width: 400px;
+    width: 500px;
     margin: 20px auto 80px;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px 1px #ddd;
+    /*border: 1px solid #ddd;*/
+    /*box-shadow: 0px 0px 10px 1px #ddd;*/
     padding: 30px;
+}
+.vers
+{
+    display: inline-block;
+    width: 140px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.doc_blocks
+{
+    display: inline-block;
+    width: 96%;
+    vertical-align: text-top;
+    border: 1px solid #e6e6e6;
+    padding: 2%;
+    /*min-height: 200px;*/
+    margin-bottom: 2%;
+}
+.t_c{
+    text-align: center;
 }
 .text_box_full{
     margin: 10px 0;
@@ -604,37 +660,248 @@ a
 .started_btn:hover{
     background: #da860f;
 }
+.ham_icon
+{
+    display: none;
+}
+.gen_block
+{
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.sv_btn
+{
+    display: inline-block;
+    background-color: #FFC107;
+    color: white;
+    padding: 6px 40px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Montserrat-Light;
+    cursor: pointer;
+    float: right;
+    vertical-align: top;
+}
+.sv_btn:hover
+{
+    background-color: #1b274a;
+}
+.left_docs_out
+{
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1%;
+    margin-right: 1%;
+}
 
-/*@media only screen and (max-width:880px)*/
-/*{*/
-    /*.copy_right*/
-    /*{*/
-        /*font-size: 11px;*/
-    /*}*/
-    /*.copy_blocks*/
-    /*{*/
-        /*font-size: 11px;*/
-    /*}*/
-/*}*/
+
+@media only screen and (max-width:880px)
+{
+    .copy_links
+    {
+        display: none;
+    }
+    .copy_blocks
+    {
+        font-size: 11px;
+    }
+    footer
+    {
+        text-align: center;
+    }
+}
 
 
-/*@media only screen and (max-width:769px)*/
-/*{*/
-    /*.mob_nav_bar*/
-    /*{*/
-        /*display: block;*/
-        /*text-align: center;*/
-    /*}*/
-    /*.nav_bar*/
-    /*{*/
-        /*display: none;*/
-    /*}*/
-    /*.mob_nav_bar .nav_com*/
-    /*{*/
-        /*width: 80%;*/
-        /*padding: 0%;*/
-        /*display: inline-block;*/
-        /*vertical-align: top;*/
-        /*text-align: left;*/
-    /*}*/
-/*}*/
+@media only screen and (max-width:768px)
+{
+    .text_box_left
+    {
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .text_box_right
+    {
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+    }
+    .content_nav
+    {
+        display: none;
+    }
+    .to_nav_tab
+    {
+        width: 80px;
+    }
+    .sub_capt
+    {
+        font-size: 18px;
+    }
+    .nav_bar
+    {
+        width: 100%;
+        background-color: #263253;
+        left: 0;
+        top: 0px;
+        color: white;
+        opacity: 0;
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        z-index: -10;
+    }
+    .nav_bar.active
+    {
+        top: 100%;
+        opacity: 1;
+        transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+        z-index: 10;
+    }
+    .nav_com
+    {
+        width: 100%;
+    }
+    .nav_com
+    {
+        padding: 2% 3%;
+        width: 94%;
+        border-bottom: 1px solid #848484;
+        color: white;
+    }
+    .ham_icon
+    {
+        display: block;
+        width: 28px;
+        height: 30px;
+        background-image: url(../images/menu-button-of-three-lines.png);
+        position: absolute;
+        right: 10%;
+        top: 31%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .prev_button
+    {
+        padding: 6px 28px;
+    }
+    .next_button
+    {
+        padding: 6px 28px;
+    }
+    .left_docs_out
+    {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:674px)
+{
+    .flow_wrap {
+        display: flex;
+        margin: 40px 0px 91px;
+    }
+}
+@media only screen and (max-width:560px)
+{
+    .content_wrap h2
+    {
+        font-size: 18px;
+    }
+    .tab_wrap ul li
+    {
+        padding: 10px 11px;
+        font-size: 11px;
+    }
+    .tab_wrap ul li img {
+        width: 12px;
+        margin-right: 0px;
+    }
+    .reset_pass_wrap
+    {
+        width: 92%;
+        padding: 4%;
+    }
+    .ham_icon
+    {
+        width: 20px;
+    }
+    .nav_com
+    {
+        font-size: 12px;
+    }
+    .vers
+    {
+        width: 47%;
+    }
+    .sv_btn
+    {
+        margin: 30px auto;
+        padding: 5px 28px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:530px)
+{
+    .flow
+    {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .flow_wrap
+    {
+        display: block;
+    }
+
+    .logo
+    {
+        width: 150px;
+    }
+    .nav_bar
+    {
+        top: 20px;
+    }
+    .sub_path
+    {
+        display: none;
+    }
+    .flow .icon {
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+        background-size: 33px;
+    }
+    .flow p
+    {
+        font-size: 12px;
+    }
+    .sub_capt {
+        font-size: 12px;
+    }
+    .to_top
+    {
+        width: 30px;
+        height: 30px;
+        background-size: 10px;
+        background-position: 10px 10px;
+    }
+    .reset_pass_wrap h2
+    {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:450px)
+{
+    .to_nav_tab {
+        margin-bottom: 50px;
+    }
+    .content_wrap_log
+    {
+        width: 80%;
+    }
+}

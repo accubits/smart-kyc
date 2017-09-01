@@ -26,6 +26,8 @@
                 </div>
             </a>
         </div>
+        <div class="ham_icon">
+        </div>
         <div style="clear:both;"></div>
     </div>
 
@@ -43,15 +45,6 @@
     </div>
 
 
-    <div class="sub_head">
-        <div class="sub_capt">
-            Personal Information
-        </div>
-        <div class="sub_path">
-            HOME / PROFILE
-        </div>
-        <div style="clear: both"></div>
-    </div>
 
 
 
@@ -122,36 +115,79 @@
             <ul>
                 <li data-id="#general">
                     <img src="images/home.png" />
-                    <span>GENERAL</span>
+                    <div>GENERAL</div>
                 </li>
                 <li class="active" data-id="#verify">
                     <img src="images/verified-list-of-exercises-of-a-gymnast-on-a-clipboard.png" />
-                    <span>VERIFY</span>
+                    <div>VERIFY</div>
                 </li>
                 <li data-id="#password">
                     <img src="images/lock.png" />
-                    <span>PASSWORD</span>
+                    <div>PASSWORD</div>
                 </li>
             </ul>
         </div>
     </div>
     <div class="tab_content_wrap">
         <div class="tab_content" id="general">
-            <div class="flow_wrap">
-                <div class="flow">
-                    <div class="icon" style="background-image: url('images/started.png')"></div>
-                    <p>Complete KYC Process</p>
-                    <a href="registration.html" class="started_btn">Get started</a>
+            <!--<div class="flow_wrap">-->
+                <!--<div class="flow">-->
+                    <!--<div class="icon" style="background-image: url('images/started.png')"></div>-->
+                    <!--<p>Complete KYC Process</p>-->
+                    <!--<a href="registration.html" class="started_btn">Get started</a>-->
+                <!--</div>-->
+                <!--<div class="flow">-->
+                    <!--<div class="icon" style="background-image: url('images/verified.png')"></div>-->
+                    <!--<p>Get Verified</p>-->
+                <!--</div>-->
+                <!--<div class="flow">-->
+                    <!--<div class="icon" style="background-image: url('images/place.png')"></div>-->
+                    <!--<p>Place your order</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="reset_pass_wrap">
+                <div class="text_box_wrap">
+                    <div class="text_box_full txt_bx">
+                        <div class="text_desc">Contact Information</div>
+                        <select>
+                            <option>Email</option>
+                            <option>Telephone 1</option>
+                            <option>Telephone 2</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="flow">
-                    <div class="icon" style="background-image: url('images/verified.png')"></div>
-                    <p>Get Verified</p>
+
+                <div class="text_box_wrap">
+                    <div class="text_box_full txt_bx">
+                        <div class="text_desc">Your Timezone</div>
+                        <select>
+                            <option>North America/America/NewYork</option>
+                            <option>North America/America/NewYork</option>
+                            <option>North America/America/NewYork</option>
+                            <option>North America/America/NewYork</option>
+                            <option>North America/America/NewYork</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="flow">
-                    <div class="icon" style="background-image: url('images/place.png')"></div>
-                    <p>Place your order</p>
+
+                <div class="ver_btm_btn">
+                    <div class="vers">
+                        Version
+                    </div>
+                    <span>:</span>
+                    <div class="vers t_c">
+                        49.2
+                    </div>
+
+                    <div class="sv_btn">
+                        Save
+                    </div>
+                    <div style="clear: both"></div>
                 </div>
+
             </div>
+
+
         </div>
         <div class="tab_content active" id="verify">
             <div class="verification_wrap" ng-if="user.users_verify_status == 0">
@@ -196,7 +232,7 @@
         <div class="to_top">
         </div>
         <div class="copy_right">
-            Copyright © Octragon Strategy Limited 2017
+            Copyright © Crypto Ventures LLC 2017. All Rights Reserved.
         </div>
         <div class="copy_links">
             <div class="copy_blocks">

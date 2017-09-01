@@ -98,6 +98,10 @@ function individual()
     $('.comp_blk_dis').css({'display':'none'});
     $('.req_blk').html('2')
 }
+function menu_tab()
+{
+    $(".nav_bar").toggleClass("active");
+}
 function init() {
     //$('.go_btn ').click(go);
 
@@ -112,6 +116,7 @@ function init() {
 
     $('.tab').click(switchTab);
     $('.tab_wrap li').click(changeTab);
+    $('.ham_icon').click(menu_tab);
 
 }
 $(document).ready(init);
