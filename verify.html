@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Verification</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <link rel="stylesheet" href="css/registration.css">
 </head>
 <body ng-controller="crypbrokersCntl">
@@ -113,11 +114,11 @@
 
         <div class="tab_wrap">
             <ul>
-                <li data-id="#general">
+                <li class="active" data-id="#general">
                     <img src="images/home.png" />
                     <div>GENERAL</div>
                 </li>
-                <li class="active" data-id="#verify">
+                <li data-id="#verify">
                     <img src="images/verified-list-of-exercises-of-a-gymnast-on-a-clipboard.png" />
                     <div>VERIFY</div>
                 </li>
@@ -129,7 +130,7 @@
         </div>
     </div>
     <div class="tab_content_wrap">
-        <div class="tab_content" id="general">
+        <div class="tab_content active" id="general">
             <!--<div class="flow_wrap">-->
                 <!--<div class="flow">-->
                     <!--<div class="icon" style="background-image: url('images/started.png')"></div>-->
@@ -149,18 +150,18 @@
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
                         <div class="text_desc">Email address</div>
-                        <input type="text" placeholder="">
+                        <input type="text" placeholder="Enter email" ng-model="general.email"/>
                     </div>
                 </div>
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
                         <div class="text_desc">Phone number</div>
-                        <input type="text" ng-model="user.idNumber">
+                        <input type="text" placeholder="Enter phone number" ng-model="general.mobile"/>
                     </div>
                 </div>
 
                 <div class="log_wrap">
-                    <div class="login_btn">
+                    <div class="login_btn" ng-click="updateGeneral()">
                         Save
                     </div>
                     <div style="clear: both"></div>
@@ -170,7 +171,7 @@
 
 
         </div>
-        <div class="tab_content active" id="verify">
+        <div class="tab_content" id="verify">
             <div class="reset_pass_wrap">
                 <div class="verification_wrap" ng-if="user.users_verify_status == 0">
                     <div class="">You account is not yet verified</div>
@@ -218,7 +219,7 @@
         <div class="copy_right">
             Copyright © Crypto Ventures LLC 2017. All Rights Reserved.
         </div>
-        <div class="copy_links">
+        <div class="copy_links" style="display: none;">
             <div class="copy_blocks">
                 About Us
             </div>
