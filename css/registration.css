@@ -73,6 +73,21 @@ input,textarea,select
     background-color: #f2f2f3;
     padding: 2% 7%;
 }
+.sub_head_log
+{
+    background-color: #f2f2f3;
+    padding: 8px 7%;
+}
+.log_logo
+{
+    display: inline-block;
+    width: 170px;
+    padding: 0 15px;
+}
+.log_nav
+{
+    top: 20px;
+}
 .content_nav
 {
     text-align: center;
@@ -191,7 +206,7 @@ input,textarea,select
 .content_wrap_log
 {
     width: 400px;
-    margin: 6% auto;
+    margin: 4% auto;
 }
 .login_btn
 {
@@ -591,13 +606,12 @@ a
 .doc_blocks
 {
     display: inline-block;
-    width: 44%;
+    width: 96%;
     vertical-align: text-top;
-    margin-bottom: 1%;
-    margin-right: 1%;
     border: 1px solid #e6e6e6;
     padding: 2%;
-    min-height: 200px;
+    /*min-height: 200px;*/
+    margin-bottom: 2%;
 }
 .t_c{
     text-align: center;
@@ -666,6 +680,14 @@ a
 {
     background-color: #1b274a;
 }
+.left_docs_out
+{
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1%;
+    margin-right: 1%;
+}
 
 
 @media only screen and (max-width:880px)
@@ -687,10 +709,6 @@ a
 
 @media only screen and (max-width:768px)
 {
-    .doc_blocks
-    {
-        width: 100%;
-    }
     .text_box_left
     {
         width: 100%;
@@ -769,6 +787,10 @@ a
     .next_button
     {
         padding: 6px 28px;
+    }
+    .left_docs_out
+    {
+        width: 100%;
     }
 }
 @media only screen and (max-width:674px)
