@@ -758,7 +758,7 @@ public function readInfo(){
             $response['result']['data'] = $result['RESULT'][0];
 
             $sql = "Select `usersImage_image` from " . $this->config->Table_usersImage . " where " .
-                $this->config->COL_usersImage_users_unique_id . " = '" . $this->getUniqueId() . "'";
+                $this->config->COL_usersImage_userRegistration_unique_id . " = '" . $this->getUniqueId() . "'";
             $result = $this->db->executeQuery($sql);
 
             $response['result']['image'] = $result['RESULT'];
