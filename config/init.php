@@ -48,16 +48,15 @@ $Table_company = "CREATE TABLE IF NOT EXISTS {$config->Table_company} (
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
 
-$Table_usersImage = "CREATE TABLE IF NOT EXISTS {$config->Table_usersImage} (
-	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
-	$config->COL_usersImage_unique_id varchar(255) NOT NULL PRIMARY  KEY,
-	$config->COL_usersImage_users_unique_id VARCHAR (255) NOT NULL,
-	$config->COL_usersImage_image VARCHAR (255) NOT NULL, 
-	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
-    modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    CONSTRAINT $config->COL_usersImage_users_unique_id FOREIGN KEY ($config->COL_usersImage_users_unique_id) 
-    REFERENCES $config->Table_users ($config->COL_users_userRegistration_unique_id) ON DELETE CASCADE
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+$Table_usersImage = "CREATE TABLE IF NOT EXISTS usersImage ( 
+id INT NOT NULL AUTO_INCREMENT UNIQUE KEY, 
+usersImage_unique_id varchar(255) NOT NULL PRIMARY KEY,
+ usersImage_userRegistration_unique_id VARCHAR (255) NOT NULL, 
+ usersImage_image VARCHAR (255) NOT NULL, created_date timestamp DEFAULT CURRENT_TIMESTAMP, 
+ modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+ CONSTRAINT usersImage_userRegistration_unique_id FOREIGN KEY (usersImage_userRegistration_unique_id) 
+ REFERENCES userRegistration (userRegistration_uniqueId) ON DELETE CASCADE 
+ ) ENGINE=InnoDB DEFAULT CHARSET=utf8";
 
 $Table_userRegistration = "CREATE TABLE IF NOT EXISTS {$config->Table_userRegistration} (
 	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
@@ -82,7 +81,7 @@ $Table_forgotPassword = "CREATE TABLE IF NOT EXISTS {$config->Table_forgotPasswo
 
 var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
-var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_userRegistration));
+var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_forgotPassword));
 

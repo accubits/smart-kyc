@@ -80,6 +80,21 @@ input,textarea,select
     background-color: #f2f2f3;
     padding: 20px 7%;
 }
+.sub_head_log
+{
+    background-color: #f2f2f3;
+    padding: 8px 7%;
+}
+.log_logo
+{
+    display: inline-block;
+    width: 170px;
+    padding: 0 15px;
+}
+.log_nav
+{
+    top: 20px;
+}
 .content_nav
 {
     text-align: center;
@@ -582,7 +597,7 @@ a
     display: block;
 }
 .reset_pass_wrap{
-    width: 400px;
+    width: 500px;
     margin: 20px auto 80px;
     /*border: 1px solid #ddd;*/
     /*box-shadow: 0px 0px 10px 1px #ddd;*/
@@ -598,13 +613,12 @@ a
 .doc_blocks
 {
     display: inline-block;
-    width: 44%;
+    width: 96%;
     vertical-align: text-top;
-    margin-bottom: 1%;
-    margin-right: 1%;
     border: 1px solid #e6e6e6;
     padding: 2%;
-    min-height: 200px;
+    /*min-height: 200px;*/
+    margin-bottom: 2%;
 }
 .t_c{
     text-align: center;
@@ -672,6 +686,14 @@ a
 .sv_btn:hover
 {
     background-color: #1b274a;
+}
+.left_docs_out
+{
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1%;
+    margin-right: 1%;
 }
 
 
@@ -773,6 +795,10 @@ a
     {
         padding: 6px 28px;
     }
+    .left_docs_out
+    {
+        width: 100%;
+    }
 }
 @media only screen and (max-width:674px)
 {
@@ -808,6 +834,16 @@ a
     .nav_com
     {
         font-size: 12px;
+    }
+    .vers
+    {
+        width: 47%;
+    }
+    .sv_btn
+    {
+        margin: 30px auto;
+        padding: 5px 28px;
+        font-size: 14px;
     }
 }
 @media only screen and (max-width:530px)
