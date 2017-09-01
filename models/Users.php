@@ -943,7 +943,8 @@ public function readInfo(){
 
         $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email." 
     from " . $this->config->Table_userRegistration . " where 
-    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' limit 1";
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "'
+     and ".$this->config->COL_userRegistration_unique_id." != '".$this->getRegistrationId()."' limit 1";
         $result = $this->db->executeQuery($sql);
 
         if ($result['CODE'] != 1) {
@@ -962,7 +963,9 @@ public function readInfo(){
 
         $sql = "select " . $this->config->COL_users_unique_id." 
     from " . $this->config->Table_users . " where 
-    " . $this->config->COL_users_mobile_number . " = '" . $this->getMobileNumber() . "' limit 1";
+    " . $this->config->COL_users_mobile_number . " = '" . $this->getMobileNumber() . "' and "
+            .$this->config->COL_users_userRegistration_unique_id." != '".
+            $this->getRegistrationId()."' limit 1";
         $result = $this->db->executeQuery($sql);
 
         if ($result['CODE'] != 1) {
