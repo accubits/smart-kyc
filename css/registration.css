@@ -213,12 +213,13 @@ input,textarea,select
 .content_wrap_log
 {
     width: 400px;
-    margin: 5% auto;
+    margin: 50px auto;
 }
 #verify
 {
-    padding-top: 10%;
+    /*padding-top: 10%;*/
     padding-bottom: 3%;
+    text-align: center;
 }
 .login_btn
 {
