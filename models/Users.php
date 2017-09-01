@@ -938,5 +938,90 @@ public function readInfo(){
         $response['result'] = "Successfully updated password";
         return $response;
     }
+    
+    public function checkEmailExists() {
+
+        $sql = "select " . $this->config->COL_userRegistration_username . ",".$this->config->COL_userRegistration_email." 
+    from " . $this->config->Table_userRegistration . " where 
+    " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "'
+     and ".$this->config->COL_userRegistration_unique_id." != '".$this->getRegistrationId()."' limit 1";
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+        }
+        elseif (count($result['RESULT']) == 0){
+            
+            return false;
+        }
+
+        return true;
+    }
+
+    public function checkMobileExists() {
+
+        $sql = "select " . $this->config->COL_users_unique_id." 
+    from " . $this->config->Table_users . " where 
+    " . $this->config->COL_users_mobile_number . " = '" . $this->getMobileNumber() . "' and "
+            .$this->config->COL_users_userRegistration_unique_id." != '".
+            $this->getRegistrationId()."' limit 1";
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+        }
+        elseif (count($result['RESULT']) == 0){
+
+            return false;
+        }
+
+        return true;
+        
+    }
+
+    public function updateUserDetails(){
+
+        if ($this->checkEmailExists()) {
+            $this->error->responseCode = 400;
+            $this->error->string = "Email already exists";
+            $this->error->errorHandler();
+        }
+        elseif ($this->checkMobileExists()) {
+            $this->error->responseCode = 400;
+            $this->error->string = "Mobile already exists";
+            $this->error->errorHandler();
+        }
+        else {
+            
+            $sql = "Update ".$this->config->Table_users." set ".$this->config->COL_users_mobile_number." = '".
+                $this->getMobileNumber()."' where ".$this->config->COL_users_userRegistration_unique_id." = '".
+                $this->getRegistrationId()."' ";
+
+            $result = $this->db->executeQuery($sql);
+
+            if ($result['CODE'] != 1) {
+
+                $this->error->internalServer();
+            }
+
+            $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_email." = '".
+                $this->getEmail()."' where ".$this->config->COL_userRegistration_unique_id." = '".
+                $this->getRegistrationId()."' ";
+
+            $result = $this->db->executeQuery($sql);
+
+            if ($result['CODE'] != 1) {
+
+                $this->error->internalServer();
+            }
+            
+        }
+
+        $response['success'] = true;
+        $response['result'] = "Successfully Updated";
+        return $response;
+    }
 
 }

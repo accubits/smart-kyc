@@ -33,6 +33,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         idNumber:'',
         idIssueDate:'',
         idValidTo:'',
+        email: ''
     };
     $scope.company={
         name:'',
@@ -335,6 +336,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 idNumber:user["users_id_number"],
                 idIssueDate:user["users_id_issue_date"],
                 idValidTo:user["users_id_valid_date"],
+                email: user["userRegistration_email"]
             };
 
             $scope.company={
@@ -349,6 +351,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 activityNatureQ:user["company_activity_nature_q"],
                 bankDetailsQ:user["company_bankdetails_q"],
             };
+            console.log($scope.user.email);
 
         }).error(function (data, err) {
             console.log(data);
@@ -368,6 +371,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         });
     }
     getUserDetails();
+
     /* add user details function [Start] */
     $scope.addUserInformation = function (){
         console.log('users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
