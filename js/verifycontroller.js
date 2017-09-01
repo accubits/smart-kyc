@@ -81,4 +81,5 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         });
 
     };
+
 });

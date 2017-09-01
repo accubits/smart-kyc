@@ -35,6 +35,10 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         idValidTo:'',
         email: ''
     };
+    $scope.general ={
+        email: "",
+        mobile: ""
+    }
     $scope.company={
         name:'',
         phone:'',
@@ -351,6 +355,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 activityNatureQ:user["company_activity_nature_q"],
                 bankDetailsQ:user["company_bankdetails_q"],
             };
+            $scope.general.email = $scope.user.email;
+            $scope.general.mobile = $scope.user.mobile;
+
             console.log($scope.user.email);
 
         }).error(function (data, err) {
@@ -592,6 +599,55 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             }
         });
     }
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+    function phonenumber(inputtxt) {
+        var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
+        return phoneno.test(inputtxt);
+    }
+    $scope.updateGeneral = function (){
+
+        console.log($scope.general)
+        if($scope.general.mobile == "" || $scope.general.email == ""){
+            showError('Please enter all the details','error',true);
+            return;
+        }
+        if(!validateEmail($scope.general.email)){
+            showError('Please enter a valid email','error',true);
+            return ;
+        }
+        if(!phonenumber($scope.general.mobile)){
+            showError('Please enter a valid phone number','error',true);
+            return ;
+        }
+        var data = 'users_mobile_number='+ $scope.general.mobile +
+            '&&userRegistration_uniqueId='+$scope.userDetails.unique_id +
+            '&&userRegistration_email='+ $scope.general.email;
+
+        var postData = data;
+        var requestObj = {
+            method: 'POST',
+            url: ServerApi+'updateUserDetails.php',
+            data: postData
+        };
+
+        // Making API Call [start]
+        $http(requestObj).success(function (data) {
+            console.log(data);
+            showError('successfully updated details','success',true);
+
+            $scope.user.email = $scope.general.email;
+            $scope.user.mobile = $scope.general.mobile;
+        }).error(function (data, err) {
+            console.log(data);
+            console.log(err);
+
+        });
+
+    };
 
 });
 
