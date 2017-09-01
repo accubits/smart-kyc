@@ -72,10 +72,16 @@ class dbconfig
     public $COL_userRegistration_password      = 'userRegistration_password';
     public $COL_userRegistration_status        = 'userRegistration_status';
 
-    public $COL_forgotPassword_token             = 'token';
-    public $COL_forgotPassword_uniqueId          = 'uniqueId';
+    public $COL_forgotPassword_token           = 'token';
+    public $COL_forgotPassword_uniqueId        = 'uniqueId';
 
-    public $TOKEN                        = 'token';
+    public $TOKEN                              = 'token';
+    
+    public function emailContentUploadSuccess($name) {
+        
+        return "";
+        
+    }
     
 }
 

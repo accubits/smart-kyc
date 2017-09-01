@@ -21,7 +21,8 @@ function onSuccessHandler()
         $error->errorHandler();
     }
     $out = $users->updateVerificationStatus($_POST['status']);
-    $email = $users->getEmailFromId($_POST[$config->COL_users_userRegistration_unique_id]);
+    $data = $users->getUserDetailsFromId($_POST[$config->COL_usersImage_userRegistration_unique_id]);
+    $email = $data[$config->COL_userRegistration_email];
     $users->sendMail($email,"KYC verification completed","Hi, your KYC verification is completed");
     echo json_encode($out);
 

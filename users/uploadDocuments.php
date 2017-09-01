@@ -17,7 +17,8 @@ function onSuccessHandler()
     $users->setImage($users->uploadImage($_FILES));
     $images = $users->getImage();
     $out = $users->addAllImage($images);
-    $email = $users->getEmailFromId($_POST[$config->COL_usersImage_userRegistration_unique_id]);
+    $data = $users->getUserDetailsFromId($_POST[$config->COL_usersImage_userRegistration_unique_id]);
+    $email = $data[$config->COL_userRegistration_email];
     $users->sendMail($email,"Documents received","Hi, your KYC documents uploaded successfully. We will verify the documents soon.");
 //    $users->sendMail('dittops@accubits.com',"KYC uploaded","User ".$_POST[$config->COL_usersImage_users_unique_id]."
 //     uploaded KYC details");
