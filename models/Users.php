@@ -575,7 +575,7 @@ public function userRegistration(){
         $sql1 = $this->db->createInsertQuery($this->config->Table_users, [
             $this->config->COL_users_userRegistration_unique_id    => $uniqueId
         ]);
-        $result1 = $this->db->executeQuery($sql1);
+        $result = $this->db->executeQuery($sql1);
 
 //        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
 //            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
@@ -799,20 +799,21 @@ public function readInfo(){
     }
     
     
-    public function getEmailFromId($id){
-        
-        $sql = "Select ".$this->config->COL_userRegistration_email." from ".$this->config->Table_userRegistration." where ".
-            $this->config->COL_userRegistration_unique_id." = '".$id."'";
+    public function getUserDetailsFromId($id){
+
+        $sql = "Select u.".$this->config->COL_users_first_name.",r.".$this->config->COL_userRegistration_email." from ".$this->config->Table_userRegistration." r 
+                inner join ".$this->config->Table_users." u 
+                on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
+                where u.".$this->config->COL_users_userRegistration_unique_id." = '".$id."' limit 1";
         $result = $this->db->executeQuery($sql);
 
         if($result['CODE']!=1){
 
             $this->error->internalServer();
         }
-        return $result['RESULT'][0][$this->config->COL_userRegistration_email];
+        return $result['RESULT'][0];
     }
-
-
+    
     public function forgotPassword() {
 
         $sql = "Select ".$this->config->COL_userRegistration_unique_id." from ".$this->config->Table_userRegistration."
@@ -995,8 +996,8 @@ public function readInfo(){
         }
         else {
             
-            $sql = "Update ".$this->config->Table_users." set ".$this->config->COL_users_mobile_number." = '".
-                $this->getMobileNumber()."' where ".$this->config->COL_users_userRegistration_unique_id." = '".
+            $sql = "Update ".$this->config->Table_users." set ".$this->config->COL_users_mobile_number." = ".
+                $this->getMobileNumber()." where ".$this->config->COL_users_userRegistration_unique_id." = '".
                 $this->getRegistrationId()."' ";
 
             $result = $this->db->executeQuery($sql);
