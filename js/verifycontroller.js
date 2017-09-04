@@ -121,6 +121,10 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             showError('Please enter a valid phone number','error',true);
             return ;
         }
+        if(!$('#terms').prop('checked')){
+            showError('Please verify the terms and conditions','error',true);
+            return ;
+        }
         showError('successfully submitted order','success',true);
         $scope.order = {
             "name": "",
@@ -131,6 +135,7 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             "type": "",
             "message": ""
         }
+        $('#terms').prop('checked', false)
         var data = 'oldPassword='+ $scope.passDeatils.oldpass +
             '&&userRegistration_uniqueId='+$scope.userDetails.unique_id +
             '&&userRegistration_password='+ $scope.passDeatils.password;

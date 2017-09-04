@@ -360,6 +360,14 @@ input,textarea,select
 {
     margin-bottom: 20px;
 }
+.terms_wrap input{
+    height: auto;
+    width:auto;
+}
+.terms_wrap label{
+    font-size: 12px;
+    font-family: Montserrat-Light;
+}
 .radio
 {
     display: inline-block;
