@@ -97,7 +97,7 @@ $Table_order = "CREATE TABLE IF NOT EXISTS {$config->Table_order} (
     CONSTRAINT $config->COL_order_user_uniqueId FOREIGN KEY ($config->COL_order_user_uniqueId) 
     REFERENCES $config->Table_userRegistration ($config->COL_userRegistration_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
-
+print_r($Table_order);
 var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_userRegistration));
