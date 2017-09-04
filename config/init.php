@@ -79,9 +79,29 @@ $Table_forgotPassword = "CREATE TABLE IF NOT EXISTS {$config->Table_forgotPasswo
     REFERENCES $config->Table_userRegistration ($config->COL_userRegistration_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
+
+$Table_order = "CREATE TABLE IF NOT EXISTS {$config->Table_order} (
+	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
+	$config->COL_order_uniqueId varchar(255) NOT NULL PRIMARY  KEY,
+	$config->COL_order_user_uniqueId varchar(255) NOT NULL,
+	$config->COL_order_name varchar(255) NOT NULL,
+	$config->COL_order_message TEXT NULL,
+	$config->COL_order_country varchar(255) NOT NULL,
+	$config->COL_order_email varchar(255) NOT NULL,
+	$config->COL_order_phone varchar(20) NOT NULL,
+	$config->COL_order_amount FLOAT NOT NULL,
+	$config->COL_order_type varchar(255) NOT NULL,
+	$config->COL_order_status int(1) DEFAULT 0 NOT NULL,
+	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
+    modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT $config->COL_order_user_uniqueId FOREIGN KEY ($config->COL_order_user_uniqueId) 
+    REFERENCES $config->Table_userRegistration ($config->COL_userRegistration_unique_id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
 var_dump($db->executeQuery($Table_users));
 var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_userRegistration));
 var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_forgotPassword));
+var_dump($db->executeQuery($Table_order));
 

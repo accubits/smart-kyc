@@ -21,6 +21,7 @@ class dbconfig
     public $Table_usersImage                = 'usersImage';
     public $Table_forgotPassword            = 'forgotPassword';
     public $Table_userRegistration          = 'userRegistration';
+    public $Table_order                     = 'order';
 
     /*Table_users*/
 
@@ -74,6 +75,18 @@ class dbconfig
 
     public $COL_forgotPassword_token           = 'token';
     public $COL_forgotPassword_uniqueId        = 'uniqueId';
+
+    public $COL_order_uniqueId                  = 'uniqueId';
+    public $COL_order_user_uniqueId             = 'order_user_uniqueId';
+    public $COL_order_name                      = 'order_name';
+    public $COL_order_country                   = 'order_country';
+    public $COL_order_email                     = 'order_email';
+    public $COL_order_phone                     = 'order_phone';
+    public $COL_order_amount                    = 'order_amount';
+    public $COL_order_type                      = 'order_type';
+    public $COL_order_message                   = 'order_message';
+    public $COL_order_status                    = 'order_status';
+
 
     public $TOKEN                              = 'token';
     
