@@ -282,6 +282,12 @@ input,textarea,select
     height: 42px;
     width: 100%;
 }
+.txt_bx textarea{
+    width: 94%;
+    border: 1px solid #f1a12f;
+    border-radius: 20px;
+    padding: 1% 3%;
+}
 .text_box_full input,select
 {
     border-radius: 30px;
@@ -296,6 +302,7 @@ input,textarea,select
 {
     margin-bottom: 20px;
 }
+
 .radio
 {
     display: inline-block;

@@ -209,17 +209,20 @@ input,textarea,select
 {
     width: 100%;
     box-shadow: 0px 0px 5px 1px #ddd;
+    border: 1px solid #666;
 }
 .ad_tab thead
 {
     text-align: left;
     /*background-color: #f2f2f3;*/
+    border-bottom: 1px solid #666;
 }
 
 .ad_tab thead tr th
 {
     padding: 15px 10px;
     color: #222;
+    border-right: 1px solid #666;
 }
 .user_item{
     cursor: pointer;
@@ -227,8 +230,14 @@ input,textarea,select
 .user_item:hover{
     background: #f2f2f2;
 }
+.under_row{
+    border-bottom: 1px solid #666;
+}
 tr{
     border-bottom: 1px solid #ddd;
+}
+tr:last-child{
+    border-bottom: none;
 }
 td, th {
     /*border: 1px solid #cccccc;*/
@@ -238,8 +247,11 @@ td, th {
 }
 td{
     color: #555;
+    border-right: 1px solid #666;
 }
-
+td:last-child{
+    text-align: center;
+}
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
@@ -276,6 +288,12 @@ tr:nth-child(even) {
 .login_block .text_box_wrap .text_box_full
 {
     margin-bottom: 20px;
+    border-bottom: none;
+    display: block;
+}
+.login_block .text_desc{
+    width: auto;
+    border: none;
 }
 .log_wrap
 {
@@ -319,23 +337,20 @@ tr:nth-child(even) {
 
 .text_box_left
 {
-    display: inline-block;
-    vertical-align: top;
-    float: left;
-    width: 48%;
+    border-bottom: 1px solid #666;
+    display: flex;
 }
 .text_box_full
 {
-    display: inline-block;
     vertical-align: top;
     width: 100%;
+    display: flex;
+    border-bottom: 1px solid #666;
 }
 .text_box_right
 {
-    display: inline-block;
-    vertical-align: top;
-    float: right;
-    width: 49%;
+    border-bottom: 1px solid #666;
+    display: flex;
 }
 .txt_bx input,select
 {
@@ -350,21 +365,32 @@ tr:nth-child(even) {
     height: 42px;
     width: 100%;
 }
+
 .text_box_full input,select
 {
     border-radius: 30px;
 }
 .text_desc {
-    margin-bottom: 12px;
     font-size: 12px;
     text-transform: capitalize;
     font-family: Montserrat-Light;
     color: #999;
+    width: 50%;
+    padding: 10px;
+    border-right: 1px solid #666;
 }
-
+.det_vw{
+    width: 50%;
+    padding: 10px;
+    margin: 0;
+}
 .text_box_wrap
 {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+}
+.radio_outer{
+    width: 50%;
+    padding: 10px;
 }
 .radio
 {
@@ -434,6 +460,20 @@ tr:nth-child(even) {
     font-family: Montserrat-Light;
     font-size: 14px;
     line-height: 23px;
+}
+.doc_item{
+    display: flex;
+    border-bottom: 1px solid #666;
+}
+.doc_item div{
+    width: 50%;
+    padding: 10px;
+}
+.doc_item div:first-child{
+    border-right: 1px solid #666;
+}
+.doc_item div:last-child{
+    text-align: center;
 }
 .upload_wrap
 {
@@ -603,4 +643,20 @@ a
 }
 .sub_head_log .sub_capt {
     font-size: 18px;
+}
+.view_btn
+{
+    display: inline-block;
+    background-color: #FFC107;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    border-radius: 20px;
+    font-family: Montserrat-Light;
+    cursor: pointer;
+    font-size: 12px;
+}
+.view_btn:hover
+{
+    background-color:  #1e2434;
 }

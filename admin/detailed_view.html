@@ -134,8 +134,10 @@
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
                         <div class="text_desc">Address Line </div>
-                        <p class="det_vw">{{user.users_address1}}</p>
-                        <p class="det_vw">{{user.users_address2}}</p>
+                        <div class="radio_outer">
+                            <p class="det_vw">{{user.users_address1}}</p>
+                            <p class="det_vw">{{user.users_address2}}</p>
+                        </div>
                     </div>
                 </div>
 
@@ -283,7 +285,11 @@
             <div class="documents_wrap wraps_common" id="personal_3">
 
                 <div class="docs_list">
-                    <div ng-repeat="item in userImage">- <a href="{{item.usersImage_image}}" target="_blank"> Document {{$index}}</a></div>
+                    <div class="doc_item" ng-repeat="item in userImage">
+                        <div><a href="{{item.usersImage_image}}" target="_blank"> Document {{$index}}</a></div>
+                        <div><a href="{{item.usersImage_image}}" download="" target="_blank" class="view_btn">DOWNLOAD</a> </div>
+                    </div>
+
                 </div>
 
 
@@ -297,7 +303,7 @@
         <div class="to_top">
         </div>
         <div class="copy_right">
-            Copyright © Crypto Ventures LLC 2017. All Rights Reserved.
+            Copyright © 2017 Crypto Ventures LLC. All Rights Reserved.
         </div>
         <div class="copy_links" style="display: none;">
             <div class="copy_blocks">
@@ -325,6 +331,7 @@
     .wraps_common{
         display: none;
         margin-bottom: 50px;
+        border: 1px solid #666;
     }
     #personal{
         display: block;
