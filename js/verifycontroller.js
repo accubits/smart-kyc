@@ -11,6 +11,15 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         "password": "",
         "reenterpassword": ""
     }
+    $scope.order = {
+        "name": "",
+        "country" :"",
+        "email": "",
+        "phone": "",
+        "amount": "",
+        "type": "",
+        "message": ""
+    }
 
     $scope.verify= function (){
 
@@ -27,6 +36,12 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             console.log(data);
             $scope.details = data.result[0];
             $scope.user = data["result"][0];
+            if(!data.result.length){
+                $scope.user = {};
+                $scope.user["users_verify_status"] = 0;
+
+                return;
+            }
             console.log($scope.user["users_verify_status"]);
             if($scope.details.users_gender == '1'){
                 $scope.details.gender = 'Male'
@@ -81,5 +96,76 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         });
 
     };
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+    function phonenumber(inputtxt) {
+        var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
+        return phoneno.test(inputtxt);
+    }
+    $scope.placeOrder = function (){
+
+        console.log($scope.passDeatils)
+        if($scope.order.name == "" || $scope.order.country == "" || $scope.order.email == "" || $scope.order.phone == ""
+        || $scope.order.amount == "" || $scope.order.message == ""){
+            showError('Please enter all the details','error',true);
+            return;
+        }
+        if(!validateEmail($scope.order.email)){
+            showError('Please enter a valid email','error',true);
+            return ;
+        }
+        if(!phonenumber($scope.order.phone)){
+            showError('Please enter a valid phone number','error',true);
+            return ;
+        }
+        showError('successfully submitted order','success',true);
+        $scope.order = {
+            "name": "",
+            "country" :"",
+            "email": "",
+            "phone": "",
+            "amount": "",
+            "type": "",
+            "message": ""
+        }
+        var data = 'oldPassword='+ $scope.passDeatils.oldpass +
+            '&&userRegistration_uniqueId='+$scope.userDetails.unique_id +
+            '&&userRegistration_password='+ $scope.passDeatils.password;
+
+        var postData = data;
+        //var requestObj = {
+        //    method: 'POST',
+        //    url: ServerApi+'updatePassword.php',
+        //    data: postData
+        //};
+        //
+        //// Making API Call [start]
+        //$http(requestObj).success(function (data) {
+        //    console.log(data);
+        //    showError('successfully updated password','success',true);
+        //    $scope.passDeatils = {
+        //        "oldpass": "",
+        //        "password": "",
+        //        "reenterpassword": ""
+        //    }
+        //}).error(function (data, err) {
+        //    console.log(data);
+        //    console.log(err);
+        //
+        //});
+
+    };
+
+    $scope.changeTab = function($event){
+        var id = $($event.target).attr('data-id');
+        $('.tab_wrap li').removeClass('active');
+        $($event.target).addClass('active');
+console.log(id)
+        $('.tab_content').removeClass('active');
+        $('#orders').addClass('active');
+    }
 
 });

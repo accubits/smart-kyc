@@ -16,7 +16,7 @@
         </div>
 
         <div class="nav_bar">
-            <a href="index.html">
+            <a href="#">
                 <div class="nav_com">
                     HOME
                 </div>
@@ -126,6 +126,10 @@
                     <img src="images/lock.png" />
                     <div>PASSWORD</div>
                 </li>
+                <li data-id="#orders" ng-if="user.users_verify_status == 1" ng-click="changeTab($event)">
+                    <img src="images/shopping-cart.png" />
+                    <div>ORDERS</div>
+                </li>
             </ul>
         </div>
     </div>
@@ -174,12 +178,14 @@
         <div class="tab_content" id="verify">
             <div class="reset_pass_wrap">
                 <div class="verification_wrap" ng-if="user.users_verify_status == 0">
-                    <div class="">You account is not yet verified</div>
+                    <div class="">Your account is not yet verified</div>
                 </div>
-                <div class="verification_wrap" ng-if="user.users_verify_status == 1">
-                    <div class="">You account is verified</div>
+                <div class="verif_button_wrap" ng-if="user.users_verify_status == 0 || user.length==0">
+                    <a href="registration.html">
+                        <div class="ver_but">Get Verified</div>
+                    </a>
                 </div>
-                <div class="verif_button_wrap">
+                <div class="verif_button_wrap" ng-if="user.users_verify_status == 1">
                     <a href="registration.html">
                         <div class="ver_but">Edit information</div>
                     </a>
@@ -191,20 +197,62 @@
             <div class="reset_pass_wrap">
                 <h2>Reset Password</h2>
                 <div class="text_box_full txt_bx">
-                    <div class="text_desc">Old Password</div>
+                    <div class="text_desc">Current Password</div>
                     <input type="password" ng-model="passDeatils.oldpass">
                 </div>
                 <div class="text_box_full txt_bx">
-                    <div class="text_desc">Password</div>
+                    <div class="text_desc">New Password</div>
                     <input type="password" ng-model="passDeatils.password">
                 </div>
                 <div class="text_box_full txt_bx">
-                    <div class="text_desc">Re-Type Password</div>
+                    <div class="text_desc">Re-Type New Password</div>
                     <input type="password" ng-model="passDeatils.reenterpassword">
                 </div>
                 <div class="log_wrap">
                     <div class="login_btn" ng-click="resetPassword()">
                         Reset
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_content" id="orders">
+            <div class="reset_pass_wrap">
+                <h2>Place an order</h2>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Full Name</div>
+                    <input type="text" ng-model="order.name">
+                </div>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Country</div>
+                    <input type="text" ng-model="order.country">
+                </div>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Email</div>
+                    <input type="text" ng-model="order.email">
+                </div>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Phone</div>
+                    <input type="text" ng-model="order.phone">
+                </div>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Order amount (USD)</div>
+                    <input type="text" ng-model="order.amount">
+                </div>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Order Type</div>
+                    <select ng-model="order.type">
+                        <option>Buying</option>
+                        <option>Selling</option>
+                        <option>Buying & Selling</option>
+                    </select>
+                </div>
+                <div class="text_box_full txt_bx">
+                    <div class="text_desc">Order message</div>
+                    <textarea cols="30" ng-model="order.message"></textarea>
+                </div>
+                <div class="log_wrap">
+                    <div class="login_btn" ng-click="placeOrder()">
+                        Submit
                     </div>
                 </div>
             </div>
@@ -217,7 +265,7 @@
         <div class="to_top">
         </div>
         <div class="copy_right">
-            Copyright © Crypto Ventures LLC 2017. All Rights Reserved.
+            Copyright © 2017 Crypto Ventures LLC. All Rights Reserved.
         </div>
         <div class="copy_links" style="display: none;">
             <div class="copy_blocks">
