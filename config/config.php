@@ -21,7 +21,7 @@ class dbconfig
     public $Table_usersImage                = 'usersImage';
     public $Table_forgotPassword            = 'forgotPassword';
     public $Table_userRegistration          = 'userRegistration';
-    public $Table_order                     = 'order';
+    public $Table_order                     = 'orders';
 
     /*Table_users*/
 
