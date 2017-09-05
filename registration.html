@@ -383,8 +383,12 @@
                         <!--</div>-->
                     </div>
                     <div class="image_upload">
-                        <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()" />
+                        <div class="file_upload">
+                            <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()"/>
+                        </div>
+                        <div class="add_new">Add New</div>
                     </div>
+
                     <p>No of Documents submitted : {{userImage.length}}</p>
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 

@@ -102,6 +102,9 @@ function menu_tab()
 {
     $(".nav_bar").toggleClass("active");
 }
+function addinput() {
+    $('.file_upload').append("<input name=\"file\" type=\"file\" multiple id=\"files\" onchange=\"angular.element(this).scope().imageUpload()\"/>")
+}
 function init() {
     //$('.go_btn ').click(go);
 
@@ -117,6 +120,7 @@ function init() {
     $('.tab').click(switchTab);
     $('.tab_wrap li').click(changeTab);
     $('.ham_icon').click(menu_tab);
+    $('.add_new').click(addinput);
 
 }
 $(document).ready(init);

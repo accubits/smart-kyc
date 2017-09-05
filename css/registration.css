@@ -567,6 +567,29 @@ a
 .image_upload{
     margin: 50px 0;
 }
+#files {
+    display: block;
+    margin-bottom: 10px;
+}
+.file_upload {
+    display: inline-block;
+    vertical-align: top;
+}
+.add_new {
+    width: 90px;
+    padding: 4px 0;
+    background-color: #f1a12f;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: Montserrat-Light;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 10px;
+
+}
 .declaration{
     font-family: Montserrat-Light;
     font-size: 13px;
