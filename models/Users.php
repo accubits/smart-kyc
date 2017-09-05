@@ -794,7 +794,7 @@ public function readInfo(){
         $mail->AddAddress($to);
         
         if(!$mail->Send()) {
-//            echo "Mailer Error: " . $mail->ErrorInfo;
+            echo "Mailer Error: " . $mail->ErrorInfo;
         }
     }
     
