@@ -292,7 +292,7 @@ tr:nth-child(even) {
 .login_btn
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f2a73d;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -677,6 +677,15 @@ a
     box-shadow: 0px 0px 10px 1px #ddd;
     padding: 30px;
 }
+.reset_pass_wrap .text_box_full{
+    border: none;
+    display: block;
+}
+.reset_pass_wrap .text_desc {
+    width: auto;
+    padding: 10px;
+    border-right: none;
+}
 .log_logo {
     display: inline-block;
     width: 170px;
@@ -692,7 +701,7 @@ a
 .view_btn
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f2a73d;
     color: white !important;
     padding: 5px 15px;
     text-align: center;
