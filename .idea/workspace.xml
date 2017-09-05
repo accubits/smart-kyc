@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68f0150a-dd9f-4a3d-93f2-4ed35fc4c9a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Users.php" afterPath="$PROJECT_DIR$/models/Users.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -25,23 +26,23 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="798" column="5" selection-start-line="798" selection-start-column="5" selection-end-line="798" selection-end-column="5" />
+            <state relative-caret-position="176">
+              <caret line="788" column="44" selection-start-line="788" selection-start-column="44" selection-end-line="788" selection-end-column="44" />
               <folding>
-                <marker date="1504615554000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615554000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504615554000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-                <marker date="1504615554000" expanded="true" signature="21162:21601" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615554000" expanded="true" signature="22524:22536" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="22524:22581" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="22524:22582" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="22524:22641" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="22524:22656" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="22524:22657" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="24701:24826" placeholder="Delete from " />
-                <marker date="1504615554000" expanded="true" signature="25181:25195" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615554000" expanded="true" signature="25181:25237" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615554000" expanded="true" signature="25181:25460" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504615929000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504615929000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504615929000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504615929000" expanded="true" signature="21075:21514" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504615929000" expanded="true" signature="22437:22449" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="22437:22494" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="22437:22495" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="22437:22554" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="22437:22569" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="22437:22570" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="24614:24739" placeholder="Delete from " />
+                <marker date="1504615929000" expanded="true" signature="25094:25108" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504615929000" expanded="true" signature="25094:25150" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504615929000" expanded="true" signature="25094:25373" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
               </folding>
             </state>
           </provider>
@@ -60,8 +61,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+            <state relative-caret-position="274">
+              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -269,20 +270,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="users" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crypbrokers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crypbrokers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -372,12 +359,12 @@
       <workItem from="1504027340314" duration="9624000" />
       <workItem from="1504072858022" duration="8305000" />
       <workItem from="1504255302358" duration="9794000" />
-      <workItem from="1504614840119" duration="649000" />
+      <workItem from="1504614840119" duration="950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48428000" />
+    <option name="totallyTimeSpent" value="48729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -756,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/placeOrder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -790,25 +769,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="798" column="5" selection-start-line="798" selection-start-column="5" selection-end-line="798" selection-end-column="5" />
+        <state relative-caret-position="176">
+          <caret line="788" column="44" selection-start-line="788" selection-start-column="44" selection-end-line="788" selection-end-column="44" />
           <folding>
-            <marker date="1504615554000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615554000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504615554000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-            <marker date="1504615554000" expanded="true" signature="21162:21601" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615554000" expanded="true" signature="22524:22536" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="22524:22581" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="22524:22582" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="22524:22641" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="22524:22656" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="22524:22657" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="24701:24826" placeholder="Delete from " />
-            <marker date="1504615554000" expanded="true" signature="25181:25195" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615554000" expanded="true" signature="25181:25237" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615554000" expanded="true" signature="25181:25460" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504615929000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504615929000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504615929000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504615929000" expanded="true" signature="21075:21514" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504615929000" expanded="true" signature="22437:22449" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="22437:22494" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="22437:22495" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="22437:22554" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="22437:22569" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="22437:22570" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="24614:24739" placeholder="Delete from " />
+            <marker date="1504615929000" expanded="true" signature="25094:25108" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504615929000" expanded="true" signature="25094:25150" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504615929000" expanded="true" signature="25094:25373" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
           </folding>
         </state>
       </provider>
