@@ -784,17 +784,15 @@ public function readInfo(){
         $mail->Host = "smtp.gmail.com";
         $mail->Port = 587; // or 587
         $mail->IsHTML(true);
-//        $mail->Username = "charush@accubits.com";
-//        $mail->Password = "charush*523";
-        $mail->Username = "maria@accubits.com";
-        $mail->Password = "maria";
+        $mail->Username = "charush@accubits.com";
+        $mail->Password = "charush*523";
         $mail->SetFrom("example@gmail.com");
         $mail->Subject = $sub;
         $mail->Body = $content;
         $mail->AddAddress($to);
         
         if(!$mail->Send()) {
-//            echo "Mailer Error: " . $mail->ErrorInfo;
+            echo "Mailer Error: " . $mail->ErrorInfo;
         }
     }
     
