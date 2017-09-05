@@ -33,10 +33,6 @@
         </div>
         <div style="clear:both"></div>
     </div>
-
-
-
-
     <div class="sub_head">
         <div class="sub_capt">
             Registration
@@ -270,11 +266,11 @@
                             <div class="text_desc">Expected Average Order Size (USD)</div>
                             <select ng-model="company.exptAvgOrder">
                                 <option value="">--Select--</option>
-                                <option>$10,000-$99,000</option>
-                                <option>$100,000-$499,000</option>
-                                <option>$500,000-$999,000</option>
-                                <option>$1 million-$9.9 million</option>
-                                <option>$10 million +</option>
+                                <option>$10,000 - $99,000</option>
+                                <option>$100,000 - $499,000</option>
+                                <option>$500,000 - $999,000</option>
+                                <option>$1 Million - $9.9 Million</option>
+                                <option>$10 Million +</option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
@@ -319,40 +315,66 @@
 
                       <div class="left_docs_out">
                         <div class="doc_blocks">
-                        <p>Individual</p>
-                        - Gov Issued ID (Passport,Drivers License, Other)<br>
-                        - Selfie Picture of You Holding Gov Issued ID<br>
-                        - Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account
+                            <p>Individual</p>
+                            <ul>
+                                <li>Gov Issued ID (Passport,Drivers License, Other)</li>
+                                <li>Selfie Picture of You Holding Gov Issued ID</li>
+                                <li>Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account</li>
+                            </ul>
+                        <!-- - Gov Issued ID (Passport,Drivers License, Other)<br>-->
+                        <!-- - Selfie Picture of You Holding Gov Issued ID<br>-->
+                        <!-- - Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account-->
                         </div>
 
 
-                        <div class="doc_blocks">
-                            <p>Important</p>
 
-                            - Documents must be in the following format : jpg, png, gif, pdf<br>
-                            - Documents must be scanned in color <br>
-                            - Documents must be clearly visible<br>
-                            - Selfie with ID requirements<br>
-                        </div>
+                          <div class="doc_blocks">
+                              <p>Company</p>
+                              <ul>
+                                  <li>Gov Issued ID (Passport,Drivers License,Other)</li>
+                                  <li>Selfie Picture of You Holding Gov Issued ID</li>
+                                  <li>Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account</li>
+                                  <li>Company registration document</li>
+                                  <li>Proof of Home Address (Utility bill or Bank statement)</li>
+                              </ul>
+                              <!-- - Gov Issued ID (Passport,Drivers License,Other)<br>-->
+                              <!-- - Selfie Picture of You Holding Gov Issued ID<br>-->
+                              <!-- - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>-->
+                              <!-- - Company registration document<br>-->
+                              <!-- - Proof of Home Address (Utility bill or Bank statement)<br>-->
+                              <ul>
+                                  <li>Look straight into the camera</li>
+                                  <li>The photo should be in color</li>
+                                  <li>Your face and card information should be clearly visible</li>
+                                  <li>Donot wear a sunglass, a hat or a headband</li>
+                                  <li>The photo should be recent</li>
+                                  <li>Image should be in high resolution (min 300 dpi)</li>
+                              </ul>
+                              <!--<span>*</span> Look straight into the camera<br>-->
+                              <!--<span>*</span> The photo should be in color<br>-->
+                              <!--<span>*</span> Your face and card information should be clearly visible<br>-->
+                              <!--<span>*</span> Donot wear a sunglass, a hat or a headband<br>-->
+                              <!--<span>*</span> The photo should be recent<br>-->
+                              <!--<span>*</span> Image should be in high resolution (min 300 dpi)<br>-->
+                          </div>
                       </div>
 
 
                       <div class="left_docs_out">
-                        <div class="doc_blocks">
-                        <p>Company</p>
-                        - Gov Issued ID (Passport,Drivers License,Other)<br>
-                        - Selfie Picture of You Holding Gov Issued ID<br>
-                        - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>
-                        - Company registration document<br>
-                        - Proof of Home Address (Utility bill or Bank statement)<br>
+                          <div class="doc_blocks">
+                              <p>Important</p>
+                              <ul>
+                                  <li>Documents must be in the following format : jpg, png, gif, pdf</li>
+                                  <li>Documents must be scanned in color</li>
+                                  <li>Documents must be clearly visible</li>
+                                  <li>Selfie with ID requirements</li>
+                              </ul>
+                              <!-- - Documents must be in the following format : jpg, png, gif, pdf<br>-->
+                              <!-- - Documents must be scanned in color <br>-->
+                              <!-- - Documents must be clearly visible<br>-->
+                              <!-- - Selfie with ID requirements<br>-->
 
-                            <span>*</span> Look straight into the camera<br>
-                            <span>*</span> The photo should be in color<br>
-                            <span>*</span> Your face and card information should be clearly visible<br>
-                            <span>*</span> Donot wear a sunglass, a hat or a headband<br>
-                            <span>*</span> The photo should be recent<br>
-                            <span>*</span> Image should be in high resolution (min 300 dpi)<br>
-                        </div>
+                          </div>
                       </div>
 
 
@@ -376,7 +398,7 @@
                         </form>
                     <div class="declaration">
                         <input type="checkbox" id="declaration" />
-                        <label for="declaration">I do hereby solemnly declare that the information provided is up-to-date and correct. The documents provided as proof of identity and proof of address has been self-attested. I authorize Octagon Strategy to verify the information provided to confirm its accuracy.
+                        <label for="declaration">I hereby solemnly declare that the information provided is up-to-date and correct. The documents provided as proof of identity and proof of address has been self-attested. I authorize CrypBrokers to verify the information provided to confirm its accuracy.
                         </label>
                     </div>
 
@@ -421,7 +443,6 @@
         </div>
         <div style="clear:both;"></div>
     </footer>
-
 </div>
 
 <script rel="script" src="js/libs/jquery.min.js"></script>

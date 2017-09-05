@@ -56,6 +56,11 @@
 
 
     <div class="sub_head">
+        <div class="nav_back">
+            <a href="user_list.html">
+                <img class="nav_back_img" src="../images/left-arrow.png">
+            </a>
+        </div>
         <div class="sub_capt us_name">
             {{user.users_first_name}} {{user.users_last_name}}
             <span ng-if="user.users_verify_status == 1"><img src="images/verified-protection.png" /></span>
@@ -103,7 +108,6 @@
                 </div>
             </div>
         </div>
-
         <div class="main_container">
             <div class="personal_wrap wraps_common" id="personal">
 
@@ -133,10 +137,10 @@
 
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
-                        <div class="text_desc">Address Line </div>
+                        <div class="text_desc">Address</div>
                         <div class="radio_outer">
-                            <p class="det_vw">{{user.users_address1}}</p>
-                            <p class="det_vw">{{user.users_address2}}</p>
+                            <p class="">{{user.users_address1}}</p>
+                            <p class="">{{user.users_address2}}</p>
                         </div>
                     </div>
                 </div>
@@ -162,7 +166,7 @@
                         <p class="det_vw">{{user.users_country_residence}}</p>
                     </div>
                     <div class="text_box_right txt_bx">
-                        <div class="text_desc">Zip / Postal code(without spaces)</div>
+                        <div class="text_desc">Zip / Postal code</div>
                         <p class="det_vw">{{user.users_zip}}</p>
                     </div>
 
@@ -197,7 +201,7 @@
 
                 <div class="text_box_wrap">
                     <div class="text_box_left txt_bx">
-                        <div class="text_desc">ID Issue date)</div>
+                        <div class="text_desc">ID Issue date</div>
                         <p class="det_vw">{{user.users_id_issue_date}}</p>
                     </div>
                     <div class="text_box_right txt_bx">
@@ -247,7 +251,7 @@
                 </div>
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
-                        <div class="text_desc">Do you have a KYC policy in place for your customers? If so,please provide a URL to your policy page.</div>
+                        <div class="text_desc">Do you have a KYC policy in place for your customers? If so, please provide a URL to your policy page.</div>
                         <p class="det_vw">{{user.company_user_url_q}}</p>
                     </div>
                 </div>
@@ -274,7 +278,7 @@
 
                 <div class="text_box_wrap">
                     <div class="text_box_full txt_bx">
-                        <div class="text_desc">What bank will you be using for deposits and withdrawals,and where is it located?</div>
+                        <div class="text_desc">What bank will you be using for deposits and withdrawals, and where is it located?</div>
                         <p class="det_vw">{{user.company_bankdetails_q}}</p>
                     </div>
                 </div>
@@ -286,7 +290,7 @@
 
                 <div class="docs_list">
                     <div class="doc_item" ng-repeat="item in userImage">
-                        <div><a href="{{item.usersImage_image}}" target="_blank"> Document {{$index}}</a></div>
+                        <div><a href="{{item.usersImage_image}}" target="_blank"> Document {{$index + 1}}</a></div>
                         <div><a href="{{item.usersImage_image}}" download="" target="_blank" class="view_btn">DOWNLOAD</a> </div>
                     </div>
 

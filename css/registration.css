@@ -4,7 +4,7 @@ html,body
     margin: 0;
     padding: 0;
     font-family: Montserrat-Regular;
-    /*height: 100%;*/
+    height: 100%;
 }
 img
 {
@@ -24,7 +24,8 @@ input,textarea,select
 }
 .outer
 {
-    height: 100%;
+    min-height: 100%;
+    position: relative;
 }
 .index_out
 {
@@ -140,13 +141,14 @@ input,textarea,select
 }
 .green
 {
-    border: 2px solid #3fd845;
-    color: #3fd845;
+    border: 2px solid #f2a73d;
+    color: #f2a73d;
 }
 .person_blk.green_bg
 {
-    border: 2px solid #3fd845;
-    background-color: #3fd845;
+    border: 2px solid #f2a73d;
+    background-color: #f2a73d;
+    color: white;
 }
 .blocks_capt
 {
@@ -176,11 +178,12 @@ input,textarea,select
 }
 .person_blk.green_bg:after
 {
-    background-color: #3fd845;
+    background-color: #f2a73d;
 }
 .comp_blk.green_bg
 {
-    background-color: #3fd845;
+    background-color: #f2a73d;
+    color: white;
 }
 .content_wrap h2
 {
@@ -224,7 +227,7 @@ input,textarea,select
 .login_btn
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f2a73d;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -387,7 +390,7 @@ input,textarea,select
 .next_button
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f2a73d;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -501,8 +504,16 @@ input,textarea,select
 footer
 {
     background-color: #f2f2f3;
-    padding: 2% 7%;
-    position: relative;
+    /*padding: 2% 7%;*/
+    /*position: relative;*/
+
+    position: absolute;
+    padding: 2% 0;
+    bottom: 0;
+    width: 100%;
+}
+.copy_right {
+    margin-left: 7%;
 }
 .to_top
 {
@@ -535,7 +546,7 @@ a
 .ver_but
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f2a73d;
     color: white;
     padding: 8px 30px;
     text-align: center;
@@ -620,10 +631,13 @@ a
 }
 .reset_pass_wrap{
     width: 500px;
-    margin: 20px auto 80px;
+    /*margin: 20px auto 80px;*/
     /*border: 1px solid #ddd;*/
     /*box-shadow: 0px 0px 10px 1px #ddd;*/
-    padding: 30px;
+    /*padding: 30px;*/
+
+    margin: auto;
+    padding: 20px 0 110px 0;
 }
 .vers
 {
