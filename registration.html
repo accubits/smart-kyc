@@ -342,14 +342,7 @@
                               <!-- - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>-->
                               <!-- - Company registration document<br>-->
                               <!-- - Proof of Home Address (Utility bill or Bank statement)<br>-->
-                              <ul>
-                                  <li>Look straight into the camera</li>
-                                  <li>The photo should be in color</li>
-                                  <li>Your face and card information should be clearly visible</li>
-                                  <li>Donot wear a sunglass, a hat or a headband</li>
-                                  <li>The photo should be recent</li>
-                                  <li>Image should be in high resolution (min 300 dpi)</li>
-                              </ul>
+
                               <!--<span>*</span> Look straight into the camera<br>-->
                               <!--<span>*</span> The photo should be in color<br>-->
                               <!--<span>*</span> Your face and card information should be clearly visible<br>-->
@@ -369,6 +362,14 @@
                                   <li>Documents must be clearly visible</li>
                                   <li>Selfie with ID requirements</li>
                               </ul>
+                              <ul>
+                                  <li>Look straight into the camera</li>
+                                  <li>The photo should be in color</li>
+                                  <li>Your face and card information should be clearly visible</li>
+                                  <li>Donot wear a sunglass, a hat or a headband</li>
+                                  <li>The photo should be recent</li>
+                                  <li>Image should be in high resolution (min 300 dpi)</li>
+                              </ul>
                               <!-- - Documents must be in the following format : jpg, png, gif, pdf<br>-->
                               <!-- - Documents must be scanned in color <br>-->
                               <!-- - Documents must be clearly visible<br>-->
@@ -386,7 +387,7 @@
                         <div class="file_upload">
                             <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()"/>
                         </div>
-                        <div class="add_new">Add New</div>
+                        <div class="add_new" style="display: none">Add New</div>
                     </div>
 
                     <p>No of Documents submitted : {{userImage.length}}</p>
