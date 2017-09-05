@@ -26,6 +26,12 @@ input,textarea,select
     font-family: Montserrat-Light;
     src: url(../../fonts/Montserrat-Medium.otf);
 }
+.login_bg{
+    /*background-image: url(../../images/cryp_btm.png);*/
+    /*background-size: 100%;*/
+    /*background-position: bottom;*/
+    /*background-repeat: no-repeat;*/
+}
 .outer
 {
     min-height: 100%;
@@ -37,6 +43,7 @@ input,textarea,select
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+    overflow: auto;
 }
 .header
 {
@@ -232,6 +239,7 @@ input,textarea,select
     box-shadow: 0px 0px 5px 1px #ddd;
     border: 1px solid #666;
 }
+
 .ad_tab thead
 {
     text-align: left;
@@ -696,4 +704,8 @@ a
 .view_btn:hover
 {
     background-color:  #1e2434;
+}
+.no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
 }

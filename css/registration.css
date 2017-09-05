@@ -33,6 +33,7 @@ input,textarea,select
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+    overflow: auto;
 }
 /*.index_out:before{*/
     /*position: absolute;*/
