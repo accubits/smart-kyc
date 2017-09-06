@@ -12,23 +12,23 @@
 //}
 
 
-function person_next()
-{
-
-    if ($('.indiv').hasClass('indv_active')) {
-        $('.documents_wrap').css({'display':'block'});
-        $('.company_wrap').css({'display':'none'});
-        $('.personal_wrap').css({'display':'none'});
-    }
-    else
-    {
-        $('.documents_wrap').css({'display':'none'});
-        $('.company_wrap').css({'display':'block'});
-        $('.personal_wrap').css({'display':'none'});
-        $('.person_blk').addClass("green_bg");
-        $('.comp_blk').addClass("green");
-    }
-}
+// function person_next()
+// {
+//
+//     if ($('.indiv').hasClass('indv_active')) {
+//         $('.documents_wrap').css({'display':'block'});
+//         $('.company_wrap').css({'display':'none'});
+//         $('.personal_wrap').css({'display':'none'});
+//     }
+//     else
+//     {
+//         $('.documents_wrap').css({'display':'none'});
+//         $('.company_wrap').css({'display':'block'});
+//         $('.personal_wrap').css({'display':'none'});
+//         $('.person_blk').addClass("green_bg");
+//         $('.comp_blk').addClass("green");
+//     }
+// }
 function person_prev()
 {
     $('.blocks').removeClass('active');

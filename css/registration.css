@@ -145,7 +145,7 @@ input,textarea,select
     border: 2px solid #f2a73d;
     color: #f2a73d;
 }
-.person_blk.green_bg
+.blocks_no.green_bg
 {
     border: 2px solid #f2a73d;
     background-color: #f2a73d;
@@ -177,11 +177,11 @@ input,textarea,select
     top: 18px;
     z-index: -1;
 }
-.person_blk.green_bg:after
+.blocks_no.green_bg:after
 {
     background-color: #f2a73d;
 }
-.comp_blk.green_bg
+.blocks_no.green_bg
 {
     background-color: #f2a73d;
     color: white;
@@ -427,6 +427,12 @@ input,textarea,select
 /*{*/
     /*display: none;*/
 /*}*/
+.block {
+    display: block !important;
+}
+.none {
+    display: none !important;
+}
 .company_wrap
 {
     display: none;
