@@ -679,6 +679,20 @@ a
     /*min-height: 200px;*/
     margin-bottom: 2%;
 }
+.star_style {
+    margin-left: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.star_style li:before {
+    content: "*";
+    display: inline;
+    float: left;
+    margin-left: -18px;
+    font-size: 18px;
+    margin-top: 5px;
+}
 .t_c{
     text-align: center;
 }

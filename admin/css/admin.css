@@ -69,8 +69,8 @@ input,textarea,select
 }
 .nav_com:hover, .nav_com.active
 {
-    color: #FFC107;
-    border-bottom:2px solid #FFC107;
+    color: #f1a12f;
+    border-bottom:2px solid #f1a12f;
 }
 .sub_head
 {
@@ -242,7 +242,7 @@ input,textarea,select
 .ad_tab thead tr th
 {
     padding: 15px 10px;
-    color: #222;
+    color: #464444;
     border-right: 1px solid #666;
 }
 .user_item{
@@ -264,10 +264,10 @@ td, th {
     /*border: 1px solid #cccccc;*/
     text-align: left;
     padding: 15px 10px;
-    font-family: Montserrat-Light;
+    font-size: 13px;
 }
 td{
-    color: #555;
+    color: #464444;
     border-right: 1px solid #666;
 }
 td:last-child{
@@ -284,7 +284,7 @@ tr:nth-child(even) {
 .login_btn
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f1a12f;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -684,16 +684,23 @@ a
 .view_btn
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f1a12f;
     color: white !important;
     padding: 5px 15px;
     text-align: center;
     border-radius: 20px;
     font-family: Montserrat-Light;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11px;
 }
 .view_btn:hover
 {
     background-color:  #1e2434;
+}
+.reset_pass_wrap .text_box_full {
+    border: none;
+    display: block;
+}
+.reset_pass_wrap .text_desc {
+    border-right: 0;
 }
