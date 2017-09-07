@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6361634f-c3fe-4240-b209-74d4cad2e83f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/business.png" afterPath="$PROJECT_DIR$/images/business.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/registration.js" afterPath="$PROJECT_DIR$/admin/js/registration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/registration.css" afterPath="$PROJECT_DIR$/css/registration.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/maincontroller.js" afterPath="$PROJECT_DIR$/js/maincontroller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/registration.js" afterPath="$PROJECT_DIR$/js/registration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration.html" afterPath="$PROJECT_DIR$/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/detailed_view.html" afterPath="$PROJECT_DIR$/admin/detailed_view.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,14 +27,54 @@
     <splitter split-orientation="horizontal" split-proportion="0.4698972">
       <split-first>
         <leaf>
-          <file leaf-file-name="registration.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="user_list.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/admin/user_list.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/registration.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="406" column="204" lean-forward="false" selection-start-line="406" selection-start-column="185" selection-end-line="406" selection-end-column="204" />
+                <state relative-caret-position="153">
+                  <caret line="396" column="46" lean-forward="true" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
                   <folding>
                     <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/admin/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="info.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/info.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -48,6 +83,16 @@
       </split-first>
       <split-second>
         <leaf>
+          <file leaf-file-name="detailed_view.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/admin/detailed_view.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="registration.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/registration.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -70,11 +115,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="maincontroller.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="maincontroller.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/maincontroller.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-167">
-                  <caret line="529" column="0" lean-forward="false" selection-start-line="529" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
+                <state relative-caret-position="343">
+                  <caret line="559" column="33" lean-forward="false" selection-start-line="559" selection-start-column="33" selection-end-line="559" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -111,6 +156,8 @@
       <find>indiv</find>
       <find>blocks_no</find>
       <find>my-awesome-dropzone</find>
+      <find>label</find>
+      <find>imageUpload</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -120,10 +167,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/admin/js/registration.js" />
-        <option value="$PROJECT_DIR$/js/maincontroller.js" />
         <option value="$PROJECT_DIR$/registration.html" />
         <option value="$PROJECT_DIR$/css/registration.css" />
         <option value="$PROJECT_DIR$/js/registration.js" />
+        <option value="$PROJECT_DIR$/js/maincontroller.js" />
+        <option value="$PROJECT_DIR$/admin/detailed_view.html" />
       </list>
     </option>
   </component>
@@ -224,18 +272,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504696106654</updated>
-      <workItem from="1504696108038" duration="15404000" />
+      <workItem from="1504696108038" duration="16345000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15404000" />
+    <option name="totallyTimeSpent" value="16345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124678664" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22686376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -317,18 +365,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="406" column="204" lean-forward="false" selection-start-line="406" selection-start-column="185" selection-end-line="406" selection-end-column="204" />
+        <state relative-caret-position="153">
+          <caret line="396" column="46" lean-forward="true" selection-start-line="396" selection-start-column="46" selection-end-line="396" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/maincontroller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
-          <caret line="529" column="0" lean-forward="false" selection-start-line="529" selection-start-column="0" selection-end-line="530" selection-end-column="0" />
+        <state relative-caret-position="343">
+          <caret line="559" column="33" lean-forward="false" selection-start-line="559" selection-start-column="33" selection-end-line="559" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/detailed_view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding />
         </state>
       </provider>
