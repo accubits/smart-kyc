@@ -89,11 +89,24 @@ function individual()
     $(this).addClass('indv_active');
     $('.comp_blk_dis').css({'display':'none'});
 }
-function init() {
-    //$('.go_btn ').click(go);
 
-    $('.personal').click(person_next);
-    $('.blocks').click(person_prev);
+
+
+function go() {
+    var id = $(this).attr('data-id');
+
+    $('.wraps_common').addClass('none');
+    $(id).closest('.wraps_common').removeClass('none');
+    $(id).closest('.wraps_common').addClass('block');
+    $('.blocks').removeClass('active');
+    $(this).addClass('active');
+}
+
+
+function init() {
+    $('.blocks ').click(go);
+
+    // $('.blocks').click(person_prev);
     $('.company').click(company_next);
     $('.pr_doc').click(doc_prev);
     $('.radio').click(rad_act);

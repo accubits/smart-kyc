@@ -32,6 +32,12 @@ input,textarea,select
     /*background-position: bottom;*/
     /*background-repeat: no-repeat;*/
 }
+.block {
+    display: block !important;
+}
+.none {
+    display: none !important;
+}
 .outer
 {
     min-height: 100%;
