@@ -34,7 +34,7 @@ crypbrokersApp.controller('userDetailCtrl', function ($scope,$http) {
                 switch (item){
                     case "users_gender":
                         console.log(user[item]);
-                        if(user[item]){
+                        if(user[item] == 1){
                             user["gender"] = 'Male';
                         }
                         else{
