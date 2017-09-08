@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6361634f-c3fe-4240-b209-74d4cad2e83f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/detailed_view.html" afterPath="$PROJECT_DIR$/admin/detailed_view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/userDetailCtrl.js" afterPath="$PROJECT_DIR$/js/userDetailCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/userlistcontroller.js" afterPath="$PROJECT_DIR$/js/userlistcontroller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/init.php" afterPath="$PROJECT_DIR$/config/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/updateVerificationStatus.php" afterPath="$PROJECT_DIR$/users/updateVerificationStatus.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -114,8 +113,8 @@
               <file leaf-file-name="maincontroller.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/js/maincontroller.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="2899">
-                      <caret line="559" column="33" lean-forward="false" selection-start-line="559" selection-start-column="33" selection-end-line="559" selection-end-column="33" />
+                    <state relative-caret-position="9">
+                      <caret line="389" column="20" lean-forward="false" selection-start-line="389" selection-start-column="20" selection-end-line="389" selection-end-column="20" />
                       <folding />
                     </state>
                   </provider>
@@ -156,10 +155,13 @@
       <find>users_verify_status</find>
       <find>userImage</find>
       <find>indiv</find>
-      <find>gender</find>
       <find>users_kyc_status</find>
       <find>mal</find>
+      <find>gender</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -283,12 +285,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504696106654</updated>
-      <workItem from="1504696108038" duration="28223000" />
+      <workItem from="1504696108038" duration="28319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28223000" />
+    <option name="totallyTimeSpent" value="28319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -443,14 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/maincontroller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2990">
-          <caret line="559" column="33" lean-forward="false" selection-start-line="559" selection-start-column="33" selection-end-line="559" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/userlistcontroller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -471,6 +465,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/maincontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="389" column="20" lean-forward="false" selection-start-line="389" selection-start-column="20" selection-end-line="389" selection-end-column="20" />
           <folding />
         </state>
       </provider>
