@@ -4,7 +4,7 @@ html,body
     margin: 0;
     padding: 0;
     font-family: Montserrat-Regular;
-    /*height: 100%;*/
+    height: 100%;
 }
 img
 {
@@ -22,9 +22,26 @@ input,textarea,select
     font-family: Montserrat-Light;
     src: url(../../fonts/Montserrat-Light.otf);
 }
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../../fonts/Montserrat-Medium.otf);
+}
+.login_bg{
+    /*background-image: url(../../images/cryp_btm.png);*/
+    /*background-size: 100%;*/
+    /*background-position: bottom;*/
+    /*background-repeat: no-repeat;*/
+}
+.block {
+    display: block !important;
+}
+.none {
+    display: none !important;
+}
 .outer
 {
-    height: 100%;
+    min-height: 100%;
+    position: relative;
 }
 .index_out
 {
@@ -32,6 +49,7 @@ input,textarea,select
     background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
+    overflow: auto;
 }
 .header
 {
@@ -64,19 +82,35 @@ input,textarea,select
 }
 .nav_com:hover, .nav_com.active
 {
-    color: #FFC107;
-    border-bottom:2px solid #FFC107;
+    color: #f1a12f;
+    border-bottom:2px solid #f1a12f;
 }
 .sub_head
 {
     background-color: #f2f2f3;
-    padding: 2% 7%;
+    padding: 2% 3%;
+}
+.nav_back {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+.nav_back:hover .nav_back_img{
+    -webkit-transform: scale(1.2);
+    -moz-transform:    scale(1.2);
+    -ms-transform:     scale(1.2);
+    -o-transform:      scale(1.2);
+    transform:         scale(1.2);
+}
+.nav_back_img {
+    width: 20px;
+    padding: 0 1%;
 }
 .content_nav
 {
     /*text-align: center;*/
     margin-top: 0px !important;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 .sub_capt
 {
@@ -192,7 +226,7 @@ input,textarea,select
 }
 .content_wrap
 {
-    padding: 2% 7%;
+    padding: 5% 7%;
     display: block;
 }
 .content_wrap_log
@@ -211,6 +245,7 @@ input,textarea,select
     box-shadow: 0px 0px 5px 1px #ddd;
     border: 1px solid #666;
 }
+
 .ad_tab thead
 {
     text-align: left;
@@ -221,7 +256,7 @@ input,textarea,select
 .ad_tab thead tr th
 {
     padding: 15px 10px;
-    color: #222;
+    color: #464444;
     border-right: 1px solid #666;
 }
 .user_item{
@@ -243,10 +278,10 @@ td, th {
     /*border: 1px solid #cccccc;*/
     text-align: left;
     padding: 15px 10px;
-    font-family: Montserrat-Light;
+    font-size: 13px;
 }
 td{
-    color: #555;
+    color: #464444;
     border-right: 1px solid #666;
 }
 td:last-child{
@@ -263,7 +298,7 @@ tr:nth-child(even) {
 .login_btn
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f1a12f;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -284,6 +319,13 @@ tr:nth-child(even) {
 }
 .login_block.active{
     display: block;
+}
+#personal, #personal_2, #personal_3 {
+    background-color: #f9f9f9;
+    font-size: 13px;
+    text-transform: capitalize;
+    font-family: Montserrat-Regular;
+    color: #464444;
 }
 .login_block .text_box_wrap .text_box_full
 {
@@ -371,10 +413,6 @@ tr:nth-child(even) {
     border-radius: 30px;
 }
 .text_desc {
-    font-size: 12px;
-    text-transform: capitalize;
-    font-family: Montserrat-Light;
-    color: #999;
     width: 50%;
     padding: 10px;
     border-right: 1px solid #666;
@@ -404,9 +442,10 @@ tr:nth-child(even) {
 .male_out
 {
     display: inline-block;
-    font-size: 15px;
+    /*font-size: 15px;*/
     margin-right: 10px;
-    font-family: Montserrat-Light;
+    /*font-family: Montserrat-Light;*/
+
 }
 .next_button
 {
@@ -464,6 +503,9 @@ tr:nth-child(even) {
 .doc_item{
     display: flex;
     border-bottom: 1px solid #666;
+}
+.doc_item a {
+    color: #34bef7;
 }
 .doc_item div{
     width: 50%;
@@ -539,8 +581,16 @@ tr:nth-child(even) {
 footer
 {
     background-color: #f2f2f3;
-    padding: 2% 7%;
-    position: relative;
+    /*padding: 2% 7%;*/
+    /*position: relative;*/
+
+    position: absolute;
+    padding: 2% 0;
+    bottom: 0;
+    width: 100%;
+}
+.copy_right {
+    margin-left: 7%;
 }
 .to_top
 {
@@ -566,6 +616,7 @@ a
 {
     display: none;
 }
+
 .content_wrap_ver .personal_wrap .text_desc
 {
     color: #a7a7a7;
@@ -632,6 +683,15 @@ a
     box-shadow: 0px 0px 10px 1px #ddd;
     padding: 30px;
 }
+.reset_pass_wrap .text_box_full{
+    border: none;
+    display: block;
+}
+.reset_pass_wrap .text_desc {
+    width: auto;
+    padding: 10px;
+    border-right: none;
+}
 .log_logo {
     display: inline-block;
     width: 170px;
@@ -647,16 +707,27 @@ a
 .view_btn
 {
     display: inline-block;
-    background-color: #FFC107;
-    color: white;
+    background-color: #f1a12f;
+    color: white !important;
     padding: 5px 15px;
     text-align: center;
     border-radius: 20px;
     font-family: Montserrat-Light;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 11px;
 }
 .view_btn:hover
 {
     background-color:  #1e2434;
+}
+.reset_pass_wrap .text_box_full {
+    border: none;
+    display: block;
+}
+.reset_pass_wrap .text_desc {
+    border-right: 0;
+}
+.no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
 }

@@ -380,7 +380,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     getUserDetails();
 
     /* add user details function [Start] */
-    $scope.addUserInformation = function (){
+    $scope.addUserInformation = function ($event){
         console.log('users_first_name='+ $scope.user.firstName + '&&users_last_name=' +
             $scope.user.lastName + '&&users_gender=' + $scope.user.gender+
             '&&users_address1='+ $scope.user.address1 + '&&users_address2='+$scope.user.address2+
@@ -448,7 +448,11 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 $scope.uniqurId= data.result.users_uniqueId;
                 $scope.nextButton1=true;
                 showError('successfully added user information','success',true);
-                person_next();
+                // person_next();
+
+                /*for switching tabs*/
+                var dataid = angular.element($event.target).attr('data-id');
+                go(dataid);
 
             }).error(function (data, err) {
               console.log(data);
@@ -470,7 +474,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
     /* add user details function [End] */
 
     /* add company details function [Start] */
-    $scope.addCompanyInformation = function (){
+    $scope.addCompanyInformation = function ($event){
 
 
         if(!$scope.company.name || !$scope.company.phone || !$scope.company.url || !$scope.company.bussibessNature
@@ -502,6 +506,11 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         $http(requestObj).success(function (data) {
             console.log(data);
             $scope.nextButton2=true;
+            // company_next();
+
+            /*for switching tabs*/
+            var dataid = angular.element($event.target).attr('data-id');
+            go(dataid);
             showError('successfully added Company information','success',true)
         }).error(function (data, err) {
             console.log(data);

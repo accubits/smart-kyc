@@ -33,10 +33,6 @@
         </div>
         <div style="clear:both"></div>
     </div>
-
-
-
-
     <div class="sub_head">
         <div class="sub_capt">
             Registration
@@ -50,11 +46,11 @@
     <div class="content_navigation">
         <p>Choose Account Type</p>
         <div class="to_nav_tab indiv">
-            <img src="images/business-card-of-a-man-with-contact-info.png">
+            <img src="images/business.png">
             <div class="nav_desc">Individual</div>
         </div>
         <div class="to_nav_tab">
-            <img src="images/office.png">
+            <img src="images/busines.png">
             <div class="nav_desc">Company</div>
         </div>
     </div>
@@ -62,7 +58,7 @@
     <div class="content_wrap">
         <div class="content_nav">
             <div class="blocks">
-                <div class="blocks_no green person_blk">
+                <div class="blocks_no green person_blk" id="one" data-id="#two">
                     1
                 </div>
                 <div class="blocks_capt">
@@ -70,7 +66,7 @@
                 </div>
             </div>
             <div class="blocks comp_blk_dis">
-                <div class="blocks_no comp_blk">
+                <div class="blocks_no comp_blk" id="two" data-id="#three">
                     2
                 </div>
                 <div class="blocks_capt">
@@ -78,7 +74,7 @@
                 </div>
             </div>
             <div class="blocks">
-                <div class="blocks_no req_blk">
+                <div class="blocks_no req_blk" id="three">
                     3
                 </div>
                 <div class="blocks_capt">
@@ -89,7 +85,7 @@
         </div>
 
         <div class="main_container">
-                <div class="personal_wrap wraps_common" id="personal">
+                <div class="personal_wrap wraps_common" id="personal_1" >
                     <h2>
                         Personal Information
                     </h2>
@@ -158,7 +154,7 @@
                             <select data-ng-model="user.countryOfResidence" data-ng-options="v.name as v.name for v in countries"></select>
                         </div>
                         <div class="text_box_right txt_bx">
-                            <div class="text_desc">Zip / Postal code (without spaces)</div>
+                            <div class="text_desc">Zip/Postal Code</div>
                             <input type='text' ng-model="user.zip" onkeypress='return (event.charCode >= 48 && event.charCode <= 57 )||event.charCode == 43 '>
                         </div>
 
@@ -206,7 +202,7 @@
 
 
                     <div class="bottom_button_wrap">
-                        <div class="next_button go_btn personal" ng-click="addUserInformation()" data-id="personal_2">
+                        <div class="next_button go_btn personal" ng-click="addUserInformation($event)" data-id="#personal_2">
                             Next
                         </div>
                     </div>
@@ -214,7 +210,7 @@
                 </div>
 
 
-                <div class="company_wrap wraps_common" id="personal_2">
+                <div class="company_wrap wraps_common" id="personal_2" data-id="#one">
                     <h2>
                         Company Information
                     </h2>
@@ -270,11 +266,11 @@
                             <div class="text_desc">Expected Average Order Size (USD)</div>
                             <select ng-model="company.exptAvgOrder">
                                 <option value="">--Select--</option>
-                                <option>$10,000-$99,000</option>
-                                <option>$100,000-$499,000</option>
-                                <option>$500,000-$999,000</option>
-                                <option>$1 million-$9.9 million</option>
-                                <option>$10 million +</option>
+                                <option>$10,000 - $99,000</option>
+                                <option>$100,000 - $499,000</option>
+                                <option>$500,000 - $999,000</option>
+                                <option>$1 Million - $9.9 Million</option>
+                                <option>$10 Million +</option>
                             </select>
                         </div>
                         <div class="text_box_right txt_bx">
@@ -299,10 +295,10 @@
                     </div>
 
                     <div class="bottom_button_wrap">
-                        <div class="prev_button pr_company go_btn" data-id="personal_1">
+                        <div class="prev_button pr_company go_btn" data-id="#personal_1">
                             Previous
                         </div>
-                        <div class="next_button company go_btn" ng-click="addCompanyInformation()" data-id="personal_3">
+                        <div class="next_button company go_btn" ng-click="addCompanyInformation($event)" data-id="#personal_3">
                             Next
                         </div>
                     </div>
@@ -310,7 +306,7 @@
                 </div>
 
 
-                <div class="documents_wrap wraps_common" id="personal_3">
+                <div class="documents_wrap wraps_common" id="personal_3"  data-id="#two">
                     <h2>
                         Required Documents
                     </h2>
@@ -319,40 +315,70 @@
 
                       <div class="left_docs_out">
                         <div class="doc_blocks">
-                        <p>Individual</p>
-                        - Gov Issued ID (Passport,Drivers License, Other)<br>
-                        - Selfie Picture of You Holding Gov Issued ID<br>
-                        - Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account
+                            <p>Individual</p>
+                            <ul>
+                                <li>Gov Issued ID (Passport,Drivers License, Other)</li>
+                                <li>Selfie Picture of You Holding Gov Issued ID</li>
+                                <li>Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account</li>
+                            </ul>
+                        <!-- - Gov Issued ID (Passport,Drivers License, Other)<br>-->
+                        <!-- - Selfie Picture of You Holding Gov Issued ID<br>-->
+                        <!-- - Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account-->
                         </div>
 
 
-                        <div class="doc_blocks">
-                            <p>Important</p>
 
-                            - Documents must be in the following format : jpg, png, gif, pdf<br>
-                            - Documents must be scanned in color <br>
-                            - Documents must be clearly visible<br>
-                            - Selfie with ID requirements<br>
-                        </div>
+                          <div class="doc_blocks">
+                              <p>Company</p>
+                              <ul>
+                                  <li>Gov Issued ID (Passport,Drivers License,Other)</li>
+                                  <li>Selfie Picture of You Holding Gov Issued ID</li>
+                                  <li>Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account</li>
+                                  <li>Company registration document</li>
+                                  <li>Proof of Home Address (Utility bill or Bank statement)</li>
+                              </ul>
+                              <!-- - Gov Issued ID (Passport,Drivers License,Other)<br>-->
+                              <!-- - Selfie Picture of You Holding Gov Issued ID<br>-->
+                              <!-- - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>-->
+                              <!-- - Company registration document<br>-->
+                              <!-- - Proof of Home Address (Utility bill or Bank statement)<br>-->
+
+                              <!--<span>*</span> Look straight into the camera<br>-->
+                              <!--<span>*</span> The photo should be in color<br>-->
+                              <!--<span>*</span> Your face and card information should be clearly visible<br>-->
+                              <!--<span>*</span> Donot wear a sunglass, a hat or a headband<br>-->
+                              <!--<span>*</span> The photo should be recent<br>-->
+                              <!--<span>*</span> Image should be in high resolution (min 300 dpi)<br>-->
+                          </div>
                       </div>
 
 
                       <div class="left_docs_out">
-                        <div class="doc_blocks">
-                        <p>Company</p>
-                        - Gov Issued ID (Passport,Drivers License,Other)<br>
-                        - Selfie Picture of You Holding Gov Issued ID<br>
-                        - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>
-                        - Company registration document<br>
-                        - Proof of Home Address (Utility bill or Bank statement)<br>
+                          <div class="doc_blocks">
+                              <p>Document Guide</p>
+                              <ul>
+                                  <li>Documents must be in the following format : jpg, png, gif, pdf</li>
+                                  <li>Documents must be scanned in color</li>
+                                  <li>Documents must be clearly visible</li>
+                                  <li>Selfie with ID requirements</li>
+                              </ul>
+                              <!-- - Documents must be in the following format : jpg, png, gif, pdf<br>-->
+                              <!-- - Documents must be scanned in color <br>-->
+                              <!-- - Documents must be clearly visible<br>-->
+                              <!-- - Selfie with ID requirements<br>-->
 
-                            <span>*</span> Look straight into the camera<br>
-                            <span>*</span> The photo should be in color<br>
-                            <span>*</span> Your face and card information should be clearly visible<br>
-                            <span>*</span> Donot wear a sunglass, a hat or a headband<br>
-                            <span>*</span> The photo should be recent<br>
-                            <span>*</span> Image should be in high resolution (min 300 dpi)<br>
-                        </div>
+                          </div>
+                          <div class="doc_blocks">
+                              <p>Photo Guide</p>
+                              <ul class="star_style">
+                                  <li>Look straight into the camera</li>
+                                  <li>The photo should be in color</li>
+                                  <li>Your face and card information should be clearly visible</li>
+                                  <li>Donot wear a sunglass, a hat or a headband</li>
+                                  <li>The photo should be recent</li>
+                                  <li>Image should be in high resolution (min 300 dpi)</li>
+                              </ul>
+                          </div>
                       </div>
 
 
@@ -361,9 +387,13 @@
                         <!--</div>-->
                     </div>
                     <div class="image_upload">
-                        <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()" />
+                        <div class="file_upload">
+                            <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()"/>
+                        </div>
+                        <div class="add_new" style="display: none">Add New</div>
                     </div>
-                    <p>No of Documents submitted : {{userImage.length}}</p>
+
+                    <p>No. Of Documents submitted : {{userImage.length}}</p>
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
                         <form style="display: none" action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="POST"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
@@ -376,13 +406,13 @@
                         </form>
                     <div class="declaration">
                         <input type="checkbox" id="declaration" />
-                        <label for="declaration">I do hereby solemnly declare that the information provided is up-to-date and correct. The documents provided as proof of identity and proof of address has been self-attested. I authorize Octagon Strategy to verify the information provided to confirm its accuracy.
+                        <label for="declaration">I hereby solemnly declare that the information provided is up-to-date and correct. The documents provided as proof of identity and proof of address has been self-attested. I authorize CrypBrokers to verify the information provided to confirm its accuracy.
                         </label>
                     </div>
 
                     <div class="bottom_button_wrap">
 
-                        <div class="prev_button pr_doc go_btn" data-id="personal_2">
+                        <div class="prev_button pr_doc go_btn" data-id="#personal_2">
                             Previous
                         </div>
                         <div class="next_button company go_btn" ng-click="verifyDoc()">
@@ -421,7 +451,6 @@
         </div>
         <div style="clear:both;"></div>
     </footer>
-
 </div>
 
 <script rel="script" src="js/libs/jquery.min.js"></script>

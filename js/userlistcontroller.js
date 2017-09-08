@@ -9,9 +9,7 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
         window.location = 'index.html';
 
     }
-
     $scope.getlist= function (){
-
         var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;
         console.log(data);
 
