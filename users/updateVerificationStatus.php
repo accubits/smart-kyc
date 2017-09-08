@@ -26,6 +26,11 @@ function onSuccessHandler()
         $email = $data[$config->COL_userRegistration_email];
         $users->sendMail($email, "KYC verification completed", "Hi, your KYC verification is completed");
     }
+    elseif ($_POST['status'] == 2) {
+        $data = $users->getUserDetailsFromId($_POST[$config->COL_users_userRegistration_unique_id]);
+        $email = $data[$config->COL_userRegistration_email];
+        $users->sendMail($email, "KYC Documents Rejected", "Hi, your KYC documents has been rejected");
+    }
     echo json_encode($out);
 
 }

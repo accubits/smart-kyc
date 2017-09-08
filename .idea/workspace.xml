@@ -132,8 +132,8 @@
       <file leaf-file-name="updateVerificationStatus.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -374,12 +374,12 @@
       <workItem from="1504027340314" duration="9624000" />
       <workItem from="1504072858022" duration="8305000" />
       <workItem from="1504255302358" duration="9794000" />
-      <workItem from="1504614840119" duration="2385000" />
+      <workItem from="1504614840119" duration="2606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50164000" />
+    <option name="totallyTimeSpent" value="50385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -811,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
