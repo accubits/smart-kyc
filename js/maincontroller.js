@@ -558,10 +558,13 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         //    index++;
         //}
         console.log($('.uploadFile'))
-        for(var item in $('.uploadFile')){
-            fd.append('image'+index, $('.uploadFile')[item].prop('files')[0]);
+        $('.uploadFile').each(function(){
+            if(!$(this).prop('files').length){
+                return true;
+            }
+            fd.append('image'+index, $(this).prop('files')[0]);
             index++;
-        }
+        });
         //console.log(fd);return;
         var data = {};
 

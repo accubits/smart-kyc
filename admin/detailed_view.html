@@ -19,7 +19,7 @@
         <div class="nav_bar">
             <a href="user_list.html">
                 <div class="nav_com">
-                    Home
+                    Clients
                 </div>
             </a>
             <a href="reset_password.html">
@@ -70,7 +70,7 @@
             <div class="acpt_dcl" ng-click="updateStatus(1)">
                 Approve
             </div>
-            <div class="acpt_dcl dcl" ng-click="updateStatus(0)">
+            <div class="acpt_dcl dcl" ng-click="updateStatus(2)">
                 Reject
             </div>
         </div>
@@ -166,7 +166,7 @@
                         <p class="det_vw">{{user.users_country_residence}}</p>
                     </div>
                     <div class="text_box_right txt_bx">
-                        <div class="text_desc">Zip / Postal code</div>
+                        <div class="text_desc">Zip/Postal code</div>
                         <p class="det_vw">{{user.users_zip}}</p>
                     </div>
 
@@ -346,8 +346,9 @@
 <script rel="script" src="../js/libs/angular-route.min.js"></script>
 <script rel="script" src="../js/config.js"></script>
 <script rel="script" src="../js/toast/toast.js"></script>
-<script rel="script" src="../js/registration.js"></script>
+<script rel="script" src="js/registration.js"></script>
 <script rel="script" src="../js/maincontroller.js"></script>
 <script rel="script" src="../js/userDetailCtrl.js"></script>
+
 </body>
 </html>
