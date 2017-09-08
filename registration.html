@@ -362,14 +362,6 @@
                                   <li>Documents must be clearly visible</li>
                                   <li>Selfie with ID requirements</li>
                               </ul>
-                              <ul>
-                                  <li>Look straight into the camera</li>
-                                  <li>The photo should be in color</li>
-                                  <li>Your face and card information should be clearly visible</li>
-                                  <li>Donot wear a sunglass, a hat or a headband</li>
-                                  <li>The photo should be recent</li>
-                                  <li>Image should be in high resolution (min 300 dpi)</li>
-                              </ul>
                               <!-- - Documents must be in the following format : jpg, png, gif, pdf<br>-->
                               <!-- - Documents must be scanned in color <br>-->
                               <!-- - Documents must be clearly visible<br>-->
@@ -396,9 +388,9 @@
                     </div>
                     <div class="image_upload">
                         <div class="file_upload">
-                            <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()"/>
+                            <input name="file" type="file" id="files" class="uploadFile" onchange="angular.element(this).scope().imageUpload()"/>
                         </div>
-                        <div class="add_new" style="display: none">Add New</div>
+                        <div class="add_new">Add New</div>
                     </div>
 
                     <p>No. Of Documents submitted : {{userImage.length}}</p>

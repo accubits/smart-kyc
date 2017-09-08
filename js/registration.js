@@ -56,7 +56,7 @@ function menu_tab()
     $(".nav_bar").toggleClass("active");
 }
 function addinput() {
-    $('.file_upload').append("<input name=\"file\" type=\"file\" multiple id=\"files\" onchange=\"angular.element(this).scope().imageUpload()\"/>")
+    $('.file_upload').append("<input name=\"file\" type=\"file\" multiple id=\"files\" class=\"uploadFile\" onchange=\"angular.element(this).scope().imageUpload()\"/>")
 }
 function init() {
     $('.prev_button ').click(go);

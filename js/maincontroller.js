@@ -553,8 +553,13 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         //fd.append('image', $('#files').prop('files')[0]);
 
         var index = 1;
-        for(var item in $('#files').prop('files')){
-            fd.append('image'+index, $('#files').prop('files')[item]);
+        //for(var item in $('#files').prop('files')){
+        //    fd.append('image'+index, $('#files').prop('files')[item]);
+        //    index++;
+        //}
+        console.log($('.uploadFile'))
+        for(var item in $('.uploadFile')){
+            fd.append('image'+index, $('.uploadFile')[item].prop('files')[0]);
             index++;
         }
         //console.log(fd);return;
