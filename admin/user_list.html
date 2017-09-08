@@ -47,17 +47,17 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Location</th>
-                    <!--<th>Submission Date</th>-->
+                    <th>Submission Date</th>
                     <th>KYC Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="info in details" ng-click="goToUserPage(info.userRegistration_uniqueId)" class="user_item">
+            <tr ng-repeat="info in details | orderBy:'created_date':false" ng-click="goToUserPage(info.userRegistration_uniqueId)" class="user_item">
                 <td>{{info.users_first_name}} {{info.users_last_name}}</td>
                 <td>{{info.userRegistration_email}}</td>
                 <td>{{info.users_city}}, {{info.users_country_residence}}</td>
-                <!--<td>{{info.users_id_issue_date}}</td>-->
+                <td>{{info.created_date | date:'MM/dd/yyyy'}}</td>
                 <td>{{info.users_kyc_status}}</td>
                 <td><a href="detailed_view.html" class="view_btn">VIEW</a> </td>
             </tr>

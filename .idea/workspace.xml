@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6361634f-c3fe-4240-b209-74d4cad2e83f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/css/admin.css" afterPath="$PROJECT_DIR$/admin/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/detailed_view.html" afterPath="$PROJECT_DIR$/admin/detailed_view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/js/registration.js" afterPath="$PROJECT_DIR$/admin/js/registration.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user_list.html" afterPath="$PROJECT_DIR$/admin/user_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/registration.html" afterPath="$PROJECT_DIR$/registration.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/userlistcontroller.js" afterPath="$PROJECT_DIR$/js/userlistcontroller.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +25,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.644427">
+    <splitter split-orientation="horizontal" split-proportion="0.5172684">
       <split-first>
         <leaf>
           <file leaf-file-name="detailed_view.html" pinned="false" current-in-tab="false">
@@ -41,20 +38,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="user_list.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="user_list.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/admin/user_list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+                <state relative-caret-position="374">
+                  <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="registration.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="registration.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/registration.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
+                <state relative-caret-position="527">
                   <caret line="363" column="35" lean-forward="false" selection-start-line="363" selection-start-column="35" selection-end-line="363" selection-end-column="35" />
                   <folding>
                     <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -79,6 +76,16 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="userlistcontroller.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/userlistcontroller.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="userDetailCtrl.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/userDetailCtrl.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -89,11 +96,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="registration.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="registration.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/admin/js/registration.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="148">
-                  <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+                <state relative-caret-position="335">
+                  <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -129,6 +136,7 @@
       <find>D Issue Date</find>
       <find>ID Issue Date</find>
       <find>KYC Status</find>
+      <find>Document Guide</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,8 +151,9 @@
         <option value="$PROJECT_DIR$/admin/css/admin.css" />
         <option value="$PROJECT_DIR$/admin/js/registration.js" />
         <option value="$PROJECT_DIR$/admin/detailed_view.html" />
-        <option value="$PROJECT_DIR$/admin/user_list.html" />
         <option value="$PROJECT_DIR$/registration.html" />
+        <option value="$PROJECT_DIR$/js/userlistcontroller.js" />
+        <option value="$PROJECT_DIR$/admin/user_list.html" />
       </list>
     </option>
   </component>
@@ -251,12 +260,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504696106654</updated>
-      <workItem from="1504696108038" duration="20815000" />
+      <workItem from="1504696108038" duration="23725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20815000" />
+    <option name="totallyTimeSpent" value="23725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -401,14 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/js/registration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/detailed_view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -417,21 +418,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/user_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="55" column="42" lean-forward="true" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/registration.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="527">
           <caret line="363" column="35" lean-forward="false" selection-start-line="363" selection-start-column="35" selection-end-line="363" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/js/registration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/userlistcontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/user_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="55" column="73" lean-forward="false" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
