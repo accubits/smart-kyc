@@ -15,7 +15,7 @@ function onSuccessHandler()
     global $config,$db,$error,$redis;
     $users = new Users($db,$config,$error,$redis);
     $users->setRegistrationId($_POST[$config->COL_users_userRegistration_unique_id]);
-    if ($_POST['status'] !=1 && $_POST['status']!= 0){
+    if ($_POST['status'] !=1 && $_POST['status']!= 2){
         $error->responseCode = 400;
         $error->string = "Invalid status";
         $error->errorHandler();
