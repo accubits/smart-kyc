@@ -8,7 +8,7 @@ crypbrokersApp.controller('adminloginCntl', function ($scope,$http,$window) {
     $scope.forgot = {
         "email": ""
     }
-
+    $scope.blockbutton= true;
     $scope.adminlogIn= function (){
         if (!$scope.details.email && !$scope.details.password){
             showError('Please enter your details','error',true);
@@ -34,8 +34,10 @@ crypbrokersApp.controller('adminloginCntl', function ($scope,$http,$window) {
             url: ServerApi+'login.php',
             data: postData
         };
+        $scope.blockbutton= false;
         $http(requestObj).success(function (data) {
             console.log(data);
+            $scope.blockbutton= true;
             localStorage.setItem("adminDetails",JSON.stringify(data));
             if(data["type"] == "1"){
                 $window.location.href = 'user_list.html';
@@ -89,8 +91,10 @@ crypbrokersApp.controller('adminloginCntl', function ($scope,$http,$window) {
             url: ServerApi+'forgotPassword.php',
             data: postData
         };
+        $scope.blockbutton= false;
         $http(requestObj).success(function (data) {
             console.log(data);
+            $scope.blockbutton= true;
             showError('Please check email for password reset','success',true);
 
             $scope.forgot.email = "";
