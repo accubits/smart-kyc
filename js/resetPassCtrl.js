@@ -9,17 +9,20 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         "password": "",
         "reenterpassword": ""
     }
-
-    // try{
-    //     var id = window.location.search.substr(7);
-    //
-    //     if(id == "" || id == undefined ){
-    //         window.location = 'index.html';
-    //     }
-    // }
-    // catch(e){
-    //     window.location = 'index.html';
-    // }
+    console.log("1");
+    try{
+        var id = window.location.search.substr(7);
+        console.log("2");
+        if(id == "" || id == undefined ){
+            window.location = 'index.html';
+            console.log("3");
+        }
+    }
+    catch(e){
+        console.log("4");
+        window.location = 'index.html';
+    }
+    console.log("5");
 
 
 
@@ -54,7 +57,8 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
                 "password": "",
                 "reenterpassword": ""
             };
-            // window.location = 'index.html';
+            console.log("6");
+            window.location = 'index.html';
         }).error(function (data, err) {
             console.log(data);
             console.log(err);
