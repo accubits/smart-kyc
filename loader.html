@@ -24,50 +24,60 @@
             /*animation: myOrbit 2s linear infinite;*/
         }
         .loader_img {
-            width: 50px;
-            transform: rotate(25deg);
-            animation: roll 2s infinite;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 80px;
+            transform: rotate(180deg);
+            animation: rollout 2s infinite;
         }
-
+        .loader_img_inner {
+            position: absolute;
+            left: 23px;
+            top: 23px;
+            width: 35px;
+            transform: rotate(180deg);
+            animation: rollIn 1.7s infinite;
+        }
+        @-webkit-keyframes rollout {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        @-moz-keyframes  rollout {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        @-o-keyframes rollout {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes rollout {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
         @-webkit-keyframes rollIn {
-            0% {
-                transform: rotate(0);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0); }
         }
         @-moz-keyframes  rollIn {
-            0% {
-                transform: rotate(0);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0); }
         }
         @-o-keyframes rollIn {
-            0% {
-                transform: rotate(0);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0); }
         }
         @keyframes rollIn {
-            0% {
-                transform: rotate(0);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(360deg); }
+            100% { transform: rotate(0); }
         }
-
     </style>
 </head>
 <body ng-controller="userDetailCtrl">
 <div class="loader_container">
 <div class="cryp_loader">
     <img class="loader_img" src="images/favicon.png">
+    <img class="loader_img_inner" src="images/favicon.png">
 </div>
 </div>
 
