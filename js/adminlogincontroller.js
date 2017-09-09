@@ -37,7 +37,6 @@ crypbrokersApp.controller('adminloginCntl', function ($scope,$http,$window) {
         $http(requestObj).success(function (data) {
             console.log(data);
             localStorage.setItem("adminDetails",JSON.stringify(data));
-
             if(data["type"] == "1"){
                 $window.location.href = 'user_list.html';
                 showError('Successfully loggedIn','success',true)

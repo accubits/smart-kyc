@@ -7,7 +7,7 @@ crypbrokersApp.controller('signupCntl', function ($scope,$http,$window) {
         password:'',
         reenterpassword:''
     };
-
+    $scope.blockbutton= true;
     $scope.signUp= function (){
         if (!$scope.details.name && !$scope.details.password && !$scope.details.email){
             showError('Please enter your details','error',true);
@@ -43,9 +43,12 @@ crypbrokersApp.controller('signupCntl', function ($scope,$http,$window) {
             url: ServerApi+'userRegistration.php',
             data: postData
         };
+        $scope.blockbutton= false;
+        showError('Loading','loading',false);
         $http(requestObj).success(function (data) {
             console.log(data);
             $window.location.href = 'index.html';
+            $scope.blockbutton= true;
             showError('User signIn success','success',true)
 
         }).error(function (data, err) {

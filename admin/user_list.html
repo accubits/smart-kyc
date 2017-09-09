@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="css/admin.css">
 </head>
 <body ng-controller="userlistCntl">
-
+<div class="loader_container" id="loader" ng-show="loading">
+    <div class="cryp_loader">
+        <img class="loader_img" src="images/loader.png">
+        <img class="loader_img_inner" src="images/loader.png">
+    </div>
+</div>
 <div class="outer">
     <div class="header">
         <div class="logo">

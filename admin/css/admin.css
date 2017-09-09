@@ -26,6 +26,70 @@ input,textarea,select
     font-family: Montserrat-Light;
     src: url(../../fonts/Montserrat-Medium.otf);
 }
+
+/*loader css start*/
+.loader_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    z-index: 100;
+}
+.cryp_loader {
+    left: 43%;
+    top: 43%;
+    position: absolute;
+}
+.loader_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    transform: rotate(180deg);
+    animation: rollout 2s infinite;
+}
+.loader_img_inner {
+    position: absolute;
+    left: 23px;
+    top: 23px;
+    width: 35px;
+    transform: rotate(180deg);
+    animation: rollIn 1.7s infinite;
+}
+@-webkit-keyframes rollout {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+@-moz-keyframes  rollout {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+@-o-keyframes rollout {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes rollout {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+}
+@-webkit-keyframes rollIn {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}
+@-moz-keyframes  rollIn {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}
+@-o-keyframes rollIn {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}
+@keyframes rollIn {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0); }
+}
+/*loader css end*/
 .login_bg{
     /*background-image: url(../../images/cryp_btm.png);*/
     /*background-size: 100%;*/
