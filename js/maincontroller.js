@@ -602,7 +602,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                         $scope.thankhide=false;
                         $scope.thankshow=true;
                     });
-                    
+
                     console.log("success _23");
                     console.log($scope.thankshow)
                     showError('Uploaded the documents', "success", true);
