@@ -45,6 +45,14 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
                         users[item]["users_kyc_status"] = "Rejected";
                         break;
                 }
+                switch (users[item]["users_account_type"]){
+                    case "0":
+                        users[item]["users_account_type"] = "Personal";
+                        break;
+                    case "1":
+                        users[item]["users_account_type"] = "Company";
+                        break;
+                }
             }
 
             $scope.details = users;

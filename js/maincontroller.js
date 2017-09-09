@@ -303,7 +303,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
 
 
     function getUserDetails(){
-
+        // if(! $scope.userDetails.unique_id){
+        //     return;
+        // }
         var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;
 
         var postData = data;

@@ -3,23 +3,26 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
     $scope.userDetails=JSON.parse(localStorage.getItem("userDetails"));
-    console.log($scope.userDetails.unique_id);
+    // console.log($scope.userDetails.unique_id);
 
     $scope.passDeatils = {
         "password": "",
         "reenterpassword": ""
     }
-
+    console.log("1");
     try{
         var id = window.location.search.substr(7);
-
+        console.log("2");
         if(id == "" || id == undefined ){
             window.location = 'index.html';
+            console.log("3");
         }
     }
     catch(e){
+        console.log("4");
         window.location = 'index.html';
     }
+    console.log("5");
 
 
 
@@ -54,6 +57,7 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
                 "password": "",
                 "reenterpassword": ""
             };
+            console.log("6");
             window.location = 'index.html';
         }).error(function (data, err) {
             console.log(data);
