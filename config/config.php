@@ -20,6 +20,7 @@ class dbconfig
     public $Table_company                   = 'company';
     public $Table_usersImage                = 'usersImage';
     public $Table_forgotPassword            = 'forgotPassword';
+    public $Table_emailVerification         = 'emailVerification';
     public $Table_userRegistration          = 'userRegistration';
     public $Table_order                     = 'orders';
 
@@ -67,14 +68,18 @@ class dbconfig
     
     /*Table_userRegistration*/
 
-    public $COL_userRegistration_unique_id     = 'userRegistration_uniqueId';
-    public $COL_userRegistration_username      = 'userRegistration_username';
-    public $COL_userRegistration_email         = 'userRegistration_email';
-    public $COL_userRegistration_password      = 'userRegistration_password';
-    public $COL_userRegistration_status        = 'userRegistration_status';
+    public $COL_userRegistration_unique_id                  = 'userRegistration_uniqueId';
+    public $COL_userRegistration_username                   = 'userRegistration_username';
+    public $COL_userRegistration_email                      = 'userRegistration_email';
+    public $COL_userRegistration_password                   = 'userRegistration_password';
+    public $COL_userRegistration_status                     = 'userRegistration_status';
+    public $COL_userRegistration_email_verify_status        = 'userRegistration_verify_status';
 
     public $COL_forgotPassword_token           = 'token';
     public $COL_forgotPassword_uniqueId        = 'uniqueId';
+
+    public $COL_emailVerification_token           = 'email_token';
+    public $COL_emailVerification_uniqueId        = 'email_uniqueId';
 
     public $COL_order_uniqueId                  = 'uniqueId';
     public $COL_order_user_uniqueId             = 'order_user_uniqueId';

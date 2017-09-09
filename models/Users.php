@@ -557,6 +557,7 @@ public function userRegistration(){
 
     if (empty($result['RESULT'])) {
         $uniqueId = TagdToUtils::getUniqueId();
+        $this->setUniqueId($uniqueId);
         $dataArr = array(
             $this->config->COL_userRegistration_unique_id    => $uniqueId,
             $this->config->COL_userRegistration_username     => $this->getUserName(),
@@ -605,7 +606,8 @@ public function userRegistration(){
 
 public function signIn(){
 
-    $sql = "Select " . $this->config->COL_userRegistration_unique_id . ",".$this->config->COL_userRegistration_status." from 
+    $sql = "Select " . $this->config->COL_userRegistration_unique_id . ",".$this->config->COL_userRegistration_status.",".
+        $this->config->COL_userRegistration_email_verify_status." from 
     " . $this->config->Table_userRegistration . " where 
     " . $this->config->COL_userRegistration_email . " = '" . $this->getEmail() . "' and 
     " . $this->config->COL_userRegistration_password . " = '" . $this->getPassword() . "' Limit 1";
@@ -621,7 +623,13 @@ public function signIn(){
         $this->error->responseCode = 400;
         $this->error->errorHandler();
 
-    } else {
+    }
+    elseif($result['RESULT'][0][$this->config->COL_userRegistration_email_verify_status] == 0) {
+        $this->error->string = "Email pending verification";
+        $this->error->responseCode = 400;
+        $this->error->errorHandler();
+        
+    }else {
 
         $token = TagdToUtils::getUniqueId();
         $this->redis->key = $token;
@@ -861,7 +869,44 @@ public function readInfo(){
         return $response;
 
     }
-    
+
+    public function addEmailVerificationToken() {
+        
+        $unique_id = $this->getUniqueId();
+
+        $sql = "Delete from ".$this->config->Table_emailVerification." where ".$this->config->COL_emailVerification_uniqueId." = 
+        '".$unique_id."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+
+        $token = TagdToUtils::getUniqueId();
+        $dataArr = array(
+            $this->config->COL_emailVerification_token => $token,
+            $this->config->COL_emailVerification_uniqueId => $unique_id,
+        );
+        $sql1 = $this->db->createInsertQuery($this->config->Table_emailVerification, $dataArr);
+        $result = $this->db->executeQuery($sql1);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+
+        }
+
+        $this->sendMail($this->getEmail(),"Email - crypbrokers","Hi, <br> Please click the below link to verify email <br>
+                        http://52.220.41.10/crypbrokers/users/verifyEmail.php?token=".$token);
+
+        $response['success'] = true;
+        $response['result'] = "An email has been sent to your registered email-id";
+        return $response;
+
+    }
+
+
     public function resetPassword($token){
         
         
@@ -902,7 +947,49 @@ public function readInfo(){
         return $response;
         
     }
-    
+
+    public function verifyEmail($token){
+
+
+        $sql =  "Select ".$this->config->COL_emailVerification_uniqueId." from ".$this->config->Table_emailVerification."
+         where ".$this->config->COL_emailVerification_token." = '".$token."' LIMIT 1";
+
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        elseif (count($result['RESULT']) == 0){
+            $this->error->responseCode = 400;
+            $this->error->string = "Invalid token";
+            $this->error->errorHandler();
+        }
+
+        $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_email_verify_status." = 
+        1 where ".$this->config->COL_userRegistration_unique_id." = '".
+            $result['RESULT'][0][$this->config->COL_emailVerification_uniqueId]."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        $sql = "Delete from ".$this->config->Table_emailVerification." where ".$this->config->COL_emailVerification_token." = 
+        '".$token."'";
+        $result = $this->db->executeQuery($sql);
+
+        if($result['CODE']!=1){
+
+            $this->error->internalServer();
+        }
+        $response['success'] = true;
+        $response['result'] = "Successfully updated password";
+        return $response;
+
+    }
+
+
     public function updatePassword($oldPassword) {
 
         $sql = " Select * from ".$this->config->Table_userRegistration." where ".$this->config->COL_userRegistration_unique_id." = '".

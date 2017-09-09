@@ -18,6 +18,7 @@ function onSuccessHandler() {
     $users->setPassword($_POST[$config->COL_userRegistration_password]);
 
     $response=$users->userRegistration();
+    $users->addEmailVerificationToken();
     echo json_encode($response);
 
 }

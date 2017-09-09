@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68f0150a-dd9f-4a3d-93f2-4ed35fc4c9a0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users/verifyEmail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/init.php" afterPath="$PROJECT_DIR$/config/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users/updateVerificationStatus.php" afterPath="$PROJECT_DIR$/users/updateVerificationStatus.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Users.php" afterPath="$PROJECT_DIR$/models/Users.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,33 +29,68 @@
       <file leaf-file-name="Users.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="738" column="5" selection-start-line="738" selection-start-column="5" selection-end-line="738" selection-end-column="5" />
+            <state relative-caret-position="139">
+              <caret line="972" column="0" selection-start-line="972" selection-start-column="0" selection-end-line="972" selection-end-column="0" />
               <folding>
-                <marker date="1504615929000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615929000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-                <marker date="1504615929000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-                <marker date="1504615929000" expanded="true" signature="21075:21514" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615929000" expanded="true" signature="22437:22449" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="22437:22494" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="22437:22495" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="22437:22554" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="22437:22569" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="22437:22570" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="24614:24739" placeholder="Delete from " />
-                <marker date="1504615929000" expanded="true" signature="25094:25108" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615929000" expanded="true" signature="25094:25150" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-                <marker date="1504615929000" expanded="true" signature="25094:25373" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <element signature="n#resetPassword#0;n#Users#0;n#!!top" expanded="false" />
+                <marker date="1504959062000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504959062000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+                <marker date="1504959062000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+                <marker date="1504959062000" expanded="true" signature="21075:21514" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504959062000" expanded="true" signature="22437:22449" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="22437:22494" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="22437:22495" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="22437:22554" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="22437:22569" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="22437:22570" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="23670:23808" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="25844:25969" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="27282:27413" placeholder="Delete from " />
+                <marker date="1504959062000" expanded="true" signature="27757:27771" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504959062000" expanded="true" signature="27757:27813" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+                <marker date="1504959062000" expanded="true" signature="27757:28036" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Order.php">
+      <file leaf-file-name="verifyEmail.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/users/verifyEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2910">
-              <caret line="194" column="70" selection-start-line="194" selection-start-column="70" selection-end-line="194" selection-end-column="70" />
+            <state relative-caret-position="331">
+              <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uploadDocuments.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/uploadDocuments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updateVerificationStatus.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forgotPassword.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/forgotPassword.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -62,28 +99,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="uploadDocuments.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/uploadDocuments.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="90">
+              <caret line="22" column="64" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -92,8 +109,18 @@
       <file leaf-file-name="userRegistration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/userRegistration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="updatePassword.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/updatePassword.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -102,48 +129,27 @@
       <file leaf-file-name="init.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/init.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+            <state relative-caret-position="331">
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding>
-                <marker date="1504859389000" expanded="true" signature="45:1474" placeholder="CREATE TABLE... IF" />
-                <marker date="1504859389000" expanded="true" signature="1498:2443" placeholder="CREATE TABLE... IF" />
-                <marker date="1504859389000" expanded="true" signature="2470:2497" placeholder="CREATE TABLE... IF" />
-                <marker date="1504859389000" expanded="true" signature="2470:3065" placeholder="CREATE TABLE... IF" />
-                <marker date="1504859389000" expanded="true" signature="3096:3696" placeholder="CREATE TABLE... IF" />
-                <marker date="1504859389000" expanded="true" signature="3726:4350" placeholder="CREATE TABLE... IF" />
-                <marker date="1504859389000" expanded="true" signature="4372:5348" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="45:1474" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="1498:2443" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="2470:2497" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="2470:3065" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="3096:3765" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="3795:4419" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="4452:5091" placeholder="CREATE TABLE... IF" />
+                <marker date="1504958354000" expanded="true" signature="5113:6089" placeholder="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="placeOrder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/placeOrder.php">
+      <file leaf-file-name="resetPassword.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/users/resetPassword.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-              <folding>
-                <element signature="e#6#90#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="updateVerificationStatus.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getAllUsers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/getAllUsers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,10 +194,11 @@
         <option value="$PROJECT_DIR$/users/uploadDocuments.php" />
         <option value="$PROJECT_DIR$/models/Order.php" />
         <option value="$PROJECT_DIR$/users/placeOrder.php" />
-        <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/models/Users.php" />
-        <option value="$PROJECT_DIR$/config/init.php" />
         <option value="$PROJECT_DIR$/users/updateVerificationStatus.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/config/init.php" />
+        <option value="$PROJECT_DIR$/models/Users.php" />
+        <option value="$PROJECT_DIR$/users/verifyEmail.php" />
       </list>
     </option>
   </component>
@@ -285,20 +292,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crypbrokers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crypbrokers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -374,16 +367,16 @@
       <workItem from="1504027340314" duration="9624000" />
       <workItem from="1504072858022" duration="8305000" />
       <workItem from="1504255302358" duration="9794000" />
-      <workItem from="1504614840119" duration="2606000" />
+      <workItem from="1504614840119" duration="4568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50385000" />
+    <option name="totallyTimeSpent" value="52347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25040388" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -391,7 +384,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -444,13 +437,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/logincontroller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="28" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/verifycontroller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -605,20 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/updatePassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/resetPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/getInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -633,17 +605,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/forgotPassword.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/addAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -651,13 +617,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Company.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3915">
-          <caret line="261" column="34" selection-start-line="261" selection-start-column="34" selection-end-line="261" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -705,30 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/uploadDocuments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/userRegistration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/updateUserDetails.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -754,37 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="738" column="5" selection-start-line="738" selection-start-column="5" selection-end-line="738" selection-end-column="5" />
-          <folding>
-            <marker date="1504615929000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615929000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
-            <marker date="1504615929000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
-            <marker date="1504615929000" expanded="true" signature="21075:21514" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615929000" expanded="true" signature="22437:22449" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="22437:22494" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="22437:22495" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="22437:22554" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="22437:22569" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="22437:22570" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="24614:24739" placeholder="Delete from " />
-            <marker date="1504615929000" expanded="true" signature="25094:25108" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615929000" expanded="true" signature="25094:25150" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-            <marker date="1504615929000" expanded="true" signature="25094:25373" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/getAllUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -793,27 +698,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/users/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="261" column="34" selection-start-line="261" selection-start-column="34" selection-end-line="261" selection-end-column="34" />
+          <folding>
+            <marker date="1504081497000" expanded="true" signature="4004:4017" placeholder="Select * fro... " />
+            <marker date="1504081497000" expanded="true" signature="4004:4018" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_company}" />
+            <marker date="1504081497000" expanded="true" signature="4004:4056" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_company}" />
+            <marker date="1504081497000" expanded="true" signature="4004:4057" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_company}" />
+            <marker date="1504081497000" expanded="true" signature="4004:4152" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_company}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/updatePassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/init.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="331">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding>
-            <marker date="1504859389000" expanded="true" signature="45:1474" placeholder="CREATE TABLE... IF" />
-            <marker date="1504859389000" expanded="true" signature="1498:2443" placeholder="CREATE TABLE... IF" />
-            <marker date="1504859389000" expanded="true" signature="2470:2497" placeholder="CREATE TABLE... IF" />
-            <marker date="1504859389000" expanded="true" signature="2470:3065" placeholder="CREATE TABLE... IF" />
-            <marker date="1504859389000" expanded="true" signature="3096:3696" placeholder="CREATE TABLE... IF" />
-            <marker date="1504859389000" expanded="true" signature="3726:4350" placeholder="CREATE TABLE... IF" />
-            <marker date="1504859389000" expanded="true" signature="4372:5348" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="45:1474" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="1498:2443" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="2470:2497" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="2470:3065" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="3096:3765" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="3795:4419" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="4452:5091" placeholder="CREATE TABLE... IF" />
+            <marker date="1504958354000" expanded="true" signature="5113:6089" placeholder="CREATE TABLE... IF" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/userRegistration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/uploadDocuments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/updateVerificationStatus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/forgotPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/resetPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="22" column="64" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="972" column="0" selection-start-line="972" selection-start-column="0" selection-end-line="972" selection-end-column="0" />
+          <folding>
+            <element signature="n#resetPassword#0;n#Users#0;n#!!top" expanded="false" />
+            <marker date="1504959062000" expanded="true" signature="15392:15728" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504959062000" expanded="true" signature="18097:18267" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_users}" />
+            <marker date="1504959062000" expanded="true" signature="19635:19825" placeholder="Select `user... ${$this-&gt;config-&gt;Table_usersImage}" />
+            <marker date="1504959062000" expanded="true" signature="21075:21514" placeholder="Select u.*,r... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504959062000" expanded="true" signature="22437:22449" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="22437:22494" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="22437:22495" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="22437:22554" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="22437:22569" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="22437:22570" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="23670:23808" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="25844:25969" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="27282:27413" placeholder="Delete from " />
+            <marker date="1504959062000" expanded="true" signature="27757:27771" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504959062000" expanded="true" signature="27757:27813" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+            <marker date="1504959062000" expanded="true" signature="27757:28036" placeholder="Select * fro... ${$this-&gt;config-&gt;Table_userRegistration}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/verifyEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
