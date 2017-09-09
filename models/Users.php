@@ -577,6 +577,7 @@ public function userRegistration(){
             $this->config->COL_users_userRegistration_unique_id    => $uniqueId
         ]);
         $result = $this->db->executeQuery($sql1);
+        print_r($result);
 
 //        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
 //            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
