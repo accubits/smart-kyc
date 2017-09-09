@@ -34,10 +34,13 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
                 users[item]["created_date"] = new Date(users[item]["created_date"]);
                 switch (users[item]["users_verify_status"]){
                     case "0":
-                            users[item]["users_kyc_status"] = "Rejected";
+                            users[item]["users_kyc_status"] = "Pending";
                         break;
                     case "1":
                         users[item]["users_kyc_status"] = "Approved";
+                        break;
+                    case "2":
+                        users[item]["users_kyc_status"] = "Rejected";
                         break;
                 }
             }
@@ -47,7 +50,7 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
         }).error(function (data, err) {
             console.log(data);
             console.log(err);
-            showError('errooooor','error',true)
+            showError('error','error',true)
         });
     };
     $scope.getlist();

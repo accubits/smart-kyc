@@ -66,11 +66,11 @@
             <span ng-if="user.users_verify_status == 1"><img src="images/verified-protection.png" /></span>
         </div>
 
-        <div class="sub_accpt" ng-if="user.users_verify_status == 0">
+        <div class="sub_accpt" >
             <div class="acpt_dcl" ng-click="updateStatus(1)">
                 Approve
             </div>
-            <div class="acpt_dcl dcl" ng-click="updateStatus(0)">
+            <div class="acpt_dcl dcl" ng-click="updateStatus(2)">
                 Reject
             </div>
         </div>
