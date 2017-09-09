@@ -7,6 +7,7 @@
  */
 
 include '../libraries/header.php';
+header('Content-Type: application/html');
 
 function onSuccessHandler() {
 
@@ -15,8 +16,7 @@ function onSuccessHandler() {
     $response=$users->verifyEmail($_GET['token']);
     
     if ($response['success'] ==true) {
-    ?>
-        <!doctype html>
+        echo "<!doctype html>
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
 <head>
     <base href=".dbconfig::$emailBaseUrl."/>
@@ -147,8 +147,7 @@ function onSuccessHandler() {
     </table>
 </center>
 </body>
-</html>;
-<?php
+</html>";
     }
 //    echo json_encode($response);
 
