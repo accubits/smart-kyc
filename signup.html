@@ -50,10 +50,7 @@
                     <input type="password" ng-model="details.reenterpassword">
                 </div>
                 <div class="log_wrap">
-                    <div class="login_btn" style="opacity: 10;cursor: none"   ng-show="! blockbutton">
-                        Signup
-                    </div>
-                    <div class="login_btn" ng-click="signUp()" ng-show="blockbutton">
+                    <div class="login_btn" ng-click="signUp()" ng-disabled="blockbutton">
                         Signup
                     </div>
                 </div>

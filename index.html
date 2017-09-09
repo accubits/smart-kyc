@@ -44,7 +44,7 @@
                         <input type="password" ng-model="details.password">
                     </div>
                     <div class="log_wrap">
-                        <div class="login_btn" ng-click="logIn()">
+                        <div class="login_btn" ng-click="logIn()" ng-disabled="blockbutton" >
                             Login
                         </div >
                         <div class="frgt_link">
@@ -61,7 +61,7 @@
                     <input type="text" ng-model="forgot.email">
                 </div>
                 <div class="log_wrap">
-                    <div class="login_btn" ng-click="forgotPass()">
+                    <div class="login_btn" ng-click="forgotPass()" ng-disabled="blockbutton">
                         Sumbit
                     </div >
                     <div class="frgt_link">
