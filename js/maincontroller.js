@@ -628,10 +628,10 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
-    function phonenumber(inputtxt) {
-        var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
-        return phoneno.test(inputtxt);
-    }
+    // function phonenumber(inputtxt) {
+    //     var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
+    //     return phoneno.test(inputtxt);
+    // }
     $scope.updateGeneral = function (){
 
         console.log($scope.general)
@@ -643,7 +643,8 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             showError('Please enter a valid email','error',true);
             return ;
         }
-        if(!phonenumber($scope.general.mobile)){
+        // if(!phonenumber($scope.general.mobile)){
+        if(($scope.general.mobile) == ""){
             showError('Please enter a valid phone number','error',true);
             return ;
         }
