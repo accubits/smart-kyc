@@ -65,6 +65,7 @@ $Table_userRegistration = "CREATE TABLE IF NOT EXISTS {$config->Table_userRegist
 	$config->COL_userRegistration_email varchar(255) NOT NULL,
 	$config->COL_userRegistration_password varchar(255) NOT NULL,
 	$config->COL_userRegistration_status int(1) default 0,
+	$config->COL_userRegistration_email_verify_status int(1) default 0,
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
@@ -76,6 +77,16 @@ $Table_forgotPassword = "CREATE TABLE IF NOT EXISTS {$config->Table_forgotPasswo
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT $config->COL_forgotPassword_uniqueId FOREIGN KEY ($config->COL_forgotPassword_uniqueId) 
+    REFERENCES $config->Table_userRegistration ($config->COL_userRegistration_unique_id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
+
+$Table_emailVerification = "CREATE TABLE IF NOT EXISTS {$config->Table_emailVerification} (
+	id INT NOT NULL AUTO_INCREMENT UNIQUE  KEY,
+	$config->COL_emailVerification_token varchar(255) NOT NULL PRIMARY  KEY,
+	$config->COL_emailVerification_uniqueId VARCHAR (255) NOT NULL,
+	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
+    modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT $config->COL_emailVerification_uniqueId FOREIGN KEY ($config->COL_emailVerification_uniqueId) 
     REFERENCES $config->Table_userRegistration ($config->COL_userRegistration_unique_id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;";
 
@@ -103,5 +114,6 @@ var_dump($db->executeQuery($Table_company));
 var_dump($db->executeQuery($Table_userRegistration));
 var_dump($db->executeQuery($Table_usersImage));
 var_dump($db->executeQuery($Table_forgotPassword));
+var_dump($db->executeQuery($Table_emailVerification));
 var_dump($db->executeQuery($Table_order));
 
