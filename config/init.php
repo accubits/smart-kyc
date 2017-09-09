@@ -22,6 +22,7 @@ $Table_users = "CREATE TABLE IF NOT EXISTS {$config->Table_users} (
 	$config->COL_users_id_issue_date DATE,
 	$config->COL_users_id_valid_date DATE, 
 	$config->COL_users_userRegistration_unique_id varchar(255) NOT NULL,
+	$config->COL_users_account_type int(1) default 0,
 	created_date timestamp DEFAULT CURRENT_TIMESTAMP,
     modified_date timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT $config->COL_users_userRegistration_unique_id FOREIGN KEY ($config->COL_users_userRegistration_unique_id) 

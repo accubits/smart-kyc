@@ -258,11 +258,7 @@ class Company
             $result = $this->db->executeQuery($sql1);
             if ($result['CODE'] != 1) {
                 $this->error->internalServer();
-            } else {
-                $response['success'] = true;
-                $response['result'] = $dataArr;
-                return $response;
-            }
+            } 
         }
         else {
             $sql1 = $this->db->createInsertQuery($this->config->Table_company, $dataArr);
@@ -272,6 +268,20 @@ class Company
             }
             
         }
+
+        $sql = "Update ".$this->config->Table_users." set ".$this->config->COL_users_account_type." = 1 where ".$this->config->COL_users_userRegistration_unique_id." = '".
+            $this->getUserId()."' ";
+
+        $result = $this->db->executeQuery($sql);
+
+        if ($result['CODE'] != 1) {
+
+            $this->error->internalServer();
+        }
+
+        $response['success'] = true;
+        $response['result'] = $dataArr;
+        return $response;
     }
 
 }
