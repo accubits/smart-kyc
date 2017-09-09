@@ -53,7 +53,7 @@
                 </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="info in details | orderBy:'created_date':false" ng-click="goToUserPage(info.userRegistration_uniqueId)" class="user_item">
+            <tr ng-repeat="info in details | orderBy:'created_date':true" ng-click="goToUserPage(info.userRegistration_uniqueId)" class="user_item">
                 <td>{{info.users_first_name}} {{info.users_last_name}}</td>
                 <td>{{info.userRegistration_email}}</td>
                 <td>{{info.users_city}}, {{info.users_country_residence}}</td>

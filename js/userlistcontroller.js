@@ -50,7 +50,7 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
         }).error(function (data, err) {
             console.log(data);
             console.log(err);
-            showError('errooooor','error',true)
+            showError('error','error',true)
         });
     };
     $scope.getlist();
