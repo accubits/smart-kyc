@@ -573,10 +573,11 @@ public function userRegistration(){
 
         }
 
-        $sql1 = $this->db->createInsertQuery($this->config->Table_users, [
+        $sql1 = $this->db->createInsertQuery($this->config->Table_users, array(
             $this->config->COL_users_userRegistration_unique_id    => $uniqueId,
             $this->config->COL_users_unique_id = TagdToUtils::getUniqueId()
-        ]);
+        ));
+        echo $sql1;
         $result = $this->db->executeQuery($sql1);
         print_r($result);
 
