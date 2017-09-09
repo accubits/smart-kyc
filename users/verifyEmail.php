@@ -15,7 +15,8 @@ function onSuccessHandler() {
     $response=$users->verifyEmail($_GET['token']);
     
     if ($response['success'] ==true) {
-        echo "<!doctype html>
+    ?>
+        <!doctype html>
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
 <head>
     <base href=".dbconfig::$emailBaseUrl."/>
@@ -146,7 +147,8 @@ function onSuccessHandler() {
     </table>
 </center>
 </body>
-</html>";
+</html>;
+<?php
     }
 //    echo json_encode($response);
 
