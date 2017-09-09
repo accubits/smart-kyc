@@ -764,8 +764,6 @@ class dbconfig
 
     }
 
-
-
 }
 
 $config = new dbconfig();
