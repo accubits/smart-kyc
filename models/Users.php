@@ -879,7 +879,6 @@ public function readInfo(){
         $sql = "Delete from ".$this->config->Table_emailVerification." where ".$this->config->COL_emailVerification_uniqueId." = 
         '".$unique_id."'";
         $result = $this->db->executeQuery($sql);
-        print_r($result);
 
         if($result['CODE']!=1){
 
@@ -893,7 +892,6 @@ public function readInfo(){
         );
         $sql1 = $this->db->createInsertQuery($this->config->Table_emailVerification, $dataArr);
         $result = $this->db->executeQuery($sql1);
-        print_r($result);
 
 
         if ($result['CODE'] != 1) {

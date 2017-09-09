@@ -12,7 +12,7 @@ function onSuccessHandler() {
 
     global $config,$db,$error,$redis;
     $users = new Users($db,$config,$error,$redis);
-    $response=$users->verifyEmail($_POST['token']);
+    $response=$users->verifyEmail($_GET['token']);
     
     if ($response['success'] ==true) {
         echo "Your email-id has been verified";
