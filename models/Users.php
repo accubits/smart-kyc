@@ -1090,6 +1090,7 @@ public function readInfo(){
                 $this->getRegistrationId()."' ";
 
             $result = $this->db->executeQuery($sql);
+            print_r($result);
 
             if ($result['CODE'] != 1) {
 
@@ -1101,6 +1102,8 @@ public function readInfo(){
                 $this->getRegistrationId()."' ";
 
             $result = $this->db->executeQuery($sql);
+            print_r($result);
+
 
             if ($result['CODE'] != 1) {
 
