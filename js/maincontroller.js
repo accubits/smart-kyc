@@ -586,8 +586,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             success: function (data, textStatus, jqXHR) {
                 hideError();
                 showError('Uploaded the documents', "success", true);
-                $scope.thankhide=false;
-                $scope.thankshow=true;
+                // $scope.thankhide=false;
+                // $scope.thankshow=true;
+                console.log("success")
                 // window.location.href = 'verify.html';
 
             },
@@ -597,6 +598,13 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 if (result["success"]) {
                     ////console.log(result);
                     hideError();
+                    $scope.$apply(function () {
+                        $scope.thankhide=false;
+                        $scope.thankshow=true;
+                    });
+                    
+                    console.log("success _23");
+                    console.log($scope.thankshow)
                     showError('Uploaded the documents', "success", true);
                     // window.location.href = 'verify.html';
                 }
