@@ -577,9 +577,7 @@ public function userRegistration(){
             $this->config->COL_users_userRegistration_unique_id    => $uniqueId,
             $this->config->COL_users_unique_id => TagdToUtils::getUniqueId()
         ));
-        echo $sql1;
         $result = $this->db->executeQuery($sql1);
-        print_r($result);
 
 //        $sql1 = $this->db->createInsertQuery($this->config->Table_company, [
 //            $this->config->COL_users_userRegistration_unique_id    => $uniqueId
@@ -876,6 +874,7 @@ public function readInfo(){
     public function addEmailVerificationToken() {
         
         $unique_id = $this->getUniqueId();
+        echo "=======".$unique_id;
 
         $sql = "Delete from ".$this->config->Table_emailVerification." where ".$this->config->COL_emailVerification_uniqueId." = 
         '".$unique_id."'";
