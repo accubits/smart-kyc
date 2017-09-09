@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bba17b93-d9f0-40c6-bbdd-2bb37ffbd83e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/user_list.html" afterPath="$PROJECT_DIR$/admin/user_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/userlistcontroller.js" afterPath="$PROJECT_DIR$/js/userlistcontroller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/verify.html" afterPath="$PROJECT_DIR$/verify.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +16,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5811351">
       <split-first>
         <leaf>
-          <file leaf-file-name="user_list.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="user_list.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/admin/user_list.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+                <state relative-caret-position="187">
+                  <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -31,6 +31,26 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
                   <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="389">
+                  <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="verify.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/verify.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="219" column="23" lean-forward="false" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -61,6 +81,7 @@
       <find>unique_id</find>
       <find>getUserDetails</find>
       <find>reset_pass_wrap</find>
+      <find>Place an orderPlace An Order</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -74,6 +95,8 @@
         <option value="$PROJECT_DIR$/resetPassword.html" />
         <option value="$PROJECT_DIR$/js/userlistcontroller.js" />
         <option value="$PROJECT_DIR$/admin/user_list.html" />
+        <option value="$PROJECT_DIR$/verify.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -163,12 +186,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1504974785199</updated>
-      <workItem from="1504974786787" duration="3636000" />
+      <workItem from="1504974786787" duration="5103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3636000" />
+    <option name="totallyTimeSpent" value="5103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -254,8 +277,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/user_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+        <state relative-caret-position="187">
+          <caret line="54" column="36" lean-forward="false" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="64" column="28" lean-forward="false" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/verify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="219" column="23" lean-forward="false" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="23" />
           <folding />
         </state>
       </provider>
