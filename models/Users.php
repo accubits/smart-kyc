@@ -901,8 +901,7 @@ public function readInfo(){
 
         }
 
-        $this->sendMail($this->getEmail(),"Email - crypbrokers","Hi, <br> Please click the below link to verify email <br>
-                        http://52.220.41.10/crypbrokers/users/verifyEmail.php?token=".$token);
+        $this->sendMail($this->getEmail(),"Email Verification - CrypBrokers",dbconfig::emailContentEmailVerification("http://52.220.41.10/crypbrokers/users/verifyEmail.php?token=".$token));
 
         $response['success'] = true;
         $response['result'] = "An email has been sent to your registered email-id";
