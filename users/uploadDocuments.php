@@ -19,7 +19,7 @@ function onSuccessHandler()
     $out = $users->addAllImage($images);
     $data = $users->getUserDetailsFromId($_POST[$config->COL_usersImage_userRegistration_unique_id]);
     $email = $data[$config->COL_userRegistration_email];
-    $users->sendMail($email,"Documents received","Hi, your KYC documents uploaded successfully. We will verify the documents soon.");
+    $users->sendMail($email,"Documents received",dbconfig::emailContentUploadSuccesfull($data[$config->COL_users_first_name]));
 //    $users->sendMail('dittops@accubits.com',"KYC uploaded","User ".$_POST[$config->COL_usersImage_users_unique_id]."
 //     uploaded KYC details");
     $users->sendMail('maria@accubits.com',"KYC uploaded","User ".$_POST[$config->COL_usersImage_userRegistration_unique_id]."

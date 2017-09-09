@@ -96,12 +96,14 @@ class dbconfig
 
     public $TOKEN                              = 'token';
     
+    public static $emailBaseUrl = "http://52.220.41.10/crypbrokers/";
+    
     public static function emailContentResetPassword($name,$link) {
         
         return "<!doctype html>
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
 <head>
-    <base href=\"http://52.220.41.10/crypbrokers/\"/>
+    <base href=".dbconfig::$emailBaseUrl."/>
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
@@ -149,7 +151,7 @@ class dbconfig
                                             <tbody>
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;background-color: white\">
-                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hello ".$name.",</p>
+                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hello ".$name."</p>
                                                 </td>
 
 
@@ -269,7 +271,531 @@ class dbconfig
 </html>";
         
     }
+
+    public static function emailContentUploadSuccesfull($name){
+
+        return "<!doctype html>
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
+<head>
+    <base href=".dbconfig::$emailBaseUrl."/>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>CrypBrokers</title>
+    <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
+    <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
+</head>
+<body style=\"width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;\">
+<center>
+    <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important; margin:0; padding:0; width:100% !important; background-color:#f7f8fb;\">
+        <tbody>
+            <tr>
+                <td style=\"text-align: center\">
+                    <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important; margin:0 auto;text-align: center; padding:0; width:100% !important; background-color:#f7f8fb;\">
+                        <tbody>
+
+
+                        <tr style=\"background-color: #f7f8fb;\">
+                            <td style=\"margin: 0 auto;\">
+                                <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                    <tbody>
+
+                                    <!-- Repeating tr starts-->
+
+                                        <tr style=\"background-color: #f7f8fb;\">
+                                            <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                                <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: white;\">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style=\"text-align: center;width: 100%;\">
+                                                            <img src=\"images/cryp_log.png\" style=\"width: 200px\">
+                                                        </td>
+                                                        <td style=\"text-align: right;width: 40%;\">
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+
+                                    <tr style=\"background-color: #f7f8fb;\">
+                                        <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                                <tbody>
+                                                <tr>
+                                                    <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                        <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hello ".$name."</p>
+                                                    </td>
+
+
+                                                    <td style=\"text-align: right;width: 40%;\">
+                                                    </td>
+                                                </tr>
+
+
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr style=\"background-color: #f7f8fb;\">
+                                        <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                                <tbody>
+                                                <tr>
+                                                    <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                        <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">
+                                                            Your documents have been successfully uploaded. <br>
+                                                            Thanks for uploading your documents, we will do the verification.
+
+                                                        </p>
+                                                    </td>
+                                                    <td style=\"text-align: right;width: 40%;\">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                        <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                                <tbody>
+                                                <tr>
+                                                    <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                        <p style=\"text-align: center;font-size: 14px;font-family: 'Montserrat Light', sans-serif;color: #cacaca;line-height: 1.5;\">
+                                                           For more details login to
+                                                        </p>
+                                                        <p>
+                                                            <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                        </p>
+                                                    </td>
+                                                    <td style=\"text-align: right;width: 40%;\">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr style=\"background-color: #f7f8fb;\">
+                                        <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                                <tbody>
+                                                <tr>
+                                                    <td style=\"text-align: center;width: 100%;\">
+                                                        <img src=\"images/cryp_btm_mail.png\" style=\"width: 100%\">
+                                                    </td>
+                                                    <td style=\"text-align: right;width: 40%;\">
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+
+
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style=\"margin: 0 auto;\">
+                                <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:100% !important;background-color: #f7f8fb;\">
+                                    <tbody>
+                                    <tr>
+                                        <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+
+
+
+                    <tr>
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:100% !important;background-color: #f7f8fb;padding-top: 4%;padding-bottom: 4%;\">
+                                <tbody>
+                                <tr>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+                </td>
+
+
+
+            </tr>
+        </tbody>
+    </table>
+</center>
+
+</body>
+</html>";
+    }
+
+    public static function emailContentVerificationSuccesfull($name){
+
+        return "<!doctype html>
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
+<head>
+    <base href=".dbconfig::$emailBaseUrl."/>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>CrypBrokers</title>
+    <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
+    <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
+</head>
+<body style=\"width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;\">
+<center>
+    <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important; margin:0; padding:0; width:100% !important; background-color:#f7f8fb;\">
+        <tbody>
+        <tr>
+            <td style=\"text-align: center\">
+                <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important; margin:0 auto;text-align: center; padding:0; width:100% !important; background-color:#f7f8fb;\">
+                    <tbody>
+
+
+                    <tr style=\"background-color: #f7f8fb;\">
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                <tbody>
+
+                                <!-- Repeating tr starts-->
+
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: white;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_log.png\" style=\"width: 200px\">
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hello ".$name."</p>
+                                                </td>
+
+
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">
+                                                       Your KYC details have been successfully verified. <br>
+                                                        You can view the details from the portal.
+                                                    </p>
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                    <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                        <tbody>
+                                        <tr>
+                                            <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                <p style=\"text-align: center;font-size: 14px;font-family: 'Montserrat Light', sans-serif;color: #cacaca;line-height: 1.5;\">
+                                                    For more details logon to
+                                                </p>
+                                                <p>
+                                                    <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                </p>
+                                            </td>
+                                            <td style=\"text-align: right;width: 40%;\">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                </tr>
+
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_btm_mail.png\" style=\"width: 100%\">
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+
+
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:100% !important;background-color: #f7f8fb;\">
+                                <tbody>
+                                <tr>
+                                    <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:100% !important;background-color: #f7f8fb;padding-top: 4%;padding-bottom: 4%;\">
+                                <tbody>
+                                <tr>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+            </td>
+
+
+
+        </tr>
+        </tbody>
+    </table>
+</center>
+
+</body>
+</html>";
     
+    }
+    public static function emailContentVerificationRejected($name){
+
+        return "<!doctype html>
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
+<head>
+    <base href=".dbconfig::$emailBaseUrl."/>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>CrypBrokers</title>
+    <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
+    <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
+</head>
+<body style=\"width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;\">
+<center>
+    <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important; margin:0; padding:0; width:100% !important; background-color:#f7f8fb;\">
+        <tbody>
+        <tr>
+            <td style=\"text-align: center\">
+                <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important; margin:0 auto;text-align: center; padding:0; width:100% !important; background-color:#f7f8fb;\">
+                    <tbody>
+
+
+                    <tr style=\"background-color: #f7f8fb;\">
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                <tbody>
+
+                                <!-- Repeating tr starts-->
+
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: white;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_log.png\" style=\"width: 200px\">
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hello ".$name."</p>
+                                                </td>
+
+
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">
+                                                       Your KYC details have been rejected. <br>
+                                                        You can view the details from the portal.
+                                                    </p>
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                    <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                        <tbody>
+                                        <tr>
+                                            <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                <p style=\"text-align: center;font-size: 14px;font-family: 'Montserrat Light', sans-serif;color: #cacaca;line-height: 1.5;\">
+                                                    For more details logon to
+                                                </p>
+                                                <p>
+                                                    <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                </p>
+                                            </td>
+                                            <td style=\"text-align: right;width: 40%;\">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                </tr>
+
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td colspan=\"2\" style=\"margin: 0 auto;\">
+                                        <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:90% !important;margin:0 auto;background-color: #f7f8fb;\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_btm_mail.png\" style=\"width: 100%\">
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+
+
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:100% !important;background-color: #f7f8fb;\">
+                                <tbody>
+                                <tr>
+                                    <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td style=\"margin: 0 auto;\">
+                            <table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"height:auto !important;width:100% !important;background-color: #f7f8fb;padding-top: 4%;padding-bottom: 4%;\">
+                                <tbody>
+                                <tr>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+            </td>
+
+
+
+        </tr>
+        </tbody>
+    </table>
+</center>
+
+</body>
+</html>";
+    }
+
+
 }
 
 $config = new dbconfig();
