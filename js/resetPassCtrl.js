@@ -10,16 +10,16 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
         "reenterpassword": ""
     }
 
-    try{
-        var id = window.location.search.substr(7);
-
-        if(id == "" || id == undefined ){
-            window.location = 'index.html';
-        }
-    }
-    catch(e){
-        window.location = 'index.html';
-    }
+    // try{
+    //     var id = window.location.search.substr(7);
+    //
+    //     if(id == "" || id == undefined ){
+    //         window.location = 'index.html';
+    //     }
+    // }
+    // catch(e){
+    //     window.location = 'index.html';
+    // }
 
 
 
