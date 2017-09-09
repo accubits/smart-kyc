@@ -388,9 +388,9 @@
                     </div>
                     <div class="image_upload">
                         <div class="file_upload">
-                            <input name="file" type="file" multiple id="files" onchange="angular.element(this).scope().imageUpload()"/>
+                            <input name="file" type="file" id="files" class="uploadFile" onchange="angular.element(this).scope().imageUpload()"/>
                         </div>
-                        <div class="add_new" style="display: none">Add New</div>
+                        <div class="add_new">Add New</div>
                     </div>
 
                     <p>No. Of Documents submitted: {{userImage.length}}</p>
