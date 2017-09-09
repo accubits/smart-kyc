@@ -169,7 +169,7 @@ class dbconfig
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;background-color: white\">
                                                     <p style=\"display:inline-block;max-width:400px;text-align: center;font-size: 14px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;padding: 0 5px\">
-                                                       We have received a request to reset the password of you account. Please click below link to reset your password <br>
+                                                       We have received your request to reset your password, please click below link to reset your password.<br>
                                                     </p>
                                                 </td>
                                                 <td style=\"text-align: right;width: 40%;\">
