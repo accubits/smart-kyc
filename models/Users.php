@@ -1086,7 +1086,7 @@ public function readInfo(){
         else {
             
             $sql = "Update ".$this->config->Table_users." set ".$this->config->COL_users_mobile_number." = ".
-                $this->getMobileNumber()." where ".$this->config->COL_users_userRegistration_unique_id." = '".
+                $this->db->escapeString($this->getMobileNumber())." where ".$this->config->COL_users_userRegistration_unique_id." = '".
                 $this->getRegistrationId()."' ";
 
             $result = $this->db->executeQuery($sql);
