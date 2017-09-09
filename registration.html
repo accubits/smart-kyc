@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <div class="content_wrap">
+    <div class="content_wrap" ng-if="thankhide">
         <div class="content_nav">
             <div class="blocks">
                 <div class="blocks_no green person_blk" id="one" data-id="#two">
@@ -419,13 +419,18 @@
                             Verify
                         </div>
                     </div>
-
                 </div>
-
         </div>
-
     </div>
-
+    <div class="thankyou"  ng-if="thankshow">
+        <div>
+            <img class="thankyou_image" src="images/thankyou.png">
+        </div>
+        <div class="thankyou_content">
+            <h2>Thank You , {{user.firstName}}</h2>
+            <p>Thank you for providing your details and documents. We will notify you via email after verifying the information.</p>
+        </div>
+    </div>
     <footer>
         <div class="to_top">
         </div>

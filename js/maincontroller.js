@@ -9,7 +9,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         localStorage.removeItem('userDetails');
         window.location = 'index.html';
 
-    }
+    };
     if(!localStorage.getItem("userDetails")){
         window.location = 'index.html';
     }
@@ -541,11 +541,14 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         }
         uploadFile();
     }
-
+    $scope.thankshow=false;
+    $scope.thankhide=true;
     function uploadFile(){
 
         if(!$('#files').prop('files')[0] || $('#files').prop('files')[0] == undefined){
-            window.location.href = 'verify.html';
+            // window.location.href = 'verify.html';
+            $scope.thankhide=false;
+            $scope.thankshow=true;
             return;
         }
         var files = $scope.files;
@@ -583,7 +586,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             success: function (data, textStatus, jqXHR) {
                 hideError();
                 showError('Uploaded the documents', "success", true);
-                window.location.href = 'verify.html';
+                $scope.thankhide=false;
+                $scope.thankshow=true;
+                // window.location.href = 'verify.html';
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -593,7 +598,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                     ////console.log(result);
                     hideError();
                     showError('Uploaded the documents', "success", true);
-                    window.location.href = 'verify.html';
+                    // window.location.href = 'verify.html';
                 }
                 else {
                     console.log(jqXHR);
