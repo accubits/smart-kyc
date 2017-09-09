@@ -625,7 +625,7 @@ public function signIn(){
 
     }
     elseif($result['RESULT'][0][$this->config->COL_userRegistration_email_verify_status] == 0) {
-        $this->error->string = "Email pending verification";
+        $this->error->string = "Email verification pending";
         $this->error->responseCode = 400;
         $this->error->errorHandler();
         
