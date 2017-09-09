@@ -502,8 +502,8 @@
       <file leaf-file-name="verifyEmail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/users/verifyEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="195">
+              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
               <folding>
                 <marker date="1504998788000" expanded="true" signature="553:8408" placeholder="..." />
                 <marker date="1504998788000" expanded="true" signature="560:1188" placeholder="..." />
@@ -845,12 +845,12 @@
       <workItem from="1504027340314" duration="9624000" />
       <workItem from="1504072858022" duration="8305000" />
       <workItem from="1504255302358" duration="9794000" />
-      <workItem from="1504614840119" duration="14302000" />
+      <workItem from="1504614840119" duration="14422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62081000" />
+    <option name="totallyTimeSpent" value="62201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
@@ -1748,8 +1748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/users/verifyEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        <state relative-caret-position="195">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
           <folding>
             <marker date="1504998788000" expanded="true" signature="553:8408" placeholder="..." />
             <marker date="1504998788000" expanded="true" signature="560:1188" placeholder="..." />

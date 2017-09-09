@@ -7,7 +7,7 @@
  */
 
 include '../libraries/header.php';
-header('Content-Type: application/html');
+header('Content-Type: text/html');
 
 function onSuccessHandler() {
 
