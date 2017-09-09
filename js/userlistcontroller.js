@@ -8,7 +8,8 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
         localStorage.removeItem('adminDetails');
         window.location = 'index.html';
 
-    }
+    };
+    $scope.loading = true;
     $scope.getlist= function (){
         var data = 'userRegistration_uniqueId='+$scope.userDetails.unique_id;
         console.log(data);
@@ -23,6 +24,7 @@ crypbrokersApp.controller('userlistCntl', function ($scope,$http) {
             console.log(data);
             $scope.details = data.result;
             console.log($scope.details);
+            $scope.loading = false;
             if($scope.details.users_gender == '1'){
                 $scope.details.gender = 'Male'
             }

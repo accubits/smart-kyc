@@ -7,8 +7,7 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
     };
     $scope.forgot = {
         "email": ""
-    }
-
+    };
     $scope.logIn= function (){
         if (!$scope.details.email && !$scope.details.password){
             showError('Please enter your details','error',true);
@@ -34,10 +33,12 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
             url: ServerApi+'login.php',
             data: postData
         };
+        $scope.blockbutton= true;
+        showError('Loading','loading',false);
         $http(requestObj).success(function (data) {
             console.log(data);
             localStorage.setItem("userDetails",JSON.stringify(data));
-
+            $scope.blockbutton= false;
             if(data["type"] == "1"){
                 $window.location.href = 'admin/user_list.html';
                 showError('Successfully loggedIn','success',true);
@@ -57,6 +58,11 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
                 showError('Invalid Credentials','error',true);
                 return;
             }
+            else if(data["error"] == "Email verification pending"){
+                showError('Email verification pending','error',true);
+                return;
+            }
+
 
             showError('Something went wrong. Try again','error',true)
 
@@ -97,8 +103,11 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
             url: ServerApi+'forgotPassword.php',
             data: postData
         };
+        $scope.blockbutton= true;
+        showError('Loading','loading',false);
         $http(requestObj).success(function (data) {
             console.log(data);
+            $scope.blockbutton= false;
             showError('Please check email for password reset','success',true);
 
             $scope.forgot.email = "";

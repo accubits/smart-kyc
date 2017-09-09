@@ -53,8 +53,8 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             $scope.passDeatils = {
                 "password": "",
                 "reenterpassword": ""
-            }
-            // window.location = 'index.html';
+            };
+            window.location = 'index.html';
         }).error(function (data, err) {
             console.log(data);
             console.log(err);

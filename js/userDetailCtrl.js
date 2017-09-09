@@ -11,6 +11,7 @@ crypbrokersApp.controller('userDetailCtrl', function ($scope,$http) {
         window.location = 'index.html';
 
     }
+    $scope.loading = true;
     function getUserDetails(){
 
         var data = 'userRegistration_uniqueId='+$scope.userID;
@@ -25,10 +26,9 @@ crypbrokersApp.controller('userDetailCtrl', function ($scope,$http) {
         // Making API Call [start]
         $http(requestObj).success(function (data) {
             console.log(data);
-
+            $scope.loading = false;
             var user = data["result"]["data"];
             var userImage = data["result"]["image"];
-
             for(var item in user){
 
                 switch (item){
@@ -85,6 +85,7 @@ crypbrokersApp.controller('userDetailCtrl', function ($scope,$http) {
             url: ServerApi+'updateVerificationStatus.php',
             data: postData
         };
+        showError('Loading','loading',false);
         $http(requestObj).success(function (data) {
             console.log(data);
             $scope.details = data.result;
