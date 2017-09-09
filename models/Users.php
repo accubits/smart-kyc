@@ -874,7 +874,6 @@ public function readInfo(){
     public function addEmailVerificationToken() {
         
         $unique_id = $this->getUniqueId();
-        echo "=======".$unique_id;
 
         $sql = "Delete from ".$this->config->Table_emailVerification." where ".$this->config->COL_emailVerification_uniqueId." = 
         '".$unique_id."'";
