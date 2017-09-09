@@ -508,6 +508,32 @@ input,textarea,select
 {
     color: red;
 }
+/*thankyou page css start*/
+    .thankyou {
+        text-align: center;
+        padding-top: 5%;
+    }
+    .thankyou_image {
+        width: 200px;
+    }
+    .thankyou_content {
+        text-align: center;
+    }
+    .thankyou_content h2 {
+        font-size: 23px;
+        font-family: Montserrat-light;
+        font-weight: lighter;
+        color: rgba(0, 0, 0, 0.74);
+    }
+    .thankyou_content p {
+        font-size: 18px;
+        font-family: Montserrat-light;
+        font-weight: lighter;
+        color: rgba(0, 0, 0, 0.74);
+        width: 90%;
+        margin: auto;
+    }
+/*thankyou page css end*/
 footer
 {
     background-color: #f2f2f3;
@@ -986,5 +1012,8 @@ a
     .content_wrap_log
     {
         width: 80%;
+    }
+    .thankyou_image {
+        width: 150px;
     }
 }

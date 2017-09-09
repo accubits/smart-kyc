@@ -9,7 +9,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         localStorage.removeItem('userDetails');
         window.location = 'index.html';
 
-    }
+    };
     if(!localStorage.getItem("userDetails")){
         window.location = 'index.html';
     }
@@ -541,11 +541,14 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         }
         uploadFile();
     }
-
+    $scope.thankshow=false;
+    $scope.thankhide=true;
     function uploadFile(){
 
         if(!$('#files').prop('files')[0] || $('#files').prop('files')[0] == undefined){
-            window.location.href = 'verify.html';
+            // window.location.href = 'verify.html';
+            $scope.thankhide=false;
+            $scope.thankshow=true;
             return;
         }
         var files = $scope.files;
@@ -583,7 +586,9 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             success: function (data, textStatus, jqXHR) {
                 hideError();
                 showError('Uploaded the documents', "success", true);
-                window.location.href = 'verify.html';
+                $scope.thankhide=false;
+                $scope.thankshow=true;
+                // window.location.href = 'verify.html';
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -593,7 +598,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                     ////console.log(result);
                     hideError();
                     showError('Uploaded the documents', "success", true);
-                    window.location.href = 'verify.html';
+                    // window.location.href = 'verify.html';
                 }
                 else {
                     console.log(jqXHR);
@@ -623,10 +628,10 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
-    function phonenumber(inputtxt) {
-        var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
-        return phoneno.test(inputtxt);
-    }
+    // function phonenumber(inputtxt) {
+    //     var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
+    //     return phoneno.test(inputtxt);
+    // }
     $scope.updateGeneral = function (){
 
         console.log($scope.general)
@@ -638,7 +643,8 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             showError('Please enter a valid email','error',true);
             return ;
         }
-        if(!phonenumber($scope.general.mobile)){
+        // if(!phonenumber($scope.general.mobile)){
+        if(($scope.general.mobile) == ""){
             showError('Please enter a valid phone number','error',true);
             return ;
         }
