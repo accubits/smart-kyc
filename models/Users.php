@@ -823,7 +823,9 @@ public function readInfo(){
     
     public function forgotPassword() {
 
-        $sql = "Select ".$this->config->COL_userRegistration_unique_id." from ".$this->config->Table_userRegistration."
+        $sql = "Select r.".$this->config->COL_userRegistration_unique_id.",u.".$this->config->COL_users_first_name." from ".$this->config->Table_userRegistration." r 
+    inner join ".$this->config->Table_users." u 
+    on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
          where ".$this->config->COL_userRegistration_email." = '".$this->getEmail()."' LIMIT 1";
 
         $result = $this->db->executeQuery($sql);
@@ -838,6 +840,7 @@ public function readInfo(){
             $this->error->errorHandler();
         }
         $unique_id = $result['RESULT'][0][$this->config->COL_userRegistration_unique_id];
+        $name = $result['RESULT'][0][$this->config->COL_users_first_name];
 
         $sql = "Delete from ".$this->config->Table_forgotPassword." where ".$this->config->COL_forgotPassword_uniqueId." = 
         '".$unique_id."'";
@@ -862,8 +865,7 @@ public function readInfo(){
 
         }
         
-        $this->sendMail($this->getEmail(),"Reset Password - crypbrokers","Hi, <br> Please click the below link t reset password <br>
-                        http://52.220.41.10/crypbrokers/resetPassword.html?token=".$token);
+        $this->sendMail($this->getEmail(),"Reset Password Request - CrypBrokers",dbconfig::emailContentResetPassword($name,"http://52.220.41.10/crypbrokers/resetPassword.html?token=".$token));
 
         $response['success'] = true;
         $response['result'] = "An email has been sent to your registered email-id";
