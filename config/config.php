@@ -287,8 +287,19 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
-                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Your documents have been successfully uploaded. Thanks for uploading your documents, we will do the verification.
+                                                    <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Thank you for completing our online KYC forms and submitting your supporting documents.  Our compliance team is currently reviewing your application.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Should our team have any further queries, they will get in touch with you.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Best Regards,
+                                                    </p>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        CrypBrokers
                                                     </p>
                                                 </td>
                                             </tr>
@@ -421,8 +432,19 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
-                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Your KYC details have been successfully verified. You can view the details from the portal.
+                                                    <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Congratulations your account has been approved and is now active. You can login to your customer portal anytime and click the “Place An Order” Tab to submit your order requests.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Should you have any further queries, feel free to email us at: compliance@crypbrokers.com.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Best Regards,
+                                                    </p>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        CrypBrokers
                                                     </p>
                                                 </td>
                                             </tr>
