@@ -92,8 +92,7 @@ class dbconfig
     public $COL_order_type                      = 'order_type';
     public $COL_order_message                   = 'order_message';
     public $COL_order_status                    = 'order_status';
-
-
+    
     public $TOKEN                              = 'token';
     
     public static $emailBaseUrl = "http://52.220.41.10/crypbrokers/";
@@ -229,7 +228,6 @@ class dbconfig
 </html>";
         
     }
-
     public static function emailContentUploadSuccesfull($name){
 
         return "<!doctype html>
@@ -362,7 +360,6 @@ class dbconfig
 </body>
 </html>";
     }
-
     public static function emailContentVerificationSuccesfull($name){
 
         return "
@@ -497,7 +494,6 @@ class dbconfig
 </html>";
     
     }
-    
     public static function emailContentVerificationRejected($name){
 
         return "<!doctype html>
@@ -631,7 +627,6 @@ class dbconfig
 </html>";
  
     }
-
     public static function emailContentEmailVerification($link){
 
         return "
