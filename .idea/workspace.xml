@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="68f0150a-dd9f-4a3d-93f2-4ed35fc4c9a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +72,8 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="98" column="4" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
+            <state relative-caret-position="229">
+              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
               <folding>
                 <element signature="n#emailContentResetPassword#0;n#dbconfig#0;n#!!top" expanded="false" />
                 <element signature="n#emailContentUploadSuccesfull#0;n#dbconfig#0;n#!!top" expanded="false" />
@@ -485,22 +484,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="varifyemail_template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/varifyemail_template.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
-              <folding>
-                <marker date="1504997716000" expanded="false" signature="1280:1296" placeholder="..." />
-                <marker date="1504997716000" expanded="true" signature="1297:1429" placeholder="..." />
-                <marker date="1504997716000" expanded="true" signature="1322:1429" placeholder="..." />
-                <marker date="1504997716000" expanded="false" signature="1399:1411" placeholder="..." />
-                <marker date="1504997716000" expanded="true" signature="1412:1429" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="verifyEmail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/users/verifyEmail.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -620,13 +603,13 @@
         <entry file="file://$PROJECT_DIR$/verifieddetails_mailer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="7" />
+              <caret line="30" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="7" />
               <folding>
-                <marker date="1504990231000" expanded="false" signature="1164:1180" placeholder="..." />
-                <marker date="1504990231000" expanded="true" signature="1181:1313" placeholder="..." />
-                <marker date="1504990231000" expanded="true" signature="1206:1313" placeholder="..." />
-                <marker date="1504990231000" expanded="false" signature="1283:1295" placeholder="..." />
-                <marker date="1504990231000" expanded="true" signature="1296:1313" placeholder="..." />
+                <marker date="1505154913000" expanded="false" signature="1164:1180" placeholder="..." />
+                <marker date="1505154913000" expanded="true" signature="1181:1313" placeholder="..." />
+                <marker date="1505154913000" expanded="true" signature="1206:1313" placeholder="..." />
+                <marker date="1505154913000" expanded="false" signature="1283:1295" placeholder="..." />
+                <marker date="1505154913000" expanded="true" signature="1296:1313" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -636,13 +619,13 @@
         <entry file="file://$PROJECT_DIR$/documentupload_mailer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="7" />
+              <caret line="20" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="7" />
               <folding>
-                <marker date="1504990231000" expanded="false" signature="1164:1180" placeholder="..." />
-                <marker date="1504990231000" expanded="true" signature="1181:1313" placeholder="..." />
-                <marker date="1504990231000" expanded="true" signature="1206:1313" placeholder="..." />
-                <marker date="1504990231000" expanded="false" signature="1283:1295" placeholder="..." />
-                <marker date="1504990231000" expanded="true" signature="1296:1313" placeholder="..." />
+                <marker date="1505154913000" expanded="false" signature="1164:1180" placeholder="..." />
+                <marker date="1505154913000" expanded="true" signature="1181:1313" placeholder="..." />
+                <marker date="1505154913000" expanded="true" signature="1206:1313" placeholder="..." />
+                <marker date="1505154913000" expanded="false" signature="1283:1295" placeholder="..." />
+                <marker date="1505154913000" expanded="true" signature="1296:1313" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -847,16 +830,16 @@
       <workItem from="1504027340314" duration="9624000" />
       <workItem from="1504072858022" duration="8305000" />
       <workItem from="1504255302358" duration="9794000" />
-      <workItem from="1504614840119" duration="15598000" />
+      <workItem from="1504614840119" duration="15845000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63377000" />
+    <option name="totallyTimeSpent" value="63624000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="730" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25040388" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -864,7 +847,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1248,13 +1231,13 @@
     <entry file="file://$PROJECT_DIR$/documentupload_mailer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="7" />
+          <caret line="20" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="7" />
           <folding>
-            <marker date="1504990231000" expanded="false" signature="1164:1180" placeholder="..." />
-            <marker date="1504990231000" expanded="true" signature="1181:1313" placeholder="..." />
-            <marker date="1504990231000" expanded="true" signature="1206:1313" placeholder="..." />
-            <marker date="1504990231000" expanded="false" signature="1283:1295" placeholder="..." />
-            <marker date="1504990231000" expanded="true" signature="1296:1313" placeholder="..." />
+            <marker date="1505154913000" expanded="false" signature="1164:1180" placeholder="..." />
+            <marker date="1505154913000" expanded="true" signature="1181:1313" placeholder="..." />
+            <marker date="1505154913000" expanded="true" signature="1206:1313" placeholder="..." />
+            <marker date="1505154913000" expanded="false" signature="1283:1295" placeholder="..." />
+            <marker date="1505154913000" expanded="true" signature="1296:1313" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1262,13 +1245,13 @@
     <entry file="file://$PROJECT_DIR$/verifieddetails_mailer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="7" />
+          <caret line="30" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="138" selection-end-column="7" />
           <folding>
-            <marker date="1504990231000" expanded="false" signature="1164:1180" placeholder="..." />
-            <marker date="1504990231000" expanded="true" signature="1181:1313" placeholder="..." />
-            <marker date="1504990231000" expanded="true" signature="1206:1313" placeholder="..." />
-            <marker date="1504990231000" expanded="false" signature="1283:1295" placeholder="..." />
-            <marker date="1504990231000" expanded="true" signature="1296:1313" placeholder="..." />
+            <marker date="1505154913000" expanded="false" signature="1164:1180" placeholder="..." />
+            <marker date="1505154913000" expanded="true" signature="1181:1313" placeholder="..." />
+            <marker date="1505154913000" expanded="true" signature="1206:1313" placeholder="..." />
+            <marker date="1505154913000" expanded="false" signature="1283:1295" placeholder="..." />
+            <marker date="1505154913000" expanded="true" signature="1296:1313" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1419,20 +1402,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="126" column="13" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
-          <folding>
-            <marker date="1504997716000" expanded="false" signature="1280:1296" placeholder="..." />
-            <marker date="1504997716000" expanded="true" signature="1297:1429" placeholder="..." />
-            <marker date="1504997716000" expanded="true" signature="1322:1429" placeholder="..." />
-            <marker date="1504997716000" expanded="false" signature="1399:1411" placeholder="..." />
-            <marker date="1504997716000" expanded="true" signature="1412:1429" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="98" column="4" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="4" />
+        <state relative-caret-position="229">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
           <folding>
             <element signature="n#emailContentResetPassword#0;n#dbconfig#0;n#!!top" expanded="false" />
             <element signature="n#emailContentUploadSuccesfull#0;n#dbconfig#0;n#!!top" expanded="false" />
