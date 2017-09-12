@@ -325,9 +325,28 @@
                         <!-- - Selfie Picture of You Holding Gov Issued ID<br>-->
                         <!-- - Proof of Home Address( Utility Bill or Bank Statement) issued within the last 3 months containing your name on the account-->
                         </div>
+                          <div class="doc_blocks">
+                              <p>Document Guide</p>
+                              <ul>
+                                  <li>Documents must be in the following format: jpg, png, gif, pdf</li>
+                                  <li>Documents must be scanned in color</li>
+                                  <li>Documents must be clearly visible</li>
+                                  <li>Selfie with the required IDs</li>
+                              </ul>
+                              <!-- - Documents must be in the following format : jpg, png, gif, pdf<br>-->
+                              <!-- - Documents must be scanned in color <br>-->
+                              <!-- - Documents must be clearly visible<br>-->
+                              <!-- - Selfie with ID requirements<br>-->
+
+                          </div>
 
 
 
+
+                      </div>
+
+
+                      <div class="left_docs_out">
                           <div class="doc_blocks">
                               <p>Company</p>
                               <ul>
@@ -337,36 +356,6 @@
                                   <li>Company registration document</li>
                                   <li>Proof of Company Address (Utility Bill, Bank Statement or Rental/Lease Agreement)</li>
                               </ul>
-                              <!-- - Gov Issued ID (Passport,Drivers License,Other)<br>-->
-                              <!-- - Selfie Picture of You Holding Gov Issued ID<br>-->
-                              <!-- - Proof of hpme address( utility bill or bank statement) issued within the last 3 months containing your name on the account<br>-->
-                              <!-- - Company registration document<br>-->
-                              <!-- - Proof of Home Address (Utility bill or Bank statement)<br>-->
-
-                              <!--<span>*</span> Look straight into the camera<br>-->
-                              <!--<span>*</span> The photo should be in color<br>-->
-                              <!--<span>*</span> Your face and card information should be clearly visible<br>-->
-                              <!--<span>*</span> Donot wear a sunglass, a hat or a headband<br>-->
-                              <!--<span>*</span> The photo should be recent<br>-->
-                              <!--<span>*</span> Image should be in high resolution (min 300 dpi)<br>-->
-                          </div>
-                      </div>
-
-
-                      <div class="left_docs_out">
-                          <div class="doc_blocks">
-                              <p>Document Guide</p>
-                              <ul>
-                                  <li>Documents must be in the following format: jpg, png, gif, pdf</li>
-                                  <li>Documents must be scanned in color</li>
-                                  <li>Documents must be clearly visible</li>
-                                  <li>Selfie with the required IDs/li>
-                              </ul>
-                              <!-- - Documents must be in the following format : jpg, png, gif, pdf<br>-->
-                              <!-- - Documents must be scanned in color <br>-->
-                              <!-- - Documents must be clearly visible<br>-->
-                              <!-- - Selfie with ID requirements<br>-->
-
                           </div>
                           <div class="doc_blocks">
                               <p>Photo Guide</p>
@@ -390,10 +379,10 @@
                         <div class="file_upload">
                             <input name="file" type="file" id="files" class="uploadFile" onchange="angular.element(this).scope().imageUpload()"/>
                         </div>
-                        <div class="add_new">Add New</div>
+                        <div class="add_new">Attach More</div>
                     </div>
 
-                    <p>No. Of Documents submitted: {{userImage.length}}</p>
+                    <p>No. Of Documents Submitted: {{userImage.length}}</p>
                     <!--<form class="dropzone" ng-model="data.images" id="my-awesome-dropzone"></form>-->
 
                         <form style="display: none" action="http://52.220.41.10/crypbrokers/users/uploadDocuments.php" method="POST"  enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
@@ -428,14 +417,14 @@
         </div>
         <div class="thankyou_content">
             <h2>Thank You , {{user.firstName}}</h2>
-            <p>Thank you for providing your details and documents. We will notify you via email after verifying the information.</p>
+            <p>Thank you for providing your details and documents. We will notify you via email with updates regarding your file.</p>
         </div>
     </div>
     <footer>
         <div class="to_top">
         </div>
         <div class="copy_right">
-            Copyright © 2017 Crypto Ventures LLC. All Rights Reserved.
+            Copyright © 2017 CrypBrokers.com. All Rights Reserved.
         </div>
         <div class="copy_links" style="display: none;">
             <div class="copy_blocks">

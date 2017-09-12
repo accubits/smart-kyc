@@ -207,7 +207,7 @@ input,textarea,select
 }
 .blocks:hover, .blocks.active
 {
-    border-bottom: 2px solid #ffc107;
+    border-bottom: 2px solid #f1a12f;
     font-weight: bold;
     font-size: 14px;
 }
@@ -514,7 +514,7 @@ tr:nth-child(even) {
 .next_button
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f1a12f;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -528,7 +528,7 @@ tr:nth-child(even) {
 }
 .prev_button {
     display: inline-block;
-    background-color: #cfcfd2;
+    background-color: #888;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -538,7 +538,7 @@ tr:nth-child(even) {
 }
 .prev_button:hover
 {
-    background-color:  #1e2434;
+    background-color:  #777;
 }
 .bottom_button_wrap
 {
@@ -569,7 +569,7 @@ tr:nth-child(even) {
     border-bottom: 1px solid #666;
 }
 .doc_item a {
-    color: #34bef7;
+    color: #1e2331;
 }
 .doc_item div{
     width: 50%;
@@ -688,7 +688,7 @@ a
 .ver_but
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f1a12f;
     color: white;
     padding: 10px 40px;
     text-align: center;
@@ -727,7 +727,7 @@ a
 .acpt_dcl
 {
     display: inline-block;
-    background-color: #FFC107;
+    background-color: #f1a12f;
     color: white;
     padding: 5px 24px;
     text-align: center;
@@ -738,7 +738,7 @@ a
 }
 .dcl
 {
-    background-color: #b1b0aa;
+    background-color: #888;
 }
 .reset_pass_wrap {
     width: 400px;
