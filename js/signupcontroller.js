@@ -46,9 +46,17 @@ crypbrokersApp.controller('signupCntl', function ($scope,$http,$window) {
         showError('Loading','loading',false);
         $http(requestObj).success(function (data) {
             console.log(data);
-            // $window.location.href = 'index.html';
+            $scope.details={
+                name:'',
+                email:'',
+                password:'',
+                reenterpassword:''
+            };
             $scope.blockbutton= false;
-            showError('Please check your email for email Id verification','success',true)
+            showError('Please check your email for email Id verification','success',false);
+            setTimeout(function(){
+                $window.location.href = 'index.html';
+            }, 3000);
 
         }).error(function (data, err) {
             console.log(data);
