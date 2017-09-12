@@ -207,11 +207,11 @@
                 <div class="text_box_wrap">
                     <div class="text_box_left txt_bx">
                         <div class="text_desc">ID Issue date</div>
-                        <p class="det_vw">{{user.users_id_issue_date}}</p>
+                        <p class="det_vw">{{user.users_id_issue_date | date:'MM-dd-yyyy'}}</p>
                     </div>
                     <div class="text_box_right txt_bx">
                         <div class="text_desc">ID valid to (if any)</div>
-                        <p class="det_vw">{{user.users_id_valid_date}}</p>
+                        <p class="det_vw">{{user.users_id_valid_date | date:'MM-dd-yyyy'}}</p>
                     </div>
 
                     <div style="clear: both"></div>
@@ -312,7 +312,7 @@
         <div class="to_top">
         </div>
         <div class="copy_right">
-            Copyright © 2017 Crypto Ventures LLC. All Rights Reserved.
+            Copyright © 2017 CrypBrokers.com. All Rights Reserved.
         </div>
         <div class="copy_links" style="display: none;">
             <div class="copy_blocks">
