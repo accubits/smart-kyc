@@ -11,7 +11,7 @@ include '../libraries/header.php';
 function onSuccessHandler()
 {
 
-    global $config,$db,$error;
+    global $config,$db,$error,$redis;
     $order = new Order($db,$config,$error);
     $order->setUserUnique($_POST[$config->COL_order_user_uniqueId]);
     $order->setName($_POST[$config->COL_order_name]);
@@ -22,6 +22,10 @@ function onSuccessHandler()
     $order->setType($_POST[$config->COL_order_type]);
     $order->setMessage($_POST[$config->COL_order_message]);
     $out    = $order->addOrder();
+    $users = new Users($db,$config,$error,$redis);
+    $data = $users->getUserDetailsFromId($_POST[$config->COL_order_user_uniqueId]);
+    $email = $data[$config->COL_userRegistration_email];
+    $users->sendMail($email,"Confirmation Email of an Order Form",dbconfig::emailContentOrderConfirm($data[$config->COL_users_first_name]));
     echo json_encode($out);
 
 }

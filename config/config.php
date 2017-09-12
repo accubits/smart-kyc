@@ -285,8 +285,19 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
-                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Your documents have been successfully uploaded. Thanks for uploading your documents, we will do the verification.
+                                                    <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Thank you for completing our online KYC forms and submitting your supporting documents.  Our compliance team is currently reviewing your application.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Should our team have any further queries, they will get in touch with you.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Best Regards,
+                                                    </p>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        CrypBrokers
                                                     </p>
                                                 </td>
                                             </tr>
@@ -418,8 +429,19 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
-                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Your KYC details have been successfully verified. You can view the details from the portal.
+                                                    <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Congratulations your account has been approved and is now active. You can login to your customer portal anytime and click the “Place An Order” Tab to submit your order requests.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Should you have any further queries, feel free to email us at: compliance@crypbrokers.com.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Best Regards,
+                                                    </p>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        CrypBrokers
                                                     </p>
                                                 </td>
                                             </tr>
@@ -758,6 +780,297 @@ class dbconfig
 </html>";
 
     }
+    public static function emailContentWelcomeMail($name){
+
+        return "<!doctype html>
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
+<head>
+    <base href=".dbconfig::$emailBaseUrl."/>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>CrypBrokers</title>
+    <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
+    <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
+</head>
+<body style=\"width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;\">
+<center>
+    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" style=\"background-color: #f7f8fb;padding: 5% 0;\">
+        <tr>
+            <td align=\"center\" valign=\"top\">
+                <!-- BEGIN TEMPLATE // -->
+                <!--[if gte mso 9]>
+                <table align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\" style=\"max-width:600px;\">
+                    <tr>
+                        <td align=\"center\" valign=\"top\" width=\"600\" style=\"width:600px;\">
+                <![endif]-->
+                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width: 600px\">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"width: 100%;background-color: white\">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"width: 100%;text-align: center;padding-top: 3%\">
+                                            <tr>
+                                                <td>
+                                                    <img src=\"images/cryp_log.png\" style=\"width: 200px\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hi ".$name."</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Thank you for creating an account with CrypBrokers.com.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        As a next step, please complete our online KYC forms located in your customer portal and attach your supporting documents in order to get approved prior to placing orders with us.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Should you have any further queries, feel free to email us at: compliance@crypbrokers.com.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Best Regards,
+                                                    </p>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        CrypBrokers
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                    <p style=\"text-align: center;font-size: 14px;font-family: 'Montserrat Light', sans-serif;color: #cacaca;line-height: 1.5;\">
+                                                        For more details login to
+                                                    </p>
+                                                    <p>
+                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                    </p>
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_btm_mail.png\" style=\"width: 100%\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;\">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--[if gte mso 9]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+                <!-- // END TEMPLATE -->
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>";
+    }
+    public static function emailContentOrderConfirm($name){
+
+        return "<!doctype html>
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
+<head>
+    <base href=".dbconfig::$emailBaseUrl."/>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>CrypBrokers</title>
+    <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
+    <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
+</head>
+<body style=\"width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;\">
+<center>
+    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" style=\"background-color: #f7f8fb;padding: 5% 0;\">
+        <tr>
+            <td align=\"center\" valign=\"top\">
+                <!-- BEGIN TEMPLATE // -->
+                <!--[if gte mso 9]>
+                <table align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\" style=\"max-width:600px;\">
+                    <tr>
+                        <td align=\"center\" valign=\"top\" width=\"600\" style=\"width:600px;\">
+                <![endif]-->
+                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width: 600px\">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"width: 100%;background-color: white\">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"width: 100%;text-align: center;padding-top: 3%\">
+                                            <tr>
+                                                <td>
+                                                    <img src=\"images/cryp_log.png\" style=\"width: 200px\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Hi ".$name."</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Thank you for submitting your order request with CrypBrokers.com. Our team is currently reviewing your order details and will be in contact with you soon.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Should you have any further queries in the meantime feel free to email us at: orders@crypbrokers.com.
+                                                    </p>
+                                                    </br>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        Best Regards,
+                                                    </p>
+                                                    <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
+                                                        CrypBrokers
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;background-color: white\">
+                                                    <p style=\"text-align: center;font-size: 14px;font-family: 'Montserrat Light', sans-serif;color: #cacaca;line-height: 1.5;\">
+                                                        For more details login to
+                                                    </p>
+                                                    <p>
+                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                    </p>
+                                                </td>
+                                                <td style=\"text-align: right;width: 40%;\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_btm_mail.png\" style=\"width: 100%\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;\">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--[if gte mso 9]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+                <!-- // END TEMPLATE -->
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>";
+    }
+    
 
 }
 

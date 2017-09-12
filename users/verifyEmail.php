@@ -14,7 +14,10 @@ function onSuccessHandler() {
     global $config,$db,$error,$redis;
     $users = new Users($db,$config,$error,$redis);
     $response=$users->verifyEmail($_GET['token']);
-    
+    $data = $users->getUserDetailsFromId($response['result']['id']);
+    $email = $data[$config->COL_userRegistration_email];
+    $users->sendMail($email,"Welcome Email",dbconfig::emailContentWelcomeMail($data[$config->COL_users_first_name]));
+
     if ($response['success'] ==true) {
         echo "<!doctype html>
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
@@ -149,6 +152,8 @@ function onSuccessHandler() {
 </body>
 </html>";
     }
+    
+    
 //    echo json_encode($response);
 
 }

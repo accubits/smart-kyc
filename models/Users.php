@@ -968,6 +968,8 @@ public function readInfo(){
             $this->error->string = "Invalid token";
             $this->error->errorHandler();
         }
+        
+        $userId = $result['RESULT'][0][$this->config->COL_emailVerification_uniqueId];
 
         $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_email_verify_status." = 
         1 where ".$this->config->COL_userRegistration_unique_id." = '".
@@ -987,7 +989,8 @@ public function readInfo(){
             $this->error->internalServer();
         }
         $response['success'] = true;
-        $response['result'] = "Successfully updated password";
+        $response['result']["message"] = "Successfully verified";
+        $response['result']["id"] = $userId;
         return $response;
 
     }
