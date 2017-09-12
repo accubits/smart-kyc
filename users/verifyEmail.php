@@ -16,7 +16,7 @@ function onSuccessHandler() {
     $response=$users->verifyEmail($_GET['token']);
     $data = $users->getUserDetailsFromId($response['result']['id']);
     $email = $data[$config->COL_userRegistration_email];
-    $users->sendMail($email,"Welcome Email",dbconfig::emailContentWelcomeMail($data[$config->COL_users_first_name]));
+    $users->sendMail($email,"Welcome Email",dbconfig::emailContentWelcomeMail($data[$config->COL_userRegistration_username]));
 
     if ($response['success'] ==true) {
         echo "<!doctype html>

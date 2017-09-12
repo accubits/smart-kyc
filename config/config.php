@@ -1071,7 +1071,6 @@ class dbconfig
 </html>";
     }
     
-
 }
 
 $config = new dbconfig();

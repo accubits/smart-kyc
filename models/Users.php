@@ -808,7 +808,8 @@ public function readInfo(){
     
     public function getUserDetailsFromId($id){
 
-        $sql = "Select u.".$this->config->COL_users_first_name.",r.".$this->config->COL_userRegistration_email." from ".$this->config->Table_userRegistration." r 
+        $sql = "Select u.".$this->config->COL_users_first_name.",r.".$this->config->COL_userRegistration_email.",r.".$this->config->COL_userRegistration_username."
+         from ".$this->config->Table_userRegistration." r 
                 inner join ".$this->config->Table_users." u 
                 on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
                 where u.".$this->config->COL_users_userRegistration_unique_id." = '".$id."' limit 1";
