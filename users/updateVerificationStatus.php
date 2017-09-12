@@ -27,9 +27,9 @@ function onSuccessHandler()
         $users->sendMail($email, "KYC verification completed", dbconfig::emailContentVerificationSuccesfull($data[$config->COL_users_first_name]));
     }
     elseif ($_POST['status'] == 2) {
-        $data = $users->getUserDetailsFromId($_POST[$config->COL_users_userRegistration_unique_id]);
-        $email = $data[$config->COL_userRegistration_email];
-        $users->sendMail($email, "KYC Documents Rejected", dbconfig::emailContentVerificationRejected($data[$config->COL_users_first_name]));
+        #$data = $users->getUserDetailsFromId($_POST[$config->COL_users_userRegistration_unique_id]);
+        #$email = $data[$config->COL_userRegistration_email];
+        #$users->sendMail($email, "KYC Documents Rejected", dbconfig::emailContentVerificationRejected($data[$config->COL_users_first_name]));
     }
     echo json_encode($out);
 
