@@ -544,7 +544,7 @@ footer
 
     position: absolute;
     padding: 2% 0;
-    bottom: 0;
+    bottom: -50px;
     width: 100%;
 }
 .copy_right {

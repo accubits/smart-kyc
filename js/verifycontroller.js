@@ -125,42 +125,43 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             showError('Please verify the terms and conditions','error',true);
             return ;
         }
-        showError('successfully submitted order','success',true);
-        $scope.order = {
-            "name": "",
-            "country" :"",
-            "email": "",
-            "phone": "",
-            "amount": "",
-            "type": "",
-            "message": ""
-        }
-        $('#terms').prop('checked', false)
-        var data = 'oldPassword='+ $scope.passDeatils.oldpass +
-            '&&userRegistration_uniqueId='+$scope.userDetails.unique_id +
-            '&&userRegistration_password='+ $scope.passDeatils.password;
+
+        showError('Creating order..','loading',true);
+        var data = 'order_name='+ $scope.order.name +
+            '&&order_user_uniqueId='+$scope.userDetails.unique_id +
+            '&&order_country='+ $scope.order.country+
+            '&&order_email='+ $scope.order.email+
+            '&&order_phone='+ $scope.order.phone+
+            '&&order_amount='+ $scope.order.amount+
+            '&&order_type='+ $scope.order.type+
+            '&&order_message='+ $scope.order.message;
 
         var postData = data;
-        //var requestObj = {
-        //    method: 'POST',
-        //    url: ServerApi+'updatePassword.php',
-        //    data: postData
-        //};
-        //
-        //// Making API Call [start]
-        //$http(requestObj).success(function (data) {
-        //    console.log(data);
-        //    showError('successfully updated password','success',true);
-        //    $scope.passDeatils = {
-        //        "oldpass": "",
-        //        "password": "",
-        //        "reenterpassword": ""
-        //    }
-        //}).error(function (data, err) {
-        //    console.log(data);
-        //    console.log(err);
-        //
-        //});
+        var requestObj = {
+            method: 'POST',
+            url: ServerApi+'placeOrder.php',
+            data: postData
+        };
+
+        // Making API Call [start]
+        $http(requestObj).success(function (data) {
+            console.log(data);
+            showError('successfully submitted order','success',true);
+            $scope.order = {
+                "name": "",
+                "country" :"",
+                "email": "",
+                "phone": "",
+                "amount": "",
+                "type": "",
+                "message": ""
+            }
+            $('#terms').prop('checked', false);
+        }).error(function (data, err) {
+            console.log(data);
+            console.log(err);
+
+        });
 
     };
 
