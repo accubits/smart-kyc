@@ -808,7 +808,8 @@ public function readInfo(){
     
     public function getUserDetailsFromId($id){
 
-        $sql = "Select u.".$this->config->COL_users_first_name.",r.".$this->config->COL_userRegistration_email." from ".$this->config->Table_userRegistration." r 
+        $sql = "Select u.".$this->config->COL_users_first_name.",r.".$this->config->COL_userRegistration_email.",r.".$this->config->COL_userRegistration_username."
+         from ".$this->config->Table_userRegistration." r 
                 inner join ".$this->config->Table_users." u 
                 on r.".$this->config->COL_userRegistration_unique_id." = u.".$this->config->COL_users_userRegistration_unique_id." 
                 where u.".$this->config->COL_users_userRegistration_unique_id." = '".$id."' limit 1";
@@ -968,6 +969,8 @@ public function readInfo(){
             $this->error->string = "Invalid token";
             $this->error->errorHandler();
         }
+        
+        $userId = $result['RESULT'][0][$this->config->COL_emailVerification_uniqueId];
 
         $sql = "Update ".$this->config->Table_userRegistration." set ".$this->config->COL_userRegistration_email_verify_status." = 
         1 where ".$this->config->COL_userRegistration_unique_id." = '".
@@ -987,7 +990,8 @@ public function readInfo(){
             $this->error->internalServer();
         }
         $response['success'] = true;
-        $response['result'] = "Successfully updated password";
+        $response['result']["message"] = "Successfully verified";
+        $response['result']["id"] = $userId;
         return $response;
 
     }
