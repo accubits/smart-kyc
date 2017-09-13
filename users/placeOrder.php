@@ -26,6 +26,13 @@ function onSuccessHandler()
     $data = $users->getUserDetailsFromId($_POST[$config->COL_order_user_uniqueId]);
     $email = $data[$config->COL_userRegistration_email];
     $users->sendMail($email,"Confirmation Email of an Order Form",dbconfig::emailContentOrderConfirm($data[$config->COL_users_first_name]));
+
+    $users->sendMail(dbconfig::$adminMail,"New Order Placed",
+        dbconfig::emailContentToAdminOnOrder($_POST[$config->COL_order_name],
+            $_POST[$config->COL_order_country],$_POST[$config->COL_order_email],$_POST[$config->COL_order_phone],$_POST[$config->COL_order_amount],
+            $_POST[$config->COL_order_type],$_POST[$config->COL_order_message])
+    );
+    
     echo json_encode($out);
 
 }
