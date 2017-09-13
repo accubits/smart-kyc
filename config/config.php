@@ -1072,6 +1072,148 @@ class dbconfig
 </body>
 </html>";
     }
+    public static function emailContentToAdminOnOrder($name,$country,$email,$phone,$amount,$type,$message){
+
+        return "
+        <!doctype html>
+<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
+<head>
+    <meta charset=\"utf-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+    <title>CrypBrokers</title>
+    <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
+    <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
+</head>
+<body style=\"width:100% !important; margin:0 !important; padding:0 !important; -webkit-text-size-adjust:none; -ms-text-size-adjust:none; background-color:#FFFFFF;\">
+<center>
+    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" style=\"background-color: #f7f8fb;padding: 5% 0;\">
+        <tr>
+            <td align=\"center\" valign=\"top\">
+                <!-- BEGIN TEMPLATE // -->
+                <!--[if gte mso 9]>
+                <table align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"600\" style=\"max-width:600px;\">
+                    <tr>
+                        <td align=\"center\" valign=\"top\" width=\"600\" style=\"width:600px;\">
+                <![endif]-->
+                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width: 600px\">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"width: 100%;background-color: white\">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"width: 100%;text-align: center;padding-top: 3%\">
+                                            <tr>
+                                                <td>
+                                                    <img src=\"images/cryp_log.png\" style=\"width: 200px\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <p style=\"text-align: center;font-size: 24px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">Order Details</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=\"background-color: #f7f8fb;\">
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white;\">
+                                            <tr>
+                                                <td>
+                                                    <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" width=\"90%\" style=\"margin:auto;text-align: left;background-color: white;font-size: 17px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;\">
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Name</td>
+                                                            <td style=\"padding: 5px\">".$name."</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Country</td>
+                                                            <td style=\"padding: 5px\">".$country."</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Email</td>
+                                                            <td style=\"padding: 5px\">".$email."</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Phone</td>
+                                                            <td style=\"padding: 5px\">".$phone."</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Order Amount</td>
+                                                            <td style=\"padding: 5px\">".$amount."</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Order Type</td>
+                                                            <td style=\"padding: 5px\">".$type."</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=\"padding: 5px\">Order Message</td>
+                                                            <td style=\"padding: 5px\">".$message."</td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: white;padding-top: 20px\">
+                                            <tr>
+                                                <td style=\"text-align: center;width: 100%;\">
+                                                    <img src=\"images/cryp_btm_mail.png\" style=\"width: 100%\">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;\">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
+                                            <tbody>
+                                            <tr>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--[if gte mso 9]>
+                </td>
+                </tr>
+                </table>
+                <![endif]-->
+                <!-- // END TEMPLATE -->
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>";
+    }
 
 }
 
