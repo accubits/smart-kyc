@@ -96,6 +96,8 @@ class dbconfig
     public $TOKEN                              = 'token';
     
     public static $emailBaseUrl = "http://52.220.41.10/crypbrokers/";
+
+    public static $adminMail = "dittops@accubits.com";
     
     public static function emailContentResetPassword($name,$link) {
         
@@ -514,7 +516,7 @@ class dbconfig
 </center>
 </body>
 </html>";
-    
+
     }
     public static function emailContentVerificationRejected($name){
 
@@ -1070,7 +1072,7 @@ class dbconfig
 </body>
 </html>";
     }
-    
+
 }
 
 $config = new dbconfig();
