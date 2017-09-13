@@ -158,7 +158,7 @@ class dbconfig
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
                                                     <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;width: 90%;margin: auto\">
-                                                        We have received a request to reset the password of you account. Please click below link to reset your password
+                                                        We have received a request to reset the password of your account. Please click the link below to reset your password.
                                                     </p>
                                                 </td>
                                             </tr>
@@ -710,7 +710,7 @@ class dbconfig
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
                                                     <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Please click the below button to verify your email-id.
+                                                        Please click the button below to verify your email id.
                                                     </p>
                                                 </td>
                                             </tr>
