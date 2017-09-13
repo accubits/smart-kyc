@@ -58,7 +58,25 @@ function menu_tab()
 function addinput() {
     $('.file_upload').append("<input name=\"file\" type=\"file\" multiple id=\"files\" class=\"uploadFile\" onchange=\"angular.element(this).scope().imageUpload()\"/>")
 }
+function datepicker() {
+    $('.datepicker-here').datepicker({
+        language: 'en',
+        dateFormat: 'dd-mm-yyyy',
+        autoClose: true
+    });
+    $('#dob').datepicker({
+        maxDate: new Date,
+        minDate: new Date(1950, 1, 1)
+    });
+    $('#issueDate').datepicker({
+        maxDate: new Date
+    });
+    $('#validTo').datepicker({
+        minDate: new Date
+    });
+}
 function init() {
+    datepicker();
     $('.prev_button ').click(go);
     $('.radio').click(rad_act);
     $('.to_top').click(top_mov);

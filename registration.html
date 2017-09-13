@@ -168,7 +168,7 @@
                         </div>
                         <div class="text_box_right txt_bx">
                             <div class="text_desc">Date Of Birth (MM/DD/YYYY)</div>
-                            <input type='text' ng-model="user.dateOfBirth" id="dob" class="datepicker-here" data-language='en'/>
+                            <input type='text' ng-model="user.dateOfBirth" id="dob" class="datepicker-here"  data-language='en'/>
                         </div>
 
                         <div style="clear: both"></div>
@@ -421,8 +421,8 @@
         </div>
     </div>
     <footer>
-        <div class="to_top">
-        </div>
+        <!--<div class="to_top">-->
+        <!--</div>-->
         <div class="copy_right">
             Copyright © 2017 CrypBrokers.com. All Rights Reserved.
         </div>
@@ -457,14 +457,5 @@
 <script rel="script" src="js/config.js"></script>
 <script rel="script" src="js/registration.js"></script>
 <script rel="script" src="js/maincontroller.js"></script>
-
-
-<script>
-    $('.datepicker-here').datepicker
-    ({
-        language: 'en',dateFormat: 'yyyy-mm-dd'
-    });
-
-</script>
 </body>
 </html>

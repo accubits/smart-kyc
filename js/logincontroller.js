@@ -8,12 +8,16 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
     $scope.forgot = {
         "email": ""
     };
+    function validateEmail(email) {
+        var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+        return re.test(email);
+    }
     $scope.logIn= function (){
         if (!$scope.details.email && !$scope.details.password){
             showError('Please enter your details','error',true);
             return;
         }
-        if(!isNaN($scope.details.email.split('@')[0])){
+        if(!validateEmail($scope.details.email)){
             showError('Please enter email','error',true);
             return ;
         }

@@ -98,7 +98,7 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
     };
 
     function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
         return re.test(email);
     }
     function phonenumber(inputtxt) {
@@ -158,6 +158,7 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             }
             $('#terms').prop('checked', false);
         }).error(function (data, err) {
+            showError('Try again with appropriate parameters','error',true);
             console.log(data);
             console.log(err);
 
