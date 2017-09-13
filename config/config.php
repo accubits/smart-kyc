@@ -204,7 +204,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -348,7 +348,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -492,7 +492,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -625,7 +625,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -756,7 +756,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -904,7 +904,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -1047,7 +1047,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -1189,7 +1189,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © Crypto Ventures LLC 2017. All Rights Reserved</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
