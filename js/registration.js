@@ -61,7 +61,7 @@ function addinput() {
 function datepicker() {
     $('.datepicker-here').datepicker({
         language: 'en',
-        dateFormat: 'dd-mm-yyyy',
+        dateFormat: 'dd/mm/yyyy',
         autoClose: true
     });
     $('#dob').datepicker({
@@ -75,7 +75,16 @@ function datepicker() {
         minDate: new Date
     });
 }
+function trigetr() {
+    $('.content_wrap_log, .reset_pass_wrap').keydown(function(event){
+        var keyCode = (event.keyCode ? event.keyCode : event.which);
+        if (keyCode == 13) {
+            $('.login_btn').trigger('click');
+        }
+    });
+}
 function init() {
+    trigetr();
     datepicker();
     $('.prev_button ').click(go);
     $('.radio').click(rad_act);

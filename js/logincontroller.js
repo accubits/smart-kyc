@@ -9,9 +9,10 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
         "email": ""
     };
     function validateEmail(email) {
-        var re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm;
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
+
     $scope.logIn= function (){
         if (!$scope.details.email && !$scope.details.password){
             showError('Please enter your details','error',true);
@@ -83,11 +84,8 @@ crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
         else{
             $('#frgt_block').addClass('active');
         }
-    }
-    function validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
-    }
+    };
+
     $scope.forgotPass = function(){
 
         if (!$scope.forgot.email){
