@@ -28,14 +28,10 @@ function onSuccessHandler()
     $users->sendMail($email,"Confirmation Email of an Order Form",dbconfig::emailContentOrderConfirm($data[$config->COL_users_first_name]));
 
     $users->sendMail(dbconfig::$adminMail,"New Order Placed",
-        "User   :   ".$_POST[$config->COL_order_name]." <br>
-        Email   :   ".$_POST[$config->COL_order_email]." <br>
-        Phone   :   ".$_POST[$config->COL_order_phone]." <br>
-        Amount    :   ".$_POST[$config->COL_order_amount]." <br>
-        Type    :   ".$_POST[$config->COL_order_type]." <br>
-        Country    :   ".$_POST[$config->COL_order_country]." <br>
-        Message    :   ".$_POST[$config->COL_order_message]." <br>
-     ");
+        dbconfig::emailContentToAdminOnOrder($_POST[$config->COL_order_name],
+            $_POST[$config->COL_order_country],$_POST[$config->COL_order_email],$_POST[$config->COL_order_phone],$_POST[$config->COL_order_amount],
+            $_POST[$config->COL_order_type],$_POST[$config->COL_order_message])
+    );
     
     echo json_encode($out);
 

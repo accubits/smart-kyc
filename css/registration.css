@@ -918,6 +918,23 @@ a
         display: flex;
         margin: 40px 0px 91px;
     }
+    .left_docs_out{
+        display: block;
+    }
+    .doc_blocks{
+        width: auto;
+        margin: 10px 0;
+        display: block;
+    }
+    .bottom_button_wrap{
+        text-align: center;
+    }
+    .to_top{
+        right: 10px;
+    }
+    .copy_right{
+        margin: 0;
+    }
 }
 @media only screen and (max-width:560px)
 {

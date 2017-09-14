@@ -61,8 +61,7 @@ function addinput() {
 function datepicker() {
     $('.datepicker-here').datepicker({
         language: 'en',
-        dateFormat: 'dd/mm/yyyy',
-        autoClose: true
+        dateFormat: 'yyyy-mm-dd'
     });
     $('#dob').datepicker({
         maxDate: new Date,
