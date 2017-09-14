@@ -461,11 +461,11 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
                 console.log(err);
                 try{
                     if(data["error"]){
-                        showError(data["error"],'error',false);
+                        showError(data["error"],'error',true);
                     }
                 }
                 catch (e){
-                    showError('Something went wrong','error',false);
+                    showError('Something went wrong','error',true);
                 }
 
 

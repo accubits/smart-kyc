@@ -61,7 +61,7 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
     $scope.resetPassword = function (){
 
         console.log($scope.passDeatils)
-        if($scope.passDeatils.oldpass == "" || $scope.passDeatils.password == ""){
+        if($scope.passDeatils.oldpass == "" || $scope.passDeatils.password == "" || $scope.passDeatils.reenterpassword == ""){
             showError('Please enter all the details','error',true);
             return;
         }
@@ -91,6 +91,7 @@ crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
             }
         }).error(function (data, err) {
             console.log(data);
+            showError(data.error,'error',true);
             console.log(err);
 
         });
