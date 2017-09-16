@@ -26,7 +26,7 @@ crypbrokersApp.controller('adminloginCntl', function ($scope,$http,$window) {
         console.log('userRegistration_email='+$scope.details.email+
             '&&userRegistration_password='+$scope.details.password);
         var data = 'userRegistration_email='+$scope.details.email+
-            '&&userRegistration_password='+$scope.details.password;
+            '&&userRegistration_password='+encodeURIComponent($scope.details.password);
 
         var postData = data;
         var requestObj = {

@@ -808,6 +808,15 @@ a
 {
     font-size: 18px;
 }
+.register_link{
+    font-size: 12px;
+    margin-top: 10px;
+    display: none;
+    text-align: center ;
+}
+.register_link a{
+    color: #f2a73d;
+}
 
 @media only screen and (max-width:880px)
 {
@@ -828,6 +837,9 @@ a
 
 @media only screen and (max-width:768px)
 {
+    .register_link{
+        display: block;
+    }
     .text_box_left
     {
         width: 100%;
