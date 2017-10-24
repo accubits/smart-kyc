@@ -45,7 +45,8 @@ input,textarea,select
 .header
 {
     position: relative;
-    padding: 0px 20px;
+    font-size: 38px;
+    padding: 20px 20px;
 }
 .logo
 {
