@@ -127,6 +127,9 @@ input,textarea,select
     width: 235px;
     padding: 0 15px;
 }
+.logo a{
+    color: #f1a12f;
+}
 .nav_bar
 {
     position: absolute;
@@ -761,6 +764,9 @@ a
     display: inline-block;
     width: 170px;
     padding: 0 15px;
+}
+.log_logo a{
+    color: #f1a12f;
 }
 .sub_head_log {
     background-color: #f2f2f3;

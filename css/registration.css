@@ -94,6 +94,9 @@ input,textarea,select
     width: 170px;
     padding: 0 15px;
 }
+.log_logo a, .logo a{
+    color: #f2a73d;
+}
 .log_nav
 {
     top: 20px;
