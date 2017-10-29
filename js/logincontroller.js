@@ -1,4 +1,4 @@
-crypbrokersApp.controller('loginCntl', function ($scope,$http,$window) {
+smartkycApp.controller('loginCntl', function ($scope,$http,$window) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $scope.details={

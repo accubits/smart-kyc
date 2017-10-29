@@ -1,5 +1,5 @@
 
-crypbrokersApp.controller('verifyCntl', function ($scope,$http) {
+smartkycApp.controller('verifyCntl', function ($scope,$http) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 

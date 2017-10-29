@@ -1,6 +1,6 @@
 
-var crypbrokersApp = angular.module('crypbrokersApp', []);
-crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
+var smartkycApp = angular.module('smartkycApp', []);
+smartkycApp.controller('crypbrokersCntl', function ($scope,$http) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
     $scope.userDetails=JSON.parse(localStorage.getItem("userDetails"));
@@ -531,7 +531,6 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             //showError('Please enter the details', "error", true);
             return;
         }
-        //uploadFile();
     }
 
     $scope.verifyDoc = function(){
@@ -555,13 +554,8 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var fd = new FormData();
         var url = ServerApi + 'uploadDocuments.php';
         showError('Uploading...', "loading", false);
-        //fd.append('image', $('#files').prop('files')[0]);
 
         var index = 1;
-        //for(var item in $('#files').prop('files')){
-        //    fd.append('image'+index, $('#files').prop('files')[item]);
-        //    index++;
-        //}
         console.log($('.uploadFile'))
         $('.uploadFile').each(function(){
             if(!$(this).prop('files').length){
@@ -570,7 +564,6 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             fd.append('image'+index, $(this).prop('files')[0]);
             index++;
         });
-        //console.log(fd);return;
         var data = {};
 
         fd.append("usersImage_userRegistration_unique_id", $scope.userDetails.unique_id);
@@ -586,10 +579,7 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
             success: function (data, textStatus, jqXHR) {
                 hideError();
                 showError('Uploaded the documents', "success", true);
-                // $scope.thankhide=false;
-                // $scope.thankshow=true;
                 console.log("success")
-                // window.location.href = 'verify.html';
 
             },
             error: function (jqXHR, textStatus, errorThrown) {
@@ -636,10 +626,6 @@ crypbrokersApp.controller('crypbrokersCntl', function ($scope,$http) {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
     }
-    // function phonenumber(inputtxt) {
-    //     var phoneno = /^([+|\d])+([\s|\d])+([\d])$/;
-    //     return phoneno.test(inputtxt);
-    // }
     $scope.updateGeneral = function (){
 
         console.log($scope.general)

@@ -1,34 +1,7 @@
 /**
- * Created by hp on 24-08-2017.
+ * Created by dittops on 24-08-2017.
  */
 
-//function go()
-//{
-//    var id = $(this).attr('data-id');
-//    console.log(id);
-//    $(id).css({'display':'block'});
-//    $('.wraps_common').css({'display':'none'});
-//
-//}
-
-
-// function person_next()
-// {
-//
-//     if ($('.indiv').hasClass('indv_active')) {
-//         $('.documents_wrap').css({'display':'block'});
-//         $('.company_wrap').css({'display':'none'});
-//         $('.personal_wrap').css({'display':'none'});
-//     }
-//     else
-//     {
-//         $('.documents_wrap').css({'display':'none'});
-//         $('.company_wrap').css({'display':'block'});
-//         $('.personal_wrap').css({'display':'none'});
-//         $('.person_blk').addClass("green_bg");
-//         $('.comp_blk').addClass("green");
-//     }
-// }
 function person_prev()
 {
     $('.blocks').removeClass('active');
@@ -38,11 +11,6 @@ function person_prev()
 
     $('.wraps_common').css({'display': 'none'});
     $(id).css({'display': 'block'});
-    //$('.documents_wrap').css({'display':'none'});
-    //$('.company_wrap').css({'display':'none'});
-    //$('.personal_wrap').css({'display':'block'});
-    //$('.person_blk').removeClass("green_bg");
-    //$('.comp_blk').removeClass("green");
 
 
 }
@@ -106,7 +74,6 @@ function go() {
 function init() {
     $('.blocks ').click(go);
 
-    // $('.blocks').click(person_prev);
     $('.company').click(company_next);
     $('.pr_doc').click(doc_prev);
     $('.radio').click(rad_act);

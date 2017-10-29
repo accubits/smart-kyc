@@ -1,5 +1,5 @@
-var crypbrokersApp = angular.module('crypbrokersApp', []);
-crypbrokersApp.controller('resetCtrl', function ($scope,$http) {
+var smartkycApp = angular.module('smartkycApp', []);
+smartkycApp.controller('resetCtrl', function ($scope,$http) {
     $http.defaults.headers.post["Accept"] = "";
     $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
 
