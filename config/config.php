@@ -3,13 +3,20 @@ require dirname(dirname(__FILE__)).'/libraries/DataBaseHandler.php';
 
 class dbconfig
 {
+    public static $emailBaseUrl = "http://smartkyc.ml";
+
     /** @var string - Redis */
     public $HOST     = 'localhost';
     public $USER     = 'root';
-    public $PASSWORD = 'accubits';
-//    public $PASSWORD = 'Accubits@123';
-    public $DB_NAME  = 'crypbrokers';
+    public $PASSWORD = '';
+    public $DB_NAME  = 'smartkyc';
 
+
+    /** @var string - Email config */
+
+    public $EMAIL_HOST = 'smtp.gmail.com';
+    public $EMAIL_USERNAME = "example@smartkyc.com";
+    public $EMAIL_PASSWORD = "pass";
 
     public $REDIS_HOST   = '127.0.0.1';
     public $REDIS_PORT   = '6379';
@@ -94,10 +101,8 @@ class dbconfig
     public $COL_order_status                    = 'order_status';
     
     public $TOKEN                              = 'token';
-    
-    public static $emailBaseUrl = "http://52.220.41.10/crypbrokers/";
 
-    public static $adminMail = "dittops@accubits.com";
+    public static $adminMail = "admin@smarktyc.com";
     
     public static function emailContentResetPassword($name,$link) {
         
@@ -109,7 +114,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -204,7 +209,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 smartKYC. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -239,7 +244,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -299,7 +304,7 @@ class dbconfig
                                                         Best Regards,
                                                     </p>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        CrypBrokers
+                                                        SmartKYC
                                                     </p>
                                                 </td>
                                             </tr>
@@ -315,7 +320,7 @@ class dbconfig
                                                         For more details login to
                                                     </p>
                                                     <p>
-                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                        <a href=".dbconfig::$emailBaseUrl." style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">SMARTKYC</div></a>
                                                     </p>
                                                 </td>
                                                 <td style=\"text-align: right;width: 40%;\">
@@ -348,7 +353,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -383,7 +388,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -436,14 +441,14 @@ class dbconfig
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Should you have any further queries, feel free to email us at: compliance@crypbrokers.com.
+                                                        Should you have any further queries, feel free to email us at: compliance@smartKYC.com.
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
                                                         Best Regards,
                                                     </p>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        CrypBrokers
+                                                        SmartKYC
                                                     </p>
                                                 </td>
                                             </tr>
@@ -459,7 +464,7 @@ class dbconfig
                                                         For more details login to
                                                     </p>
                                                     <p>
-                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                        <a href=".dbconfig::$emailBaseUrl." style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">SMARTKYC</div></a>
                                                     </p>
                                                 </td>
                                                 <td style=\"text-align: right;width: 40%;\">
@@ -492,7 +497,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -527,7 +532,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -592,7 +597,7 @@ class dbconfig
                                                         For more details login to
                                                     </p>
                                                     <p>
-                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                        <a href=".dbconfig::$emailBaseUrl." style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">SMARTKYC</div></a>
                                                     </p>
                                                 </td>
                                                 <td style=\"text-align: right;width: 40%;\">
@@ -625,7 +630,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -661,7 +666,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -756,7 +761,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -791,7 +796,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -840,7 +845,7 @@ class dbconfig
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
                                                     <p style=\"text-align: center;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Thank you for creating an account with CrypBrokers.com.
+                                                        Thank you for creating an account with SmartKYC.com.
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
@@ -848,14 +853,14 @@ class dbconfig
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Should you have any further queries, feel free to email us at: compliance@crypbrokers.com.
+                                                        Should you have any further queries, feel free to email us at: compliance@smartkyc.com.
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
                                                         Best Regards,
                                                     </p>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        CrypBrokers
+                                                        smartkyc
                                                     </p>
                                                 </td>
                                             </tr>
@@ -871,7 +876,7 @@ class dbconfig
                                                         For more details login to
                                                     </p>
                                                     <p>
-                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                        <a href=".dbconfig::$emailBaseUrl." style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">SMARTKYC</div></a>
                                                     </p>
                                                 </td>
                                                 <td style=\"text-align: right;width: 40%;\">
@@ -904,7 +909,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -938,7 +943,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -987,18 +992,18 @@ class dbconfig
                                             <tr>
                                                 <td style=\"text-align: center;width: 100%;\">
                                                     <p style=\"text-align: justify;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Thank you for submitting your order request with CrypBrokers.com. Our team is currently reviewing your order details and will be in contact with you soon.
+                                                        Thank you for submitting your order request with SmartKYC.com. Our team is currently reviewing your order details and will be in contact with you soon.
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        Should you have any further queries in the meantime feel free to email us at: orders@crypbrokers.com.
+                                                        Should you have any further queries in the meantime feel free to email us at: orders@smartkyc.com.
                                                     </p>
                                                     </br>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
                                                         Best Regards,
                                                     </p>
                                                     <p style=\"text-align: left;font-size: 18px;font-family: 'Montserrat Light', sans-serif;color: #989898;line-height: 1.5;;width: 90%;margin: auto\">
-                                                        CrypBrokers
+                                                        SmartKYC
                                                     </p>
                                                 </td>
                                             </tr>
@@ -1014,7 +1019,7 @@ class dbconfig
                                                         For more details login to
                                                     </p>
                                                     <p>
-                                                        <a href=\"http://52.220.41.10/crypbrokers/\" style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">CRYPBROKERS</div></a>
+                                                        <a href=".dbconfig::$emailBaseUrl." style=\"color: #fff; text-decoration: none\"> <div style=\"display: inline-block;background-color: #FFC107;font-family: 'Montserrat Light', sans-serif;padding: 7px 30px;border-radius: 20px;color: #f7f8fb;font-size: 12px;\">SMARTKYC</div></a>
                                                     </p>
                                                 </td>
                                                 <td style=\"text-align: right;width: 40%;\">
@@ -1047,7 +1052,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -1081,7 +1086,7 @@ class dbconfig
     <meta charset=\"utf-8\">
     <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>CrypBrokers</title>
+    <title>SmartKYC</title>
     <!--<link href=\"https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat|Open+Sans|Raleway:300|Roboto:300\" rel=\"stylesheet\">-->
     <!--<link href=\"http://allfont.net/allfont.css?fonts=montserrat-light\" rel=\"stylesheet\" type=\"text/css\" />-->
 </head>
@@ -1189,7 +1194,7 @@ class dbconfig
                                         <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"text-align: center;background-color: transparent\">
                                             <tbody>
                                             <tr>
-                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 CrypBrokers.com. All Rights Reserved.</span></td>
+                                                <td style=\"text-align: center;\"><span style=\"font-size: 10px;color: #999999;font-family: 'Montserrat Light', sans-serif;\">Copyright © 2017 SmartKYC.com. All Rights Reserved.</span></td>
                                             </tr>
                                             </tbody>
                                         </table>

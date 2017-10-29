@@ -790,12 +790,12 @@ public function readInfo(){
         $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
         $mail->SMTPAuth = true; // authentication enabled
         $mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
-        $mail->Host = "smtp.gmail.com";
+        $mail->Host = dbconfig::$EMAIL_HOST;
         $mail->Port = 587; // or 587
         $mail->IsHTML(true);
-        $mail->Username = "charush@accubits.com";
-        $mail->Password = "charush*523";
-        $mail->SetFrom("example@gmail.com");
+        $mail->Username = dbconfig::$EMAIL_USERNAME;
+        $mail->Password = dbconfig::$EMAIL_PASSWORD;
+        $mail->SetFrom("info@smartkyc.com");
         $mail->Subject = $sub;
         $mail->Body = $content;
         $mail->AddAddress($to);
