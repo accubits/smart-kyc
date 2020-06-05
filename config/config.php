@@ -3,13 +3,13 @@ require dirname(dirname(__FILE__)).'/libraries/DataBaseHandler.php';
 
 class dbconfig
 {
-    public static $emailBaseUrl = "http://smartkyc.ml";
+    public static $emailBaseUrl = "https://kyc-intel.herokuapp.com";
 
     /** @var string - Redis */
-    public $HOST     = 'localhost';
-    public $USER     = 'root';
-    public $PASSWORD = '';
-    public $DB_NAME  = 'smartkyc';
+    public $HOST     = 'ec2-52-20-36-181.compute-1.amazonaws.com';
+    public $USER     = 'h';
+    public $PASSWORD = 'pb4d210f5bc588b8177921b7c2467054a951758019920a0f595b5e6ce03b619cd';
+    public $DB_NAME  = 'redis-angular-79402';
 
 
     /** @var string - Email config */
@@ -18,8 +18,8 @@ class dbconfig
     public $EMAIL_USERNAME = "example@smartkyc.com";
     public $EMAIL_PASSWORD = "pass";
 
-    public $REDIS_HOST   = '127.0.0.1';
-    public $REDIS_PORT   = '6379';
+    public $REDIS_HOST   = 'ec2-52-20-36-181.compute-1.amazonaws.com';
+    public $REDIS_PORT   = '50369';
     public $REDIS_EXPIRY = '10000';
 
     /** @var string - Tables */
@@ -73,7 +73,7 @@ class dbconfig
     public $COL_usersImage_unique_id                       = 'usersImage_unique_id';
     public $COL_usersImage_userRegistration_unique_id     = 'usersImage_userRegistration_unique_id';
     public $COL_usersImage_image                           = 'usersImage_image';
-    
+
     /*Table_userRegistration*/
 
     public $COL_userRegistration_unique_id                  = 'userRegistration_uniqueId';
@@ -99,13 +99,13 @@ class dbconfig
     public $COL_order_type                      = 'order_type';
     public $COL_order_message                   = 'order_message';
     public $COL_order_status                    = 'order_status';
-    
+
     public $TOKEN                              = 'token';
 
     public static $adminMail = "admin@smarktyc.com";
-    
+
     public static function emailContentResetPassword($name,$link) {
-        
+
         return "
         <!doctype html>
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">
@@ -233,7 +233,7 @@ class dbconfig
 </center>
 </body>
 </html>";
-        
+
     }
     public static function emailContentUploadSuccesfull($name){
 
@@ -654,7 +654,7 @@ class dbconfig
 </center>
 </body>
 </html>";
- 
+
     }
     public static function emailContentEmailVerification($link){
 

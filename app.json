@@ -1,0 +1,17 @@
+{
+  "name": "smart-kyc",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs#v83 -a -kyc"
+    }
+  ]
+}
